@@ -1,0 +1,1072 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: BuiltinLocators.spec.js >> E-commerce product search and add to cart
+- Location: tests\BuiltinLocators.spec.js:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: browserContext.waitForEvent: Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Shopping cart" [ref=e9] [cursor=pointer]:
+          - /url: "#sc-active-cart"
+          - text: Your Amazon Cart
+    - separator [ref=e10]
+    - heading "Keyboard shortcuts" [level=2] [ref=e11]
+    - list "Keyboard shortcuts" [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Search, alt, forward slash" [ref=e14] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e15]:
+            - generic [ref=e16]: Search
+            - generic [ref=e17]:
+              - generic [ref=e18]: alt
+              - generic [ref=e19]: +
+              - generic [ref=e20]: /
+      - listitem [ref=e21]:
+        - link "Cart, shift, alt, c" [ref=e22] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e23]:
+            - generic [ref=e24]: Cart
+            - generic [ref=e25]:
+              - generic [ref=e26]: shift
+              - generic [ref=e27]: +
+              - generic [ref=e28]: alt
+              - generic [ref=e29]: +
+              - generic [ref=e30]: C
+      - listitem [ref=e31]:
+        - link "Home, shift, alt, h" [ref=e32] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e33]:
+            - generic [ref=e34]: Home
+            - generic [ref=e35]:
+              - generic [ref=e36]: shift
+              - generic [ref=e37]: +
+              - generic [ref=e38]: alt
+              - generic [ref=e39]: +
+              - generic [ref=e40]: H
+      - listitem [ref=e41]:
+        - link "Your orders, shift, alt, o" [ref=e42] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e43]:
+            - generic [ref=e44]: Orders
+            - generic [ref=e45]:
+              - generic [ref=e46]: shift
+              - generic [ref=e47]: +
+              - generic [ref=e48]: alt
+              - generic [ref=e49]: +
+              - generic [ref=e50]: O
+      - listitem [ref=e51]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Show/Hide shortcuts
+            - generic [ref=e55]:
+              - generic [ref=e56]: shift
+              - generic [ref=e57]: +
+              - generic [ref=e58]: alt
+              - generic [ref=e59]: +
+              - generic [ref=e60]: Z
+    - generic [ref=e66]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e67]:
+    - navigation "Primary" [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - link "Amazon.in" [ref=e72] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Chennai 600041 Update location" [ref=e75] [cursor=pointer]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Delivering to Chennai 600041
+              - generic [ref=e79]: Update location
+        - search [ref=e82]:
+          - generic [ref=e85]:
+            - generic [ref=e87]: All
+            - combobox "Select the department you want to search in" [ref=e89] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e92]
+          - generic "Go" [ref=e95] [cursor=pointer]:
+            - button "Go" [ref=e96]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e100] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e103]:
+                - img "India" [ref=e104]
+                - generic [ref=e105]: EN
+            - button "Expand to Change Language or Country" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - link "Hello, sign in Account & Lists" [ref=e108] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fcart%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e110]: Hello, sign in
+              - generic [ref=e111]: Account & Lists
+            - button "Expand Account and Lists" [ref=e112] [cursor=pointer]
+          - link "Returns & Orders" [ref=e113] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e114]: Returns
+            - generic [ref=e115]: "& Orders"
+          - link "1 item in cart" [ref=e116] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e118]: "1"
+            - generic [ref=e121]: Cart
+      - generic [ref=e122]:
+        - button "Open All Categories Menu" [ref=e124] [cursor=pointer]:
+          - generic [ref=e126]: All
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - link "Fresh" [ref=e133] [cursor=pointer]:
+              - /url: /fresh?ref_=nav_cs_fresh
+          - listitem [ref=e134]:
+            - link "MX Player" [ref=e136] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e137]:
+            - link "Sell" [ref=e139] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e140]:
+            - link "Bestsellers" [ref=e142] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e143]:
+            - link "Mobiles" [ref=e145] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e146]:
+            - link "Today's Deals" [ref=e148] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e149]:
+            - link "Customer Service" [ref=e151] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e152]:
+            - link "New Releases" [ref=e154] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e155]:
+            - generic [ref=e156]:
+              - link "Prime" [ref=e157] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e158] [cursor=pointer]
+          - listitem [ref=e159]:
+            - link "Fashion" [ref=e161] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e162]:
+            - link "Electronics" [ref=e164] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e165]:
+            - link "Amazon Pay" [ref=e167] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e168]:
+            - link "Home & Kitchen" [ref=e170] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e171]:
+            - link "Computers" [ref=e173] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e174]:
+            - link "Books" [ref=e176] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e177]:
+            - link "Toys & Games" [ref=e179] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e180]:
+            - link "Gift Cards" [ref=e182] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e183]:
+            - link "Beauty & Personal Care" [ref=e185] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e186]:
+            - link "Car & Motorbike" [ref=e188] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e189]:
+            - link "Home Improvement" [ref=e191] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e192]:
+            - link "Custom Products" [ref=e194] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e195]:
+            - link "Sports, Fitness & Outdoors" [ref=e197] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e198]:
+            - link "Grocery & Gourmet Foods" [ref=e200] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e201]:
+            - link "Health, Household & Personal Care" [ref=e203] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e204]:
+            - link "Pet Supplies" [ref=e206] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e207]:
+            - link "Video Games" [ref=e209] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e210]:
+            - link "Baby" [ref=e212] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e213]:
+            - link "AmazonBasics" [ref=e215] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e216]:
+            - link "Subscribe & Save" [ref=e218] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e219]:
+            - link "Audible" [ref=e221] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e222]:
+            - link "Kindle eBooks" [ref=e224] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e225]:
+            - link "Flights" [ref=e227] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+  - main [ref=e232]:
+    - heading "All Carts" [level=1] [ref=e233]
+    - generic [ref=e235]:
+      - generic [ref=e236]:
+        - generic [ref=e240]:
+          - generic [ref=e241]:
+            - generic [ref=e242]:
+              - progressbar [ref=e245]
+              - generic [ref=e247]: ₹499
+            - generic [ref=e253]:
+              - text: Your order is eligible for FREE Delivery.
+              - generic [ref=e254]:
+                - text: Choose
+                - link "FREE Delivery" [ref=e255] [cursor=pointer]:
+                  - /url: /gp/help/customer/display.html?nodeId=200904360&pop-up=1
+                - text: option at checkout.
+          - generic [ref=e256]:
+            - 'heading "Amazon Subtotal (1 item): ₹3,995.00" [level=3] [ref=e257]':
+              - generic [ref=e258]: Amazon
+              - generic [ref=e259]:
+                - text: "Subtotal (1 item):"
+                - generic [ref=e260]: ₹3,995.00
+            - generic [ref=e264]:
+              - checkbox "This order contains a gift" [ref=e265]
+              - generic [ref=e267]: This order contains a gift
+            - generic [ref=e271] [cursor=pointer]:
+              - button "Proceed to Buy Buy Amazon items" [ref=e272]: Proceed to checkout
+              - generic [ref=e275]: Proceed to Buy
+          - button "EMI Available" [ref=e280] [cursor=pointer]:
+            - heading "EMI Available" [level=5] [ref=e282]
+        - generic [ref=e291]:
+          - heading "Customers who shopped for Nike Mens Run Defy Running Shoes also shopped for:" [level=3] [ref=e292]
+          - list [ref=e293]:
+            - listitem [ref=e294]:
+              - generic [ref=e299]:
+                - link [ref=e301] [cursor=pointer]:
+                  - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=pd_cart_crc_cko_sbs_d_sccl_1_1/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD7XPY&psc=1
+                  - img [ref=e303]
+                - generic [ref=e304]:
+                  - generic [ref=e306]:
+                    - link "Nike Mens Revolution 8 Running Shoes" [ref=e307] [cursor=pointer]:
+                      - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=pd_cart_crc_cko_sbs_d_sccl_1_1/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD7XPY&psc=1
+                      - generic [ref=e309]: Nike Mens Revolution 8 Running Shoes
+                    - link "3.9 out of 5 stars, 997 ratings" [ref=e312] [cursor=pointer]:
+                      - /url: /product-reviews/B0FBRD7XPY/ref=pd_cart_crc_cko_sbs_d_sccl_1_1_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD7XPY
+                      - generic [ref=e314]: 3.9 out of 5 stars
+                      - text: "997"
+                    - generic [ref=e315]:
+                      - generic [ref=e317]:
+                        - generic [ref=e318]:
+                          - link "-20%" [ref=e319] [cursor=pointer]:
+                            - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=pd_cart_crc_cko_sbs_d_sccl_1_1/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD7XPY&psc=1
+                            - text: "-20%"
+                          - link "₹3,436.00" [ref=e320] [cursor=pointer]:
+                            - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=pd_cart_crc_cko_sbs_d_sccl_1_1/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD7XPY&psc=1
+                            - generic [ref=e321]:
+                              - generic [ref=e322]: ₹3,436.00
+                              - generic [ref=e323]:
+                                - text: ₹
+                                - generic [ref=e324]:
+                                  - text: 3,436
+                                  - generic [ref=e325]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹4,295.00" [ref=e327] [cursor=pointer]':
+                          - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=pd_cart_crc_cko_sbs_d_sccl_1_1/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD7XPY&psc=1
+                          - generic [ref=e329]: "M.R.P: ₹4,295.00"
+                      - generic [ref=e334]: FREE delivery Sat, 25 Apr
+                  - generic [ref=e342] [cursor=pointer]:
+                    - button "Add to cart, Nike Mens Revolution 8 Running Shoes" [ref=e343]
+                    - generic [ref=e344]: Add to cart
+            - listitem [ref=e345]:
+              - generic [ref=e350]:
+                - link [ref=e352] [cursor=pointer]:
+                  - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRF4GTB/ref=pd_cart_crc_cko_sbs_d_sccl_1_2/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRF4GTB&psc=1
+                  - img [ref=e354]
+                - generic [ref=e355]:
+                  - generic [ref=e357]:
+                    - link "Nike Mens Revolution 8 Easy-On Adaptive Shoes" [ref=e358] [cursor=pointer]:
+                      - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRF4GTB/ref=pd_cart_crc_cko_sbs_d_sccl_1_2/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRF4GTB&psc=1
+                      - generic [ref=e360]: Nike Mens Revolution 8 Easy-On Adaptive Shoes
+                    - link "3.9 out of 5 stars, 50 ratings" [ref=e363] [cursor=pointer]:
+                      - /url: /product-reviews/B0FBRF4GTB/ref=pd_cart_crc_cko_sbs_d_sccl_1_2_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRF4GTB
+                      - generic [ref=e365]: 3.9 out of 5 stars
+                      - text: "50"
+                    - generic [ref=e366]:
+                      - link "₹4,295.00" [ref=e370] [cursor=pointer]:
+                        - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRF4GTB/ref=pd_cart_crc_cko_sbs_d_sccl_1_2/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRF4GTB&psc=1
+                        - generic [ref=e371]:
+                          - generic [ref=e372]: ₹4,295.00
+                          - generic [ref=e373]:
+                            - text: ₹
+                            - generic [ref=e374]:
+                              - text: 4,295
+                              - generic [ref=e375]: .
+                            - text: "00"
+                      - generic [ref=e380]: FREE delivery Wed, 22 Apr
+                  - generic [ref=e388] [cursor=pointer]:
+                    - button "Add to cart, Nike Mens Revolution 8 Easy-On Adaptive Shoes" [ref=e389]
+                    - generic [ref=e390]: Add to cart
+            - listitem [ref=e391]:
+              - generic [ref=e396]:
+                - link [ref=e398] [cursor=pointer]:
+                  - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFT93QSQ/ref=pd_cart_crc_cko_sbs_d_sccl_1_3/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0GGDWZCS1&psc=1
+                  - img [ref=e400]
+                - generic [ref=e401]:
+                  - generic [ref=e403]:
+                    - link "Nike Mens Downshifter 14 Running Shoes" [ref=e404] [cursor=pointer]:
+                      - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFT93QSQ/ref=pd_cart_crc_cko_sbs_d_sccl_1_3/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0GGDWZCS1&psc=1
+                      - generic [ref=e406]: Nike Mens Downshifter 14 Running Shoes
+                    - link "4.1 out of 5 stars, 31 ratings" [ref=e409] [cursor=pointer]:
+                      - /url: /product-reviews/B0GGDWZCS1/ref=pd_cart_crc_cko_sbs_d_sccl_1_3_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0GGDWZCS1
+                      - generic [ref=e411]: 4.1 out of 5 stars
+                      - text: "31"
+                    - link "₹4,895.00" [ref=e416] [cursor=pointer]:
+                      - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFT93QSQ/ref=pd_cart_crc_cko_sbs_d_sccl_1_3/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0GGDWZCS1&psc=1
+                      - generic [ref=e417]:
+                        - generic [ref=e418]: ₹4,895.00
+                        - generic [ref=e419]:
+                          - text: ₹
+                          - generic [ref=e420]:
+                            - text: 4,895
+                            - generic [ref=e421]: .
+                          - text: "00"
+                  - link "See all buying options" [ref=e427] [cursor=pointer]:
+                    - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFT93QSQ/ref=pd_cart_crc_cko_sbs_d_sccl_1_3_atc_o/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0GGDWZCS1&psc=1
+            - listitem [ref=e428]:
+              - generic [ref=e433]:
+                - link [ref=e435] [cursor=pointer]:
+                  - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=pd_cart_crc_cko_sbs_d_sccl_1_4/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD4TLF&psc=1
+                  - img [ref=e437]
+                - generic [ref=e438]:
+                  - generic [ref=e440]:
+                    - link "Nike Mens Winflo 11 Running Shoes" [ref=e441] [cursor=pointer]:
+                      - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=pd_cart_crc_cko_sbs_d_sccl_1_4/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD4TLF&psc=1
+                      - generic [ref=e443]: Nike Mens Winflo 11 Running Shoes
+                    - link "4.3 out of 5 stars, 94 ratings" [ref=e446] [cursor=pointer]:
+                      - /url: /product-reviews/B0FBRD4TLF/ref=pd_cart_crc_cko_sbs_d_sccl_1_4_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD4TLF
+                      - generic [ref=e448]: 4.3 out of 5 stars
+                      - text: "94"
+                    - generic [ref=e449]:
+                      - generic [ref=e451]:
+                        - generic [ref=e452]:
+                          - link "-20%" [ref=e453] [cursor=pointer]:
+                            - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=pd_cart_crc_cko_sbs_d_sccl_1_4/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD4TLF&psc=1
+                            - text: "-20%"
+                          - link "₹6,956.00" [ref=e454] [cursor=pointer]:
+                            - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=pd_cart_crc_cko_sbs_d_sccl_1_4/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD4TLF&psc=1
+                            - generic [ref=e455]:
+                              - generic [ref=e456]: ₹6,956.00
+                              - generic [ref=e457]:
+                                - text: ₹
+                                - generic [ref=e458]:
+                                  - text: 6,956
+                                  - generic [ref=e459]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹8,695.00" [ref=e461] [cursor=pointer]':
+                          - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=pd_cart_crc_cko_sbs_d_sccl_1_4/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBRD4TLF&psc=1
+                          - generic [ref=e463]: "M.R.P: ₹8,695.00"
+                      - generic [ref=e468]: FREE delivery Sat, 25 Apr
+                  - generic [ref=e476] [cursor=pointer]:
+                    - button "Add to cart, Nike Mens Winflo 11 Running Shoes" [ref=e477]
+                    - generic [ref=e478]: Add to cart
+            - listitem [ref=e479]:
+              - generic [ref=e484]:
+                - link [ref=e486] [cursor=pointer]:
+                  - /url: /Puma-Unisex-Adult-Skyrocket-Gray-Cool-Running/dp/B0CKJ7PBF3/ref=pd_cart_crc_cko_sbs_d_sccl_1_5/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FMK2B6T3&psc=1
+                  - img [ref=e488]
+                - generic [ref=e489]:
+                  - generic [ref=e491]:
+                    - link "Puma Unisex-Adult Skyrocket Lite Running Shoe" [ref=e492] [cursor=pointer]:
+                      - /url: /Puma-Unisex-Adult-Skyrocket-Gray-Cool-Running/dp/B0CKJ7PBF3/ref=pd_cart_crc_cko_sbs_d_sccl_1_5/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FMK2B6T3&psc=1
+                      - generic [ref=e494]: Puma Unisex-Adult Skyrocket Lite Running Shoe
+                    - link "4.4 out of 5 stars, 755 ratings" [ref=e497] [cursor=pointer]:
+                      - /url: /product-reviews/B0FMK2B6T3/ref=pd_cart_crc_cko_sbs_d_sccl_1_5_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FMK2B6T3
+                      - generic [ref=e499]: 4.4 out of 5 stars
+                      - text: "755"
+                    - link "₹2,999.00" [ref=e504] [cursor=pointer]:
+                      - /url: /Puma-Unisex-Adult-Skyrocket-Gray-Cool-Running/dp/B0CKJ7PBF3/ref=pd_cart_crc_cko_sbs_d_sccl_1_5/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FMK2B6T3&psc=1
+                      - generic [ref=e505]:
+                        - generic [ref=e506]: ₹2,999.00
+                        - generic [ref=e507]:
+                          - text: ₹
+                          - generic [ref=e508]:
+                            - text: 2,999
+                            - generic [ref=e509]: .
+                          - text: "00"
+                  - link "See all buying options" [ref=e515] [cursor=pointer]:
+                    - /url: /Puma-Unisex-Adult-Skyrocket-Gray-Cool-Running/dp/B0CKJ7PBF3/ref=pd_cart_crc_cko_sbs_d_sccl_1_5_atc_o/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FMK2B6T3&psc=1
+            - listitem [ref=e516]:
+              - generic [ref=e521]:
+                - link [ref=e523] [cursor=pointer]:
+                  - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-10UK/dp/B0D945K7H7/ref=pd_cart_crc_cko_sbs_d_sccl_1_6/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0D945K7H7&psc=1
+                  - img [ref=e525]
+                - generic [ref=e526]:
+                  - generic [ref=e528]:
+                    - link "Nike Mens Precision 7 Basketball Shoes" [ref=e529] [cursor=pointer]:
+                      - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-10UK/dp/B0D945K7H7/ref=pd_cart_crc_cko_sbs_d_sccl_1_6/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0D945K7H7&psc=1
+                      - generic [ref=e531]: Nike Mens Precision 7 Basketball Shoes
+                    - link "4.0 out of 5 stars, 224 ratings" [ref=e534] [cursor=pointer]:
+                      - /url: /product-reviews/B0D945K7H7/ref=pd_cart_crc_cko_sbs_d_sccl_1_6_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0D945K7H7
+                      - generic [ref=e536]: 4.0 out of 5 stars
+                      - text: "224"
+                    - generic [ref=e537]:
+                      - generic [ref=e539]:
+                        - generic [ref=e540]:
+                          - link "-20%" [ref=e541] [cursor=pointer]:
+                            - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-10UK/dp/B0D945K7H7/ref=pd_cart_crc_cko_sbs_d_sccl_1_6/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0D945K7H7&psc=1
+                            - text: "-20%"
+                          - link "₹4,556.00" [ref=e542] [cursor=pointer]:
+                            - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-10UK/dp/B0D945K7H7/ref=pd_cart_crc_cko_sbs_d_sccl_1_6/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0D945K7H7&psc=1
+                            - generic [ref=e543]:
+                              - generic [ref=e544]: ₹4,556.00
+                              - generic [ref=e545]:
+                                - text: ₹
+                                - generic [ref=e546]:
+                                  - text: 4,556
+                                  - generic [ref=e547]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹5,695.00" [ref=e549] [cursor=pointer]':
+                          - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-10UK/dp/B0D945K7H7/ref=pd_cart_crc_cko_sbs_d_sccl_1_6/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0D945K7H7&psc=1
+                          - generic [ref=e551]: "M.R.P: ₹5,695.00"
+                      - generic [ref=e556]: FREE delivery Wed, 22 Apr
+                  - generic [ref=e564] [cursor=pointer]:
+                    - button "Add to cart, Nike Mens Precision 7 Basketball Shoes" [ref=e565]
+                    - generic [ref=e566]: Add to cart
+            - listitem [ref=e567]:
+              - generic [ref=e572]:
+                - link [ref=e574] [cursor=pointer]:
+                  - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=pd_cart_crc_cko_sbs_d_sccl_1_7/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CKS5T2V8&psc=1
+                  - img [ref=e576]
+                - generic [ref=e577]:
+                  - generic [ref=e579]:
+                    - link "Nike Mens Legend Essential 3 Nn Training Shoes" [ref=e580] [cursor=pointer]:
+                      - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=pd_cart_crc_cko_sbs_d_sccl_1_7/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CKS5T2V8&psc=1
+                      - generic [ref=e582]: Nike Mens Legend Essential 3 Nn Training Shoes
+                    - link "3.3 out of 5 stars, 13 ratings" [ref=e585] [cursor=pointer]:
+                      - /url: /product-reviews/B0CKS5T2V8/ref=pd_cart_crc_cko_sbs_d_sccl_1_7_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CKS5T2V8
+                      - generic [ref=e587]: 3.3 out of 5 stars
+                      - text: "13"
+                    - generic [ref=e588]:
+                      - generic [ref=e590]:
+                        - generic [ref=e591]:
+                          - link "-30%" [ref=e592] [cursor=pointer]:
+                            - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=pd_cart_crc_cko_sbs_d_sccl_1_7/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CKS5T2V8&psc=1
+                            - text: "-30%"
+                          - link "₹3,496.00" [ref=e593] [cursor=pointer]:
+                            - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=pd_cart_crc_cko_sbs_d_sccl_1_7/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CKS5T2V8&psc=1
+                            - generic [ref=e594]:
+                              - generic [ref=e595]: ₹3,496.00
+                              - generic [ref=e596]:
+                                - text: ₹
+                                - generic [ref=e597]:
+                                  - text: 3,496
+                                  - generic [ref=e598]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹4,995.00" [ref=e600] [cursor=pointer]':
+                          - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=pd_cart_crc_cko_sbs_d_sccl_1_7/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CKS5T2V8&psc=1
+                          - generic [ref=e602]: "M.R.P: ₹4,995.00"
+                      - generic [ref=e607]: FREE delivery Sat, 25 Apr
+                  - generic [ref=e615] [cursor=pointer]:
+                    - button "Add to cart, Nike Mens Legend Essential 3 Nn Training Shoes" [ref=e616]
+                    - generic [ref=e617]: Add to cart
+            - listitem [ref=e618]:
+              - generic [ref=e623]:
+                - link [ref=e625] [cursor=pointer]:
+                  - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MHVHMR/ref=pd_cart_crc_cko_sbs_d_sccl_1_8/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0G4MHVHMR&psc=1
+                  - img [ref=e627]
+                - generic [ref=e628]:
+                  - generic [ref=e630]:
+                    - link "Nike Mens Air Zoom Pegasus 41 Running Shoes" [ref=e631] [cursor=pointer]:
+                      - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MHVHMR/ref=pd_cart_crc_cko_sbs_d_sccl_1_8/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0G4MHVHMR&psc=1
+                      - generic [ref=e633]: Nike Mens Air Zoom Pegasus 41 Running Shoes
+                    - link "4.3 out of 5 stars, 21 ratings" [ref=e636] [cursor=pointer]:
+                      - /url: /product-reviews/B0G4MHVHMR/ref=pd_cart_crc_cko_sbs_d_sccl_1_8_cr/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0G4MHVHMR
+                      - generic [ref=e638]: 4.3 out of 5 stars
+                      - text: "21"
+                    - generic [ref=e639]:
+                      - generic [ref=e641]:
+                        - generic [ref=e642]:
+                          - link "-40%" [ref=e643] [cursor=pointer]:
+                            - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MHVHMR/ref=pd_cart_crc_cko_sbs_d_sccl_1_8/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0G4MHVHMR&psc=1
+                            - text: "-40%"
+                          - link "₹7,137.00" [ref=e644] [cursor=pointer]:
+                            - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MHVHMR/ref=pd_cart_crc_cko_sbs_d_sccl_1_8/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0G4MHVHMR&psc=1
+                            - generic [ref=e645]:
+                              - generic [ref=e646]: ₹7,137.00
+                              - generic [ref=e647]:
+                                - text: ₹
+                                - generic [ref=e648]:
+                                  - text: 7,137
+                                  - generic [ref=e649]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹11,895.00" [ref=e651] [cursor=pointer]':
+                          - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MHVHMR/ref=pd_cart_crc_cko_sbs_d_sccl_1_8/523-8135897-3428603?pd_rd_w=gOyn7&content-id=amzn1.sym.61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_p=61c9f25f-5129-4f03-9806-1917beac1ddc&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0G4MHVHMR&psc=1
+                          - generic [ref=e653]: "M.R.P: ₹11,895.00"
+                      - generic [ref=e658]: FREE delivery Sun, 26 Apr
+                  - generic [ref=e666] [cursor=pointer]:
+                    - button "Add to cart, Nike Mens Air Zoom Pegasus 41 Running Shoes" [ref=e667]
+                    - generic [ref=e668]: Add to cart
+      - generic [ref=e669]:
+        - generic [ref=e671]:
+          - heading "Shopping Cart" [level=2] [ref=e675]
+          - generic [ref=e678]:
+            - generic [ref=e682]: Price
+            - list "Shopping Cart" [ref=e683]:
+              - listitem [ref=e684]:
+                - generic [ref=e686]:
+                  - link [ref=e688] [cursor=pointer]:
+                    - /url: /gp/product/B0DZWFZCKZ/ref=ox_sc_act_image_1?smid=A2O5KR0Y95DC4B&psc=1
+                  - generic [ref=e689]:
+                    - link "Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e691] [cursor=pointer]:
+                      - /url: /gp/product/B0DZWFZCKZ/ref=ox_sc_act_title_1?smid=A2O5KR0Y95DC4B&psc=1
+                      - heading "Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [level=3] [ref=e693]:
+                        - generic [ref=e694]:
+                          - generic [ref=e695]: Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK
+                          - generic [ref=e696]: Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK
+                    - generic [ref=e702]:
+                      - generic [ref=e703]: ₹3,995.00
+                      - text: ₹3,995.00
+                    - generic [ref=e704]:
+                      - generic [ref=e705]: In stock
+                      - generic [ref=e708]: FREE delivery Sun, 26 Apr available at checkout
+                      - paragraph [ref=e709]
+                      - generic [ref=e713]:
+                        - checkbox "This will be a gift This is a gift Learn more" [ref=e714]
+                        - generic [ref=e716]:
+                          - text: This will be a gift
+                          - link "This is a gift Learn more" [ref=e718] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=ord_cart_shr?pop-up=1&nodeId=200507630
+                            - generic [ref=e719]:
+                              - generic [ref=e720]: This is a gift
+                              - text: Learn more
+                      - generic [ref=e721]: "Size: 8 UK"
+                      - generic [ref=e722]: "Colour: White/Pure Platinum/Black"
+                    - generic [ref=e723]:
+                      - group "Quantity is 1" [ref=e726]:
+                        - generic [ref=e727]: Quantity is 1
+                        - generic [ref=e729]:
+                          - button "Delete Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e730] [cursor=pointer]
+                          - generic [ref=e734]: "1"
+                          - generic [ref=e736]: "1"
+                          - button "Increase quantity by one Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e737] [cursor=pointer]
+                      - button "Delete Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e741] [cursor=pointer]: Delete
+                      - button "Save for later Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e744] [cursor=pointer]: Save for later
+                      - button "See more like this Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e747] [cursor=pointer]: See more like this
+                      - link "Share Nike Men Run Defy White/Pure Platinum-Black Running Shoes 8 UK" [ref=e750] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Share
+            - generic [ref=e752]:
+              - text: "Subtotal (1 item):"
+              - generic [ref=e753]: ₹3,995.00
+        - generic [ref=e757]:
+          - paragraph [ref=e759]: The price and availability of items at Amazon.in are subject to change. The shopping cart is a temporary place to store a list of your items and reflects each item's most recent price.
+          - paragraph [ref=e760]: Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.
+  - group [ref=e768]:
+    - generic [ref=e771]:
+      - heading "Customers Who Bought Nike Mens Run Defy Running Shoes Also Bought" [level=2] [ref=e773]
+      - generic [ref=e776]: Page 1 of 4
+    - generic [ref=e778]:
+      - button "Previous set of slides" [ref=e780] [cursor=pointer]:
+        - generic [ref=e783]: Previous set of slides
+      - group [ref=e785]:
+        - list [ref=e786]:
+          - listitem [ref=e787]:
+            - generic [ref=e789]:
+              - link [ref=e790] [cursor=pointer]:
+                - /url: /Nike-Women-Black-Bright-Violet-Sapphire-Running/dp/B0FBWRSXSN/ref=pd_cart_crc_cko_mrai_d_sccl_2_1/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBWRSXSN&psc=1
+                - img [ref=e792]
+              - generic [ref=e794]:
+                - link "Nike Womens Run Defy Running Shoes" [ref=e795] [cursor=pointer]:
+                  - /url: /Nike-Women-Black-Bright-Violet-Sapphire-Running/dp/B0FBWRSXSN/ref=pd_cart_crc_cko_mrai_d_sccl_2_1/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBWRSXSN&psc=1
+                  - generic [ref=e797]: Nike Womens Run Defy Running Shoes
+                - link "4.4 out of 5 stars, 75 ratings" [ref=e800] [cursor=pointer]:
+                  - /url: /product-reviews/B0FBWRSXSN/ref=pd_cart_crc_cko_mrai_d_sccl_2_1_cr/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBWRSXSN
+                  - generic [ref=e802]: 4.4 out of 5 stars
+                  - text: "75"
+                - generic [ref=e805]: 400+ viewed in past month
+                - generic [ref=e806]:
+                  - generic [ref=e808]:
+                    - generic [ref=e809]:
+                      - link "-20%" [ref=e810] [cursor=pointer]:
+                        - /url: /Nike-Women-Black-Bright-Violet-Sapphire-Running/dp/B0FBWRSXSN/ref=pd_cart_crc_cko_mrai_d_sccl_2_1/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBWRSXSN&psc=1
+                        - text: "-20%"
+                      - link "₹3,196.00" [ref=e811] [cursor=pointer]:
+                        - /url: /Nike-Women-Black-Bright-Violet-Sapphire-Running/dp/B0FBWRSXSN/ref=pd_cart_crc_cko_mrai_d_sccl_2_1/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBWRSXSN&psc=1
+                        - generic [ref=e812]:
+                          - generic [ref=e813]: ₹3,196.00
+                          - generic [ref=e814]:
+                            - text: ₹
+                            - generic [ref=e815]:
+                              - text: 3,196
+                              - generic [ref=e816]: .
+                            - text: "00"
+                    - generic [ref=e819]: Limited time deal
+                    - 'link "M.R.P: ₹3,995.00" [ref=e821] [cursor=pointer]':
+                      - /url: /Nike-Women-Black-Bright-Violet-Sapphire-Running/dp/B0FBWRSXSN/ref=pd_cart_crc_cko_mrai_d_sccl_2_1/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FBWRSXSN&psc=1
+                      - generic [ref=e823]: "M.R.P: ₹3,995.00"
+                  - generic [ref=e825]: Get it by Saturday, April 25
+                - text: FREE Delivery by Amazon
+              - generic [ref=e833] [cursor=pointer]:
+                - button "Add to cart, Nike Womens Run Defy Running Shoes" [ref=e834]
+                - generic [ref=e835]: Add to cart
+          - listitem [ref=e836]:
+            - generic [ref=e838]:
+              - link [ref=e839] [cursor=pointer]:
+                - /url: /Puma-Mens-Poly-Galactic-67742769/dp/B0CL9HFSXR/ref=pd_cart_crc_cko_mrai_d_sccl_2_2/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0DP95RGKY&psc=1
+                - img [ref=e841]
+              - generic [ref=e843]:
+                - link "Puma Men's Polyster Active Tracksuit | Lightweight Polyester Full-Zip Jacket & Track Pants Set for Men" [ref=e844] [cursor=pointer]:
+                  - /url: /Puma-Mens-Poly-Galactic-67742769/dp/B0CL9HFSXR/ref=pd_cart_crc_cko_mrai_d_sccl_2_2/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0DP95RGKY&psc=1
+                  - generic [ref=e846]: Puma Men's Polyster Active Tracksuit | Lightweight Polyester Full-Zip Jacket & Track Pants Set for Men
+                - link "4.1 out of 5 stars, 691 ratings" [ref=e849] [cursor=pointer]:
+                  - /url: /product-reviews/B0DP95RGKY/ref=pd_cart_crc_cko_mrai_d_sccl_2_2_cr/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0DP95RGKY
+                  - generic [ref=e851]: 4.1 out of 5 stars
+                  - text: "691"
+                - generic [ref=e854]: 900+ viewed in past month
+                - link "₹2,322.80 ₹2,369.00" [ref=e859] [cursor=pointer]:
+                  - /url: /Puma-Mens-Poly-Galactic-67742769/dp/B0CL9HFSXR/ref=pd_cart_crc_cko_mrai_d_sccl_2_2/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0DP95RGKY&psc=1
+                  - generic:
+                    - generic [ref=e860]:
+                      - generic [ref=e861]: ₹2,322.80
+                      - generic [ref=e862]:
+                        - text: ₹
+                        - generic [ref=e863]:
+                          - text: 2,322
+                          - generic [ref=e864]: .
+                        - text: "80"
+                    - text: "-"
+                    - generic [ref=e865]:
+                      - generic [ref=e866]: ₹2,369.00
+                      - generic [ref=e867]:
+                        - text: ₹
+                        - generic [ref=e868]:
+                          - text: 2,369
+                          - generic [ref=e869]: .
+                        - text: "00"
+              - link "See all buying options" [ref=e875] [cursor=pointer]:
+                - /url: /Puma-Mens-Poly-Galactic-67742769/dp/B0CL9HFSXR/ref=pd_cart_crc_cko_mrai_d_sccl_2_2_atc_o/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0DP95RGKY&psc=1
+          - listitem [ref=e876]:
+            - generic [ref=e878]:
+              - link [ref=e879] [cursor=pointer]:
+                - /url: /ASICS-Mens-FLEXC-Black-Sneakers/dp/B0DS65Y3QQ/ref=pd_cart_crc_cko_mrai_d_sccl_2_3/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B09Y397X5F&psc=1
+                - img [ref=e881]
+              - generic [ref=e883]:
+                - link "ASICS Men's Flex C Sports Running Shoe 1201A275" [ref=e884] [cursor=pointer]:
+                  - /url: /ASICS-Mens-FLEXC-Black-Sneakers/dp/B0DS65Y3QQ/ref=pd_cart_crc_cko_mrai_d_sccl_2_3/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B09Y397X5F&psc=1
+                  - generic [ref=e886]: ASICS Men's Flex C Sports Running Shoe 1201A275
+                - link "3.5 out of 5 stars, 135 ratings" [ref=e889] [cursor=pointer]:
+                  - /url: /product-reviews/B09Y397X5F/ref=pd_cart_crc_cko_mrai_d_sccl_2_3_cr/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B09Y397X5F
+                  - generic [ref=e891]: 3.5 out of 5 stars
+                  - text: "135"
+                - generic [ref=e894]: 1K+ viewed in past month
+                - link "₹2,664.00" [ref=e899] [cursor=pointer]:
+                  - /url: /ASICS-Mens-FLEXC-Black-Sneakers/dp/B0DS65Y3QQ/ref=pd_cart_crc_cko_mrai_d_sccl_2_3/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B09Y397X5F&psc=1
+                  - generic [ref=e900]:
+                    - generic [ref=e901]: ₹2,664.00
+                    - generic [ref=e902]:
+                      - text: ₹
+                      - generic [ref=e903]:
+                        - text: 2,664
+                        - generic [ref=e904]: .
+                      - text: "00"
+              - link "See all buying options" [ref=e910] [cursor=pointer]:
+                - /url: /ASICS-Mens-FLEXC-Black-Sneakers/dp/B0DS65Y3QQ/ref=pd_cart_crc_cko_mrai_d_sccl_2_3_atc_o/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B09Y397X5F&psc=1
+          - listitem [ref=e911]:
+            - generic [ref=e913]:
+              - link [ref=e914] [cursor=pointer]:
+                - /url: /Reebok-Zig-Titanica-Lite-Running/dp/B0FL76G55T/ref=pd_cart_crc_cko_mrai_d_sccl_2_4/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FN9FTD1F&psc=1
+                - img [ref=e916]
+              - generic [ref=e918]:
+                - link "Reebok Men's Running Shoes - Zig Titanica Lite - Gym & Running Shoes for Men with Comfortable Support" [ref=e919] [cursor=pointer]:
+                  - /url: /Reebok-Zig-Titanica-Lite-Running/dp/B0FL76G55T/ref=pd_cart_crc_cko_mrai_d_sccl_2_4/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FN9FTD1F&psc=1
+                  - generic [ref=e921]: Reebok Men's Running Shoes - Zig Titanica Lite - Gym & Running Shoes for Men with Comfortable Support
+                - link "4.2 out of 5 stars, 137 ratings" [ref=e924] [cursor=pointer]:
+                  - /url: /product-reviews/B0FN9FTD1F/ref=pd_cart_crc_cko_mrai_d_sccl_2_4_cr/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FN9FTD1F
+                  - generic [ref=e926]: 4.2 out of 5 stars
+                  - text: "137"
+                - generic [ref=e929]: 6K+ viewed in past month
+                - link "₹2,921.65 ₹3,239.00" [ref=e934] [cursor=pointer]:
+                  - /url: /Reebok-Zig-Titanica-Lite-Running/dp/B0FL76G55T/ref=pd_cart_crc_cko_mrai_d_sccl_2_4/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FN9FTD1F&psc=1
+                  - generic:
+                    - generic [ref=e935]:
+                      - generic [ref=e936]: ₹2,921.65
+                      - generic [ref=e937]:
+                        - text: ₹
+                        - generic [ref=e938]:
+                          - text: 2,921
+                          - generic [ref=e939]: .
+                        - text: "65"
+                    - text: "-"
+                    - generic [ref=e940]:
+                      - generic [ref=e941]: ₹3,239.00
+                      - generic [ref=e942]:
+                        - text: ₹
+                        - generic [ref=e943]:
+                          - text: 3,239
+                          - generic [ref=e944]: .
+                        - text: "00"
+              - link "See all buying options" [ref=e950] [cursor=pointer]:
+                - /url: /Reebok-Zig-Titanica-Lite-Running/dp/B0FL76G55T/ref=pd_cart_crc_cko_mrai_d_sccl_2_4_atc_o/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FN9FTD1F&psc=1
+          - listitem [ref=e951]:
+            - generic [ref=e953]:
+              - link [ref=e954] [cursor=pointer]:
+                - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3RS72G/ref=pd_cart_crc_cko_mrai_d_sccl_2_5/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FC3RS72G&psc=1
+                - img [ref=e956]
+              - generic [ref=e958]:
+                - link "Nike Mens M Promina Walking Shoes" [ref=e959] [cursor=pointer]:
+                  - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3RS72G/ref=pd_cart_crc_cko_mrai_d_sccl_2_5/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FC3RS72G&psc=1
+                  - generic [ref=e961]: Nike Mens M Promina Walking Shoes
+                - link "4.1 out of 5 stars, 477 ratings" [ref=e964] [cursor=pointer]:
+                  - /url: /product-reviews/B0FC3RS72G/ref=pd_cart_crc_cko_mrai_d_sccl_2_5_cr/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FC3RS72G
+                  - generic [ref=e966]: 4.1 out of 5 stars
+                  - text: "477"
+                - generic [ref=e969]: 1K+ viewed in past month
+                - generic [ref=e970]:
+                  - generic [ref=e972]:
+                    - generic [ref=e973]:
+                      - link "-20%" [ref=e974] [cursor=pointer]:
+                        - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3RS72G/ref=pd_cart_crc_cko_mrai_d_sccl_2_5/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FC3RS72G&psc=1
+                        - text: "-20%"
+                      - link "₹3,996.00" [ref=e975] [cursor=pointer]:
+                        - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3RS72G/ref=pd_cart_crc_cko_mrai_d_sccl_2_5/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FC3RS72G&psc=1
+                        - generic [ref=e976]:
+                          - generic [ref=e977]: ₹3,996.00
+                          - generic [ref=e978]:
+                            - text: ₹
+                            - generic [ref=e979]:
+                              - text: 3,996
+                              - generic [ref=e980]: .
+                            - text: "00"
+                    - generic [ref=e983]: Limited time deal
+                    - 'link "M.R.P: ₹4,995.00" [ref=e985] [cursor=pointer]':
+                      - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3RS72G/ref=pd_cart_crc_cko_mrai_d_sccl_2_5/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0FC3RS72G&psc=1
+                      - generic [ref=e987]: "M.R.P: ₹4,995.00"
+                  - generic [ref=e989]: Get it by Wednesday, April 22
+                - text: FREE Delivery by Amazon
+              - generic [ref=e997] [cursor=pointer]:
+                - button "Add to cart, Nike Mens M Promina Walking Shoes" [ref=e998]
+                - generic [ref=e999]: Add to cart
+          - listitem [ref=e1000]:
+            - generic [ref=e1002]:
+              - link [ref=e1003] [cursor=pointer]:
+                - /url: /Fitness-Mantra%C2%AE-Sports-Breathable-Multicolor/dp/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB&psc=1
+                - img [ref=e1005]
+              - generic [ref=e1007]:
+                - link "Fitness Mantra® 12 Pairs Sports Ankle Cotton Socks | Free Size| Breathable| Daily Use| Multicolor| 12 Pairs|" [ref=e1008] [cursor=pointer]:
+                  - /url: /Fitness-Mantra%C2%AE-Sports-Breathable-Multicolor/dp/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB&psc=1
+                  - generic [ref=e1010]: Fitness Mantra® 12 Pairs Sports Ankle Cotton Socks | Free Size| Breathable| Daily Use| Multicolor| 12 Pairs|
+                - link "4.0 out of 5 stars, 4,962 ratings" [ref=e1013] [cursor=pointer]:
+                  - /url: /product-reviews/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6_cr/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB
+                  - generic [ref=e1015]: 4.0 out of 5 stars
+                  - text: 4,962
+                - generic [ref=e1018]: 5K+ viewed in past month
+                - generic [ref=e1019]:
+                  - link "#1 Best Seller":
+                    - /url: /gp/bestsellers/apparel/92073715031/ref=zg_b_bs_92073715031_1/ref=pd_cart_crc_cko_mrai_d_sccl_2_6_bsb/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB
+                    - generic [ref=e1023] [cursor=pointer]: "#1 Best Seller"
+                - generic [ref=e1024]:
+                  - generic [ref=e1026]:
+                    - generic [ref=e1027]:
+                      - link "-80%" [ref=e1028] [cursor=pointer]:
+                        - /url: /Fitness-Mantra%C2%AE-Sports-Breathable-Multicolor/dp/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB&psc=1
+                        - text: "-80%"
+                      - link "₹198.00" [ref=e1029] [cursor=pointer]:
+                        - /url: /Fitness-Mantra%C2%AE-Sports-Breathable-Multicolor/dp/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB&psc=1
+                        - generic [ref=e1030]:
+                          - generic [ref=e1031]: ₹198.00
+                          - generic [ref=e1032]:
+                            - text: ₹
+                            - generic [ref=e1033]:
+                              - text: "198"
+                              - generic [ref=e1034]: .
+                            - text: "00"
+                      - link "(₹16.50/pack)" [ref=e1035] [cursor=pointer]:
+                        - /url: /Fitness-Mantra%C2%AE-Sports-Breathable-Multicolor/dp/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB&psc=1
+                    - generic [ref=e1038]: Limited time deal
+                    - 'link "M.R.P: ₹999.00" [ref=e1040] [cursor=pointer]':
+                      - /url: /Fitness-Mantra%C2%AE-Sports-Breathable-Multicolor/dp/B0CTQ4RSMB/ref=pd_cart_crc_cko_mrai_d_sccl_2_6/523-8135897-3428603?pd_rd_w=uT25F&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=Z6NVTREZZKDVQ05WYXWT&pd_rd_wg=bDIDm&pd_rd_r=ef8b5a94-afb7-4456-9b73-bfaebccccd22&pd_rd_i=B0CTQ4RSMB&psc=1
+                      - generic [ref=e1042]: "M.R.P: ₹999.00"
+                  - generic [ref=e1044]: Get it by Wednesday, April 22
+                - text: FREE Delivery by Amazon
+              - generic [ref=e1052] [cursor=pointer]:
+                - button "Add to cart, Fitness Mantra® 12 Pairs Sports Ankle Cotton Socks | Free Size| Breathable| Daily Use| Multicolor| 12 Pairs|" [ref=e1053]
+                - generic [ref=e1054]: Add to cart
+      - button "Next set of slides" [ref=e1056] [cursor=pointer]:
+        - generic [ref=e1059]: Next set of slides
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e1060]:
+    - button "Back to top" [ref=e1061] [cursor=pointer]:
+      - generic [ref=e1062]: Back to top
+    - generic [ref=e1063]:
+      - generic [ref=e1064]:
+        - heading "Get to Know Us" [level=6] [ref=e1065]
+        - list [ref=e1066]:
+          - listitem [ref=e1067]:
+            - link "About Amazon" [ref=e1068] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1069]:
+            - link "Careers" [ref=e1070] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e1071]:
+            - link "Press Releases" [ref=e1072] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1073]:
+            - link "Amazon Science" [ref=e1074] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e1076]:
+        - heading "Connect with Us" [level=6] [ref=e1077]
+        - list [ref=e1078]:
+          - listitem [ref=e1079]:
+            - link "Facebook" [ref=e1080] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e1081]:
+            - link "Twitter" [ref=e1082] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e1083]:
+            - link "Instagram" [ref=e1084] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e1086]:
+        - heading "Make Money with Us" [level=6] [ref=e1087]
+        - list [ref=e1088]:
+          - listitem [ref=e1089]:
+            - link "Sell on Amazon" [ref=e1090] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e1091]:
+            - link "Sell under Amazon Accelerator" [ref=e1092] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e1093]:
+            - link "Protect and Build Your Brand" [ref=e1094] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e1095]:
+            - link "Amazon Global Selling" [ref=e1096] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e1097]:
+            - link "Supply to Amazon" [ref=e1098] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e1099]:
+            - link "Become an Affiliate" [ref=e1100] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e1101]:
+            - link "Fulfilment by Amazon" [ref=e1102] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e1103]:
+            - link "Advertise Your Products" [ref=e1104] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e1105]:
+            - link "Amazon Pay on Merchants" [ref=e1106] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e1108]:
+        - heading "Let Us Help You" [level=6] [ref=e1109]
+        - list [ref=e1110]:
+          - listitem [ref=e1111]:
+            - link "Your Account" [ref=e1112] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e1113]:
+            - link "Returns Centre" [ref=e1114] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1115]:
+            - link "Recalls and Product Safety Alerts" [ref=e1116] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e1117]:
+            - link "100% Purchase Protection" [ref=e1118] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e1119]:
+            - link "Amazon App Download" [ref=e1120] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e1121]:
+            - link "Help" [ref=e1122] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e1124]:
+      - link "Amazon India Home" [ref=e1127] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e1130]:
+        - generic [ref=e1131]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e1132] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e1134]: English
+          - button "Expand to Change Language or Country" [ref=e1135] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e1136] [cursor=pointer]:
+          - generic [ref=e1138]: India
+    - generic "More on Amazon" [ref=e1139]:
+      - generic "More on Amazon" [ref=e1140]:
+        - list [ref=e1141]:
+          - listitem [ref=e1142]:
+            - link "AbeBooks Books, art & collectibles" [ref=e1143] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e1144]
+              - generic [ref=e1145]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e1146]
+          - listitem [ref=e1147]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e1148] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e1149]
+              - generic [ref=e1150]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e1151]
+          - listitem [ref=e1152]:
+            - link "Audible Download Audio Books" [ref=e1153] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e1154]
+              - generic [ref=e1155]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e1156]
+          - listitem [ref=e1157]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e1158] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e1159]
+              - generic [ref=e1160]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e1161]:
+          - listitem [ref=e1162]:
+            - link "Shopbop Designer Fashion Brands" [ref=e1163] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e1164]
+              - generic [ref=e1165]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e1166]
+          - listitem [ref=e1167]:
+            - link "Amazon Business Everything For Your Business" [ref=e1168] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e1169]
+              - generic [ref=e1170]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e1171]
+          - listitem [ref=e1172]:
+            - link "Amazon Prime Music 100 million songs, ad-free Over 15 million podcast episodes" [ref=e1173] [cursor=pointer]:
+              - /url: /music/prime?ref=footer_apm
+              - heading "Amazon Prime Music" [level=5] [ref=e1174]
+              - generic [ref=e1175]:
+                - text: 100 million songs, ad-free
+                - text: Over 15 million podcast episodes
+          - listitem [ref=e1176]
+          - listitem [ref=e1177]
+    - generic [ref=e1178]:
+      - list [ref=e1179]:
+        - listitem [ref=e1180]:
+          - link "Conditions of Use & Sale" [ref=e1181] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e1182]:
+          - link "Privacy Notice" [ref=e1183] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e1184]:
+          - link "Interest-Based Ads" [ref=e1185] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e1186]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=e1188]:
+    - iframe [ref=f7e2]:
+      - generic [active]:
+        - img [ref=f8e1]
+        - img [ref=f8e2]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('E-commerce product search and add to cart', async ({ page, context }) => {
+  4  | 
+  5  |   // Step 1: Open Amazon
+  6  |   await page.goto('https://www.amazon.in/');
+  7  | 
+  8  |   // Step 2: Search for product
+  9  |   await page.getByPlaceholder('Search Amazon.in').fill('Nike shoes');
+  10 |   await page.keyboard.press('Enter'); // ✅ avoids "Go button" issue
+  11 | 
+  12 |   // Step 3: Verify search results page loaded
+  13 |   await expect(page).toHaveTitle(/Amazon/);
+  14 | 
+  15 |   // Step 4: Click first product
+  16 |   const firstProduct = page.locator('div[data-component-type="s-search-result"]').first();
+  17 |   await firstProduct.click();
+  18 | 
+  19 |   // Step 5: Handle new tab
+> 20 |   const newPage = await context.waitForEvent('page');
+     |                                 ^ Error: browserContext.waitForEvent: Test timeout of 30000ms exceeded.
+  21 |   await newPage.waitForLoadState();
+  22 | 
+  23 |   // Step 6: Click Add to Cart
+  24 |   await newPage.getByRole('button', { name: 'Add to Cart' }).click();
+  25 | 
+  26 |   // Step 7: Verify item added
+  27 |   await expect(newPage.getByText('Added to Cart')).toBeVisible();
+  28 | 
+  29 | });
+```

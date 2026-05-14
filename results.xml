@@ -1,0 +1,81 @@
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="14.306059999999999">
+<testsuite name="report.spec.js" timestamp="2026-05-11T06:22:05.650Z" hostname="chromium" tests="3" failures="1" skipped="0" time="11.919" errors="0">
+<testcase name="Amazon" classname="report.spec.js" time="1.33">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\report-Amazon-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\report-Amazon-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\report-Amazon-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Flipkart" classname="report.spec.js" time="3.652">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\report-Flipkart-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\report-Flipkart-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\report-Flipkart-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Demo Blaze" classname="report.spec.js" time="6.937">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\report-Demo-Blaze-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\report-Demo-Blaze-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\report-Demo-Blaze-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\report-Demo-Blaze-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  [chromium] › report.spec.js:15:1 › Demo Blaze ────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected: "STOE"
+    Received: "STORE"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        9 × unexpected value "STORE"
+
+
+      16 |
+      17 |     await page.goto('https://demoblaze.com/');
+    > 18 |     await expect(page).toHaveTitle('STOE');
+         |                        ^
+      19 | })
+      20 |
+      21 |
+        at G:\newPW\tests\report.spec.js:18:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\report-Demo-Blaze-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\report-Demo-Blaze-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\report-Demo-Blaze-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\report-Demo-Blaze-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\report-Demo-Blaze-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>

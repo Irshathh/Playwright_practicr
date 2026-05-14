@@ -1,0 +1,928 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: screenshot.spec.js >> Element Screenshot
+- Location: tests\screenshot.spec.js:20:6
+
+# Error details
+
+```
+Error: locator.screenshot: Error: strict mode violation: locator('//div[@class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr"]') resolved to 20 elements:
+    1) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'ACs' })
+    2) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Refrigerators' })
+    3) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Microwaves' })
+    4) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Washing machines' })
+    5) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Cushion covers, bedsheets &' })
+    6) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Figurines, vases & more' })
+    7) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Home storage' })
+    8) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Lighting solutions' })
+    9) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Cleaning' })
+    10) <div class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr">…</div> aka getByRole('link', { name: 'Bath accessories' })
+    ...
+
+Call log:
+  - waiting for locator('//div[@class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr"]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+    - separator [ref=e8]
+    - heading "Keyboard shortcuts" [level=2] [ref=e9]
+    - list "Keyboard shortcuts" [ref=e10]:
+      - listitem [ref=e11]:
+        - link "Search, alt, forward slash" [ref=e12] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e13]:
+            - generic [ref=e14]: Search
+            - generic [ref=e15]:
+              - generic [ref=e16]: alt
+              - generic [ref=e17]: +
+              - generic [ref=e18]: /
+      - listitem [ref=e19]:
+        - link "Cart, shift, alt, c" [ref=e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e21]:
+            - generic [ref=e22]: Cart
+            - generic [ref=e23]:
+              - generic [ref=e24]: shift
+              - generic [ref=e25]: +
+              - generic [ref=e26]: alt
+              - generic [ref=e27]: +
+              - generic [ref=e28]: C
+      - listitem [ref=e29]:
+        - link "Home, shift, alt, h" [ref=e30] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e31]:
+            - generic [ref=e32]: Home
+            - generic [ref=e33]:
+              - generic [ref=e34]: shift
+              - generic [ref=e35]: +
+              - generic [ref=e36]: alt
+              - generic [ref=e37]: +
+              - generic [ref=e38]: H
+      - listitem [ref=e39]:
+        - link "Your orders, shift, alt, o" [ref=e40] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e41]:
+            - generic [ref=e42]: Orders
+            - generic [ref=e43]:
+              - generic [ref=e44]: shift
+              - generic [ref=e45]: +
+              - generic [ref=e46]: alt
+              - generic [ref=e47]: +
+              - generic [ref=e48]: O
+      - listitem [ref=e49]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Show/Hide shortcuts
+            - generic [ref=e53]:
+              - generic [ref=e54]: shift
+              - generic [ref=e55]: +
+              - generic [ref=e56]: alt
+              - generic [ref=e57]: +
+              - generic [ref=e58]: Z
+    - generic [ref=e64]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e65]:
+    - navigation "Primary" [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - link "Amazon.in" [ref=e70] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Chennai 600041 Update location" [ref=e73] [cursor=pointer]:
+            - generic [ref=e75]:
+              - generic [ref=e76]: Delivering to Chennai 600041
+              - generic [ref=e77]: Update location
+        - search [ref=e80]:
+          - generic [ref=e83]:
+            - generic [ref=e85]: All
+            - combobox "Select the department you want to search in" [ref=e87] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e90]
+          - generic "Go" [ref=e93] [cursor=pointer]:
+            - button "Go" [ref=e94]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e98] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e101]:
+                - img "India" [ref=e102]
+                - generic [ref=e103]: EN
+            - button "Expand to Change Language or Country" [ref=e104] [cursor=pointer]
+          - generic [ref=e105]:
+            - link "Hello, sign in Account & Lists" [ref=e106] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e108]: Hello, sign in
+              - generic [ref=e109]: Account & Lists
+            - button "Expand Account and Lists" [ref=e110] [cursor=pointer]
+          - link "Returns & Orders" [ref=e111] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e112]: Returns
+            - generic [ref=e113]: "& Orders"
+          - link "0 items in cart" [ref=e114] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e116]: "0"
+            - generic [ref=e119]: Cart
+      - generic [ref=e120]:
+        - button "Open All Categories Menu" [ref=e122] [cursor=pointer]:
+          - generic [ref=e124]: All
+        - list [ref=e128]:
+          - listitem [ref=e129]:
+            - link "Fresh" [ref=e131] [cursor=pointer]:
+              - /url: /fresh?ref_=nav_cs_fresh
+          - listitem [ref=e132]:
+            - link "MX Player" [ref=e134] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e135]:
+            - link "Sell" [ref=e137] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e138]:
+            - link "Bestsellers" [ref=e140] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e141]:
+            - link "Mobiles" [ref=e143] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e144]:
+            - link "Today's Deals" [ref=e146] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e147]:
+            - link "Customer Service" [ref=e149] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e150]:
+            - link "New Releases" [ref=e152] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e153]:
+            - generic [ref=e154]:
+              - link "Prime" [ref=e155] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e156] [cursor=pointer]
+          - listitem [ref=e157]:
+            - link "Amazon Pay" [ref=e159] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e160]:
+            - link "Electronics" [ref=e162] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e163]:
+            - link "Fashion" [ref=e165] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e166]:
+            - link "Home & Kitchen" [ref=e168] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e169]:
+            - link "Computers" [ref=e171] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e172]:
+            - link "Books" [ref=e174] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e175]:
+            - link "Toys & Games" [ref=e177] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e178]:
+            - link "Gift Cards" [ref=e180] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e181]:
+            - link "Beauty & Personal Care" [ref=e183] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e184]:
+            - link "Car & Motorbike" [ref=e186] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e187]:
+            - link "Home Improvement" [ref=e189] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e190]:
+            - link "Custom Products" [ref=e192] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e193]:
+            - link "Sports, Fitness & Outdoors" [ref=e195] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e196]:
+            - link "Health, Household & Personal Care" [ref=e198] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e199]:
+            - link "Grocery & Gourmet Foods" [ref=e201] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e202]:
+            - link "Pet Supplies" [ref=e204] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e205]:
+            - link "Baby" [ref=e207] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e208]:
+            - link "Video Games" [ref=e210] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e211]:
+            - link "AmazonBasics" [ref=e213] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e214]:
+            - link "Audible" [ref=e216] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e217]:
+            - link "Subscribe & Save" [ref=e219] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e220]:
+            - link "Kindle eBooks" [ref=e222] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e223]:
+            - link "Flights" [ref=e225] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+        - link "Jan26_Event" [ref=e229] [cursor=pointer]:
+          - /url: /events/greatsummersale/?_encoding=UTF8&ref_=nav_swm_event&pf_rd_p=5b0cae96-094f-4960-87ea-c493b25457f0&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=A21TJRUUN4KGV&pf_rd_r=B20T3BP4FAFRBR46Z9J7
+          - img "Jan26_Event" [ref=e230]
+  - main [ref=e232]:
+    - banner [ref=e234]:
+      - region "Featured content" [ref=e235]:
+        - list [ref=e240]:
+          - listitem [ref=e241]:
+            - link "Great Summer Sale" [ref=e244] [cursor=pointer]:
+              - /url: /events/greatsummersale/?_encoding=UTF8&ref_=DRQC1&pd_rd_w=6ZkaC&content-id=amzn1.sym.58084d0e-2d11-4657-97ac-fed92201bfd0&pf_rd_p=58084d0e-2d11-4657-97ac-fed92201bfd0&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=V54X8&pd_rd_r=69714165-59cd-4e55-8ad5-3531422f2cb9
+              - img "Great Summer Sale" [ref=e245]
+    - generic [ref=e246]:
+      - generic [ref=e247]:
+        - generic [ref=e249]:
+          - heading "Appliances for your home | Up to 55% off" [level=2] [ref=e251]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - link "ACs" [ref=e255] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&bbn=81107432031&rh=n%3A81107432031%2Cp_85%3A10440599031&pd_rd_w=iRip7&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "ACs" [ref=e257]
+                - generic [ref=e259]: Air conditioners
+              - link "Refrigerators" [ref=e261] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&bbn=81107433031&rh=n%3A81107433031%2Cp_85%3A10440599031&pd_rd_w=iRip7&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Refrigerators" [ref=e263]
+                - generic [ref=e265]: Refrigerators
+            - generic [ref=e266]:
+              - link "Microwaves" [ref=e268] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&bbn=84514739031&rh=n%3A84514739031%2Cp_85%3A10440599031&pd_rd_w=iRip7&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Microwaves" [ref=e270]
+                - generic [ref=e272]: Microwaves
+              - link "Washing machines" [ref=e274] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&bbn=84514752031&rh=n%3A84514752031%2Cp_85%3A10440599031&pd_rd_w=iRip7&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Washing machines" [ref=e276]
+                - generic [ref=e278]: Washing machines
+          - link "Appliances for your home | Up to 55% off - See more" [ref=e280] [cursor=pointer]:
+            - /url: /s/?_encoding=UTF8&bbn=84514735031&rh=n%3A84514735031%2Cp_85%3A10440599031&pd_rd_w=iRip7&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+            - generic [ref=e281]:
+              - generic [ref=e282]: See more
+              - generic [ref=e283]: See more
+        - generic [ref=e285]:
+          - heading "Revamp your home in style" [level=2] [ref=e287]
+          - generic [ref=e288]:
+            - generic [ref=e289]:
+              - link "Cushion covers, bedsheets & more" [ref=e291] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&node=1380442031&pd_rd_w=FMfRB&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Cushion covers, bedsheets & more" [ref=e293]
+                - generic [ref=e295]: Cushion covers, bedsheets & more
+              - link "Figurines, vases & more" [ref=e297] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&node=1380374031&pd_rd_w=FMfRB&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Figurines, vases & more" [ref=e299]
+                - generic [ref=e301]: Figurines, vases & more
+            - generic [ref=e302]:
+              - link "Home storage" [ref=e304] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&node=1380510031&pd_rd_w=FMfRB&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Home storage" [ref=e306]
+                - generic [ref=e308]: Home storage
+              - link "Lighting solutions" [ref=e310] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&node=1380485031&pd_rd_w=FMfRB&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Lighting solutions" [ref=e312]
+                - generic [ref=e314]: Lighting solutions
+          - link "Revamp your home in style - Explore all" [ref=e316] [cursor=pointer]:
+            - /url: /b/?_encoding=UTF8&node=12414705031&pd_rd_w=FMfRB&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+            - generic [ref=e317]:
+              - generic [ref=e318]: Explore all
+              - generic [ref=e319]: Explore all
+        - generic [ref=e321]:
+          - heading "Starting ₹49 | Deals on home essentials" [level=2] [ref=e323]
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - link "Cleaning" [ref=e327] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&i=home-improvement&bbn=61028133031&rh=n%3A61028133031%2Cp_72%3A1318476031%2Cp_36%3A-19900&_encoding=UTF8&qid=1714749719&rnid=3444809031&ref=sr_nr_p_36_3&pd_rd_w=GaEPk&content-id=amzn1.sym.2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_p=2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Cleaning" [ref=e329]
+                - generic [ref=e331]: Cleaning supplies
+              - link "Bath accessories" [ref=e333] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&i=home-improvement&rh=n%3A60834830031%2Cp_36%3A-39900%2Cp_72%3A1318476031&dc=&fs=true&qid=1714744556&rnid=1318475031&ref=sr_nr_p_72_1&ds=v1%3AObcyf9vB3S72PU7NAfGZ%2FbllKjFxF%2BIh8NlJQg5c1A8%22&pd_rd_w=GaEPk&content-id=amzn1.sym.2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_p=2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Bath accessories" [ref=e335]
+                - generic [ref=e337]: Bathroom accessories
+            - generic [ref=e338]:
+              - link "Home tools" [ref=e340] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&i=home-improvement&rh=n%3A95174669031%2Cp_36%3A3444810031%2Cp_72%3A1318476031&pd_rd_w=GaEPk&content-id=amzn1.sym.2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_p=2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Home tools" [ref=e342]
+                - generic [ref=e344]: Home tools
+              - link "Wallpapers" [ref=e346] [cursor=pointer]:
+                - /url: /s/?_encoding=UTF8&i=home-improvement&rh=n%3A87322479031%2Cp_36%3A-29900%2Cp_72%3A1318476031&dc=&fs=true&qid=1714750891&rnid=1318475031&ref=sr_nr_p_72_1&ds=v1%3AKT2aFWvve4xsaDjrU17ctKHJFfdbS%2FW1Ex2L5A6belw&pd_rd_w=GaEPk&content-id=amzn1.sym.2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_p=2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Wallpapers" [ref=e348]
+                - generic [ref=e350]: Wallpapers
+          - link "Starting ₹49 | Deals on home essentials - Explore all" [ref=e352] [cursor=pointer]:
+            - /url: /b/?_encoding=UTF8&node=4286640031&pd_rd_w=GaEPk&content-id=amzn1.sym.2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_p=2eab8373-f2e6-4b01-97aa-c5592db6ec60&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+            - generic [ref=e353]:
+              - generic [ref=e354]: Explore all
+              - generic [ref=e355]: Explore all
+        - generic [ref=e357]:
+          - heading "Bulk order discounts + Up to 18% GST savings" [level=2] [ref=e359]
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - link "Up to 45% off | Laptops" [ref=e363] [cursor=pointer]:
+                - /url: /b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=2QIz5&content-id=amzn1.sym.73333962-bf52-455e-9970-7ac1801ca224&pf_rd_p=73333962-bf52-455e-9970-7ac1801ca224&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Up to 45% off | Laptops" [ref=e365]
+                - generic [ref=e367]: Up to 45% off | Laptops
+              - link "Up to 60% off | Kitchen appliances" [ref=e369] [cursor=pointer]:
+                - /url: /b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=2QIz5&content-id=amzn1.sym.73333962-bf52-455e-9970-7ac1801ca224&pf_rd_p=73333962-bf52-455e-9970-7ac1801ca224&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Up to 60% off | Kitchen appliances" [ref=e371]
+                - generic [ref=e373]: Up to 60% off | Kitchen appliances
+            - generic [ref=e374]:
+              - link "Min. 50% off | Office furniture" [ref=e376] [cursor=pointer]:
+                - /url: /b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=2QIz5&content-id=amzn1.sym.73333962-bf52-455e-9970-7ac1801ca224&pf_rd_p=73333962-bf52-455e-9970-7ac1801ca224&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "Min. 50% off | Office furniture" [ref=e378]
+                - generic [ref=e380]: Min. 50% off | Office furniture
+              - link "For Business Purchases" [ref=e382] [cursor=pointer]:
+                - /url: /b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=2QIz5&content-id=amzn1.sym.73333962-bf52-455e-9970-7ac1801ca224&pf_rd_p=73333962-bf52-455e-9970-7ac1801ca224&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+                - img "For Business Purchases" [ref=e384]
+                - generic [ref=e386]: Register using GST, Udyam, FSSAI or BPAN
+          - link "Bulk order discounts + Up to 18% GST savings - Create a free account" [ref=e388] [cursor=pointer]:
+            - /url: /b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=2QIz5&content-id=amzn1.sym.73333962-bf52-455e-9970-7ac1801ca224&pf_rd_p=73333962-bf52-455e-9970-7ac1801ca224&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=wMLpZ&pd_rd_r=275217a0-0ae2-4f12-90cb-c88589795756&ref_=pd_hp_d_atf_unk
+            - generic [ref=e389]:
+              - generic [ref=e390]: Create a free account
+              - generic [ref=e391]: Create a free account
+      - generic [ref=e393]:
+        - generic [ref=e395]:
+          - heading "Customers’ Most-Loved products" [level=2] [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e399]: Customers’ Most-Loved products
+              - generic [ref=e400]: Customers’ Most-Loved products
+          - generic [ref=e402]:
+            - link "Wall1ders Golden Mirror Stickers - Acrylic Wall Decor, Large Size (45 cm), Self-Adhesive" [ref=e404] [cursor=pointer]:
+              - /url: /Wall1ders-Acrylic-Mirror-Stickers-Office/dp/B071RV9WZ9/?_encoding=UTF8&pd_rd_w=fUjBO&content-id=amzn1.sym.7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_p=7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_ohl_gw_cml
+              - img "Wall1ders Golden Mirror Stickers - Acrylic Wall Decor, Large Size (45 cm), Self-Adhesive" [ref=e406]
+            - link "Nirmalaya Premium Organic Cow Dung Havan Cups | Pack of 15 with Holder | 100% Natural Organic Cups | Blend of Guggal, Lobaan & Natural Herbs | Ideal for Pooja, Meditation, Yoga and Aromatherapy" [ref=e408] [cursor=pointer]:
+              - /url: /Nirmalaya-Organic-Sambrani-Pooja-Jatamassi/dp/B0BC1KVT3R/?_encoding=UTF8&pd_rd_w=fUjBO&content-id=amzn1.sym.7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_p=7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_ohl_gw_cml
+              - img "Nirmalaya Premium Organic Cow Dung Havan Cups | Pack of 15 with Holder | 100% Natural Organic Cups | Blend of Guggal, Lobaan & Natural Herbs | Ideal for Pooja, Meditation, Yoga and Aromatherapy" [ref=e410]
+            - link "Wall1ders Wall Border, Mirror Stickers for wall, Acrylic Mirror wall Decor Sticker, wall Mirror Stickers, Acrylic Stickers, Wall Stickers for Hall Room, Bed Room, Kitchen. (Gold)- Pack of 10" [ref=e412] [cursor=pointer]:
+              - /url: /Wall1ders-Borders-Golden-Acrylic-Stickers/dp/B075PVBJ23/?_encoding=UTF8&pd_rd_w=fUjBO&content-id=amzn1.sym.7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_p=7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_ohl_gw_cml
+              - img "Wall1ders Wall Border, Mirror Stickers for wall, Acrylic Mirror wall Decor Sticker, wall Mirror Stickers, Acrylic Stickers, Wall Stickers for Hall Room, Bed Room, Kitchen. (Gold)- Pack of 10" [ref=e414]
+            - link "Saaikee Fruit Basket with Lid | Net Basket for Fruits & Vegetables | Fruits Basket with net Cover | Mesh Basket | Apple Shape Vegetables Fruit Basket for Kitchen (Blue)" [ref=e416] [cursor=pointer]:
+              - /url: /Saaikee-Basket-Size28-5-Assorted-Kilogram/dp/B07ZRTPG16/?_encoding=UTF8&pd_rd_w=fUjBO&content-id=amzn1.sym.7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_p=7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_ohl_gw_cml
+              - img "Saaikee Fruit Basket with Lid | Net Basket for Fruits & Vegetables | Fruits Basket with net Cover | Mesh Basket | Apple Shape Vegetables Fruit Basket for Kitchen (Blue)" [ref=e418]
+          - link "Customers’ Most-Loved products - Explore more" [ref=e420] [cursor=pointer]:
+            - /url: /b/?_encoding=UTF8&node=30631803031&pd_rd_w=fUjBO&content-id=amzn1.sym.7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_p=7f09719d-336e-4ab7-8e81-a2df620a37b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_ohl_gw_cml
+            - generic [ref=e421]:
+              - generic [ref=e422]: Explore more
+              - generic [ref=e423]: Explore more
+        - generic [ref=e425]:
+          - heading "Up to 75% off | Curated products | Small Businesses" [level=2] [ref=e427]:
+            - generic [ref=e428]:
+              - generic [ref=e429]: Up to 75% off | Curated products | Small Businesses
+              - generic [ref=e430]: Up to 75% off | Curated products | Small Busin…
+          - generic [ref=e432]:
+            - group [ref=e435]:
+              - group [ref=e439]:
+                - list [ref=e440]:
+                  - listitem [ref=e441]:
+                    - link "SNS DECOR Metal Peacock Wall Art Decorations | Perfect 3D Wall Sculpture For Living Room, Bedroom, Drawing Room & Office (Golden, Size:32x30inch)" [ref=e442] [cursor=pointer]:
+                      - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+                      - img "SNS DECOR Metal Peacock Wall Art Decorations | Perfect 3D Wall Sculpture For Living Room, Bedroom, Drawing Room & Office (Golden, Size:32x30inch)" [ref=e444]
+                  - listitem [ref=e445]:
+                    - link [ref=e446] [cursor=pointer]:
+                      - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+                  - listitem [ref=e449]:
+                    - link [ref=e450] [cursor=pointer]:
+                      - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+                  - listitem [ref=e453]:
+                    - link [ref=e454] [cursor=pointer]:
+                      - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+                  - listitem [ref=e457]:
+                    - link [ref=e458] [cursor=pointer]:
+                      - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+                  - listitem [ref=e461]:
+                    - link [ref=e462] [cursor=pointer]:
+                      - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+            - generic [ref=e465]:
+              - link "SNS DECOR Metal Peacock Wall Art Decorations | Perfect 3D Wall Sculpture For Living Room, Bedroom, Drawing Room & Office..." [ref=e466] [cursor=pointer]:
+                - /url: /Peacock-Decorations-Perfect-Sculpture-28x31inch/dp/B09NP8RHJC/?_encoding=UTF8&pd_rd_w=enL9Q&content-id=amzn1.sym.74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_p=74aa624f-4750-42af-9ab4-4ec9addf0341&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE1
+                - paragraph [ref=e467]:
+                  - generic [ref=e468]:
+                    - generic [ref=e469]: SNS DECOR Metal Peacock Wall Art Decorations | Perfect 3D Wall Sculpture For Living Room, Bedroom, Drawing Room & Office...
+                    - generic [ref=e470]: SNS DECOR Metal Peacock Wall Art Decorations | Perfect 3D Wall Scul…
+              - 'generic "Deal Price: ₹2,334.00, M.R.P.: ₹7,999.00" [ref=e471]':
+                - generic [ref=e472]:
+                  - generic [ref=e473]: ₹2,334.00
+                  - generic [ref=e474]:
+                    - text: ₹
+                    - generic [ref=e475]:
+                      - text: 2,334
+                      - generic [ref=e476]: .
+                    - text: "00"
+                - text: "M.R.P:"
+                - generic [ref=e477]:
+                  - generic [ref=e478]: ₹7,999.00
+                  - text: ₹7,999.00
+        - generic [ref=e480]:
+          - heading "Min.30% off | Top selections from Small Businesses" [level=2] [ref=e482]:
+            - generic [ref=e483]:
+              - generic [ref=e484]: Min.30% off | Top selections from Small Businesses
+              - generic [ref=e485]: Min.30% off | Top selections from Small…
+          - generic [ref=e487]:
+            - group [ref=e490]:
+              - group [ref=e494]:
+                - list [ref=e495]:
+                  - listitem [ref=e496]:
+                    - link "CREATIVE QUBE Engineered Wood Study & Office Table 120x60x75cm | Matte Finish | Free Standing Compact Computer Desk with Drawer & Cabinet | 1 Year Warranty | Brown Finish - Urban Teak" [ref=e497] [cursor=pointer]:
+                      - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+                      - img "CREATIVE QUBE Engineered Wood Study & Office Table 120x60x75cm | Matte Finish | Free Standing Compact Computer Desk with Drawer & Cabinet | 1 Year Warranty | Brown Finish - Urban Teak" [ref=e499]
+                  - listitem [ref=e500]:
+                    - link [ref=e501] [cursor=pointer]:
+                      - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+                  - listitem [ref=e504]:
+                    - link [ref=e505] [cursor=pointer]:
+                      - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+                  - listitem [ref=e508]:
+                    - link [ref=e509] [cursor=pointer]:
+                      - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+                  - listitem [ref=e512]:
+                    - link [ref=e513] [cursor=pointer]:
+                      - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+                  - listitem [ref=e516]:
+                    - link [ref=e517] [cursor=pointer]:
+                      - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+            - generic [ref=e520]:
+              - link "CREATIVE QUBE Engineered Wood Study & Office Table 120x60x75cm | Matte Finish | Free Standing Compact Computer Desk with..." [ref=e521] [cursor=pointer]:
+                - /url: /CREATIVE-QUBE-120x60x75cm-Engineered-Warranty/dp/B0FKHC2V4B/?_encoding=UTF8&pd_rd_w=U6mcJ&content-id=amzn1.sym.a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_p=a0f68b74-8e6e-4593-a797-bc3c5271cf5d&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_NAMABE2
+                - paragraph [ref=e522]:
+                  - generic [ref=e523]:
+                    - generic [ref=e524]: CREATIVE QUBE Engineered Wood Study & Office Table 120x60x75cm | Matte Finish | Free Standing Compact Computer Desk with...
+                    - generic [ref=e525]: CREATIVE QUBE Engineered Wood Study & Office Table 120x60x75cm…
+              - 'generic "Deal Price: ₹6,080.00, M.R.P.: ₹13,000.00" [ref=e526]':
+                - generic [ref=e527]:
+                  - generic [ref=e528]: ₹6,080.00
+                  - generic [ref=e529]:
+                    - text: ₹
+                    - generic [ref=e530]:
+                      - text: 6,080
+                      - generic [ref=e531]: .
+                    - text: "00"
+                - text: "M.R.P:"
+                - generic [ref=e532]:
+                  - generic [ref=e533]: ₹13,000.00
+                  - text: ₹13,000
+        - generic [ref=e535]:
+          - heading "Up to 60% off | Home & kitchen essentials from women owned brands" [level=2] [ref=e537]:
+            - generic [ref=e538]:
+              - generic [ref=e539]: Up to 60% off | Home & kitchen essentials from women owned brands
+              - generic [ref=e540]: Up to 60% off | Home & kitchen essentials fro…
+          - generic [ref=e542]:
+            - group [ref=e545]:
+              - group [ref=e549]:
+                - list [ref=e550]:
+                  - listitem [ref=e551]:
+                    - link "hago Refrigerator Organizer Container with 6 Grid Compartments | 1200 ML Fridge Storage Box for Vegetables & Fruits | BPA-Free Kitchen Storage Container for Fridge Organisation" [ref=e552] [cursor=pointer]:
+                      - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+                      - img "hago Refrigerator Organizer Container with 6 Grid Compartments | 1200 ML Fridge Storage Box for Vegetables & Fruits | BPA-Free Kitchen Storage Container for Fridge Organisation" [ref=e554]
+                  - listitem [ref=e555]:
+                    - link [ref=e556] [cursor=pointer]:
+                      - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+                  - listitem [ref=e559]:
+                    - link [ref=e560] [cursor=pointer]:
+                      - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+                  - listitem [ref=e563]:
+                    - link [ref=e564] [cursor=pointer]:
+                      - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+                  - listitem [ref=e567]:
+                    - link [ref=e568] [cursor=pointer]:
+                      - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+                  - listitem [ref=e571]:
+                    - link [ref=e572] [cursor=pointer]:
+                      - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+            - generic [ref=e575]:
+              - link "hago Refrigerator Organizer Container with 6 Grid Compartments | 1200 ML Fridge Storage Box for Vegetables & Fruits |..." [ref=e576] [cursor=pointer]:
+                - /url: /Hago-Containers-Container-Vegetable-Refrigerator/dp/B0CQ1XDP1T/?_encoding=UTF8&pd_rd_w=IftQk&content-id=amzn1.sym.f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_p=f1901f75-ec04-459f-a75b-bcb040ffd6b7&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_kar_gw_pc_en_
+                - paragraph [ref=e577]:
+                  - generic [ref=e578]:
+                    - generic [ref=e579]: hago Refrigerator Organizer Container with 6 Grid Compartments | 1200 ML Fridge Storage Box for Vegetables & Fruits |...
+                    - generic [ref=e580]: hago Refrigerator Organizer Container with 6 Grid Compartment…
+              - 'generic "Deal Price: ₹263.00, M.R.P.: ₹1,200.00" [ref=e581]':
+                - generic [ref=e582]:
+                  - generic [ref=e583]: ₹263.00
+                  - generic [ref=e584]:
+                    - text: ₹
+                    - generic [ref=e585]:
+                      - text: "263"
+                      - generic [ref=e586]: .
+                    - text: "00"
+                - text: "M.R.P:"
+                - generic [ref=e587]:
+                  - generic [ref=e588]: ₹1,200.00
+                  - text: ₹1,200.00
+        - separator [ref=e589]
+        - generic [ref=e591]:
+          - heading "Essentials for Expecting Mothers" [level=2] [ref=e593]
+          - generic [ref=e594]:
+            - generic [ref=e595]:
+              - link "Pregnancy supplements" [ref=e597] [cursor=pointer]:
+                - /url: /gp/redirect.html/?ie=UTF8&_encoding=UTF8&location=https%3A%2F%2Fwww.amazon.in%2Ffcx%2Fshop-by-age%2F22426616031%3Fage%3Dprenatal%26ref_%3Dfly_sa_pdt_rwt_stet_r_prenatalprenatal_nvc_22426616031%26sa%3D%26sc%3D%26st%3D1372805031&source=standards&token=92E2066044E901E39BA4B55F98E091C9E01827E4&pd_rd_w=CGrxx&content-id=amzn1.sym.c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_p=c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_unk
+                - img "Pregnancy supplements" [ref=e599]
+                - generic [ref=e601]: Pregnancy supplements
+              - link "Maternity Sleep & Loungewear" [ref=e603] [cursor=pointer]:
+                - /url: /gp/redirect.html/?ie=UTF8&_encoding=UTF8&location=https%3A%2F%2Fwww.amazon.in%2Ffcx%2Fshop-by-age%2Fstore%3Fage%3Dprenatal%26ref_%3Dfly_sa_pdt_rwt_stet_r_prenatalprenatal_nvs_1571271031%26st%3D1571271031&source=standards&token=469FE99C40360A7AD88A14BFBEE63C66F38DCE60%22%2C%20%22mediaCentralPath%22%3A%22%2Fimg20%2FEvents%2FTinyTots%2FGW%2FMaternity_Sleep__Loungewear.jpg&pd_rd_w=CGrxx&content-id=amzn1.sym.c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_p=c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_unk
+                - img "Maternity Sleep & Loungewear" [ref=e605]
+                - generic [ref=e607]: Maternity Sleep & Loungewear
+            - generic [ref=e608]:
+              - link "Maternity pillows" [ref=e610] [cursor=pointer]:
+                - /url: /gp/redirect.html/?ie=UTF8&_encoding=UTF8&location=https%3A%2F%2Fwww.amazon.in%2Ffcx%2Fshop-by-age%2F22426509031%3Fage%3Dprenatal%26ref_%3Dfly_sa_pdt_rwt_stet_r_prenatalprenatal_nvc_22426509031%26sa%3D%26sc%3D%26st%3D1372805031&source=standards&token=396962536440393EAC337CF4686B9C64EB195518&pd_rd_w=CGrxx&content-id=amzn1.sym.c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_p=c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_unk
+                - img "Maternity pillows" [ref=e612]
+                - generic [ref=e614]: Maternity pillows
+              - link "Maternity Skin care" [ref=e616] [cursor=pointer]:
+                - /url: /gp/redirect.html/?ie=UTF8&_encoding=UTF8&location=https%3A%2F%2Fwww.amazon.in%2Ffcx%2Fshop-by-age%2F22426115031%3Fage%3Dprenatal%26ref_%3Dfly_sa_hom_rwt_stet_r_prenatalprenatal_nvc_22426115031%26sa%3D%26sc%3D%26st%3D1372805031&source=standards&token=6C4D529D8DC4F0C4B4229EB45FE25AEE2EF9CB45&pd_rd_w=CGrxx&content-id=amzn1.sym.c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_p=c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_unk
+                - img "Maternity Skin care" [ref=e618]
+                - generic [ref=e620]: Maternity Skin care
+          - link "Essentials for Expecting Mothers - See more" [ref=e622] [cursor=pointer]:
+            - /url: /l/25981077031/?_encoding=UTF8&pd_rd_w=CGrxx&content-id=amzn1.sym.c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_p=c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_unk
+            - generic [ref=e623]:
+              - generic [ref=e624]: See more
+              - generic [ref=e625]: See more
+        - generic [ref=e627]:
+          - heading "Customers’ Most-Loved Fashion for you" [level=2] [ref=e629]:
+            - generic [ref=e630]:
+              - generic [ref=e631]: Customers’ Most-Loved Fashion for you
+              - generic [ref=e632]: Customers’ Most-Loved Fashion for you
+          - generic [ref=e634]:
+            - link "Jockey Cotton Blend Crew Neck T-Shirt For Women AW88_White_XL, Relaxed Fit" [ref=e636] [cursor=pointer]:
+              - /url: /Jockey-Crew-T-Shirt-Women-AW88_White_XL/dp/B09MFMVVK5/?_encoding=UTF8&pd_rd_w=jsT1l&content-id=amzn1.sym.de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_p=de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_gw_cml
+              - img "Jockey Cotton Blend Crew Neck T-Shirt For Women AW88_White_XL, Relaxed Fit" [ref=e638]
+            - link "Skechers Womens Summits - 896220id Navy/Multi Casual Shoe - 3 UK (6 US) (896220ID-NVMT)" [ref=e640] [cursor=pointer]:
+              - /url: /Skechers-Summits-Womens-Casual-Shoes-896220ID-NVMT-6-Navy-Multi/dp/B0CBVN2SCS/?_encoding=UTF8&pd_rd_w=jsT1l&content-id=amzn1.sym.de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_p=de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_gw_cml
+              - img "Skechers Womens Summits - 896220id Navy/Multi Casual Shoe - 3 UK (6 US) (896220ID-NVMT)" [ref=e642]
+            - link "Skechers Mens Summits - Brisbane Light Gray Sneaker - 9 UK (10 US) (232057ID-LTGY)" [ref=e644] [cursor=pointer]:
+              - /url: /Skechers-232057ID-LTGY-Skechers-232057ID-LTGY-SHOES-Mens-Casual-Shoes-UK9/dp/B0BQHQ2QGZ/?_encoding=UTF8&pd_rd_w=jsT1l&content-id=amzn1.sym.de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_p=de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_gw_cml
+              - img "Skechers Mens Summits - Brisbane Light Gray Sneaker - 9 UK (10 US) (232057ID-LTGY)" [ref=e646]
+            - link "XYXX Men 100% Cotton Polo Tshirt, Regular Fit, Solid, Pack of 1, XYPTSRT12XL, Indian Blue, XL" [ref=e648] [cursor=pointer]:
+              - /url: /XYXX-Solid-Regular-XY_CR14_Polo-Tshirt_1_Blue/dp/B0CBBB5843/?_encoding=UTF8&pd_rd_w=jsT1l&content-id=amzn1.sym.de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_p=de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_gw_cml
+              - img "XYXX Men 100% Cotton Polo Tshirt, Regular Fit, Solid, Pack of 1, XYPTSRT12XL, Indian Blue, XL" [ref=e650]
+          - link "Customers’ Most-Loved Fashion for you - Explore more" [ref=e652] [cursor=pointer]:
+            - /url: /s/?_encoding=UTF8&node=50916365031&pd_rd_w=jsT1l&content-id=amzn1.sym.de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_p=de84ee3f-a07f-47cd-ac44-50f5d6cbb587&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_a2i_gw_cml
+            - generic [ref=e653]:
+              - generic [ref=e654]: Explore more
+              - generic [ref=e655]: Explore more
+        - generic [ref=e657]:
+          - heading "Best Sellers in Computers & Accessories" [level=2] [ref=e659]:
+            - generic [ref=e660]:
+              - generic [ref=e661]: Best Sellers in Computers & Accessories
+              - generic [ref=e662]: Best Sellers in Computers & Accesso…
+          - generic [ref=e664]:
+            - link "Ambrane Unbreakable 3A Fast Charging 1.5m Braided Type C Cable for Smartphones, Tablets & other Type C devices, 480Mbps Data Sync, Quick Charge 3.0 (RCT15A, Black)" [ref=e666] [cursor=pointer]:
+              - /url: /Ambrane-Unbreakable-Charging-Braided-Cable/dp/B098NS6PVG/?_encoding=UTF8&pd_rd_w=DwQDZ&content-id=amzn1.sym.211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_p=211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_crs_zg_bs_976392031
+              - img "Ambrane Unbreakable 3A Fast Charging 1.5m Braided Type C Cable for Smartphones, Tablets & other Type C devices, 480Mbps Data Sync, Quick Charge 3.0 (RCT15A, Black)" [ref=e668]
+            - link "DIVIJA STORE Wood Smart Multipurpose Foldable Laptop Table with Cup Holder, Study Table, Bed Table, Breakfast Table, Foldable and Portable/Ergonomic & Rounded Edges/Non-Slip Legs (Black), 59 cm, 8 cm" [ref=e670] [cursor=pointer]:
+              - /url: /DIVIJA-STORE-Multipurpose-Breakfast-Ergonomic/dp/B0DK7B3B2G/?_encoding=UTF8&pd_rd_w=DwQDZ&content-id=amzn1.sym.211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_p=211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_crs_zg_bs_976392031
+              - img "DIVIJA STORE Wood Smart Multipurpose Foldable Laptop Table with Cup Holder, Study Table, Bed Table, Breakfast Table, Foldable and Portable/Ergonomic & Rounded Edges/Non-Slip Legs (Black), 59 cm, 8 cm" [ref=e672]
+            - link "Tygot 6 Angles Adjustable Aluminum Ergonomic Foldable Portable Tabletop Laptop/Desktop Riser Stand Holder Compatible for MacBook, HP, Dell, Lenovo & All Other Notebook (Grey)" [ref=e674] [cursor=pointer]:
+              - /url: /Tygot-Laptop-Stand-Adjustable-OverHeating/dp/B0D9FL6CFX/?_encoding=UTF8&pd_rd_w=DwQDZ&content-id=amzn1.sym.211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_p=211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_crs_zg_bs_976392031
+              - img "Tygot 6 Angles Adjustable Aluminum Ergonomic Foldable Portable Tabletop Laptop/Desktop Riser Stand Holder Compatible for MacBook, HP, Dell, Lenovo & All Other Notebook (Grey)" [ref=e676]
+            - link "Dyazo 6 Angles Adjustable Aluminum Ergonomic Foldable Portable Tabletop Laptop/Desktop Riser Stand Holder Compatible for MacBook, HP, Dell, Lenovo & All Other Notebook (Silver)" [ref=e678] [cursor=pointer]:
+              - /url: /Dyazo-Computer-Adjustable-Ergonomic-Compatible/dp/B08LHTJTBB/?_encoding=UTF8&pd_rd_w=DwQDZ&content-id=amzn1.sym.211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_p=211684f4-ebe1-443f-8a4a-0773471e979f&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_crs_zg_bs_976392031
+              - img "Dyazo 6 Angles Adjustable Aluminum Ergonomic Foldable Portable Tabletop Laptop/Desktop Riser Stand Holder Compatible for MacBook, HP, Dell, Lenovo & All Other Notebook (Silver)" [ref=e680]
+        - generic [ref=e682]:
+          - heading "Up to 60% off | Bestsellers from women-led brands" [level=2] [ref=e684]:
+            - generic [ref=e685]:
+              - generic [ref=e686]: Up to 60% off | Bestsellers from women-led brands
+              - generic [ref=e687]: Up to 60% off | Bestsellers from wome…
+          - generic [ref=e689]:
+            - group [ref=e692]:
+              - group [ref=e696]:
+                - list [ref=e697]:
+                  - listitem [ref=e698]:
+                    - link "Satpurush Multipurpose bathroom accessories Kitchen Bathroom Shelf Wall Holder Storage Rack Bathro0om Organizer Rack Storage Box Strong Adhesive Sticker Shower Rack Shelf (4 Bath Blue)" [ref=e699] [cursor=pointer]:
+                      - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+                      - img "Satpurush Multipurpose bathroom accessories Kitchen Bathroom Shelf Wall Holder Storage Rack Bathro0om Organizer Rack Storage Box Strong Adhesive Sticker Shower Rack Shelf (4 Bath Blue)" [ref=e701]
+                  - listitem [ref=e702]:
+                    - link [ref=e703] [cursor=pointer]:
+                      - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+                  - listitem [ref=e706]:
+                    - link [ref=e707] [cursor=pointer]:
+                      - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+                  - listitem [ref=e710]:
+                    - link [ref=e711] [cursor=pointer]:
+                      - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+                  - listitem [ref=e714]:
+                    - link [ref=e715] [cursor=pointer]:
+                      - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+                  - listitem [ref=e718]:
+                    - link [ref=e719] [cursor=pointer]:
+                      - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+            - generic [ref=e722]:
+              - link "Satpurush Multipurpose bathroom accessories Kitchen Bathroom Shelf Wall Holder Storage Rack Bathro0om Organizer Rack..." [ref=e723] [cursor=pointer]:
+                - /url: /Multipurpose-Kitchen-Bathroom-Organizer-Adhesive/dp/B095C981FC/?_encoding=UTF8&pd_rd_w=K9gc1&content-id=amzn1.sym.ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_p=ea190cd0-1ee7-412b-b9ea-b20656b172c3&pf_rd_r=4DFT1JXD3120JTR3AZ4Z&pd_rd_wg=fKhtc&pd_rd_r=70a8935f-ec6d-4f36-8e3b-5808d01a6386&ref_=pd_hp_d_btf_sah_gw_pc_en_
+                - paragraph [ref=e724]:
+                  - generic [ref=e725]:
+                    - generic [ref=e726]: Satpurush Multipurpose bathroom accessories Kitchen Bathroom Shelf Wall Holder Storage Rack Bathro0om Organizer Rack...
+                    - generic [ref=e727]: Satpurush Multipurpose bathroom accessories Kitchen Bathroom She…
+              - 'generic "Price: ₹349.00, M.R.P.: ₹1,599.00" [ref=e728]':
+                - generic [ref=e729]:
+                  - generic [ref=e730]: ₹349.00
+                  - generic [ref=e731]:
+                    - text: ₹
+                    - generic [ref=e732]:
+                      - text: "349"
+                      - generic [ref=e733]: .
+                    - text: "00"
+                - text: "M.R.P:"
+                - generic [ref=e734]:
+                  - generic [ref=e735]: ₹1,599.00
+                  - text: ₹1,599.00
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e736]:
+    - button "Back to top" [ref=e737] [cursor=pointer]:
+      - generic [ref=e738]: Back to top
+    - generic [ref=e739]:
+      - generic [ref=e740]:
+        - heading "Get to Know Us" [level=6] [ref=e741]
+        - list [ref=e742]:
+          - listitem [ref=e743]:
+            - link "About Amazon" [ref=e744] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e745]:
+            - link "Careers" [ref=e746] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e747]:
+            - link "Press Releases" [ref=e748] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e749]:
+            - link "Amazon Science" [ref=e750] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e752]:
+        - heading "Connect with Us" [level=6] [ref=e753]
+        - list [ref=e754]:
+          - listitem [ref=e755]:
+            - link "Facebook" [ref=e756] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e757]:
+            - link "Twitter" [ref=e758] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e759]:
+            - link "Instagram" [ref=e760] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e762]:
+        - heading "Make Money with Us" [level=6] [ref=e763]
+        - list [ref=e764]:
+          - listitem [ref=e765]:
+            - link "Sell on Amazon" [ref=e766] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e767]:
+            - link "Sell under Amazon Accelerator" [ref=e768] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e769]:
+            - link "Protect and Build Your Brand" [ref=e770] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e771]:
+            - link "Amazon Global Selling" [ref=e772] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e773]:
+            - link "Supply to Amazon" [ref=e774] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e775]:
+            - link "Become an Affiliate" [ref=e776] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e777]:
+            - link "Fulfilment by Amazon" [ref=e778] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e779]:
+            - link "Advertise Your Products" [ref=e780] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e781]:
+            - link "Amazon Pay on Merchants" [ref=e782] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e784]:
+        - heading "Let Us Help You" [level=6] [ref=e785]
+        - list [ref=e786]:
+          - listitem [ref=e787]:
+            - link "Your Account" [ref=e788] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e789]:
+            - link "Returns Centre" [ref=e790] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e791]:
+            - link "Recalls and Product Safety Alerts" [ref=e792] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e793]:
+            - link "100% Purchase Protection" [ref=e794] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e795]:
+            - link "Amazon App Download" [ref=e796] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e797]:
+            - link "Help" [ref=e798] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e800]:
+      - link "Amazon India Home" [ref=e803] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e806]:
+        - generic [ref=e807]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e808] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e810]: English
+          - button "Expand to Change Language or Country" [ref=e811] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e812] [cursor=pointer]:
+          - generic [ref=e814]: India
+    - generic "More on Amazon" [ref=e815]:
+      - generic "More on Amazon" [ref=e816]:
+        - list [ref=e817]:
+          - listitem [ref=e818]:
+            - link "AbeBooks Books, art & collectibles" [ref=e819] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e820]
+              - generic [ref=e821]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e822]
+          - listitem [ref=e823]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e824] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e825]
+              - generic [ref=e826]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e827]
+          - listitem [ref=e828]:
+            - link "Audible Download Audio Books" [ref=e829] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e830]
+              - generic [ref=e831]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e832]
+          - listitem [ref=e833]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e834] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e835]
+              - generic [ref=e836]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e837]:
+          - listitem [ref=e838]:
+            - link "Shopbop Designer Fashion Brands" [ref=e839] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e840]
+              - generic [ref=e841]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e842]
+          - listitem [ref=e843]:
+            - link "Amazon Business Everything For Your Business" [ref=e844] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e845]
+              - generic [ref=e846]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e847]
+          - listitem [ref=e848]:
+            - link "Amazon Prime Music 100 million songs, ad-free Over 15 million podcast episodes" [ref=e849] [cursor=pointer]:
+              - /url: /music/prime?ref=footer_apm
+              - heading "Amazon Prime Music" [level=5] [ref=e850]
+              - generic [ref=e851]:
+                - text: 100 million songs, ad-free
+                - text: Over 15 million podcast episodes
+          - listitem [ref=e852]
+          - listitem [ref=e853]
+    - generic [ref=e854]:
+      - list [ref=e855]:
+        - listitem [ref=e856]:
+          - link "Conditions of Use & Sale" [ref=e857] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e858]:
+          - link "Privacy Notice" [ref=e859] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e860]:
+          - link "Interest-Based Ads" [ref=e861] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e862]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=e864]:
+    - iframe [ref=f1e2]:
+      - generic [active]:
+        - img [ref=f2e1]
+        - img [ref=f2e2]
+        - img [ref=f2e3]
+        - img [ref=f2e4]
+        - img [ref=f2e5]
+        - img [ref=f2e6]
+        - img [ref=f2e7]
+        - img [ref=f2e8]
+        - img [ref=f2e9]
+        - img [ref=f2e10]
+        - img [ref=f2e11]
+        - img [ref=f2e12]
+        - img [ref=f2e13]
+        - img [ref=f2e14]
+        - img [ref=f2e15]
+        - img [ref=f2e16]
+        - img [ref=f2e17]
+        - img [ref=f2e18]
+        - img [ref=f2e19]
+        - img [ref=f2e20]
+        - img [ref=f2e21]
+        - img [ref=f2e22]
+        - img [ref=f2e23]
+        - img [ref=f2e24]
+        - img [ref=f2e25]
+        - img [ref=f2e26]
+        - img [ref=f2e27]
+        - img [ref=f2e28]
+        - img [ref=f2e29]
+        - img [ref=f2e30]
+        - img [ref=f2e31]
+        - img [ref=f2e32]
+        - img [ref=f2e33]
+        - img [ref=f2e34]
+        - img [ref=f2e35]
+        - img [ref=f2e36]
+        - img [ref=f2e37]
+        - img [ref=f2e38]
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('@playwright/test')
+  2  | 
+  3  | test('Page Screenshot', async ({ page }) => {
+  4  | 
+  5  |     await page.goto('https://www.amazon.in/');
+  6  |     await page.waitForTimeout(4000);
+  7  |     await page.screenshot({ path: 'tests/screenshot/' + Date.now() + 'HomePage.png' });
+  8  | 
+  9  | });
+  10 | 
+  11 | test('FullPage Screenshot', async ({ page }) => {
+  12 | 
+  13 |     await page.goto('https://www.amazon.in/');
+  14 |     await page.waitForTimeout(4000);
+  15 |     await page.screenshot({ path: 'tests/screenshot/' + Date.now() + 'FullPage.png', fullPage: true });
+  16 | 
+  17 | });
+  18 | 
+  19 | 
+  20 | test.only('Element Screenshot', async ({ page }) => {
+  21 | 
+  22 |     await page.goto('https://www.amazon.in/');
+  23 |     await page.waitForTimeout(4000);
+  24 |     await page.locator('//div[@class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr"]')
+> 25 |         .screenshot({ path: 'tests/screenshot/' + Date.now() + 'ElementScreenshot.png' });
+     |          ^ Error: locator.screenshot: Error: strict mode violation: locator('//div[@class="a-section a-spacing-none _Zmx1a_fluidImageContainer_2SOMr"]') resolved to 20 elements:
+  26 | 
+  27 | });
+```

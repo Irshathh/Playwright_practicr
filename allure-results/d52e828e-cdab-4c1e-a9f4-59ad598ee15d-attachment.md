@@ -1,0 +1,5082 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: BuiltinLocators.spec.js >> E-commerce product search and add to cart (stable)
+- Location: tests\BuiltinLocators.spec.js:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForNavigation: Test timeout of 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+============================================================
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Results" [ref=e9] [cursor=pointer]:
+          - /url: .s-asin a:has(h2)
+    - separator [ref=e10]
+    - heading "Keyboard shortcuts" [level=2] [ref=e11]
+    - list "Keyboard shortcuts" [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Search, alt, forward slash" [ref=e14] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e15]:
+            - generic [ref=e16]: Search
+            - generic [ref=e17]:
+              - generic [ref=e18]: alt
+              - generic [ref=e19]: +
+              - generic [ref=e20]: /
+      - listitem [ref=e21]:
+        - link "Cart, shift, alt, c" [ref=e22] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e23]:
+            - generic [ref=e24]: Cart
+            - generic [ref=e25]:
+              - generic [ref=e26]: shift
+              - generic [ref=e27]: +
+              - generic [ref=e28]: alt
+              - generic [ref=e29]: +
+              - generic [ref=e30]: C
+      - listitem [ref=e31]:
+        - link "Home, shift, alt, h" [ref=e32] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e33]:
+            - generic [ref=e34]: Home
+            - generic [ref=e35]:
+              - generic [ref=e36]: shift
+              - generic [ref=e37]: +
+              - generic [ref=e38]: alt
+              - generic [ref=e39]: +
+              - generic [ref=e40]: H
+      - listitem [ref=e41]:
+        - link "Your orders, shift, alt, o" [ref=e42] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e43]:
+            - generic [ref=e44]: Orders
+            - generic [ref=e45]:
+              - generic [ref=e46]: shift
+              - generic [ref=e47]: +
+              - generic [ref=e48]: alt
+              - generic [ref=e49]: +
+              - generic [ref=e50]: O
+      - listitem [ref=e51]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Show/Hide shortcuts
+            - generic [ref=e55]:
+              - generic [ref=e56]: shift
+              - generic [ref=e57]: +
+              - generic [ref=e58]: alt
+              - generic [ref=e59]: +
+              - generic [ref=e60]: Z
+    - generic [ref=e66]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e67]:
+    - navigation "Primary" [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - link "Amazon.in" [ref=e72] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Chennai 600041 Update location" [ref=e75] [cursor=pointer]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Delivering to Chennai 600041
+              - generic [ref=e79]: Update location
+        - search [ref=e82]:
+          - generic [ref=e85]:
+            - generic [ref=e87]: All
+            - combobox "Select the department you want to search in" [ref=e89] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e92]: Nike shoes
+          - generic "Go" [ref=e95] [cursor=pointer]:
+            - button "Go" [ref=e96]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e100] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e103]:
+                - img "India" [ref=e104]
+                - generic [ref=e105]: EN
+            - button "Expand to Change Language or Country" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - link "Hello, sign in Account & Lists" [ref=e108] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fs%3Fk%3DNike%2Bshoes%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e110]: Hello, sign in
+              - generic [ref=e111]: Account & Lists
+            - button "Expand Account and Lists" [ref=e112] [cursor=pointer]
+          - link "Returns & Orders" [ref=e113] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e114]: Returns
+            - generic [ref=e115]: "& Orders"
+          - link "0 items in cart" [ref=e116] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e118]: "0"
+            - generic [ref=e121]: Cart
+      - generic [ref=e122]:
+        - button "Open All Categories Menu" [ref=e124] [cursor=pointer]:
+          - generic [ref=e126]: All
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - link "Fresh" [ref=e133] [cursor=pointer]:
+              - /url: /fresh?ref_=nav_cs_fresh
+          - listitem [ref=e134]:
+            - link "MX Player" [ref=e136] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e137]:
+            - link "Sell" [ref=e139] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e140]:
+            - link "Bestsellers" [ref=e142] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e143]:
+            - link "Mobiles" [ref=e145] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e146]:
+            - link "Today's Deals" [ref=e148] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e149]:
+            - link "Customer Service" [ref=e151] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e152]:
+            - link "New Releases" [ref=e154] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e155]:
+            - generic [ref=e156]:
+              - link "Prime" [ref=e157] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e158] [cursor=pointer]
+          - listitem [ref=e159]:
+            - link "Fashion" [ref=e161] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e162]:
+            - link "Electronics" [ref=e164] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e165]:
+            - link "Amazon Pay" [ref=e167] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e168]:
+            - link "Home & Kitchen" [ref=e170] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e171]:
+            - link "Computers" [ref=e173] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e174]:
+            - link "Books" [ref=e176] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e177]:
+            - link "Toys & Games" [ref=e179] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e180]:
+            - link "Gift Cards" [ref=e182] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e183]:
+            - link "Beauty & Personal Care" [ref=e185] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e186]:
+            - link "Car & Motorbike" [ref=e188] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e189]:
+            - link "Home Improvement" [ref=e191] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e192]:
+            - link "Custom Products" [ref=e194] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e195]:
+            - link "Sports, Fitness & Outdoors" [ref=e197] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e198]:
+            - link "Grocery & Gourmet Foods" [ref=e200] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e201]:
+            - link "Health, Household & Personal Care" [ref=e203] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e204]:
+            - link "Pet Supplies" [ref=e206] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e207]:
+            - link "Video Games" [ref=e209] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e210]:
+            - link "Baby" [ref=e212] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e213]:
+            - link "AmazonBasics" [ref=e215] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e216]:
+            - link "Subscribe & Save" [ref=e218] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e219]:
+            - link "Audible" [ref=e221] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e222]:
+            - link "Kindle eBooks" [ref=e224] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e225]:
+            - link "Flights" [ref=e227] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+      - dialog [ref=e230]
+  - generic [ref=e232]:
+    - 'heading "1-48 of 309 results for \"Nike shoes\" Sort by: Featured" [level=1] [ref=e235]':
+      - generic [ref=e236]:
+        - heading "1-48 of 309 results for \"Nike shoes\"" [level=2] [ref=e241]
+        - generic [ref=e246]:
+          - generic [ref=e247]: "Sort by:"
+          - combobox "Sort by:" [ref=e248]:
+            - option "Featured" [selected]
+            - 'option "Price: Low to High"'
+            - 'option "Price: High to Low"'
+            - option "Avg. Customer Review"
+            - option "Newest Arrivals"
+            - option "Best Sellers"
+          - generic [ref=e251] [cursor=pointer]: Sort by:Featured
+    - generic [ref=e253]:
+      - generic [ref=e255]:
+        - generic [ref=e257]:
+          - generic [ref=e260]:
+            - link "Sponsored ad from Boldfit. \"Trekking shoes designed for maximum durability.\" Shop Boldfit." [ref=e261] [cursor=pointer]:
+              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=auto-sparkle-hsa-tetris&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+            - generic [ref=e262]:
+              - generic [ref=e264]:
+                - link "Boldfit" [ref=e266] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=auto-sparkle-hsa-tetris&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_logo&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                  - img "Boldfit" [ref=e268]
+                - generic [ref=e270]:
+                  - link "Trekking shoes designed for maximum durability" [ref=e271] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=auto-sparkle-hsa-tetris&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_hl&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                    - generic [ref=e272]:
+                      - generic [ref=e273]: Trekking shoes designed for maximum durability
+                      - generic [ref=e274]: Trekking shoes designed for maximum durability
+                  - generic [ref=e275]:
+                    - button "Leave feedback on Sponsored ad" [ref=e279] [cursor=pointer]: Sponsored
+                    - generic [ref=e281]: "|"
+                    - generic [ref=e282]: Top 10 best-selling brand in this category
+                    - generic [ref=e283]: "|"
+                    - link "Shop Boldfit" [ref=e285] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=auto-sparkle-hsa-tetris&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_cta&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                      - generic [ref=e288]:
+                        - text: Shop
+                        - generic [ref=e289]:
+                          - text: Boldfit
+                          - img [ref=e290]
+              - group [ref=e292]:
+                - generic [ref=e294]:
+                  - group [ref=e296]:
+                    - list [ref=e297]:
+                      - listitem [ref=e298]:
+                        - generic [ref=e300]:
+                          - link [ref=e301] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0D1KPCX5B/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_0_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                          - link "Boldfit Trekking Shoes for Man Outdoor Hiking Shoes for Man High Neck Footwear for Men Anti Skid Trekking Boots Water Repellent for Men Breathable Hiking Boots Riding Shoe for Bikers laceup Biker shoe" [ref=e303] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0D1KPCX5B/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_0_img&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                            - img "Boldfit Trekking Shoes for Man Outdoor Hiking Shoes for Man High Neck Footwear for Men Anti Skid Trekking Boots Water Repellent for Men Breathable Hiking Boots Riding Shoe for Bikers laceup Biker shoe" [ref=e306]
+                          - generic [ref=e308]:
+                            - link [ref=e309] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0D1KPCX5B/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_0_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                            - link "Boldfit Trekking Shoes for Man Outdoor Hiking Shoes for Man High Neck Footwear for Men Anti Skid Trekking Boots Water Repellent for Men Breathable Hiking Boots Riding Shoe for Bikers laceup Biker shoe" [ref=e311] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0D1KPCX5B/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_0_title&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                              - generic [ref=e312]:
+                                - generic [ref=e313]: Boldfit Trekking Shoes for Man Outdoor Hiking Shoes for Man High Neck Footwear for Men Anti Skid Trekking Boots Water Repellent for Men Breathable Hiking Boots Riding Shoe for Bikers laceup Biker shoe
+                                - generic [ref=e314]: Boldfit Trekking Shoes for Man Outdoor Hiking Shoes for Ma…
+                            - link "Rated 4 out of 5 stars by 1566 reviews. Go to review section." [ref=e315] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0D1KPCX5B/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_0_rating&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2#customerReviews
+                              - generic [ref=e316]:
+                                - generic [ref=e317]: "4"
+                                - generic [ref=e319]: 4 out of 5 stars.
+                                - generic [ref=e320]: (1.5k)
+                            - link "₹1,799.00" [ref=e322] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0D1KPCX5B/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_0_price&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                              - generic [ref=e324]:
+                                - generic [ref=e325]: ₹1,799.00
+                                - generic [ref=e326]:
+                                  - text: ₹
+                                  - generic [ref=e327]:
+                                    - text: 1,799
+                                    - generic [ref=e328]: .
+                                  - text: "00"
+                            - generic [ref=e331]: "M.R.P: ₹3,999.00"
+                            - img "Eligible for Prime." [ref=e333]
+                      - listitem [ref=e334]:
+                        - generic [ref=e336]:
+                          - link [ref=e337] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXH8GJY/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_1_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                          - link "Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti Skid Trekking Boots Water Repellent, Outlander Black" [ref=e339] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXH8GJY/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_1_img&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                            - img "Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti Skid Trekking Boots Water Repellent, Outlander Black" [ref=e342]
+                          - generic [ref=e344]:
+                            - link [ref=e345] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXH8GJY/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_1_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                            - link "Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti Skid Trekking Boots Water Repellent, Outlander Black" [ref=e347] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXH8GJY/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_1_title&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                              - generic [ref=e348]:
+                                - generic [ref=e349]: Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti Skid Trekking Boots Water Repellent, Outlander Black
+                                - generic [ref=e350]: Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti S…
+                            - link "Rated 4.2 out of 5 stars by 655 reviews. Go to review section." [ref=e351] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXH8GJY/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_1_rating&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2#customerReviews
+                              - generic [ref=e352]:
+                                - generic [ref=e353]: "4.2"
+                                - generic [ref=e355]: 4.2 out of 5 stars.
+                                - generic [ref=e356]: (655)
+                            - link "₹1,799.00" [ref=e358] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXH8GJY/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_1_price&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                              - generic [ref=e360]:
+                                - generic [ref=e361]: ₹1,799.00
+                                - generic [ref=e362]:
+                                  - text: ₹
+                                  - generic [ref=e363]:
+                                    - text: 1,799
+                                    - generic [ref=e364]: .
+                                  - text: "00"
+                            - generic [ref=e367]: "M.R.P: ₹4,999.00"
+                            - img "Eligible for Prime." [ref=e369]
+                      - listitem [ref=e370]:
+                        - generic [ref=e372]:
+                          - link [ref=e373] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXHHY4D/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_2_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                          - link [ref=e375] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXHHY4D/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_2_img&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                            - img [ref=e378]
+                          - generic [ref=e380]:
+                            - link [ref=e381] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXHHY4D/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_2_bkgd&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                            - link [ref=e383] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXHHY4D/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_2_title&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                              - generic [ref=e384]:
+                                - generic [ref=e385]: Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti Skid Trekking Boots Water Repellent, Outlander Black
+                                - generic [ref=e386]: Boldfit Trekking Shoes for Man Outdoor high Neck ShoAnti S…
+                            - link [ref=e387] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXHHY4D/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_2_rating&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2#customerReviews
+                              - generic [ref=e388]:
+                                - generic [ref=e389]: "4.2"
+                                - generic [ref=e391]: 4.2 out of 5 stars.
+                                - generic [ref=e392]: (655)
+                            - link [ref=e394] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JOcp57kDVC-OkPmQMUBaSFAAAAGdqicObwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDYsyg0/clv1c_ek-YBPf3Vcba3jM2mAX3I_BwCrM5kGj1uKAREQe1NaFCbD9uZcDwmf6Ge1BcDMAdOyDYVaWHGb1qbYB3TNr7TU_aKkyPrBbJbArkepcgxAgW7XfT4sMjemfSzrm1JHOiHwxD-p7biTWADeUYl4evUpPZrbVUBtTqLsX57WvKXIecVGx7M6q3-LMJP8E2frw43VoRYX8TD-YK1X_7qgAYZEYwF9d3TGS4ez7S5enjCslQ6zRnMlyv6St_Ghe7okX7Iu4twhoW4EhJn43tha-gcud0X0mILK7B8DsxGPdt_cDL6Gf2UYvJ8Wx1DewVCotf75eN5ww5Ro2DGSU_rKHTBDV0T19zhYEN2Y64KJSpYCRs4eOXaicgwiY8eePe9SPvPCHZwS4DoWusutBGgHuSTzTo1Kj7U7Fnt481evgAT3-P9zohJSwlP0GiccYYMVgjm0g-nJJLjypYOpE6Te5a3MZcD5f6PMB4yyA6G_37xU7GN0FWmp1eP_Ja9ZBE2E7Wc_3PQyVzLDrDxZKsOWxzF0tel8NtgVRUDZL1glr1ZXRbZhltdRea0LJvhn6p9060cJx2e4W-kPtpnXdcrc3C27dydR5QIi9VpPItxvhWelvJqzsK8ghWR6TN-6UoW1Wy7pCAnlR2_ghN7EfMUgiOfCgA8TmsY3ardhlCFxrAfWjLLfKCyr4RUk7JC8lBqC3-__NUIVN9f0_2yzigmwRH2AqpzNDPy4zdBNtnx3n10gUdSQA2vKg6TcFVkPpopbc9vQHMJoMFmJRYHqLOZ6TPtz3fDLuXt-I9PGcMFd9EuhVapFtw6_Y61OqHRsELdtz7VuJ8b15h05WdpV4xF3d14qeSvX0AnOsHL30ErG2yblEtQIzQtvEwJQL0vTT1QoH7fN4iYBY1WwrGFCbyQupJXFUFuNIIz8YXBeU9BIr697tG9YYJVuEhcpX6kP03rM8RGr42MUyTk5BVs1ubhDaccNW1yU-Mi4WLsJOKr4AtIY3wNg0CikZ0alXvm428glA3NuNcu_YgMVN6cY5GodpNddl01oOo6PIiqOSjLc5nMcO-quQr7_8l8Uf9Ho3n6ON5R5wKFAaJA-oLk6Fx8rtw2Gz-bUhiAWQuTgLAiPAdSULy4XNkcZk6D3I0mRLw-krTiGHz1B4qaiXuw6hsCTN6tDa0zlRV5hDdKV9P8KKtUnxzkLng4crat4fBZf9Ut4dfssMHrgHam03Bic30wImilYkFoCHhJ2eRFovmx_qnXVqeKR3Ce8Wls_LCQfetfeWlEknetZVbAr4DFIWo2Sr_lIWAU1nhmdI3COwLOkAZwe7xhX0h4oxY77dAHiekg3QWY_u6LcQ4HDb4DtcwjmHIBg6hVTUN9EVLRM4ZyxX8bnwUzH56K1oFHAJsYnGWF4zk5seIjy8DU2caxVRzHLZfv7rFRp0DiS-Xq8sAzQNHho1bkRGxMlovS5O2XIeWKJWVYoRGoqt7OtodG6XxcFwJCwHVffz_FA97McVH1VuuAMXHplT4hiGhvjqDoNvHgTsTtaQqOQcINV32hWJKl9nmB3yE6ExLIBx2G8befIGaGwa1uncJsZhALXNvBC52ExU66oUdkW_21rUbtN_-0vvjPga5iYNxX3byoaqIDbuUBdof1UjvaKzczsJPQRPE98SybTfQCjVlFAsCyeMCLq2_WMjR3iwdzSFx8BidEFnzCLhOe5wABw/https://www.amazon.in/gp/aw/d/B0DGXHHY4D/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&qid=1776676179&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&aref=6sXk61Pkva&ref_=sbx_s_sparkle_sbtcd_asin_2_price&pd_rd_w=Quqyk&content-id=amzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05%3Aamzn1.sym.9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_p=9269eab1-ae85-443b-9ec2-b2fa4ebaad05&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=fwVae&pd_rd_r=32656df5-6a5e-468f-aacb-7fc0cb4c36f2
+                              - generic [ref=e396]:
+                                - generic [ref=e397]: ₹1,999.00
+                                - generic [ref=e398]:
+                                  - text: ₹
+                                  - generic [ref=e399]:
+                                    - text: 1,999
+                                    - generic [ref=e400]: .
+                                  - text: "00"
+                            - generic [ref=e403]: "M.R.P: ₹4,999.00"
+                            - img [ref=e405]
+                  - button "Next page" [ref=e407] [cursor=pointer]:
+                    - generic [ref=e410]: Next page
+          - generic [ref=e412]:
+            - generic [ref=e415]:
+              - heading "Results" [level=2] [ref=e416]
+              - generic [ref=e417]: Check each product page for other buying options. Price and other details may vary based on product size and colour.
+            - generic:
+              - list:
+                - listitem [ref=e418]:
+                  - generic [ref=e425]:
+                    - link [ref=e429] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MDgzMjo6MDo6&url=%2FNike-Court-Vision-NN-WHITE-BLACK-DH2987-101-9%2Fdp%2FB098F6QPLK%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-1-spons%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=quZuPvaFkt&sp_cr=ZAZ
+                      - img [ref=e431]
+                    - generic [ref=e432]:
+                      - group "colours available" [ref=e434]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e436] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MDgzMjo6MDo6&url=%2FNike-Court-Vision-NN-WHITE-BLACK-DH2987-101-9%2Fdp%2FB098F6QPLK%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-1-spons%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=quZuPvaFkt&sp_cr=ZAZ
+                      - generic [ref=e437]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e440] [cursor=pointer]:
+                          - generic [ref=e441]: Sponsored
+                        - heading "Nike" [level=2] [ref=e444]
+                        - link "Sponsored Ad - Nike Mens Court Vision Lo Nn Basketball Shoes" [ref=e445] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MDgzMjo6MDo6&url=%2FNike-Court-Vision-NN-WHITE-BLACK-DH2987-101-9%2Fdp%2FB098F6QPLK%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-1-spons%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=quZuPvaFkt&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens Court Vision Lo Nn Basketball Shoes" [level=2] [ref=e446]: Nike Mens Court Vision Lo Nn Basketball Shoes
+                      - generic [ref=e448]:
+                        - text: "3.8"
+                        - button "3.8 out of 5 stars, rating details" [ref=e450] [cursor=pointer]:
+                          - generic [ref=e452]: 3.8 out of 5 stars
+                        - link "4,223 ratings" [ref=e454] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MDgzMjo6MDo6&url=%2FNike-Court-Vision-NN-WHITE-BLACK-DH2987-101-9%2Fdp%2FB098F6QPLK%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-1-spons%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=quZuPvaFkt&sp_cr=ZAZ#customerReviews
+                          - text: (4.2K)
+                      - generic [ref=e455]:
+                        - generic [ref=e457]:
+                          - generic [ref=e458]: Price, product page
+                          - link "₹4,995" [ref=e459] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MDgzMjo6MDo6&url=%2FNike-Court-Vision-NN-WHITE-BLACK-DH2987-101-9%2Fdp%2FB098F6QPLK%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-1-spons%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=quZuPvaFkt&sp_cr=ZAZ
+                            - generic [ref=e460]:
+                              - generic [ref=e461]: ₹4,995
+                              - generic [ref=e462]: ₹4,995
+                        - generic [ref=e466]:
+                          - generic [ref=e467]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e468]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e471]:
+                        - generic [ref=e473]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e475]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e485] [cursor=pointer]
+                - listitem [ref=e486]:
+                  - generic [ref=e493]:
+                    - link [ref=e497] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MTAzMjo6MDo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-2-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                      - img [ref=e499]
+                    - generic [ref=e500]:
+                      - group "colours available" [ref=e502]:
+                        - list
+                        - link "+7 other colors/patterns" [ref=e504] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MTAzMjo6MDo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-2-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                      - generic [ref=e505]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e508] [cursor=pointer]:
+                          - generic [ref=e509]: Sponsored
+                        - heading "Nike" [level=2] [ref=e512]
+                        - link "Sponsored Ad - Nike Mens Run Defy Running Shoes" [ref=e513] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MTAzMjo6MDo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-2-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens Run Defy Running Shoes" [level=2] [ref=e514]: Nike Mens Run Defy Running Shoes
+                      - generic [ref=e515]:
+                        - generic [ref=e516]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e518] [cursor=pointer]:
+                            - generic [ref=e520]: 4.0 out of 5 stars
+                          - link "825 ratings" [ref=e522] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MTAzMjo6MDo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-2-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ#customerReviews
+                            - text: (825)
+                        - generic [ref=e523]: 50+ bought in past month
+                      - generic [ref=e524]:
+                        - generic [ref=e526]:
+                          - generic [ref=e527]: Price, product page
+                          - link "₹3,995" [ref=e528] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MTAzMjo6MDo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-2-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                            - generic [ref=e529]:
+                              - generic [ref=e530]: ₹3,995
+                              - generic [ref=e531]: ₹3,995
+                        - generic [ref=e535]:
+                          - generic [ref=e536]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e537]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e542]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e552] [cursor=pointer]
+                - listitem [ref=e553]:
+                  - generic [ref=e560]:
+                    - generic [ref=e565]: New Season
+                    - link [ref=e569] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MjQzMjo6MDo6&url=%2FNike-Winflo-Black-Bright-Crimson-Running%2Fdp%2FB0FBRD3W89%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-3-spons%26aref%3D3C8x1U1fU0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=3C8x1U1fU0&sp_cr=ZAZ
+                      - img [ref=e571]
+                    - generic [ref=e572]:
+                      - group "colours available" [ref=e574]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=e576] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MjQzMjo6MDo6&url=%2FNike-Winflo-Black-Bright-Crimson-Running%2Fdp%2FB0FBRD3W89%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-3-spons%26aref%3D3C8x1U1fU0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=3C8x1U1fU0&sp_cr=ZAZ
+                      - generic [ref=e577]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e580] [cursor=pointer]:
+                          - generic [ref=e581]: Sponsored
+                        - heading "Nike" [level=2] [ref=e584]
+                        - link "Sponsored Ad - Nike Mens Winflo 11 Running Shoes" [ref=e585] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MjQzMjo6MDo6&url=%2FNike-Winflo-Black-Bright-Crimson-Running%2Fdp%2FB0FBRD3W89%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-3-spons%26aref%3D3C8x1U1fU0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=3C8x1U1fU0&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens Winflo 11 Running Shoes" [level=2] [ref=e586]: Nike Mens Winflo 11 Running Shoes
+                      - generic [ref=e587]:
+                        - generic [ref=e588]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e590] [cursor=pointer]:
+                            - generic [ref=e592]: 4.3 out of 5 stars
+                          - link "94 ratings" [ref=e594] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MjQzMjo6MDo6&url=%2FNike-Winflo-Black-Bright-Crimson-Running%2Fdp%2FB0FBRD3W89%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-3-spons%26aref%3D3C8x1U1fU0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=3C8x1U1fU0&sp_cr=ZAZ#customerReviews
+                            - text: (94)
+                        - generic [ref=e595]: 50+ bought in past month
+                      - generic [ref=e596]:
+                        - link "Limited time deal" [ref=e598] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e601]: Limited time deal
+                        - generic [ref=e603]:
+                          - generic [ref=e604]: Price, product page
+                          - 'link "₹6,956 M.R.P: ₹8,695 M.R.P: ₹8,695" [ref=e605] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDkxNDIyNTI0MjQzMjo6MDo6&url=%2FNike-Winflo-Black-Bright-Crimson-Running%2Fdp%2FB0FBRD3W89%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-3-spons%26aref%3D3C8x1U1fU0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=3C8x1U1fU0&sp_cr=ZAZ
+                            - generic [ref=e606]:
+                              - generic [ref=e607]: ₹6,956
+                              - generic [ref=e608]: ₹6,956
+                            - generic [ref=e609]: "M.R.P: ₹8,695"
+                            - generic [ref=e610]:
+                              - text: "M.R.P:"
+                              - generic [ref=e611]:
+                                - generic [ref=e612]: ₹8,695
+                                - text: ₹8,695
+                          - text: (20% off)
+                        - generic [ref=e616]:
+                          - generic [ref=e617]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e618]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e623]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e633] [cursor=pointer]
+                - listitem [ref=e634]:
+                  - generic [ref=e641]:
+                    - generic [ref=e646]: New Season
+                    - link [ref=e650] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDk5NjU1MjI2MjEzMjo6MDo6&url=%2FNike-Heritage-Midnight-Green-Midnight-Skateboarding%2Fdp%2FB0FXXW21SL%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-4-spons%26aref%3Dg8IsQlbZAa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=g8IsQlbZAa&sp_cr=ZAZ
+                      - img [ref=e652]
+                    - generic [ref=e653]:
+                      - group "colours available" [ref=e655]:
+                        - list
+                        - link "+6 other colors/patterns" [ref=e657] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDk5NjU1MjI2MjEzMjo6MDo6&url=%2FNike-Heritage-Midnight-Green-Midnight-Skateboarding%2Fdp%2FB0FXXW21SL%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-4-spons%26aref%3Dg8IsQlbZAa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=g8IsQlbZAa&sp_cr=ZAZ
+                      - generic [ref=e658]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e661] [cursor=pointer]:
+                          - generic [ref=e662]: Sponsored
+                        - heading "Nike" [level=2] [ref=e665]
+                        - link "Sponsored Ad - Nike Mens SB Heritage Vulc Skateboarding Shoes" [ref=e666] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDk5NjU1MjI2MjEzMjo6MDo6&url=%2FNike-Heritage-Midnight-Green-Midnight-Skateboarding%2Fdp%2FB0FXXW21SL%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-4-spons%26aref%3Dg8IsQlbZAa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=g8IsQlbZAa&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens SB Heritage Vulc Skateboarding Shoes" [level=2] [ref=e667]: Nike Mens SB Heritage Vulc Skateboarding Shoes
+                      - generic [ref=e669]:
+                        - text: "3.4"
+                        - button "3.4 out of 5 stars, rating details" [ref=e671] [cursor=pointer]:
+                          - generic [ref=e673]: 3.4 out of 5 stars
+                        - link "49 ratings" [ref=e675] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDk5NjU1MjI2MjEzMjo6MDo6&url=%2FNike-Heritage-Midnight-Green-Midnight-Skateboarding%2Fdp%2FB0FXXW21SL%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-4-spons%26aref%3Dg8IsQlbZAa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=g8IsQlbZAa&sp_cr=ZAZ#customerReviews
+                          - text: (49)
+                      - generic [ref=e676]:
+                        - link "Limited time deal" [ref=e678] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e681]: Limited time deal
+                        - generic [ref=e683]:
+                          - generic [ref=e684]: Price, product page
+                          - 'link "₹3,297 M.R.P: ₹5,495 M.R.P: ₹5,495" [ref=e685] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYXRmOjMwMDk5NjU1MjI2MjEzMjo6MDo6&url=%2FNike-Heritage-Midnight-Green-Midnight-Skateboarding%2Fdp%2FB0FXXW21SL%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-4-spons%26aref%3Dg8IsQlbZAa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=g8IsQlbZAa&sp_cr=ZAZ
+                            - generic [ref=e686]:
+                              - generic [ref=e687]: ₹3,297
+                              - generic [ref=e688]: ₹3,297
+                            - generic [ref=e689]: "M.R.P: ₹5,495"
+                            - generic [ref=e690]:
+                              - text: "M.R.P:"
+                              - generic [ref=e691]:
+                                - generic [ref=e692]: ₹5,495
+                                - text: ₹5,495
+                          - text: (40% off)
+                        - generic [ref=e696]:
+                          - generic [ref=e697]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e698]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e703]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e717] [cursor=pointer]
+                - listitem [ref=e718]:
+                  - generic [ref=e723]:
+                    - generic [ref=e728]: New Season
+                    - link [ref=e732] [cursor=pointer]:
+                      - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=sr_1_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                      - img [ref=e734]
+                    - generic [ref=e735]:
+                      - group "colours available" [ref=e737]:
+                        - list [ref=e738]:
+                          - generic [ref=e739]:
+                            - listitem:
+                              - link "WHITE/BLACK-PURE PLATINUM-GLACIER BLUE":
+                                - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                          - generic [ref=e742]:
+                            - listitem:
+                              - link "Black/Anthracite":
+                                - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0DPHWWYYV/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                          - generic [ref=e745]:
+                            - listitem:
+                              - link "Lt Smoke Grey/Black-Smoke Grey-White":
+                                - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0DPHTWLTQ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                          - generic [ref=e748]:
+                            - listitem:
+                              - link "Summit White/Metallic Silver-White":
+                                - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FQN5RFR6/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                          - generic [ref=e751]:
+                            - listitem:
+                              - link "White/Off Noir-Hydrogen Blue":
+                                - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FQMW41HY/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                          - generic [ref=e754]:
+                            - listitem:
+                              - link "White/Pure Platinum":
+                                - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0DPHVMP3V/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                      - generic [ref=e757]:
+                        - heading "Nike" [level=2] [ref=e759]
+                        - link "Nike Mens Revolution 8 Running Shoes" [ref=e760] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=sr_1_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                          - heading "Nike Mens Revolution 8 Running Shoes" [level=2] [ref=e761]
+                      - generic [ref=e762]:
+                        - generic [ref=e763]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e765] [cursor=pointer]:
+                            - generic [ref=e767]: 3.9 out of 5 stars
+                          - link "997 ratings" [ref=e769] [cursor=pointer]:
+                            - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=sr_1_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5#customerReviews
+                            - text: (997)
+                        - generic [ref=e770]: 200+ bought in past month
+                      - generic [ref=e771]:
+                        - link "Limited time deal" [ref=e773] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e776]: Limited time deal
+                        - generic [ref=e778]:
+                          - generic [ref=e779]: Price, product page
+                          - 'link "₹3,436 M.R.P: ₹4,295 M.R.P: ₹4,295" [ref=e780] [cursor=pointer]':
+                            - /url: /Nike-Revolution-Black-Pure-Platinum-Glacier-Running/dp/B0FBRD7XPY/ref=sr_1_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-5
+                            - generic [ref=e781]:
+                              - generic [ref=e782]: ₹3,436
+                              - generic [ref=e783]: ₹3,436
+                            - generic [ref=e784]: "M.R.P: ₹4,295"
+                            - generic [ref=e785]:
+                              - text: "M.R.P:"
+                              - generic [ref=e786]:
+                                - generic [ref=e787]: ₹4,295
+                                - text: ₹4,295
+                          - text: (20% off)
+                        - generic [ref=e791]:
+                          - generic [ref=e792]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e793]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e798]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e808] [cursor=pointer]
+                - listitem [ref=e809]:
+                  - generic [ref=e814]:
+                    - generic "Amazon's Choice" [ref=e816]:
+                      - group "Amazon's Choice for \"Nike shoes\"" [ref=e819]:
+                        - generic [ref=e821]: Amazon's Choice
+                    - link [ref=e825] [cursor=pointer]:
+                      - /url: /Nike-REVOLUTION-7-WHITE-RED-BLACK-PHOTON-DUST-FB2207-102-6UK/dp/B0CZHDSN8J/ref=sr_1_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-6
+                      - img [ref=e827]
+                    - generic [ref=e828]:
+                      - group "colours available" [ref=e830]:
+                        - list [ref=e831]:
+                          - generic [ref=e832]:
+                            - listitem:
+                              - link "WHITE/FIRE RED-BLACK-PHOTON DUST":
+                                - /url: /Nike-REVOLUTION-7-WHITE-RED-BLACK-PHOTON-DUST-FB2207-102-6UK/dp/B0CZHDSN8J/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-6
+                          - generic [ref=e835]:
+                            - listitem:
+                              - link "WOLF GREY/VOLT-SMOKE GREY-BLACK":
+                                - /url: /Nike-REVOLUTION-7-WHITE-RED-BLACK-PHOTON-DUST-FB2207-102-6UK/dp/B0CKZ9GBCV/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-6
+                      - generic [ref=e838]:
+                        - heading "Nike" [level=2] [ref=e840]
+                        - link "Nike Mens Revolution 7 Running Shoes" [ref=e841] [cursor=pointer]:
+                          - /url: /Nike-REVOLUTION-7-WHITE-RED-BLACK-PHOTON-DUST-FB2207-102-6UK/dp/B0CZHDSN8J/ref=sr_1_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-6
+                          - heading "Nike Mens Revolution 7 Running Shoes" [level=2] [ref=e842]
+                      - generic [ref=e844]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e846] [cursor=pointer]:
+                          - generic [ref=e848]: 4.2 out of 5 stars
+                        - link "2,026 ratings" [ref=e850] [cursor=pointer]:
+                          - /url: /Nike-REVOLUTION-7-WHITE-RED-BLACK-PHOTON-DUST-FB2207-102-6UK/dp/B0CZHDSN8J/ref=sr_1_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-6#customerReviews
+                          - text: (2K)
+                      - generic [ref=e851]:
+                        - link "Limited time deal" [ref=e853] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e856]: Limited time deal
+                        - generic [ref=e858]:
+                          - generic [ref=e859]: Price, product page
+                          - 'link "₹2,217 M.R.P: ₹3,695 M.R.P: ₹3,695" [ref=e860] [cursor=pointer]':
+                            - /url: /Nike-REVOLUTION-7-WHITE-RED-BLACK-PHOTON-DUST-FB2207-102-6UK/dp/B0CZHDSN8J/ref=sr_1_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-6
+                            - generic [ref=e861]:
+                              - generic [ref=e862]: ₹2,217
+                              - generic [ref=e863]: ₹2,217
+                            - generic [ref=e864]: "M.R.P: ₹3,695"
+                            - generic [ref=e865]:
+                              - text: "M.R.P:"
+                              - generic [ref=e866]:
+                                - generic [ref=e867]: ₹3,695
+                                - text: ₹3,695
+                          - text: (40% off)
+                        - generic [ref=e871]:
+                          - generic [ref=e872]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e873]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e878]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e892] [cursor=pointer]
+                - listitem [ref=e893]:
+                  - generic [ref=e898]:
+                    - group "Best sellerin Men's Basketball Shoes" [ref=e903]:
+                      - generic "Best seller" [ref=e905]
+                    - link [ref=e909] [cursor=pointer]:
+                      - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXNQFDR/ref=sr_1_7?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                      - img [ref=e911]
+                    - generic [ref=e912]:
+                      - group "colours available" [ref=e914]:
+                        - list [ref=e915]:
+                          - generic [ref=e916]:
+                            - listitem:
+                              - link "BLACK/BLACK-WHITE-ICE BLUE":
+                                - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXNQFDR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                          - generic [ref=e919]:
+                            - listitem:
+                              - link "Black/White-White":
+                                - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0FMNF9H1S/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                          - generic [ref=e922]:
+                            - listitem:
+                              - link "BLACK/BLACK-BLACK":
+                                - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXN8345/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                          - generic [ref=e925]:
+                            - listitem:
+                              - link "BLACK/UNIVERSITY RED-WHITE":
+                                - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXQN9F1/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                          - generic [ref=e928]:
+                            - listitem:
+                              - link "White/Royal Pulse-Hydrogen Blue":
+                                - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0FMNLPNB3/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                      - generic [ref=e931]:
+                        - heading "Nike" [level=2] [ref=e933]
+                        - link "Nike Mens Precision 8 Mid Basketball Shoes" [ref=e934] [cursor=pointer]:
+                          - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXNQFDR/ref=sr_1_7?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                          - heading "Nike Mens Precision 8 Mid Basketball Shoes" [level=2] [ref=e935]
+                      - generic [ref=e936]:
+                        - generic [ref=e937]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=e939] [cursor=pointer]:
+                            - generic [ref=e941]: 4.5 out of 5 stars
+                          - link "85 ratings" [ref=e943] [cursor=pointer]:
+                            - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXNQFDR/ref=sr_1_7?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7#customerReviews
+                            - text: (85)
+                        - generic [ref=e944]: 50+ bought in past month
+                      - generic [ref=e945]:
+                        - link "Limited time deal" [ref=e947] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e950]: Limited time deal
+                        - generic [ref=e952]:
+                          - generic [ref=e953]: Price, product page
+                          - 'link "₹5,036 M.R.P: ₹6,295 M.R.P: ₹6,295" [ref=e954] [cursor=pointer]':
+                            - /url: /Nike-Precision-Black-Black-White-ICE-Basketball/dp/B0DZXNQFDR/ref=sr_1_7?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-7
+                            - generic [ref=e955]:
+                              - generic [ref=e956]: ₹5,036
+                              - generic [ref=e957]: ₹5,036
+                            - generic [ref=e958]: "M.R.P: ₹6,295"
+                            - generic [ref=e959]:
+                              - text: "M.R.P:"
+                              - generic [ref=e960]:
+                                - generic [ref=e961]: ₹6,295
+                                - text: ₹6,295
+                          - text: (20% off)
+                        - generic [ref=e965]:
+                          - generic [ref=e966]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e967]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e972]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e982] [cursor=pointer]
+                - listitem [ref=e983]:
+                  - generic [ref=e988]:
+                    - link [ref=e992] [cursor=pointer]:
+                      - /url: /Nike-Revolution-White-Wolf-Grey-Topaz-Running/dp/B0FBRC1J6S/ref=sr_1_8?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-8
+                      - img [ref=e994]
+                    - generic [ref=e995]:
+                      - group "colours available" [ref=e997]:
+                        - list
+                        - link "+5 other colors/patterns" [ref=e999] [cursor=pointer]:
+                          - /url: /Nike-Revolution-White-Wolf-Grey-Topaz-Running/dp/B0FBRC1J6S/ref=cs_sr_dp?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-8
+                      - generic [ref=e1000]:
+                        - heading "Nike" [level=2] [ref=e1002]
+                        - link "Nike Mens Revolution 8 Running Shoes" [ref=e1003] [cursor=pointer]:
+                          - /url: /Nike-Revolution-White-Wolf-Grey-Topaz-Running/dp/B0FBRC1J6S/ref=sr_1_8?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-8
+                          - heading "Nike Mens Revolution 8 Running Shoes" [level=2] [ref=e1004]
+                      - generic [ref=e1005]:
+                        - generic [ref=e1006]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e1008] [cursor=pointer]:
+                            - generic [ref=e1010]: 3.9 out of 5 stars
+                          - link "997 ratings" [ref=e1012] [cursor=pointer]:
+                            - /url: /Nike-Revolution-White-Wolf-Grey-Topaz-Running/dp/B0FBRC1J6S/ref=sr_1_8?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-8#customerReviews
+                            - text: (997)
+                        - generic [ref=e1013]: 50+ bought in past month
+                      - generic "Currently unavailable." [ref=e1016]
+                      - link "See options" [ref=e1022] [cursor=pointer]:
+                        - /url: /Nike-Revolution-White-Wolf-Grey-Topaz-Running/dp/B0FBRC1J6S/ref=sr_1_8_so_SHOES?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-8
+                - listitem [ref=e1023]:
+                  - generic [ref=e1028]:
+                    - generic [ref=e1033]: New Season
+                    - link [ref=e1037] [cursor=pointer]:
+                      - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWDJN4P/ref=sr_1_9?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                      - img [ref=e1039]
+                    - generic [ref=e1040]:
+                      - group "colours available" [ref=e1042]:
+                        - list [ref=e1043]:
+                          - generic [ref=e1044]:
+                            - listitem:
+                              - link "WOLF GREY/BLACK-WHITE-IRON GREY":
+                                - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWDJN4P/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - generic [ref=e1047]:
+                            - listitem:
+                              - link "Deep Royal Blue/White-World Indigo-Black":
+                                - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DYKY5H4V/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - generic [ref=e1050]:
+                            - listitem:
+                              - link "Black/Anthracite":
+                                - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DYLJW6HS/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - generic [ref=e1053]:
+                            - listitem:
+                              - link "Summit White/Bright Crimson-turf Orange":
+                                - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0FBRFBPBG/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - generic [ref=e1056]:
+                            - listitem:
+                              - link "WHITE/BLACK-GLACIER BLUE-GREEN STRIKE":
+                                - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0FBRCWPRP/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - generic [ref=e1059]:
+                            - listitem:
+                              - link "White/Pure Platinum/Black":
+                                - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWFVVY1/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                        - link "+2 other colors/patterns" [ref=e1063] [cursor=pointer]:
+                          - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWDJN4P/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - text: "+2"
+                      - generic [ref=e1064]:
+                        - heading "Nike" [level=2] [ref=e1066]
+                        - link "Nike Mens Run Defy Running Shoes" [ref=e1067] [cursor=pointer]:
+                          - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWDJN4P/ref=sr_1_9?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                          - heading "Nike Mens Run Defy Running Shoes" [level=2] [ref=e1068]
+                      - generic [ref=e1069]:
+                        - generic [ref=e1070]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e1072] [cursor=pointer]:
+                            - generic [ref=e1074]: 4.0 out of 5 stars
+                          - link "825 ratings" [ref=e1076] [cursor=pointer]:
+                            - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWDJN4P/ref=sr_1_9?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9#customerReviews
+                            - text: (825)
+                        - generic [ref=e1077]: 50+ bought in past month
+                      - generic [ref=e1078]:
+                        - generic [ref=e1080]:
+                          - generic [ref=e1081]: Price, product page
+                          - link "₹3,995" [ref=e1082] [cursor=pointer]:
+                            - /url: /Nike-Defy-Black-White-Iron-Running-Shoes/dp/B0DZWDJN4P/ref=sr_1_9?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-9
+                            - generic [ref=e1083]:
+                              - generic [ref=e1084]: ₹3,995
+                              - generic [ref=e1085]: ₹3,995
+                        - generic [ref=e1089]:
+                          - generic [ref=e1090]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1091]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1094]:
+                        - generic [ref=e1096]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e1098]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1108] [cursor=pointer]
+                - listitem [ref=e1109]:
+                  - generic [ref=e1114]:
+                    - generic [ref=e1119]: New Season
+                    - link [ref=e1123] [cursor=pointer]:
+                      - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTFDWXF/ref=sr_1_10?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10
+                      - img [ref=e1125]
+                    - generic [ref=e1126]:
+                      - group "colours available" [ref=e1128]:
+                        - list [ref=e1129]:
+                          - generic [ref=e1130]:
+                            - listitem:
+                              - link "WHITE/BLACK-PLATINUM TINT-ANTHRACITE":
+                                - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTFDWXF/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10
+                          - generic [ref=e1133]:
+                            - listitem:
+                              - link "WHITE/BLACK-SUMMIT WHITE-BRIGHT CRIMSON":
+                                - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTH41ZQ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10
+                          - generic [ref=e1136]:
+                            - listitem:
+                              - link "White/White":
+                                - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTDZ96P/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10
+                      - generic [ref=e1139]:
+                        - heading "Nike" [level=2] [ref=e1141]
+                        - link "Nike Mens Downshifter 14 Running Shoes" [ref=e1142] [cursor=pointer]:
+                          - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTFDWXF/ref=sr_1_10?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10
+                          - heading "Nike Mens Downshifter 14 Running Shoes" [level=2] [ref=e1143]
+                      - generic [ref=e1144]:
+                        - generic [ref=e1145]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1147] [cursor=pointer]:
+                            - generic [ref=e1149]: 4.1 out of 5 stars
+                          - link "31 ratings" [ref=e1151] [cursor=pointer]:
+                            - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTFDWXF/ref=sr_1_10?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10#customerReviews
+                            - text: (31)
+                        - generic [ref=e1152]: 50+ bought in past month
+                      - generic [ref=e1153]:
+                        - generic [ref=e1155]:
+                          - generic [ref=e1156]: Price, product page
+                          - link "₹4,895" [ref=e1157] [cursor=pointer]:
+                            - /url: /Nike-Downshifter-Black-Platinum-Tint-Anthracite-Running/dp/B0FFTFDWXF/ref=sr_1_10?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-10
+                            - generic [ref=e1158]:
+                              - generic [ref=e1159]: ₹4,895
+                              - generic [ref=e1160]: ₹4,895
+                        - generic [ref=e1164]:
+                          - generic [ref=e1165]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1166]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1171]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e1181] [cursor=pointer]
+                - listitem [ref=e1182]:
+                  - generic [ref=e1187]:
+                    - link [ref=e1191] [cursor=pointer]:
+                      - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WG8N2C/ref=sr_1_11?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                      - img [ref=e1193]
+                    - generic [ref=e1194]:
+                      - group "colours available" [ref=e1196]:
+                        - list [ref=e1197]:
+                          - generic [ref=e1198]:
+                            - listitem:
+                              - link "SUMMIT WHITE/NAVY-WHITE-GUM LIGHT BROWN":
+                                - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WG8N2C/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - generic [ref=e1201]:
+                            - listitem:
+                              - link "MIDNIGHT NAVY/NOBLE GREEN-MIDNIGHT NAVY":
+                                - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B0G8KXG13G/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - generic [ref=e1204]:
+                            - listitem:
+                              - link "SUMMIT WHITE/CARDINAL RED-WHITE":
+                                - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WJVM89/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - generic [ref=e1207]:
+                            - listitem:
+                              - link "BLACK/WHITE-BLACK-WHITE":
+                                - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B09DG59NB7/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - generic [ref=e1210]:
+                            - listitem:
+                              - link "SAIL/GORGE GREEN-SAIL-SAFETY ORANGE":
+                                - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B09NMF7GFB/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - generic [ref=e1213]:
+                            - listitem:
+                              - link "Purple":
+                                - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B0FXXW21SL/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                        - link "+1 other color/pattern" [ref=e1217] [cursor=pointer]:
+                          - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WG8N2C/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - text: "+1"
+                      - generic [ref=e1218]:
+                        - heading "Nike" [level=2] [ref=e1220]
+                        - link "Nike Mens SB Heritage Vulc Skateboarding Shoes" [ref=e1221] [cursor=pointer]:
+                          - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WG8N2C/ref=sr_1_11?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                          - heading "Nike Mens SB Heritage Vulc Skateboarding Shoes" [level=2] [ref=e1222]
+                      - generic [ref=e1224]:
+                        - text: "3.4"
+                        - button "3.4 out of 5 stars, rating details" [ref=e1226] [cursor=pointer]:
+                          - generic [ref=e1228]: 3.4 out of 5 stars
+                        - link "49 ratings" [ref=e1230] [cursor=pointer]:
+                          - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WG8N2C/ref=sr_1_11?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11#customerReviews
+                          - text: (49)
+                      - generic [ref=e1231]:
+                        - generic [ref=e1233]:
+                          - generic [ref=e1234]: Price, product page
+                          - 'link "₹3,297 M.R.P: ₹5,495 M.R.P: ₹5,495" [ref=e1235] [cursor=pointer]':
+                            - /url: /Nike-Heritage-Vulc-Summit-Navy-White-Gum-BROWN-CD5010-102-10UK/dp/B096WG8N2C/ref=sr_1_11?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-11
+                            - generic [ref=e1236]:
+                              - generic [ref=e1237]: ₹3,297
+                              - generic [ref=e1238]: ₹3,297
+                            - generic [ref=e1239]: "M.R.P: ₹5,495"
+                            - generic [ref=e1240]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1241]:
+                                - generic [ref=e1242]: ₹5,495
+                                - text: ₹5,495
+                          - text: (40% off)
+                        - generic [ref=e1246]:
+                          - generic [ref=e1247]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1248]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1251]:
+                        - generic [ref=e1253]: FREE delivery Sat, 25 Apr
+                        - generic [ref=e1255]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1265] [cursor=pointer]
+                - listitem [ref=e1266]:
+                  - generic [ref=e1271]:
+                    - generic [ref=e1276]: New Season
+                    - link [ref=e1280] [cursor=pointer]:
+                      - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0G4N1JZGG/ref=sr_1_12?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12
+                      - img [ref=e1282]
+                    - generic [ref=e1283]:
+                      - group "colours available" [ref=e1285]:
+                        - list [ref=e1286]:
+                          - generic [ref=e1287]:
+                            - listitem:
+                              - link "OFF WHITE/BLACK-WHITE-TOPAZ GOLD":
+                                - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0G4N1JZGG/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12
+                          - generic [ref=e1290]:
+                            - listitem:
+                              - link "MEDIUM ASH/SAIL-COLLEGE GREY-LIGHT ASH":
+                                - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0DYKW7843/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12
+                          - generic [ref=e1293]:
+                            - listitem:
+                              - link "BLACK/WHITE-IRON GREY":
+                                - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0D8WC2XY1/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12
+                      - generic [ref=e1296]:
+                        - heading "Nike" [level=2] [ref=e1298]
+                        - link "Nike Mens Quest 6 Running Shoes" [ref=e1299] [cursor=pointer]:
+                          - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0G4N1JZGG/ref=sr_1_12?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12
+                          - heading "Nike Mens Quest 6 Running Shoes" [level=2] [ref=e1300]
+                      - generic [ref=e1302]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e1304] [cursor=pointer]:
+                          - generic [ref=e1306]: 3.9 out of 5 stars
+                        - link "243 ratings" [ref=e1308] [cursor=pointer]:
+                          - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0G4N1JZGG/ref=sr_1_12?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12#customerReviews
+                          - text: (243)
+                      - generic [ref=e1309]:
+                        - link "Limited time deal" [ref=e1311] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1314]: Limited time deal
+                        - generic [ref=e1316]:
+                          - generic [ref=e1317]: Price, product page
+                          - 'link "₹5,676 M.R.P: ₹7,095 M.R.P: ₹7,095" [ref=e1318] [cursor=pointer]':
+                            - /url: /Nike-Quest-White-Black-White-Topaz-Running/dp/B0G4N1JZGG/ref=sr_1_12?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-12
+                            - generic [ref=e1319]:
+                              - generic [ref=e1320]: ₹5,676
+                              - generic [ref=e1321]: ₹5,676
+                            - generic [ref=e1322]: "M.R.P: ₹7,095"
+                            - generic [ref=e1323]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1324]:
+                                - generic [ref=e1325]: ₹7,095
+                                - text: ₹7,095
+                          - text: (20% off)
+                        - generic [ref=e1329]:
+                          - generic [ref=e1330]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1331]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1334]:
+                        - generic [ref=e1336]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e1338]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1348] [cursor=pointer]
+                - listitem [ref=e1349]:
+                  - generic [ref=e1354]:
+                    - generic [ref=e1359]: New Season
+                    - link [ref=e1363] [cursor=pointer]:
+                      - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MXSFFC/ref=sr_1_13?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13
+                      - img [ref=e1365]
+                    - generic [ref=e1366]:
+                      - group "colours available" [ref=e1368]:
+                        - list [ref=e1369]:
+                          - generic [ref=e1370]:
+                            - listitem:
+                              - link "BLACK/BRIGHT CRIMSON-TOPAZ GOLD":
+                                - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MXSFFC/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13
+                          - generic [ref=e1373]:
+                            - listitem:
+                              - link "WHITE/BLACK-HYPER TURQ-CONCORD":
+                                - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0FMYJG3LG/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13
+                          - generic [ref=e1376]:
+                            - listitem:
+                              - link "WHITE/BLACK-VOLT ICE-BARELY VOLT":
+                                - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MSL62X/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13
+                      - generic [ref=e1379]:
+                        - heading "Nike" [level=2] [ref=e1381]
+                        - link "Nike Mens Air Zoom Pegasus 41 Running Shoes" [ref=e1382] [cursor=pointer]:
+                          - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MXSFFC/ref=sr_1_13?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13
+                          - heading "Nike Mens Air Zoom Pegasus 41 Running Shoes" [level=2] [ref=e1383]
+                      - generic [ref=e1384]:
+                        - generic [ref=e1385]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e1387] [cursor=pointer]:
+                            - generic [ref=e1389]: 4.3 out of 5 stars
+                          - link "21 ratings" [ref=e1391] [cursor=pointer]:
+                            - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MXSFFC/ref=sr_1_13?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13#customerReviews
+                            - text: (21)
+                        - generic [ref=e1392]: 50+ bought in past month
+                      - generic [ref=e1393]:
+                        - link "Limited time deal" [ref=e1395] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1398]: Limited time deal
+                        - generic [ref=e1400]:
+                          - generic [ref=e1401]: Price, product page
+                          - 'link "₹7,137 M.R.P: ₹11,895 M.R.P: ₹11,895" [ref=e1402] [cursor=pointer]':
+                            - /url: /Nike-Pegasus-Bright-Crimson-Topaz-Running/dp/B0G4MXSFFC/ref=sr_1_13?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-13
+                            - generic [ref=e1403]:
+                              - generic [ref=e1404]: ₹7,137
+                              - generic [ref=e1405]: ₹7,137
+                            - generic [ref=e1406]: "M.R.P: ₹11,895"
+                            - generic [ref=e1407]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1408]:
+                                - generic [ref=e1409]: ₹11,895
+                                - text: ₹11,895
+                          - text: (40% off)
+                        - generic [ref=e1413]:
+                          - generic [ref=e1414]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1415]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1420]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e1430] [cursor=pointer]
+                - listitem [ref=e1431]:
+                  - generic [ref=e1436]:
+                    - generic [ref=e1441]: New Season
+                    - link [ref=e1445] [cursor=pointer]:
+                      - /url: /Nike-Court-Vision-LO-NB/dp/B0FDWFR2C5/ref=sr_1_14?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-14
+                      - img [ref=e1447]
+                    - generic [ref=e1448]:
+                      - group "colours available" [ref=e1450]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e1452] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-LO-NB/dp/B0FDWFR2C5/ref=cs_sr_dp?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-14
+                      - generic [ref=e1453]:
+                        - heading "Nike" [level=2] [ref=e1455]
+                        - link "Nike Mens Court Vision Low Basketball Shoes" [ref=e1456] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-LO-NB/dp/B0FDWFR2C5/ref=sr_1_14?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-14
+                          - heading "Nike Mens Court Vision Low Basketball Shoes" [level=2] [ref=e1457]
+                      - generic [ref=e1459]:
+                        - text: "3.7"
+                        - button "3.7 out of 5 stars, rating details" [ref=e1461] [cursor=pointer]:
+                          - generic [ref=e1463]: 3.7 out of 5 stars
+                        - link "15 ratings" [ref=e1465] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-LO-NB/dp/B0FDWFR2C5/ref=sr_1_14?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-14#customerReviews
+                          - text: (15)
+                      - generic [ref=e1466]:
+                        - link "Limited time deal" [ref=e1468] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1471]: Limited time deal
+                        - generic [ref=e1473]:
+                          - generic [ref=e1474]: Price, product page
+                          - 'link "₹5,196 M.R.P: ₹6,495 M.R.P: ₹6,495" [ref=e1475] [cursor=pointer]':
+                            - /url: /Nike-Court-Vision-LO-NB/dp/B0FDWFR2C5/ref=sr_1_14?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-14
+                            - generic [ref=e1476]:
+                              - generic [ref=e1477]: ₹5,196
+                              - generic [ref=e1478]: ₹5,196
+                            - generic [ref=e1479]: "M.R.P: ₹6,495"
+                            - generic [ref=e1480]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1481]:
+                                - generic [ref=e1482]: ₹6,495
+                                - text: ₹6,495
+                          - text: (20% off)
+                        - generic [ref=e1486]:
+                          - generic [ref=e1487]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1488]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1491]:
+                        - generic [ref=e1493]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e1495]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1505] [cursor=pointer]
+                - listitem [ref=e1506]:
+                  - generic [ref=e1511]:
+                    - link [ref=e1515] [cursor=pointer]:
+                      - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09NMHQQ5W/ref=sr_1_15?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                      - img [ref=e1517]
+                    - generic [ref=e1518]:
+                      - group "colours available" [ref=e1520]:
+                        - list [ref=e1521]:
+                          - generic [ref=e1522]:
+                            - listitem:
+                              - link "SAIL/GORGE GREEN-SAIL-SAFETY ORANGE":
+                                - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09NMHQQ5W/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - generic [ref=e1525]:
+                            - listitem:
+                              - link "MIDNIGHT NAVY/NOBLE GREEN-MIDNIGHT NAVY":
+                                - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B0G8KXG13G/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - generic [ref=e1528]:
+                            - listitem:
+                              - link "SUMMIT WHITE/CARDINAL RED-WHITE":
+                                - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B0F9FPTKWF/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - generic [ref=e1531]:
+                            - listitem:
+                              - link "SUMMIT WHITE/NAVY-WHITE-GUM LIGHT BROWN":
+                                - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B0F9FQ7W43/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - generic [ref=e1534]:
+                            - listitem:
+                              - link "BLACK/WHITE-BLACK-WHITE":
+                                - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09DG59NB7/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - generic [ref=e1537]:
+                            - listitem:
+                              - link "Purple":
+                                - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B0FXXW21SL/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                        - link "+1 other color/pattern" [ref=e1541] [cursor=pointer]:
+                          - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09NMHQQ5W/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - text: "+1"
+                      - generic [ref=e1542]:
+                        - heading "Nike" [level=2] [ref=e1544]
+                        - link "Nike Mens SB Heritage Vulc Skateboarding Shoes" [ref=e1545] [cursor=pointer]:
+                          - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09NMHQQ5W/ref=sr_1_15?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                          - heading "Nike Mens SB Heritage Vulc Skateboarding Shoes" [level=2] [ref=e1546]
+                      - generic [ref=e1548]:
+                        - text: "3.4"
+                        - button "3.4 out of 5 stars, rating details" [ref=e1550] [cursor=pointer]:
+                          - generic [ref=e1552]: 3.4 out of 5 stars
+                        - link "49 ratings" [ref=e1554] [cursor=pointer]:
+                          - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09NMHQQ5W/ref=sr_1_15?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15#customerReviews
+                          - text: (49)
+                      - generic [ref=e1555]:
+                        - link "Limited time deal" [ref=e1557] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1560]: Limited time deal
+                        - generic [ref=e1562]:
+                          - generic [ref=e1563]: Price, product page
+                          - 'link "₹3,297 M.R.P: ₹5,495 M.R.P: ₹5,495" [ref=e1564] [cursor=pointer]':
+                            - /url: /Nike-Heritage-Green-Sail-Safety-Orange-Skateboarding/dp/B09NMHQQ5W/ref=sr_1_15?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-15
+                            - generic [ref=e1565]:
+                              - generic [ref=e1566]: ₹3,297
+                              - generic [ref=e1567]: ₹3,297
+                            - generic [ref=e1568]: "M.R.P: ₹5,495"
+                            - generic [ref=e1569]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1570]:
+                                - generic [ref=e1571]: ₹5,495
+                                - text: ₹5,495
+                          - text: (40% off)
+                        - generic [ref=e1575]:
+                          - generic [ref=e1576]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1577]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1580]:
+                        - generic [ref=e1582]: FREE delivery Sat, 25 Apr
+                        - generic [ref=e1584]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1594] [cursor=pointer]
+                - listitem [ref=e1595]:
+                  - generic [ref=e1600]:
+                    - link [ref=e1604] [cursor=pointer]:
+                      - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-8UK/dp/B0D93TBYZY/ref=sr_1_16?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-16
+                      - img [ref=e1606]
+                    - generic [ref=e1607]:
+                      - group "colours available" [ref=e1609]:
+                        - list [ref=e1610]:
+                          - generic [ref=e1611]:
+                            - listitem:
+                              - link "WHITE/BLACK":
+                                - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-8UK/dp/B0D93TBYZY/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-16
+                          - generic [ref=e1614]:
+                            - listitem:
+                              - link "BLACK/WHITE-IRON GREY-SMOKE GREY":
+                                - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-8UK/dp/B0DLGZF32V/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-16
+                      - generic [ref=e1617]:
+                        - heading "Nike" [level=2] [ref=e1619]
+                        - link "Nike Mens Precision 7 Basketball Shoes" [ref=e1620] [cursor=pointer]:
+                          - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-8UK/dp/B0D93TBYZY/ref=sr_1_16?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-16
+                          - heading "Nike Mens Precision 7 Basketball Shoes" [level=2] [ref=e1621]
+                      - generic [ref=e1623]:
+                        - text: "4.0"
+                        - button "4.0 out of 5 stars, rating details" [ref=e1625] [cursor=pointer]:
+                          - generic [ref=e1627]: 4.0 out of 5 stars
+                        - link "224 ratings" [ref=e1629] [cursor=pointer]:
+                          - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-8UK/dp/B0D93TBYZY/ref=sr_1_16?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-16#customerReviews
+                          - text: (224)
+                      - generic [ref=e1630]:
+                        - link "Limited time deal" [ref=e1632] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1635]: Limited time deal
+                        - generic [ref=e1637]:
+                          - generic [ref=e1638]: Price, product page
+                          - 'link "₹4,556 M.R.P: ₹5,695 M.R.P: ₹5,695" [ref=e1639] [cursor=pointer]':
+                            - /url: /Nike-FN4322-101-Precision-VII-WHITE-BLACK-FN4322-101-8UK/dp/B0D93TBYZY/ref=sr_1_16?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-16
+                            - generic [ref=e1640]:
+                              - generic [ref=e1641]: ₹4,556
+                              - generic [ref=e1642]: ₹4,556
+                            - generic [ref=e1643]: "M.R.P: ₹5,695"
+                            - generic [ref=e1644]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1645]:
+                                - generic [ref=e1646]: ₹5,695
+                                - text: ₹5,695
+                          - text: (20% off)
+                        - generic [ref=e1650]:
+                          - generic [ref=e1651]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1652]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1655]:
+                        - generic [ref=e1657]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e1659]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1669] [cursor=pointer]
+                - listitem [ref=e1670]:
+                  - generic [ref=e1675]:
+                    - generic [ref=e1680]: New Season
+                    - link [ref=e1684] [cursor=pointer]:
+                      - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=sr_1_17?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17
+                      - img [ref=e1686]
+                    - generic [ref=e1687]:
+                      - group "colours available" [ref=e1689]:
+                        - list [ref=e1690]:
+                          - generic [ref=e1691]:
+                            - listitem:
+                              - link "SUMMIT WHITE/BLACK-BRIGHT CRIMSON":
+                                - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17
+                          - generic [ref=e1694]:
+                            - listitem:
+                              - link "BLACK/WHITE-ANTHRACITE-COOL GREY":
+                                - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0CZHJYFZR/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17
+                          - generic [ref=e1697]:
+                            - listitem:
+                              - link "WHITE/BLACK-GLACIER BLUE-GREEN STRIKE":
+                                - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRCZMN1/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17
+                      - generic [ref=e1700]:
+                        - heading "Nike" [level=2] [ref=e1702]
+                        - link "Nike Mens Winflo 11 Running Shoes" [ref=e1703] [cursor=pointer]:
+                          - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=sr_1_17?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17
+                          - heading "Nike Mens Winflo 11 Running Shoes" [level=2] [ref=e1704]
+                      - generic [ref=e1706]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e1708] [cursor=pointer]:
+                          - generic [ref=e1710]: 4.3 out of 5 stars
+                        - link "94 ratings" [ref=e1712] [cursor=pointer]:
+                          - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=sr_1_17?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17#customerReviews
+                          - text: (94)
+                      - generic [ref=e1713]:
+                        - link "Limited time deal" [ref=e1715] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1718]: Limited time deal
+                        - generic [ref=e1720]:
+                          - generic [ref=e1721]: Price, product page
+                          - 'link "₹6,956 M.R.P: ₹8,695 M.R.P: ₹8,695" [ref=e1722] [cursor=pointer]':
+                            - /url: /Nike-Winflo-Black-Bright-Crimson-Running/dp/B0FBRD4TLF/ref=sr_1_17?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-17
+                            - generic [ref=e1723]:
+                              - generic [ref=e1724]: ₹6,956
+                              - generic [ref=e1725]: ₹6,956
+                            - generic [ref=e1726]: "M.R.P: ₹8,695"
+                            - generic [ref=e1727]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1728]:
+                                - generic [ref=e1729]: ₹8,695
+                                - text: ₹8,695
+                          - text: (20% off)
+                        - generic [ref=e1733]:
+                          - generic [ref=e1734]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1735]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1738]:
+                        - generic [ref=e1740]: FREE delivery Sat, 25 Apr
+                        - generic [ref=e1742]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1752] [cursor=pointer]
+                - listitem [ref=e1753]:
+                  - generic [ref=e1758]:
+                    - generic [ref=e1763]: New Season
+                    - link [ref=e1767] [cursor=pointer]:
+                      - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHT15ZD/ref=sr_1_18?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                      - img [ref=e1769]
+                    - generic [ref=e1770]:
+                      - group "colours available" [ref=e1772]:
+                        - list [ref=e1773]:
+                          - generic [ref=e1774]:
+                            - listitem:
+                              - link "Lt Smoke Grey/Black-Smoke Grey-White":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHT15ZD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                          - generic [ref=e1777]:
+                            - listitem:
+                              - link "Black/Anthracite":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHVF2SH/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                          - generic [ref=e1780]:
+                            - listitem:
+                              - link "Summit White/Metallic Silver-White":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0FQN3CKM5/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                          - generic [ref=e1783]:
+                            - listitem:
+                              - link "White/Off Noir-Hydrogen Blue":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0FQN1H7DN/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                          - generic [ref=e1786]:
+                            - listitem:
+                              - link "White/Pure Platinum":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHY13VZ/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                          - generic [ref=e1789]:
+                            - listitem:
+                              - link "WHITE/BLACK-PURE PLATINUM-GLACIER BLUE":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0FBRCTB1K/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                      - generic [ref=e1792]:
+                        - heading "Nike" [level=2] [ref=e1794]
+                        - link "Nike Mens Revolution 8 Running Shoes" [ref=e1795] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHT15ZD/ref=sr_1_18?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                          - heading "Nike Mens Revolution 8 Running Shoes" [level=2] [ref=e1796]
+                      - generic [ref=e1798]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e1800] [cursor=pointer]:
+                          - generic [ref=e1802]: 3.9 out of 5 stars
+                        - link "997 ratings" [ref=e1804] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHT15ZD/ref=sr_1_18?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18#customerReviews
+                          - text: (997)
+                      - generic [ref=e1805]:
+                        - generic [ref=e1807]:
+                          - generic [ref=e1808]: Price, product page
+                          - link "₹4,295" [ref=e1809] [cursor=pointer]:
+                            - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHT15ZD/ref=sr_1_18?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-18
+                            - generic [ref=e1810]:
+                              - generic [ref=e1811]: ₹4,295
+                              - generic [ref=e1812]: ₹4,295
+                        - generic [ref=e1816]:
+                          - generic [ref=e1817]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1818]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1823]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e1833] [cursor=pointer]
+                - listitem [ref=e1834]:
+                  - generic [ref=e1839]:
+                    - link [ref=e1843] [cursor=pointer]:
+                      - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYKN57S6/ref=sr_1_19?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                      - img [ref=e1845]
+                    - generic [ref=e1846]:
+                      - group "colours available" [ref=e1848]:
+                        - list [ref=e1849]:
+                          - generic [ref=e1850]:
+                            - listitem:
+                              - link "Black/Anthracite":
+                                - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYKN57S6/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - generic [ref=e1853]:
+                            - listitem:
+                              - link "Deep Royal Blue/White-World Indigo-Black":
+                                - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYL7SB9C/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - generic [ref=e1856]:
+                            - listitem:
+                              - link "Summit White/Bright Crimson-turf Orange":
+                                - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0FBRBW36P/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - generic [ref=e1859]:
+                            - listitem:
+                              - link "WHITE/BLACK-GLACIER BLUE-GREEN STRIKE":
+                                - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0FBRCT5XD/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - generic [ref=e1862]:
+                            - listitem:
+                              - link "White/Pure Platinum/Black":
+                                - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DZWGR4NC/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - generic [ref=e1865]:
+                            - listitem:
+                              - link "Wolf Grey/Black/White/Iron Grey":
+                                - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DZWGT3GX/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                        - link "+2 other colors/patterns" [ref=e1869] [cursor=pointer]:
+                          - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYKN57S6/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - text: "+2"
+                      - generic [ref=e1870]:
+                        - heading "Nike" [level=2] [ref=e1872]
+                        - link "Nike Mens Run Defy Running Shoes" [ref=e1873] [cursor=pointer]:
+                          - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYKN57S6/ref=sr_1_19?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                          - heading "Nike Mens Run Defy Running Shoes" [level=2] [ref=e1874]
+                      - generic [ref=e1876]:
+                        - text: "4.0"
+                        - button "4.0 out of 5 stars, rating details" [ref=e1878] [cursor=pointer]:
+                          - generic [ref=e1880]: 4.0 out of 5 stars
+                        - link "825 ratings" [ref=e1882] [cursor=pointer]:
+                          - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYKN57S6/ref=sr_1_19?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19#customerReviews
+                          - text: (825)
+                      - generic [ref=e1883]:
+                        - generic [ref=e1885]:
+                          - generic [ref=e1886]: Price, product page
+                          - link "₹3,995" [ref=e1887] [cursor=pointer]:
+                            - /url: /Nike-Running-Shoes-Black-Anthracite/dp/B0DYKN57S6/ref=sr_1_19?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-19
+                            - generic [ref=e1888]:
+                              - generic [ref=e1889]: ₹3,995
+                              - generic [ref=e1890]: ₹3,995
+                        - generic [ref=e1894]:
+                          - generic [ref=e1895]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1896]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1899]:
+                        - generic [ref=e1901]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e1903]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e1913] [cursor=pointer]
+                - listitem [ref=e1914]:
+                  - generic [ref=e1919]:
+                    - generic [ref=e1924]: New Season
+                    - link [ref=e1928] [cursor=pointer]:
+                      - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0G4MTPJZW/ref=sr_1_20?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                      - img [ref=e1930]
+                    - generic [ref=e1931]:
+                      - group "colours available" [ref=e1933]:
+                        - list [ref=e1934]:
+                          - generic [ref=e1935]:
+                            - listitem:
+                              - link "BLACK/TEAM CRIMSON":
+                                - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0G4MTPJZW/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                          - generic [ref=e1938]:
+                            - listitem:
+                              - link "WOLF GREY/WHITE":
+                                - /url: /Nike-Invigor-Black-Crimson-Running/dp/B071DVRP7T/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                          - generic [ref=e1941]:
+                            - listitem:
+                              - link "SUMMIT WHITE/GOLD LEAF":
+                                - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0G8KM2YQF/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                          - generic [ref=e1944]:
+                            - listitem:
+                              - link "PENCIL POINT/SAPPHIRE-DK SMOKE GREY":
+                                - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0FDV565H1/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                      - generic [ref=e1947]:
+                        - heading "Nike" [level=2] [ref=e1949]
+                        - link "Nike Mens Air Max Invigor Running Shoes" [ref=e1950] [cursor=pointer]:
+                          - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0G4MTPJZW/ref=sr_1_20?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                          - heading "Nike Mens Air Max Invigor Running Shoes" [level=2] [ref=e1951]
+                      - generic [ref=e1953]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e1955] [cursor=pointer]:
+                          - generic [ref=e1957]: 4.3 out of 5 stars
+                        - link "314 ratings" [ref=e1959] [cursor=pointer]:
+                          - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0G4MTPJZW/ref=sr_1_20?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20#customerReviews
+                          - text: (314)
+                      - generic [ref=e1960]:
+                        - link "Limited time deal" [ref=e1962] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1965]: Limited time deal
+                        - generic [ref=e1967]:
+                          - generic [ref=e1968]: Price, product page
+                          - 'link "₹5,996 M.R.P: ₹7,495 M.R.P: ₹7,495" [ref=e1969] [cursor=pointer]':
+                            - /url: /Nike-Invigor-Black-Crimson-Running/dp/B0G4MTPJZW/ref=sr_1_20?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-20
+                            - generic [ref=e1970]:
+                              - generic [ref=e1971]: ₹5,996
+                              - generic [ref=e1972]: ₹5,996
+                            - generic [ref=e1973]: "M.R.P: ₹7,495"
+                            - generic [ref=e1974]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1975]:
+                                - generic [ref=e1976]: ₹7,495
+                                - text: ₹7,495
+                          - text: (20% off)
+                        - generic [ref=e1980]:
+                          - generic [ref=e1981]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1982]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1987]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e1997] [cursor=pointer]
+                - listitem [ref=e1998]:
+                  - generic [ref=e2005]:
+                    - generic [ref=e2010]: New Season
+                    - link [ref=e2014] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MjMzMjo6MDo6&url=%2FNike-Court-Vision-Black-SAIL-Basketball%2Fdp%2FB0FBRYKJDG%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-21-spons%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=Nxa8M9bYjD&sp_cr=ZAZ
+                      - img [ref=e2016]
+                    - generic [ref=e2017]:
+                      - group "colours available" [ref=e2019]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e2021] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MjMzMjo6MDo6&url=%2FNike-Court-Vision-Black-SAIL-Basketball%2Fdp%2FB0FBRYKJDG%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-21-spons%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=Nxa8M9bYjD&sp_cr=ZAZ
+                      - generic [ref=e2022]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2025] [cursor=pointer]:
+                          - generic [ref=e2026]: Sponsored
+                        - heading "Nike" [level=2] [ref=e2029]
+                        - link "Sponsored Ad - Nike Mens Court Vision Mid Next Nature Basketball Shoes" [ref=e2030] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MjMzMjo6MDo6&url=%2FNike-Court-Vision-Black-SAIL-Basketball%2Fdp%2FB0FBRYKJDG%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-21-spons%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=Nxa8M9bYjD&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens Court Vision Mid Next Nature Basketball Shoes" [level=2] [ref=e2031]: Nike Mens Court Vision Mid Next Nature Basketball Shoes
+                      - generic [ref=e2033]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e2035] [cursor=pointer]:
+                          - generic [ref=e2037]: 3.9 out of 5 stars
+                        - link "1,394 ratings" [ref=e2039] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MjMzMjo6MDo6&url=%2FNike-Court-Vision-Black-SAIL-Basketball%2Fdp%2FB0FBRYKJDG%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-21-spons%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=Nxa8M9bYjD&sp_cr=ZAZ#customerReviews
+                          - text: (1.3K)
+                      - generic [ref=e2040]:
+                        - link "Limited time deal" [ref=e2042] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2045]: Limited time deal
+                        - generic [ref=e2047]:
+                          - generic [ref=e2048]: Price, product page
+                          - 'link "₹4,796 M.R.P: ₹5,995 M.R.P: ₹5,995" [ref=e2049] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MjMzMjo6MDo6&url=%2FNike-Court-Vision-Black-SAIL-Basketball%2Fdp%2FB0FBRYKJDG%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-21-spons%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=Nxa8M9bYjD&sp_cr=ZAZ
+                            - generic [ref=e2050]:
+                              - generic [ref=e2051]: ₹4,796
+                              - generic [ref=e2052]: ₹4,796
+                            - generic [ref=e2053]: "M.R.P: ₹5,995"
+                            - generic [ref=e2054]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2055]:
+                                - generic [ref=e2056]: ₹5,995
+                                - text: ₹5,995
+                          - text: (20% off)
+                        - generic [ref=e2060]:
+                          - generic [ref=e2061]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2062]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2067]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e2077] [cursor=pointer]
+                - listitem [ref=e2078]:
+                  - generic [ref=e2085]:
+                    - link [ref=e2089] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-22-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                      - img [ref=e2091]
+                    - generic [ref=e2092]:
+                      - group "colours available" [ref=e2094]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=e2096] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-22-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                      - generic [ref=e2097]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2100] [cursor=pointer]:
+                          - generic [ref=e2101]: Sponsored
+                        - heading "Nike" [level=2] [ref=e2104]
+                        - link "Sponsored Ad - Nike Mens M Promina Walking Shoes" [ref=e2105] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-22-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens M Promina Walking Shoes" [level=2] [ref=e2106]: Nike Mens M Promina Walking Shoes
+                      - generic [ref=e2108]:
+                        - text: "4.1"
+                        - button "4.1 out of 5 stars, rating details" [ref=e2110] [cursor=pointer]:
+                          - generic [ref=e2112]: 4.1 out of 5 stars
+                        - link "477 ratings" [ref=e2114] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-22-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ#customerReviews
+                          - text: (477)
+                      - generic [ref=e2115]:
+                        - generic [ref=e2117]:
+                          - generic [ref=e2118]: Price, product page
+                          - link "₹4,995" [ref=e2119] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-22-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                            - generic [ref=e2120]:
+                              - generic [ref=e2121]: ₹4,995
+                              - generic [ref=e2122]: ₹4,995
+                        - generic [ref=e2126]:
+                          - generic [ref=e2127]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2128]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2133]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e2147] [cursor=pointer]
+                - listitem [ref=e2148]:
+                  - generic [ref=e2155]:
+                    - generic [ref=e2160]: New Season
+                    - link [ref=e2164] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk3MTE0MDk5NDEzMjo6MDo6&url=%2FNike-IB1899-W-Downshifter-14%2Fdp%2FB0FFV4YG8R%2Fref%3Dsr_1_23_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-23-spons%26aref%3DfIYHFOuWFQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fIYHFOuWFQ&sp_cr=ZAZ
+                      - img [ref=e2166]
+                    - generic [ref=e2167]:
+                      - group "colours available" [ref=e2169]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=e2171] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk3MTE0MDk5NDEzMjo6MDo6&url=%2FNike-IB1899-W-Downshifter-14%2Fdp%2FB0FFV4YG8R%2Fref%3Dsr_1_23_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-23-spons%26aref%3DfIYHFOuWFQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fIYHFOuWFQ&sp_cr=ZAZ
+                      - generic [ref=e2172]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2175] [cursor=pointer]:
+                          - generic [ref=e2176]: Sponsored
+                        - heading "Nike" [level=2] [ref=e2179]
+                        - link "Sponsored Ad - Nike Womens Downshifter 14 Running Shoes" [ref=e2180] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk3MTE0MDk5NDEzMjo6MDo6&url=%2FNike-IB1899-W-Downshifter-14%2Fdp%2FB0FFV4YG8R%2Fref%3Dsr_1_23_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-23-spons%26aref%3DfIYHFOuWFQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fIYHFOuWFQ&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Womens Downshifter 14 Running Shoes" [level=2] [ref=e2181]: Nike Womens Downshifter 14 Running Shoes
+                      - generic [ref=e2183]:
+                        - text: "5.0"
+                        - button "5.0 out of 5 stars, rating details" [ref=e2185] [cursor=pointer]:
+                          - generic [ref=e2187]: 5.0 out of 5 stars
+                        - link "7 ratings" [ref=e2189] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk3MTE0MDk5NDEzMjo6MDo6&url=%2FNike-IB1899-W-Downshifter-14%2Fdp%2FB0FFV4YG8R%2Fref%3Dsr_1_23_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-23-spons%26aref%3DfIYHFOuWFQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fIYHFOuWFQ&sp_cr=ZAZ#customerReviews
+                          - text: (7)
+                      - generic [ref=e2190]:
+                        - generic [ref=e2192]:
+                          - generic [ref=e2193]: Price, product page
+                          - link "₹4,895" [ref=e2194] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk3MTE0MDk5NDEzMjo6MDo6&url=%2FNike-IB1899-W-Downshifter-14%2Fdp%2FB0FFV4YG8R%2Fref%3Dsr_1_23_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-23-spons%26aref%3DfIYHFOuWFQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fIYHFOuWFQ&sp_cr=ZAZ
+                            - generic [ref=e2195]:
+                              - generic [ref=e2196]: ₹4,895
+                              - generic [ref=e2197]: ₹4,895
+                        - generic [ref=e2201]:
+                          - generic [ref=e2202]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2203]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2208]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e2218] [cursor=pointer]
+                - listitem [ref=e2219]:
+                  - generic [ref=e2226]:
+                    - link [ref=e2230] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk2NzYzMTY0NDIzMjo6MDo6&url=%2FCampus-Womens-Annie-Walking-Shoes%2Fdp%2FB09RBG9ZJJ%2Fref%3Dsr_1_24_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-24-spons%26aref%3DurxVRqgIQD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=urxVRqgIQD&sp_cr=ZAZ
+                      - img [ref=e2232]
+                    - generic [ref=e2233]:
+                      - group "colours available" [ref=e2235]:
+                        - list
+                        - link "+5 other colors/patterns" [ref=e2237] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk2NzYzMTY0NDIzMjo6MDo6&url=%2FCampus-Womens-Annie-Walking-Shoes%2Fdp%2FB09RBG9ZJJ%2Fref%3Dsr_1_24_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-24-spons%26aref%3DurxVRqgIQD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=urxVRqgIQD&sp_cr=ZAZ
+                      - generic [ref=e2238]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2241] [cursor=pointer]:
+                          - generic [ref=e2242]: Sponsored
+                        - heading "Campus" [level=2] [ref=e2245]
+                        - link "Sponsored Ad - Women Annie Walking Shoes" [ref=e2246] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk2NzYzMTY0NDIzMjo6MDo6&url=%2FCampus-Womens-Annie-Walking-Shoes%2Fdp%2FB09RBG9ZJJ%2Fref%3Dsr_1_24_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-24-spons%26aref%3DurxVRqgIQD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=urxVRqgIQD&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Women Annie Walking Shoes" [level=2] [ref=e2247]: Women Annie Walking Shoes
+                      - generic [ref=e2248]:
+                        - generic [ref=e2249]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2251] [cursor=pointer]:
+                            - generic [ref=e2253]: 4.1 out of 5 stars
+                          - link "4,013 ratings" [ref=e2255] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk2NzYzMTY0NDIzMjo6MDo6&url=%2FCampus-Womens-Annie-Walking-Shoes%2Fdp%2FB09RBG9ZJJ%2Fref%3Dsr_1_24_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-24-spons%26aref%3DurxVRqgIQD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=urxVRqgIQD&sp_cr=ZAZ#customerReviews
+                            - text: (4K)
+                        - generic [ref=e2256]: 50+ bought in past month
+                      - generic [ref=e2257]:
+                        - link "Limited time deal" [ref=e2259] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2262]: Limited time deal
+                        - generic [ref=e2264]:
+                          - generic [ref=e2265]: Price, product page
+                          - 'link "₹799 M.R.P: ₹1,399 M.R.P: ₹1,399" [ref=e2266] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfbXRmOjMwMDk2NzYzMTY0NDIzMjo6MDo6&url=%2FCampus-Womens-Annie-Walking-Shoes%2Fdp%2FB09RBG9ZJJ%2Fref%3Dsr_1_24_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-24-spons%26aref%3DurxVRqgIQD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=urxVRqgIQD&sp_cr=ZAZ
+                            - generic [ref=e2267]:
+                              - generic [ref=e2268]: ₹799
+                              - generic [ref=e2269]: ₹799
+                            - generic [ref=e2270]: "M.R.P: ₹1,399"
+                            - generic [ref=e2271]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2272]:
+                                - generic [ref=e2273]: ₹1,399
+                                - text: ₹1,399
+                          - text: (43% off)
+                        - generic [ref=e2277]:
+                          - generic [ref=e2278]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2279]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2282]:
+                        - generic [ref=e2284]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e2286]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e2296] [cursor=pointer]
+                - listitem [ref=e2297]:
+                  - generic [ref=e2302]:
+                    - link [ref=e2306] [cursor=pointer]:
+                      - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6FTKHVR/ref=sr_1_25?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                      - img [ref=e2308]
+                    - generic [ref=e2309]:
+                      - group "colours available" [ref=e2311]:
+                        - list [ref=e2312]:
+                          - generic [ref=e2313]:
+                            - listitem:
+                              - link "BLACK/WHITE-BLACK":
+                                - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6FTKHVR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                          - generic [ref=e2316]:
+                            - listitem:
+                              - link "OLD ROYAL/WHITE-BLACK-GAME ROYAL":
+                                - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6FZ9WR2/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                          - generic [ref=e2319]:
+                            - listitem:
+                              - link "BLACK/DK SMOKE GREY-BLACK":
+                                - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0BX49SXJ1/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                          - generic [ref=e2322]:
+                            - listitem:
+                              - link "GREY":
+                                - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6G1MFW9/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                          - generic [ref=e2325]:
+                            - listitem:
+                              - link "IRON GREY/PHANTOM-BLACK-GUM MED BROWN":
+                                - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0BZZHLS45/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                      - generic [ref=e2328]:
+                        - heading "Nike" [level=2] [ref=e2330]
+                        - link "Nike Mens Air Max Alpha Trainer 5 Cross Training Shoes" [ref=e2331] [cursor=pointer]:
+                          - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6FTKHVR/ref=sr_1_25?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                          - heading "Nike Mens Air Max Alpha Trainer 5 Cross Training Shoes" [level=2] [ref=e2332]
+                      - generic [ref=e2334]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e2336] [cursor=pointer]:
+                          - generic [ref=e2338]: 4.3 out of 5 stars
+                        - link "1,324 ratings" [ref=e2340] [cursor=pointer]:
+                          - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6FTKHVR/ref=sr_1_25?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25#customerReviews
+                          - text: (1.3K)
+                      - generic [ref=e2341]:
+                        - link "Limited time deal" [ref=e2343] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2346]: Limited time deal
+                        - generic [ref=e2348]:
+                          - generic [ref=e2349]: Price, product page
+                          - 'link "₹5,246 M.R.P: ₹7,495 M.R.P: ₹7,495" [ref=e2350] [cursor=pointer]':
+                            - /url: /Nike-Alpha-Trainer-White-Black-Training/dp/B0B6FTKHVR/ref=sr_1_25?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-25
+                            - generic [ref=e2351]:
+                              - generic [ref=e2352]: ₹5,246
+                              - generic [ref=e2353]: ₹5,246
+                            - generic [ref=e2354]: "M.R.P: ₹7,495"
+                            - generic [ref=e2355]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2356]:
+                                - generic [ref=e2357]: ₹7,495
+                                - text: ₹7,495
+                          - text: (30% off)
+                        - generic [ref=e2361]:
+                          - generic [ref=e2362]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2363]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2364]:
+                        - generic [ref=e2368]: FREE delivery Sun, 26 Apr
+                        - generic "Only 1 left in stock." [ref=e2370]
+                      - button "Add to cart" [ref=e2380] [cursor=pointer]
+                - listitem [ref=e2381]:
+                  - generic [ref=e2386]:
+                    - generic [ref=e2391]: New Season
+                    - link [ref=e2395] [cursor=pointer]:
+                      - /url: /Nike-Revolution-Black-White-Black-Running/dp/B0DPHXLV3G/ref=sr_1_26?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-26
+                      - img [ref=e2397]
+                    - generic [ref=e2398]:
+                      - generic [ref=e2399]:
+                        - heading "Nike" [level=2] [ref=e2401]
+                        - link "Nike Men Revolution 8 Black/White-Black Running Shoes 6 UK" [ref=e2402] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-White-Black-Running/dp/B0DPHXLV3G/ref=sr_1_26?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-26
+                          - heading "Nike Men Revolution 8 Black/White-Black Running Shoes 6 UK" [level=2] [ref=e2403]
+                      - generic [ref=e2405]:
+                        - text: "4.6"
+                        - button "4.6 out of 5 stars, rating details" [ref=e2407] [cursor=pointer]:
+                          - generic [ref=e2409]: 4.6 out of 5 stars
+                        - link "11 ratings" [ref=e2411] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-White-Black-Running/dp/B0DPHXLV3G/ref=sr_1_26?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-26#customerReviews
+                          - text: (11)
+                      - generic [ref=e2412]:
+                        - generic [ref=e2414]:
+                          - generic [ref=e2415]: Price, product page
+                          - link "₹4,295" [ref=e2416] [cursor=pointer]:
+                            - /url: /Nike-Revolution-Black-White-Black-Running/dp/B0DPHXLV3G/ref=sr_1_26?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-26
+                            - generic [ref=e2417]:
+                              - generic [ref=e2418]: ₹4,295
+                              - generic [ref=e2419]: ₹4,295
+                        - generic [ref=e2423]:
+                          - generic [ref=e2424]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2425]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2430]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e2444] [cursor=pointer]
+                - listitem [ref=e2445]:
+                  - generic [ref=e2450]:
+                    - link [ref=e2454] [cursor=pointer]:
+                      - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0CS7HR92K/ref=sr_1_27?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27
+                      - img [ref=e2456]
+                    - generic [ref=e2457]:
+                      - group "colours available" [ref=e2459]:
+                        - list [ref=e2460]:
+                          - generic [ref=e2461]:
+                            - listitem:
+                              - link "SAIL/MIDNIGHT NAVY-GUM LIGHT BROWN":
+                                - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0CS7HR92K/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27
+                          - generic [ref=e2464]:
+                            - listitem:
+                              - link "BLACK":
+                                - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0DLGYF1SG/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27
+                          - generic [ref=e2467]:
+                            - listitem:
+                              - link "GREY":
+                                - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0DLGZ1HJJ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27
+                      - generic [ref=e2470]:
+                        - heading "Nike" [level=2] [ref=e2472]
+                        - link "Nike Mens Court Vision Low Sneaker" [ref=e2473] [cursor=pointer]:
+                          - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0CS7HR92K/ref=sr_1_27?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27
+                          - heading "Nike Mens Court Vision Low Sneaker" [level=2] [ref=e2474]
+                      - generic [ref=e2476]:
+                        - text: "4.0"
+                        - button "4.0 out of 5 stars, rating details" [ref=e2478] [cursor=pointer]:
+                          - generic [ref=e2480]: 4.0 out of 5 stars
+                        - link "317 ratings" [ref=e2482] [cursor=pointer]:
+                          - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0CS7HR92K/ref=sr_1_27?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27#customerReviews
+                          - text: (317)
+                      - generic [ref=e2483]:
+                        - generic [ref=e2485]:
+                          - generic [ref=e2486]: Price, product page
+                          - link "₹5,695" [ref=e2487] [cursor=pointer]:
+                            - /url: /NIKE-LO-SAIL-Midnight-Navy-Gum-BROWN-HF1068-133-11UK/dp/B0CS7HR92K/ref=sr_1_27?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-27
+                            - generic [ref=e2488]:
+                              - generic [ref=e2489]: ₹5,695
+                              - generic [ref=e2490]: ₹5,695
+                        - generic [ref=e2494]:
+                          - generic [ref=e2495]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2496]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2499]:
+                        - generic [ref=e2501]: FREE delivery Sat, 25 Apr
+                        - generic [ref=e2503]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e2513] [cursor=pointer]
+                - listitem [ref=e2514]:
+                  - generic [ref=e2519]:
+                    - generic [ref=e2524]: New Season
+                    - link [ref=e2528] [cursor=pointer]:
+                      - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0G4MSL62X/ref=sr_1_28?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28
+                      - img [ref=e2530]
+                    - generic [ref=e2531]:
+                      - group "colours available" [ref=e2533]:
+                        - list [ref=e2534]:
+                          - generic [ref=e2535]:
+                            - listitem:
+                              - link "WHITE/BLACK-VOLT ICE-BARELY VOLT":
+                                - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0G4MSL62X/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28
+                          - generic [ref=e2538]:
+                            - listitem:
+                              - link "BLACK/BRIGHT CRIMSON-TOPAZ GOLD":
+                                - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0G4MXSFFC/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28
+                          - generic [ref=e2541]:
+                            - listitem:
+                              - link "WHITE/BLACK-HYPER TURQ-CONCORD":
+                                - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0FMYJG3LG/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28
+                      - generic [ref=e2544]:
+                        - heading "Nike" [level=2] [ref=e2546]
+                        - link "Nike Mens Air Zoom Pegasus 41 Running Shoes" [ref=e2547] [cursor=pointer]:
+                          - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0G4MSL62X/ref=sr_1_28?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28
+                          - heading "Nike Mens Air Zoom Pegasus 41 Running Shoes" [level=2] [ref=e2548]
+                      - generic [ref=e2550]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e2552] [cursor=pointer]:
+                          - generic [ref=e2554]: 4.3 out of 5 stars
+                        - link "21 ratings" [ref=e2556] [cursor=pointer]:
+                          - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0G4MSL62X/ref=sr_1_28?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28#customerReviews
+                          - text: (21)
+                      - generic [ref=e2557]:
+                        - link "Limited time deal" [ref=e2559] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2562]: Limited time deal
+                        - generic [ref=e2564]:
+                          - generic [ref=e2565]: Price, product page
+                          - 'link "₹7,137 M.R.P: ₹11,896 M.R.P: ₹11,896" [ref=e2566] [cursor=pointer]':
+                            - /url: /Nike-Pegasus-Black-Volt-Ice-Barely-Running/dp/B0G4MSL62X/ref=sr_1_28?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-28
+                            - generic [ref=e2567]:
+                              - generic [ref=e2568]: ₹7,137
+                              - generic [ref=e2569]: ₹7,137
+                            - generic [ref=e2570]: "M.R.P: ₹11,896"
+                            - generic [ref=e2571]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2572]:
+                                - generic [ref=e2573]: ₹11,896
+                                - text: ₹11,896
+                          - text: (40% off)
+                        - generic [ref=e2577]:
+                          - generic [ref=e2578]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2579]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2580]:
+                        - generic [ref=e2586]: FREE delivery Sat, 25 Apr
+                        - generic "Only 1 left in stock." [ref=e2588]
+                      - button "Add to cart" [ref=e2598] [cursor=pointer]
+          - generic [ref=e2602]:
+            - generic [ref=e2607]:
+              - heading "Highly rated" [level=2] [ref=e2609]
+              - generic [ref=e2610]:
+                - button "View Sponsored information or leave ad feedback" [ref=e2612] [cursor=pointer]: Sponsored
+                - text: "| Based on star rating and number of customer ratings"
+            - region "Highly rated" [ref=e2614]:
+              - list [ref=e2620]:
+                - listitem "1 of 5" [ref=e2621]:
+                  - generic [ref=e2627]:
+                    - link [ref=e2631] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DJMMKLXS%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                      - img [ref=e2633]
+                    - generic [ref=e2634]:
+                      - group "colours available" [ref=e2636]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=e2638] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DJMMKLXS%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                      - generic [ref=e2639]:
+                        - heading "Nike" [level=2] [ref=e2641]
+                        - link "Sponsored Ad - Nike Mens M Promina Walking Shoes" [ref=e2642] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DJMMKLXS%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens M Promina Walking Shoes" [level=2] [ref=e2643]: Nike Mens M Promina Walking Shoes
+                      - generic [ref=e2645]:
+                        - text: "4.1"
+                        - button "4.1 out of 5 stars, rating details" [ref=e2647] [cursor=pointer]:
+                          - generic [ref=e2649]: 4.1 out of 5 stars
+                        - link "477 ratings" [ref=e2651] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DJMMKLXS%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ#customerReviews
+                          - text: (477)
+                      - generic [ref=e2652]:
+                        - generic [ref=e2654]:
+                          - generic [ref=e2655]: Price, product page
+                          - link "₹4,995" [ref=e2656] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk5NjU1MjI2MTgzMjo6MDo6&url=%2FNike-FV5285-NIKE-PROMINA-BLACK-WHITE-6UK%2Fdp%2FB0DJMMKLXS%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DJMMKLXS%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DS5GmmlcPpR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S5GmmlcPpR&sp_cr=ZAZ
+                            - generic [ref=e2657]:
+                              - generic [ref=e2658]: ₹4,995
+                              - generic [ref=e2659]: ₹4,995
+                        - generic [ref=e2663]:
+                          - generic [ref=e2664]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2665]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2670]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e2684] [cursor=pointer]
+                - listitem "2 of 5" [ref=e2685]:
+                  - generic [ref=e2691]:
+                    - link [ref=e2695] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDkxNDIyNTI0MTAzMjo6MTo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DZWFZCKZ%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                      - img [ref=e2697]
+                    - generic [ref=e2698]:
+                      - group "colours available" [ref=e2700]:
+                        - list
+                        - link "+7 other colors/patterns" [ref=e2702] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDkxNDIyNTI0MTAzMjo6MTo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DZWFZCKZ%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                      - generic [ref=e2703]:
+                        - heading "Nike" [level=2] [ref=e2705]
+                        - link "Sponsored Ad - Nike Mens Run Defy Running Shoes" [ref=e2706] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDkxNDIyNTI0MTAzMjo6MTo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DZWFZCKZ%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens Run Defy Running Shoes" [level=2] [ref=e2707]: Nike Mens Run Defy Running Shoes
+                      - generic [ref=e2708]:
+                        - generic [ref=e2709]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e2711] [cursor=pointer]:
+                            - generic [ref=e2713]: 4.0 out of 5 stars
+                          - link "825 ratings" [ref=e2715] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDkxNDIyNTI0MTAzMjo6MTo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DZWFZCKZ%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ#customerReviews
+                            - text: (825)
+                        - generic [ref=e2716]: 50+ bought in past month
+                      - generic [ref=e2717]:
+                        - generic [ref=e2719]:
+                          - generic [ref=e2720]: Price, product page
+                          - link "₹3,995" [ref=e2721] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDkxNDIyNTI0MTAzMjo6MTo6&url=%2FNike-Defy-Running-Shoes-HM9594-100_8%2Fdp%2FB0DZWFZCKZ%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DZWFZCKZ%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dkz3EJ5JLhS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=kz3EJ5JLhS&sp_cr=ZAZ
+                            - generic [ref=e2722]:
+                              - generic [ref=e2723]: ₹3,995
+                              - generic [ref=e2724]: ₹3,995
+                        - generic [ref=e2728]:
+                          - generic [ref=e2729]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2730]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2735]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e2745] [cursor=pointer]
+                - listitem "3 of 5" [ref=e2746]:
+                  - generic [ref=e2752]:
+                    - link [ref=e2756] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDgyOTEwMDY2ODQzMjo6Mjo6&url=%2FDOCTOR-EXTRA-SOFT-Lightweight-D-2011%2Fdp%2FB0G35ZKQFY%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0G35ZKQFY%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DoQ4YXMBQe1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oQ4YXMBQe1&sp_cr=ZAZ
+                      - img [ref=e2758]
+                    - generic [ref=e2759]:
+                      - group "colours available" [ref=e2761]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e2763] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDgyOTEwMDY2ODQzMjo6Mjo6&url=%2FDOCTOR-EXTRA-SOFT-Lightweight-D-2011%2Fdp%2FB0G35ZKQFY%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0G35ZKQFY%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DoQ4YXMBQe1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oQ4YXMBQe1&sp_cr=ZAZ
+                      - generic [ref=e2764]:
+                        - heading "DOCTOR EXTRA SOFT" [level=2] [ref=e2766]
+                        - link "Sponsored Ad - Men’s Running & Walking Shoes| Lightweight Comfortable Slip-On Sports Sneakers, Memory Foam Cushion, Breathable Mesh, Anti-Slip Flexible Gym Training Gents Boys D-2011" [ref=e2767] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDgyOTEwMDY2ODQzMjo6Mjo6&url=%2FDOCTOR-EXTRA-SOFT-Lightweight-D-2011%2Fdp%2FB0G35ZKQFY%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0G35ZKQFY%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DoQ4YXMBQe1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oQ4YXMBQe1&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Men’s Running & Walking Shoes| Lightweight Comfortable Slip-On Sports Sneakers, Memory Foam Cushion, Breathable Mesh, Anti-Slip Flexible Gym Training Gents Boys D-2011" [level=2] [ref=e2768]: Men’s Running & Walking Shoes| Lightweight Comfortable Slip-On Sports Sneakers, Memory Foam Cushion, Breathable Mesh, Anti-Slip Flexible Gym Training Gents Boys D-2011
+                      - generic [ref=e2770]:
+                        - text: "4.5"
+                        - button "4.5 out of 5 stars, rating details" [ref=e2772] [cursor=pointer]:
+                          - generic [ref=e2774]: 4.5 out of 5 stars
+                        - link "250 ratings" [ref=e2776] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDgyOTEwMDY2ODQzMjo6Mjo6&url=%2FDOCTOR-EXTRA-SOFT-Lightweight-D-2011%2Fdp%2FB0G35ZKQFY%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0G35ZKQFY%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DoQ4YXMBQe1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oQ4YXMBQe1&sp_cr=ZAZ#customerReviews
+                          - text: (250)
+                      - generic [ref=e2777]:
+                        - generic [ref=e2779]:
+                          - generic [ref=e2780]: Price, product page
+                          - 'link "₹1,499 M.R.P: ₹5,999 M.R.P: ₹5,999" [ref=e2781] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDgyOTEwMDY2ODQzMjo6Mjo6&url=%2FDOCTOR-EXTRA-SOFT-Lightweight-D-2011%2Fdp%2FB0G35ZKQFY%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0G35ZKQFY%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DoQ4YXMBQe1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oQ4YXMBQe1&sp_cr=ZAZ
+                            - generic [ref=e2782]:
+                              - generic [ref=e2783]: ₹1,499
+                              - generic [ref=e2784]: ₹1,499
+                            - generic [ref=e2785]: "M.R.P: ₹5,999"
+                            - generic [ref=e2786]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2787]:
+                                - generic [ref=e2788]: ₹5,999
+                                - text: ₹5,999
+                          - text: (75% off)
+                        - generic [ref=e2791]:
+                          - generic [ref=e2792]: Save 2%
+                          - text: with coupon (limited sizes/colours)
+                      - generic [ref=e2797]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e2807] [cursor=pointer]
+                - listitem "4 of 5" [ref=e2808]:
+                  - generic [ref=e2814]:
+                    - link [ref=e2818] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTA0Mzk5OTUyMzUzMjo6Mzo6&url=%2FPuma-Mens-Black-Royal-Sapphire-Running%2Fdp%2FB0BVMCJP6N%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0BVMCJP6N%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DJ4gzWSTU7s%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=J4gzWSTU7s&sp_cr=ZAZ
+                      - img [ref=e2820]
+                    - generic [ref=e2821]:
+                      - group "colours available" [ref=e2823]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=e2825] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTA0Mzk5OTUyMzUzMjo6Mzo6&url=%2FPuma-Mens-Black-Royal-Sapphire-Running%2Fdp%2FB0BVMCJP6N%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0BVMCJP6N%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DJ4gzWSTU7s%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=J4gzWSTU7s&sp_cr=ZAZ
+                      - generic [ref=e2826]:
+                        - heading "PUMA" [level=2] [ref=e2828]
+                        - link "Sponsored Ad - Men Wish Max Running Shoe" [ref=e2829] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTA0Mzk5OTUyMzUzMjo6Mzo6&url=%2FPuma-Mens-Black-Royal-Sapphire-Running%2Fdp%2FB0BVMCJP6N%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0BVMCJP6N%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DJ4gzWSTU7s%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=J4gzWSTU7s&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Men Wish Max Running Shoe" [level=2] [ref=e2830]: Men Wish Max Running Shoe
+                      - generic [ref=e2832]:
+                        - text: "4.0"
+                        - button "4.0 out of 5 stars, rating details" [ref=e2834] [cursor=pointer]:
+                          - generic [ref=e2836]: 4.0 out of 5 stars
+                        - link "897 ratings" [ref=e2838] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTA0Mzk5OTUyMzUzMjo6Mzo6&url=%2FPuma-Mens-Black-Royal-Sapphire-Running%2Fdp%2FB0BVMCJP6N%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0BVMCJP6N%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DJ4gzWSTU7s%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=J4gzWSTU7s&sp_cr=ZAZ#customerReviews
+                          - text: (897)
+                      - generic [ref=e2839]:
+                        - generic [ref=e2841]:
+                          - generic [ref=e2842]: Price, product page
+                          - 'link "₹1,999 M.R.P: ₹4,499 M.R.P: ₹4,499" [ref=e2843] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTA0Mzk5OTUyMzUzMjo6Mzo6&url=%2FPuma-Mens-Black-Royal-Sapphire-Running%2Fdp%2FB0BVMCJP6N%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0BVMCJP6N%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3DJ4gzWSTU7s%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=J4gzWSTU7s&sp_cr=ZAZ
+                            - generic [ref=e2844]:
+                              - generic [ref=e2845]: ₹1,999
+                              - generic [ref=e2846]: ₹1,999
+                            - generic [ref=e2847]: "M.R.P: ₹4,499"
+                            - generic [ref=e2848]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2849]:
+                                - generic [ref=e2850]: ₹4,499
+                                - text: ₹4,499
+                          - text: (56% off)
+                        - generic [ref=e2854]:
+                          - generic [ref=e2855]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2856]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2859]:
+                        - generic [ref=e2861]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e2863]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2873] [cursor=pointer]
+                - listitem "5 of 5" [ref=e2874]:
+                  - generic [ref=e2880]:
+                    - link [ref=e2884] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk3MTg1MDA1MTUzMjo6NDo6&url=%2FDOCTOR-EXTRA-SOFT-Comfortable-Lightweight%2Fdp%2FB0DWKV94Q5%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DWKV94Q5%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dl7Lsu59bNY%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=l7Lsu59bNY&sp_cr=ZAZ
+                      - img [ref=e2886]
+                    - generic [ref=e2887]:
+                      - group "colours available" [ref=e2889]:
+                        - list
+                        - link "+8 other colors/patterns" [ref=e2891] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk3MTg1MDA1MTUzMjo6NDo6&url=%2FDOCTOR-EXTRA-SOFT-Comfortable-Lightweight%2Fdp%2FB0DWKV94Q5%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DWKV94Q5%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dl7Lsu59bNY%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=l7Lsu59bNY&sp_cr=ZAZ
+                      - generic [ref=e2892]:
+                        - heading "DOCTOR EXTRA SOFT" [level=2] [ref=e2894]
+                        - link "Sponsored Ad - Men's Sports Shoes with Memory Foam Cushioned Insole|Running Walking Gym Training Jogging Athletics|Comfortable & Stylish|Casual & Lightweight|Slipon Sneaker Gent's & Boy's ART-2008" [ref=e2895] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk3MTg1MDA1MTUzMjo6NDo6&url=%2FDOCTOR-EXTRA-SOFT-Comfortable-Lightweight%2Fdp%2FB0DWKV94Q5%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DWKV94Q5%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dl7Lsu59bNY%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=l7Lsu59bNY&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Men's Sports Shoes with Memory Foam Cushioned Insole|Running Walking Gym Training Jogging Athletics|Comfortable & Stylish|Casual & Lightweight|Slipon Sneaker Gent's & Boy's ART-2008" [level=2] [ref=e2896]: Men's Sports Shoes with Memory Foam Cushioned Insole|Running Walking Gym Training Jogging Athletics|Comfortable & Stylish|Casual & Lightweight|Slipon Sneaker Gent's & Boy's ART-2008
+                      - generic [ref=e2898]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e2900] [cursor=pointer]:
+                          - generic [ref=e2902]: 4.2 out of 5 stars
+                        - link "2,173 ratings" [ref=e2904] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk3MTg1MDA1MTUzMjo6NDo6&url=%2FDOCTOR-EXTRA-SOFT-Comfortable-Lightweight%2Fdp%2FB0DWKV94Q5%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DWKV94Q5%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dl7Lsu59bNY%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=l7Lsu59bNY&sp_cr=ZAZ#customerReviews
+                          - text: (2.1K)
+                      - generic [ref=e2905]:
+                        - link "Limited time deal" [ref=e2907] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2910]: Limited time deal
+                        - generic [ref=e2912]:
+                          - generic [ref=e2913]: Price, product page
+                          - 'link "₹1,397.99 M.R.P: ₹5,999 M.R.P: ₹5,999" [ref=e2914] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4OTg3MjkwNDAyNDM0MTUxOjE3NzY2NzYxNzk6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDk3MTg1MDA1MTUzMjo6NDo6&url=%2FDOCTOR-EXTRA-SOFT-Comfortable-Lightweight%2Fdp%2FB0DWKV94Q5%2Fref%3Dsxin_36_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%253Aamzn1.sym.76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26cv_ct_cx%3DNike%2Bshoes%26keywords%3DNike%2Bshoes%26pd_rd_i%3DB0DWKV94Q5%26pd_rd_r%3D5028447d-1645-49c7-bbdb-da1dd70fd1b3%26pd_rd_w%3DzE2z4%26pd_rd_wg%3DrxBFy%26pf_rd_p%3D76a1f397-3be8-48c6-95f3-640bcc2e7bf1%26pf_rd_r%3D9DTTBMDYPJN5FVCTGBFY%26qid%3D1776676179%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons%26aref%3Dl7Lsu59bNY%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=l7Lsu59bNY&sp_cr=ZAZ
+                            - generic [ref=e2915]:
+                              - generic [ref=e2916]: ₹1,397.99
+                              - generic [ref=e2917]:
+                                - text: ₹
+                                - generic [ref=e2918]:
+                                  - text: 1,397
+                                  - generic [ref=e2919]: .
+                                - text: "99"
+                            - generic [ref=e2920]: "M.R.P: ₹5,999"
+                            - generic [ref=e2921]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2922]:
+                                - generic [ref=e2923]: ₹5,999
+                                - text: ₹5,999
+                          - text: (77% off)
+                        - generic [ref=e2926]:
+                          - generic [ref=e2927]: Save 2%
+                          - text: with coupon (limited sizes/colours)
+                      - generic [ref=e2930]:
+                        - generic [ref=e2932]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e2934]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e2944] [cursor=pointer]
+          - generic [ref=e2946]:
+            - heading "More results" [level=2] [ref=e2950]
+            - generic:
+              - list:
+                - listitem [ref=e2951]:
+                  - generic [ref=e2956]:
+                    - generic [ref=e2961]: New Season
+                    - link [ref=e2965] [cursor=pointer]:
+                      - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW73BK2/ref=sr_1_29?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                      - img [ref=e2967]
+                    - generic [ref=e2968]:
+                      - group "colours available" [ref=e2970]:
+                        - list [ref=e2971]:
+                          - generic [ref=e2972]:
+                            - listitem:
+                              - link "DESERT KHAKI/BLACK-SANDDRIFT-SAIL":
+                                - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW73BK2/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - generic [ref=e2975]:
+                            - listitem:
+                              - link "Black/White-Anthracite-Glacier Blue":
+                                - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0DYL8HB7R/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - generic [ref=e2978]:
+                            - listitem:
+                              - link "LT LEMON TWIST/BLACK-VOLT-BRIGHT CRIMSON":
+                                - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0G4MY8R3S/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - generic [ref=e2981]:
+                            - listitem:
+                              - link "THUNDER BLUE/LT OREWOOD BRN":
+                                - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW7691C/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - generic [ref=e2984]:
+                            - listitem:
+                              - link "BLACK/METALLIC BLACK-OFF NOIR-RACER BLUE":
+                                - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDVZJHRL/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - generic [ref=e2987]:
+                            - listitem:
+                              - link "LIGHT ARMY/PALE IVORY-TWILIGHT MARSH":
+                                - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FQ5ZYPG6/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                        - link "+4 other colors/patterns" [ref=e2991] [cursor=pointer]:
+                          - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW73BK2/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - text: "+4"
+                      - generic [ref=e2992]:
+                        - heading "Nike" [level=2] [ref=e2994]
+                        - link "Nike Mens Metro Tek Running Shoes" [ref=e2995] [cursor=pointer]:
+                          - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW73BK2/ref=sr_1_29?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                          - heading "Nike Mens Metro Tek Running Shoes" [level=2] [ref=e2996]
+                      - generic [ref=e2998]:
+                        - text: "3.0"
+                        - button "3.0 out of 5 stars, rating details" [ref=e3000] [cursor=pointer]:
+                          - generic [ref=e3002]: 3.0 out of 5 stars
+                        - link "6 ratings" [ref=e3004] [cursor=pointer]:
+                          - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW73BK2/ref=sr_1_29?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29#customerReviews
+                          - text: (6)
+                      - generic [ref=e3005]:
+                        - link "Limited time deal" [ref=e3007] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3010]: Limited time deal
+                        - generic [ref=e3012]:
+                          - generic [ref=e3013]: Price, product page
+                          - 'link "₹5,196 M.R.P: ₹6,495 M.R.P: ₹6,495" [ref=e3014] [cursor=pointer]':
+                            - /url: /Nike-Metro-Desert-Black-Sanddrift-Sail-Running/dp/B0FDW73BK2/ref=sr_1_29?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-29
+                            - generic [ref=e3015]:
+                              - generic [ref=e3016]: ₹5,196
+                              - generic [ref=e3017]: ₹5,196
+                            - generic [ref=e3018]: "M.R.P: ₹6,495"
+                            - generic [ref=e3019]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3020]:
+                                - generic [ref=e3021]: ₹6,495
+                                - text: ₹6,495
+                          - text: (20% off)
+                        - generic [ref=e3025]:
+                          - generic [ref=e3026]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3027]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3032]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3042] [cursor=pointer]
+                - listitem [ref=e3043]:
+                  - generic [ref=e3048]:
+                    - link [ref=e3052] [cursor=pointer]:
+                      - /url: /Nike-AIR-MAX-Invigor-Print/dp/B00VDHV45O/ref=sr_1_30?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30
+                      - img [ref=e3054]
+                    - generic [ref=e3055]:
+                      - group "colours available" [ref=e3057]:
+                        - list [ref=e3058]:
+                          - generic [ref=e3059]:
+                            - listitem:
+                              - link "BLACK/WHITE-COOL GREY":
+                                - /url: /Nike-AIR-MAX-Invigor-Print/dp/B00VDHV45O/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30
+                          - generic [ref=e3062]:
+                            - listitem:
+                              - link "BLACK/SOLAR RED-ANTHRACITE":
+                                - /url: /Nike-AIR-MAX-Invigor-Print/dp/B07QWZ242H/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30
+                          - generic [ref=e3065]:
+                            - listitem:
+                              - link "BLACK/VOLT-DARK GREY-COOL GREY":
+                                - /url: /Nike-AIR-MAX-Invigor-Print/dp/B07QR6X5W8/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30
+                      - generic [ref=e3068]:
+                        - heading "Nike" [level=2] [ref=e3070]
+                        - link "Nike Mens Air Max Invigor Running Shoes" [ref=e3071] [cursor=pointer]:
+                          - /url: /Nike-AIR-MAX-Invigor-Print/dp/B00VDHV45O/ref=sr_1_30?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30
+                          - heading "Nike Mens Air Max Invigor Running Shoes" [level=2] [ref=e3072]
+                      - generic [ref=e3074]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e3076] [cursor=pointer]:
+                          - generic [ref=e3078]: 4.2 out of 5 stars
+                        - link "567 ratings" [ref=e3080] [cursor=pointer]:
+                          - /url: /Nike-AIR-MAX-Invigor-Print/dp/B00VDHV45O/ref=sr_1_30?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30#customerReviews
+                          - text: (567)
+                      - generic [ref=e3081]:
+                        - link "Limited time deal" [ref=e3083] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3086]: Limited time deal
+                        - generic [ref=e3088]:
+                          - generic [ref=e3089]: Price, product page
+                          - 'link "₹5,996 M.R.P: ₹7,495 M.R.P: ₹7,495" [ref=e3090] [cursor=pointer]':
+                            - /url: /Nike-AIR-MAX-Invigor-Print/dp/B00VDHV45O/ref=sr_1_30?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-30
+                            - generic [ref=e3091]:
+                              - generic [ref=e3092]: ₹5,996
+                              - generic [ref=e3093]: ₹5,996
+                            - generic [ref=e3094]: "M.R.P: ₹7,495"
+                            - generic [ref=e3095]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3096]:
+                                - generic [ref=e3097]: ₹7,495
+                                - text: ₹7,495
+                          - text: (20% off)
+                        - generic [ref=e3101]:
+                          - generic [ref=e3102]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3103]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3108]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e3122] [cursor=pointer]
+                - listitem [ref=e3123]:
+                  - generic [ref=e3128]:
+                    - generic [ref=e3133]: New Season
+                    - link [ref=e3137] [cursor=pointer]:
+                      - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DYKRL74P/ref=sr_1_31?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                      - img [ref=e3139]
+                    - generic [ref=e3140]:
+                      - group "colours available" [ref=e3142]:
+                        - list [ref=e3143]:
+                          - generic [ref=e3144]:
+                            - listitem:
+                              - link "BLACK/BLACK-ANTHRACITE-SMOKE GREY":
+                                - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DYKRL74P/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                          - generic [ref=e3147]:
+                            - listitem:
+                              - link "PURE PLATINUM/BLACK-BRILLIANT BLUE":
+                                - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0FDWH5BC6/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                          - generic [ref=e3150]:
+                            - listitem:
+                              - link "WHITE/WHITE-BLACK-METALLIC SILVER":
+                                - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DZ74DCBS/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                          - generic [ref=e3153]:
+                            - listitem:
+                              - link "COURT BLUE/BLACK-VAST GREY-COLLEGE GREY":
+                                - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0FFNK6Z8M/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                          - generic [ref=e3156]:
+                            - listitem:
+                              - link "WHITE/BLACK-VAST GREY-COLLEGE GREY":
+                                - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DYKRNHWR/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                      - generic [ref=e3159]:
+                        - heading "Nike" [level=2] [ref=e3161]
+                        - link "Nike Mens V5 RNR Running Shoe" [ref=e3162] [cursor=pointer]:
+                          - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DYKRL74P/ref=sr_1_31?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                          - heading "Nike Mens V5 RNR Running Shoe" [level=2] [ref=e3163]
+                      - generic [ref=e3165]:
+                        - text: "4.4"
+                        - button "4.4 out of 5 stars, rating details" [ref=e3167] [cursor=pointer]:
+                          - generic [ref=e3169]: 4.4 out of 5 stars
+                        - link "86 ratings" [ref=e3171] [cursor=pointer]:
+                          - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DYKRL74P/ref=sr_1_31?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31#customerReviews
+                          - text: (86)
+                      - generic [ref=e3172]:
+                        - generic [ref=e3174]:
+                          - generic [ref=e3175]: Price, product page
+                          - link "₹7,995" [ref=e3176] [cursor=pointer]:
+                            - /url: /Nike-Black-Black-Anthracite-Smoke-Running-Shoes/dp/B0DYKRL74P/ref=sr_1_31?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-31
+                            - generic [ref=e3177]:
+                              - generic [ref=e3178]: ₹7,995
+                              - generic [ref=e3179]: ₹7,995
+                        - generic [ref=e3183]:
+                          - generic [ref=e3184]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3185]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3190]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3200] [cursor=pointer]
+                - listitem [ref=e3201]:
+                  - generic [ref=e3206]:
+                    - link [ref=e3210] [cursor=pointer]:
+                      - /url: /Nike-Court-Borough-Sneakers-6-BQ5448-001/dp/B07VHD9TH5/ref=sr_1_32?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-32
+                      - img [ref=e3212]
+                    - generic [ref=e3213]:
+                      - generic [ref=e3214]:
+                        - heading "Nike" [level=2] [ref=e3216]
+                        - link "Nike Unisex Court Borough Low 2 (Gs) Black/Black-Black Basketball Shoes 6 UK" [ref=e3217] [cursor=pointer]:
+                          - /url: /Nike-Court-Borough-Sneakers-6-BQ5448-001/dp/B07VHD9TH5/ref=sr_1_32?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-32
+                          - heading "Nike Unisex Court Borough Low 2 (Gs) Black/Black-Black Basketball Shoes 6 UK" [level=2] [ref=e3218]
+                      - generic [ref=e3220]:
+                        - text: "4.5"
+                        - button "4.5 out of 5 stars, rating details" [ref=e3222] [cursor=pointer]:
+                          - generic [ref=e3224]: 4.5 out of 5 stars
+                        - link "310 ratings" [ref=e3226] [cursor=pointer]:
+                          - /url: /Nike-Court-Borough-Sneakers-6-BQ5448-001/dp/B07VHD9TH5/ref=sr_1_32?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-32#customerReviews
+                          - text: (310)
+                      - generic [ref=e3227]:
+                        - link "Limited time deal" [ref=e3229] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3232]: Limited time deal
+                        - generic [ref=e3234]:
+                          - generic [ref=e3235]: Price, product page
+                          - 'link "₹2,796 M.R.P: ₹3,495 M.R.P: ₹3,495" [ref=e3236] [cursor=pointer]':
+                            - /url: /Nike-Court-Borough-Sneakers-6-BQ5448-001/dp/B07VHD9TH5/ref=sr_1_32?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-32
+                            - generic [ref=e3237]:
+                              - generic [ref=e3238]: ₹2,796
+                              - generic [ref=e3239]: ₹2,796
+                            - generic [ref=e3240]: "M.R.P: ₹3,495"
+                            - generic [ref=e3241]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3242]:
+                                - generic [ref=e3243]: ₹3,495
+                                - text: ₹3,495
+                          - text: (20% off)
+                        - generic [ref=e3247]:
+                          - generic [ref=e3248]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3249]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3254]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3268] [cursor=pointer]
+                - listitem [ref=e3269]:
+                  - generic [ref=e3274]:
+                    - link [ref=e3278] [cursor=pointer]:
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_33?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                      - img [ref=e3280]
+                    - generic [ref=e3281]:
+                      - group "colours available" [ref=e3283]:
+                        - list [ref=e3284]:
+                          - generic [ref=e3285]:
+                            - listitem:
+                              - link "FTWWHT/SILVMT":
+                                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - generic [ref=e3288]:
+                            - listitem:
+                              - link "BLUNIT/ACTGOL/SILVMT":
+                                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M8HLT3T/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - generic [ref=e3291]:
+                            - listitem:
+                              - link "CARBON/VISGRE/BORANG":
+                                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q4KR/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - generic [ref=e3294]:
+                            - listitem:
+                              - link "CBLACK/FTWWHT":
+                                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M8S2BQX/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - generic [ref=e3297]:
+                            - listitem:
+                              - link "CGRANI/GRESIX":
+                                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M8HLX18/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - generic [ref=e3300]:
+                            - listitem:
+                              - link "CONAVY/SILVMT/TRUBLU":
+                                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07LH5ZHCW/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                        - link "+5 other colors/patterns" [ref=e3304] [cursor=pointer]:
+                          - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - text: "+5"
+                      - generic [ref=e3305]:
+                        - heading "adidas" [level=2] [ref=e3307]
+                        - link "Men Drogo M Running Shoe" [ref=e3308] [cursor=pointer]:
+                          - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_33?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                          - heading "Men Drogo M Running Shoe" [level=2] [ref=e3309]
+                      - generic [ref=e3310]:
+                        - generic [ref=e3311]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e3313] [cursor=pointer]:
+                            - generic [ref=e3315]: 4.0 out of 5 stars
+                          - link "16,124 ratings" [ref=e3317] [cursor=pointer]:
+                            - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_33?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33#customerReviews
+                            - text: (16.1K)
+                        - generic [ref=e3318]: 100+ bought in past month
+                      - generic [ref=e3319]:
+                        - link "Ends in 09:19:52" [ref=e3321] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3324]: Ends in 09:19:52
+                        - generic [ref=e3326]:
+                          - generic [ref=e3327]: Price, product page
+                          - 'link "₹1,899 M.R.P: ₹3,299 M.R.P: ₹3,299" [ref=e3328] [cursor=pointer]':
+                            - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_33?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-33
+                            - generic [ref=e3329]:
+                              - generic [ref=e3330]: ₹1,899
+                              - generic [ref=e3331]: ₹1,899
+                            - generic [ref=e3332]: "M.R.P: ₹3,299"
+                            - generic [ref=e3333]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3334]:
+                                - generic [ref=e3335]: ₹3,299
+                                - text: ₹3,299
+                          - text: (42% off)
+                        - generic [ref=e3339]:
+                          - generic [ref=e3340]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3341]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3344]:
+                        - generic [ref=e3346]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e3348]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e3358] [cursor=pointer]
+                - listitem [ref=e3359]:
+                  - generic [ref=e3364]:
+                    - link [ref=e3368] [cursor=pointer]:
+                      - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0044S733Q/ref=sr_1_34?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                      - img [ref=e3370]
+                    - generic [ref=e3371]:
+                      - group "colours available" [ref=e3373]:
+                        - list [ref=e3374]:
+                          - generic [ref=e3375]:
+                            - listitem:
+                              - link "WOLF GREY/WHITE":
+                                - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0044S733Q/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                          - generic [ref=e3378]:
+                            - listitem:
+                              - link "SUMMIT WHITE/GOLD LEAF":
+                                - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0G8K9DS11/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                          - generic [ref=e3381]:
+                            - listitem:
+                              - link "BLACK/TEAM CRIMSON":
+                                - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0G4MSLN3W/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                          - generic [ref=e3384]:
+                            - listitem:
+                              - link "PENCIL POINT/SAPPHIRE-DK SMOKE GREY":
+                                - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0FDVTCBGL/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                      - generic [ref=e3387]:
+                        - heading "Nike" [level=2] [ref=e3389]
+                        - link "Nike Mens Air Max Invigor Running Shoes" [ref=e3390] [cursor=pointer]:
+                          - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0044S733Q/ref=sr_1_34?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                          - heading "Nike Mens Air Max Invigor Running Shoes" [level=2] [ref=e3391]
+                      - generic [ref=e3393]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e3395] [cursor=pointer]:
+                          - generic [ref=e3397]: 4.3 out of 5 stars
+                        - link "314 ratings" [ref=e3399] [cursor=pointer]:
+                          - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0044S733Q/ref=sr_1_34?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34#customerReviews
+                          - text: (314)
+                      - generic [ref=e3400]:
+                        - generic [ref=e3402]:
+                          - generic [ref=e3403]: Price, product page
+                          - link "₹7,495" [ref=e3404] [cursor=pointer]:
+                            - /url: /Nike-AIR-Invigor-Wolf-GREY-WHITE-749680-005-10UK/dp/B0044S733Q/ref=sr_1_34?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-34
+                            - generic [ref=e3405]:
+                              - generic [ref=e3406]: ₹7,495
+                              - generic [ref=e3407]: ₹7,495
+                        - generic [ref=e3411]:
+                          - generic [ref=e3412]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3413]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3418]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3428] [cursor=pointer]
+                - listitem [ref=e3429]:
+                  - generic [ref=e3434]:
+                    - generic [ref=e3439]: New Season
+                    - link [ref=e3443] [cursor=pointer]:
+                      - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=sr_1_35?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-35
+                      - img [ref=e3445]
+                    - generic [ref=e3446]:
+                      - generic [ref=e3447]:
+                        - heading "Nike" [level=2] [ref=e3449]
+                        - link "Nike Mens Legend Essential 3 Nn Training Shoes" [ref=e3450] [cursor=pointer]:
+                          - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=sr_1_35?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-35
+                          - heading "Nike Mens Legend Essential 3 Nn Training Shoes" [level=2] [ref=e3451]
+                      - generic [ref=e3453]:
+                        - text: "3.3"
+                        - button "3.3 out of 5 stars, rating details" [ref=e3455] [cursor=pointer]:
+                          - generic [ref=e3457]: 3.3 out of 5 stars
+                        - link "13 ratings" [ref=e3459] [cursor=pointer]:
+                          - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=sr_1_35?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-35#customerReviews
+                          - text: (13)
+                      - generic [ref=e3460]:
+                        - link "Limited time deal" [ref=e3462] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3465]: Limited time deal
+                        - generic [ref=e3467]:
+                          - generic [ref=e3468]: Price, product page
+                          - 'link "₹3,496 M.R.P: ₹4,995 M.R.P: ₹4,995" [ref=e3469] [cursor=pointer]':
+                            - /url: /Nike-DM1120-403-Legend-Essential-NN/dp/B0CKS5T2V8/ref=sr_1_35?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-35
+                            - generic [ref=e3470]:
+                              - generic [ref=e3471]: ₹3,496
+                              - generic [ref=e3472]: ₹3,496
+                            - generic [ref=e3473]: "M.R.P: ₹4,995"
+                            - generic [ref=e3474]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3475]:
+                                - generic [ref=e3476]: ₹4,995
+                                - text: ₹4,995
+                          - text: (30% off)
+                        - generic [ref=e3480]:
+                          - generic [ref=e3481]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3482]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3487]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3501] [cursor=pointer]
+                - listitem [ref=e3502]:
+                  - generic [ref=e3507]:
+                    - link [ref=e3511] [cursor=pointer]:
+                      - /url: /Nike-Alleyoop-Skate-Shoes-Cj0882-001/dp/B07Q4DLNGL/ref=sr_1_36?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-36
+                      - img [ref=e3513]
+                    - generic [ref=e3514]:
+                      - group "colours available" [ref=e3516]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e3518] [cursor=pointer]:
+                          - /url: /Nike-Alleyoop-Skate-Shoes-Cj0882-001/dp/B07Q4DLNGL/ref=cs_sr_dp?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-36
+                      - generic [ref=e3519]:
+                        - heading "Nike" [level=2] [ref=e3521]
+                        - link "Nike Mens SB Alleyoop Skateboarding Shoes" [ref=e3522] [cursor=pointer]:
+                          - /url: /Nike-Alleyoop-Skate-Shoes-Cj0882-001/dp/B07Q4DLNGL/ref=sr_1_36?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-36
+                          - heading "Nike Mens SB Alleyoop Skateboarding Shoes" [level=2] [ref=e3523]
+                      - generic [ref=e3525]:
+                        - text: "4.0"
+                        - button "4.0 out of 5 stars, rating details" [ref=e3527] [cursor=pointer]:
+                          - generic [ref=e3529]: 4.0 out of 5 stars
+                        - link "56 ratings" [ref=e3531] [cursor=pointer]:
+                          - /url: /Nike-Alleyoop-Skate-Shoes-Cj0882-001/dp/B07Q4DLNGL/ref=sr_1_36?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-36#customerReviews
+                          - text: (56)
+                      - generic [ref=e3532]:
+                        - link "Limited time deal" [ref=e3534] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3537]: Limited time deal
+                        - generic [ref=e3539]:
+                          - generic [ref=e3540]: Price, product page
+                          - 'link "₹3,897 M.R.P: ₹6,495 M.R.P: ₹6,495" [ref=e3541] [cursor=pointer]':
+                            - /url: /Nike-Alleyoop-Skate-Shoes-Cj0882-001/dp/B07Q4DLNGL/ref=sr_1_36?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-36
+                            - generic [ref=e3542]:
+                              - generic [ref=e3543]: ₹3,897
+                              - generic [ref=e3544]: ₹3,897
+                            - generic [ref=e3545]: "M.R.P: ₹6,495"
+                            - generic [ref=e3546]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3547]:
+                                - generic [ref=e3548]: ₹6,495
+                                - text: ₹6,495
+                          - text: (40% off)
+                        - generic [ref=e3552]:
+                          - generic [ref=e3553]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3554]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3559]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3573] [cursor=pointer]
+                - listitem [ref=e3574]:
+                  - generic [ref=e3579]:
+                    - generic [ref=e3584]: New Season
+                    - link [ref=e3588] [cursor=pointer]:
+                      - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRD3RX9/ref=sr_1_37?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-37
+                      - img [ref=e3590]
+                    - generic [ref=e3591]:
+                      - group "colours available" [ref=e3593]:
+                        - list [ref=e3594]:
+                          - generic [ref=e3595]:
+                            - listitem:
+                              - link "BLACK/WHITE-ANTHRACITE-WOLF GREY":
+                                - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRD3RX9/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-37
+                          - generic [ref=e3598]:
+                            - listitem:
+                              - link "WHITE/BLACK-WOLF GREY":
+                                - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRFZ5W1/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-37
+                      - generic [ref=e3601]:
+                        - heading "Nike" [level=2] [ref=e3603]
+                        - link "Nike Mens Revolution 8 Easy-On Adaptive Shoes" [ref=e3604] [cursor=pointer]:
+                          - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRD3RX9/ref=sr_1_37?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-37
+                          - heading "Nike Mens Revolution 8 Easy-On Adaptive Shoes" [level=2] [ref=e3605]
+                      - generic [ref=e3607]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e3609] [cursor=pointer]:
+                          - generic [ref=e3611]: 3.9 out of 5 stars
+                        - link "50 ratings" [ref=e3613] [cursor=pointer]:
+                          - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRD3RX9/ref=sr_1_37?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-37#customerReviews
+                          - text: (50)
+                      - generic [ref=e3614]:
+                        - generic [ref=e3616]:
+                          - generic [ref=e3617]: Price, product page
+                          - link "₹4,295" [ref=e3618] [cursor=pointer]:
+                            - /url: /Nike-HQ2414-Revolution-8-EASYON/dp/B0FBRD3RX9/ref=sr_1_37?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-37
+                            - generic [ref=e3619]:
+                              - generic [ref=e3620]: ₹4,295
+                              - generic [ref=e3621]: ₹4,295
+                        - generic [ref=e3625]:
+                          - generic [ref=e3626]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3627]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3630]:
+                        - generic [ref=e3632]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e3634]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e3644] [cursor=pointer]
+                - listitem [ref=e3645]:
+                  - generic [ref=e3650]:
+                    - link [ref=e3654] [cursor=pointer]:
+                      - /url: /Nike-Court-Vision-LO-White/dp/B0983PLZLV/ref=sr_1_38?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                      - img [ref=e3656]
+                    - generic [ref=e3657]:
+                      - group "colours available" [ref=e3659]:
+                        - list [ref=e3660]:
+                          - generic [ref=e3661]:
+                            - listitem:
+                              - link "White":
+                                - /url: /Nike-Court-Vision-LO-White/dp/B0983PLZLV/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                          - generic [ref=e3664]:
+                            - listitem:
+                              - link "Pencil Point/White":
+                                - /url: /Nike-Court-Vision-LO-White/dp/B0FBRXK5RX/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                          - generic [ref=e3667]:
+                            - listitem:
+                              - link "WHITE/BLACK-WHITE":
+                                - /url: /Nike-Court-Vision-LO-White/dp/B098F6QPLK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                          - generic [ref=e3670]:
+                            - listitem:
+                              - link "BLACK/BLACK-BLACK":
+                                - /url: /Nike-Court-Vision-LO-White/dp/B098F6B34N/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                      - generic [ref=e3673]:
+                        - heading "Nike" [level=2] [ref=e3675]
+                        - link "Nike Mens Court Vision Lo Nn Basketball Shoes" [ref=e3676] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-LO-White/dp/B0983PLZLV/ref=sr_1_38?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                          - heading "Nike Mens Court Vision Lo Nn Basketball Shoes" [level=2] [ref=e3677]
+                      - generic [ref=e3679]:
+                        - text: "3.8"
+                        - button "3.8 out of 5 stars, rating details" [ref=e3681] [cursor=pointer]:
+                          - generic [ref=e3683]: 3.8 out of 5 stars
+                        - link "4,223 ratings" [ref=e3685] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-LO-White/dp/B0983PLZLV/ref=sr_1_38?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38#customerReviews
+                          - text: (4.2K)
+                      - generic [ref=e3686]:
+                        - generic [ref=e3688]:
+                          - generic [ref=e3689]: Price, product page
+                          - link "₹4,995" [ref=e3690] [cursor=pointer]:
+                            - /url: /Nike-Court-Vision-LO-White/dp/B0983PLZLV/ref=sr_1_38?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-38
+                            - generic [ref=e3691]:
+                              - generic [ref=e3692]: ₹4,995
+                              - generic [ref=e3693]: ₹4,995
+                        - generic [ref=e3697]:
+                          - generic [ref=e3698]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3699]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3702]:
+                        - generic [ref=e3704]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e3706]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e3716] [cursor=pointer]
+                - listitem [ref=e3717]:
+                  - generic [ref=e3722]:
+                    - link [ref=e3726] [cursor=pointer]:
+                      - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZSY61B/ref=sr_1_39?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                      - img [ref=e3728]
+                    - generic [ref=e3729]:
+                      - group "colours available" [ref=e3731]:
+                        - list [ref=e3732]:
+                          - generic [ref=e3733]:
+                            - listitem:
+                              - link "CBLACK/FTWWHT":
+                                - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZSY61B/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                          - generic [ref=e3736]:
+                            - listitem:
+                              - link "DOVGRY/FTWWHT":
+                                - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZTK6CY/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                          - generic [ref=e3739]:
+                            - listitem:
+                              - link "LEGINK/LEGGLD/CBLACK":
+                                - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZVSR7V/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                          - generic [ref=e3742]:
+                            - listitem:
+                              - link "NMARIN/FTWWHT":
+                                - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZTQJ3K/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                          - generic [ref=e3745]:
+                            - listitem:
+                              - link "GRESIX/DOVGRY/SYELLO":
+                                - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZT5X8S/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                      - generic [ref=e3748]:
+                        - heading "adidas" [level=2] [ref=e3750]
+                        - link "Men's Clinch-X M Running Shoe" [ref=e3751] [cursor=pointer]:
+                          - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZSY61B/ref=sr_1_39?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                          - heading "Men's Clinch-X M Running Shoe" [level=2] [ref=e3752]
+                      - generic [ref=e3753]:
+                        - generic [ref=e3754]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e3756] [cursor=pointer]:
+                            - generic [ref=e3758]: 4.0 out of 5 stars
+                          - link "7,328 ratings" [ref=e3760] [cursor=pointer]:
+                            - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZSY61B/ref=sr_1_39?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39#customerReviews
+                            - text: (7.3K)
+                        - generic [ref=e3761]: 500+ bought in past month
+                      - generic [ref=e3762]:
+                        - link "Clearance Sale - No Returns" [ref=e3764] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3767]: Clearance Sale - No Returns
+                        - generic [ref=e3769]:
+                          - generic [ref=e3770]: Price, product page
+                          - 'link "₹979 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=e3771] [cursor=pointer]':
+                            - /url: /Adidas-Mens-Clinch-X-Running-Black/dp/B08FZSY61B/ref=sr_1_39?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-39
+                            - generic [ref=e3772]:
+                              - generic [ref=e3773]: ₹979
+                              - generic [ref=e3774]: ₹979
+                            - generic [ref=e3775]: "M.R.P: ₹2,999"
+                            - generic [ref=e3776]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3777]:
+                                - generic [ref=e3778]: ₹2,999
+                                - text: ₹2,999
+                          - text: (67% off)
+                        - generic [ref=e3782]:
+                          - generic [ref=e3783]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3784]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3789]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3799] [cursor=pointer]
+                - listitem [ref=e3800]:
+                  - generic [ref=e3805]:
+                    - generic [ref=e3810]: New Season
+                    - link [ref=e3814] [cursor=pointer]:
+                      - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFTD8J3C/ref=sr_1_40?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40
+                      - img [ref=e3816]
+                    - generic [ref=e3817]:
+                      - group "colours available" [ref=e3819]:
+                        - list [ref=e3820]:
+                          - generic [ref=e3821]:
+                            - listitem:
+                              - link "WHITE/BLACK-SUMMIT WHITE-BRIGHT CRIMSON":
+                                - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFTD8J3C/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40
+                          - generic [ref=e3824]:
+                            - listitem:
+                              - link "WHITE/BLACK-PLATINUM TINT-ANTHRACITE":
+                                - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFT93QSQ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40
+                          - generic [ref=e3827]:
+                            - listitem:
+                              - link "White/White":
+                                - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFTDZ96P/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40
+                      - generic [ref=e3830]:
+                        - heading "Nike" [level=2] [ref=e3832]
+                        - link "Nike Mens Downshifter 14 Running Shoes" [ref=e3833] [cursor=pointer]:
+                          - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFTD8J3C/ref=sr_1_40?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40
+                          - heading "Nike Mens Downshifter 14 Running Shoes" [level=2] [ref=e3834]
+                      - generic [ref=e3836]:
+                        - text: "4.1"
+                        - button "4.1 out of 5 stars, rating details" [ref=e3838] [cursor=pointer]:
+                          - generic [ref=e3840]: 4.1 out of 5 stars
+                        - link "31 ratings" [ref=e3842] [cursor=pointer]:
+                          - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFTD8J3C/ref=sr_1_40?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40#customerReviews
+                          - text: (31)
+                      - generic [ref=e3843]:
+                        - generic [ref=e3845]:
+                          - generic [ref=e3846]: Price, product page
+                          - link "₹4,895" [ref=e3847] [cursor=pointer]:
+                            - /url: /Nike-Downshifter-Black-Summit-White-Bright-Crimson/dp/B0FFTD8J3C/ref=sr_1_40?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-40
+                            - generic [ref=e3848]:
+                              - generic [ref=e3849]: ₹4,895
+                              - generic [ref=e3850]: ₹4,895
+                        - generic [ref=e3854]:
+                          - generic [ref=e3855]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3856]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3859]:
+                        - generic [ref=e3861]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e3863]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e3873] [cursor=pointer]
+                - listitem [ref=e3874]:
+                  - generic [ref=e3879]:
+                    - generic [ref=e3884]: New Season
+                    - link [ref=e3888] [cursor=pointer]:
+                      - /url: /Nike-Precision-White-Lt-Blue-Picante-Basketball/dp/B0FQN5NL13/ref=sr_1_41?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-41
+                      - img [ref=e3890]
+                    - generic [ref=e3891]:
+                      - generic [ref=e3892]:
+                        - heading "Nike" [level=2] [ref=e3894]
+                        - link "Mens Precision 8 Low Basketball Shoes" [ref=e3895] [cursor=pointer]:
+                          - /url: /Nike-Precision-White-Lt-Blue-Picante-Basketball/dp/B0FQN5NL13/ref=sr_1_41?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-41
+                          - heading "Mens Precision 8 Low Basketball Shoes" [level=2] [ref=e3896]
+                      - generic [ref=e3897]:
+                        - generic [ref=e3899]:
+                          - generic [ref=e3900]: Price, product page
+                          - link "₹5,995" [ref=e3901] [cursor=pointer]:
+                            - /url: /Nike-Precision-White-Lt-Blue-Picante-Basketball/dp/B0FQN5NL13/ref=sr_1_41?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-41
+                            - generic [ref=e3902]:
+                              - generic [ref=e3903]: ₹5,995
+                              - generic [ref=e3904]: ₹5,995
+                        - generic [ref=e3908]:
+                          - generic [ref=e3909]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3910]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3915]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e3925] [cursor=pointer]
+                - listitem [ref=e3926]:
+                  - generic [ref=e3931]:
+                    - generic [ref=e3936]: New Season
+                    - link [ref=e3940] [cursor=pointer]:
+                      - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMGH5KW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                      - img [ref=e3942]
+                    - generic [ref=e3943]:
+                      - group "colours available" [ref=e3945]:
+                        - list [ref=e3946]:
+                          - generic [ref=e3947]:
+                            - listitem:
+                              - link "WHITE/BLACK-GREEN STRIKE-GLACIER BLUE":
+                                - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMGH5KW/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                          - generic [ref=e3950]:
+                            - listitem:
+                              - link "BLACK/WHITE-ANTHRACITE":
+                                - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0CZHHCMP1/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                          - generic [ref=e3953]:
+                            - listitem:
+                              - link "SILVER SAGE/BLACK-BLACK SPRUCE-PHANTOM":
+                                - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMJKTVX/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                          - generic [ref=e3956]:
+                            - listitem:
+                              - link "WHITE/BRIGHT CRIMSON-SPRUCE AURA":
+                                - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMDJKH1/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                      - generic [ref=e3959]:
+                        - heading "Nike" [level=2] [ref=e3961]
+                        - link "Nike Mens Journey Run Running Shoes" [ref=e3962] [cursor=pointer]:
+                          - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMGH5KW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                          - heading "Nike Mens Journey Run Running Shoes" [level=2] [ref=e3963]
+                      - generic [ref=e3965]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e3967] [cursor=pointer]:
+                          - generic [ref=e3969]: 4.2 out of 5 stars
+                        - link "175 ratings" [ref=e3971] [cursor=pointer]:
+                          - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMGH5KW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42#customerReviews
+                          - text: (175)
+                      - generic [ref=e3972]:
+                        - link "Limited time deal" [ref=e3974] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3977]: Limited time deal
+                        - generic [ref=e3979]:
+                          - generic [ref=e3980]: Price, product page
+                          - 'link "₹6,796 M.R.P: ₹8,495 M.R.P: ₹8,495" [ref=e3981] [cursor=pointer]':
+                            - /url: /Nike-Journey-Black-Green-Strike-Glacier-Running/dp/B0FCMGH5KW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-42
+                            - generic [ref=e3982]:
+                              - generic [ref=e3983]: ₹6,796
+                              - generic [ref=e3984]: ₹6,796
+                            - generic [ref=e3985]: "M.R.P: ₹8,495"
+                            - generic [ref=e3986]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3987]:
+                                - generic [ref=e3988]: ₹8,495
+                                - text: ₹8,495
+                          - text: (20% off)
+                        - generic [ref=e3992]:
+                          - generic [ref=e3993]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3994]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3999]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4009] [cursor=pointer]
+                - listitem [ref=e4010]:
+                  - generic [ref=e4015]:
+                    - generic [ref=e4020]: New Season
+                    - link [ref=e4024] [cursor=pointer]:
+                      - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0GKG4CSGD/ref=sr_1_43?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43
+                      - img [ref=e4026]
+                    - generic [ref=e4027]:
+                      - group "colours available" [ref=e4029]:
+                        - list [ref=e4030]:
+                          - generic [ref=e4031]:
+                            - listitem:
+                              - link "WHITE/LT SMOKE GREY-MIDNIGHT NAVY-BLACK":
+                                - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0GKG4CSGD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43
+                          - generic [ref=e4034]:
+                            - listitem:
+                              - link "SANDDRIFT/BAROQUE BROWN-LT OREWOOD BRN":
+                                - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0GNJW3JJG/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43
+                          - generic [ref=e4037]:
+                            - listitem:
+                              - link "WHITE/RED-PHOTO BLUE-BLACK":
+                                - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0BGQC3YSZ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43
+                      - generic [ref=e4040]:
+                        - heading "Nike" [level=2] [ref=e4042]
+                        - link "Nike Mens Air Max Dawn Running Shoes" [ref=e4043] [cursor=pointer]:
+                          - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0GKG4CSGD/ref=sr_1_43?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43
+                          - heading "Nike Mens Air Max Dawn Running Shoes" [level=2] [ref=e4044]
+                      - generic [ref=e4046]:
+                        - text: "4.4"
+                        - button "4.4 out of 5 stars, rating details" [ref=e4048] [cursor=pointer]:
+                          - generic [ref=e4050]: 4.4 out of 5 stars
+                        - link "44 ratings" [ref=e4052] [cursor=pointer]:
+                          - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0GKG4CSGD/ref=sr_1_43?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43#customerReviews
+                          - text: (44)
+                      - generic [ref=e4053]:
+                        - generic [ref=e4055]:
+                          - generic [ref=e4056]: Price, product page
+                          - 'link "₹6,786 M.R.P: ₹9,695 M.R.P: ₹9,695" [ref=e4057] [cursor=pointer]':
+                            - /url: /Nike-White-Grey-Midnight-Navy-Black-Running/dp/B0GKG4CSGD/ref=sr_1_43?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-43
+                            - generic [ref=e4058]:
+                              - generic [ref=e4059]: ₹6,786
+                              - generic [ref=e4060]: ₹6,786
+                            - generic [ref=e4061]: "M.R.P: ₹9,695"
+                            - generic [ref=e4062]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4063]:
+                                - generic [ref=e4064]: ₹9,695
+                                - text: ₹9,695
+                          - text: (30% off)
+                        - generic [ref=e4068]:
+                          - generic [ref=e4069]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4070]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4075]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e4085] [cursor=pointer]
+                - listitem [ref=e4086]:
+                  - generic [ref=e4091]:
+                    - link [ref=e4095] [cursor=pointer]:
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVCTZF/ref=sr_1_44?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                      - img [ref=e4097]
+                    - generic [ref=e4098]:
+                      - group "colours available" [ref=e4100]:
+                        - list [ref=e4101]:
+                          - generic [ref=e4102]:
+                            - listitem:
+                              - link "All Black":
+                                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVCTZF/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - generic [ref=e4105]:
+                            - listitem:
+                              - link "Batik Blue":
+                                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B0B5HL8MHR/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - generic [ref=e4108]:
+                            - listitem:
+                              - link "Batik Blue / White / Court Green":
+                                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09N6FB5Y6/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - generic [ref=e4111]:
+                            - listitem:
+                              - link "Black / Lgh Solid Grey":
+                                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09N6XCFFC/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - generic [ref=e4114]:
+                            - listitem:
+                              - link "Black / Solar Lime R":
+                                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B0B5HKZG2C/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - generic [ref=e4117]:
+                            - listitem:
+                              - link "Classic White / Seaport Teal/Black":
+                                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09N6DBTKS/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                        - link "+21 other colors/patterns" [ref=e4121] [cursor=pointer]:
+                          - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVCTZF/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - text: "+21"
+                      - generic [ref=e4122]:
+                        - heading "Reebok" [level=2] [ref=e4124]
+                        - link "Men's Running Shoes - Stride Runner - Lightweight Training Shoes for Gym, Running and Fitness" [ref=e4125] [cursor=pointer]:
+                          - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVCTZF/ref=sr_1_44?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                          - heading "Men's Running Shoes - Stride Runner - Lightweight Training Shoes for Gym, Running and Fitness" [level=2] [ref=e4126]
+                      - generic [ref=e4128]:
+                        - text: "3.8"
+                        - button "3.8 out of 5 stars, rating details" [ref=e4130] [cursor=pointer]:
+                          - generic [ref=e4132]: 3.8 out of 5 stars
+                        - link "6,593 ratings" [ref=e4134] [cursor=pointer]:
+                          - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVCTZF/ref=sr_1_44?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44#customerReviews
+                          - text: (6.5K)
+                      - generic [ref=e4135]:
+                        - generic [ref=e4137]:
+                          - generic [ref=e4138]: Price, product page
+                          - 'link "₹1,449 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=e4139] [cursor=pointer]':
+                            - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVCTZF/ref=sr_1_44?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-44
+                            - generic [ref=e4140]:
+                              - generic [ref=e4141]: ₹1,449
+                              - generic [ref=e4142]: ₹1,449
+                            - generic [ref=e4143]: "M.R.P: ₹2,499"
+                            - generic [ref=e4144]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4145]:
+                                - generic [ref=e4146]: ₹2,499
+                                - text: ₹2,499
+                          - text: (42% off)
+                        - generic [ref=e4150]:
+                          - generic [ref=e4151]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4152]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4155]:
+                        - generic [ref=e4157]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e4159]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e4169] [cursor=pointer]
+                - listitem [ref=e4170]:
+                  - generic [ref=e4175]:
+                    - link [ref=e4179] [cursor=pointer]:
+                      - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKMPSG4/ref=sr_1_45?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                      - img [ref=e4181]
+                    - generic [ref=e4182]:
+                      - group "colours available" [ref=e4184]:
+                        - list [ref=e4185]:
+                          - generic [ref=e4186]:
+                            - listitem:
+                              - link "WHITE/SKY":
+                                - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKMPSG4/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                          - generic [ref=e4189]:
+                            - listitem:
+                              - link "BLACK":
+                                - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKQRYTJ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                          - generic [ref=e4192]:
+                            - listitem:
+                              - link "LIGHT GREY/NAVY":
+                                - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKPTX6H/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                          - generic [ref=e4195]:
+                            - listitem:
+                              - link "WHITE/BEIGE":
+                                - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKQR573/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                      - generic [ref=e4198]:
+                        - heading "Campus" [level=2] [ref=e4200]
+                        - link "Men's DRIVO Running Shoes" [ref=e4201] [cursor=pointer]:
+                          - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKMPSG4/ref=sr_1_45?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                          - heading "Men's DRIVO Running Shoes" [level=2] [ref=e4202]
+                      - generic [ref=e4203]:
+                        - generic [ref=e4204]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e4206] [cursor=pointer]:
+                            - generic [ref=e4208]: 4.2 out of 5 stars
+                          - link "437 ratings" [ref=e4210] [cursor=pointer]:
+                            - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKMPSG4/ref=sr_1_45?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45#customerReviews
+                            - text: (437)
+                        - generic [ref=e4211]: 100+ bought in past month
+                      - generic [ref=e4212]:
+                        - link "Limited time deal" [ref=e4214] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4217]: Limited time deal
+                        - generic [ref=e4219]:
+                          - generic [ref=e4220]: Price, product page
+                          - 'link "₹1,349 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=e4221] [cursor=pointer]':
+                            - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKMPSG4/ref=sr_1_45?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-45
+                            - generic [ref=e4222]:
+                              - generic [ref=e4223]: ₹1,349
+                              - generic [ref=e4224]: ₹1,349
+                            - generic [ref=e4225]: "M.R.P: ₹2,499"
+                            - generic [ref=e4226]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4227]:
+                                - generic [ref=e4228]: ₹2,499
+                                - text: ₹2,499
+                          - text: (46% off)
+                        - generic [ref=e4232]:
+                          - generic [ref=e4233]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4234]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4239]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4249] [cursor=pointer]
+                - listitem [ref=e4250]:
+                  - generic [ref=e4255]:
+                    - generic [ref=e4260]: New Season
+                    - link [ref=e4264] [cursor=pointer]:
+                      - /url: /Nike-HQ2052-Pacific/dp/B0DYL3QJRH/ref=sr_1_46?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                      - img [ref=e4266]
+                    - generic [ref=e4267]:
+                      - group "colours available" [ref=e4269]:
+                        - list [ref=e4270]:
+                          - generic [ref=e4271]:
+                            - listitem:
+                              - link "BLACK/WHITE-IRON GREY-GUM LIGHT BROWN":
+                                - /url: /Nike-HQ2052-Pacific/dp/B0DYL3QJRH/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                          - generic [ref=e4274]:
+                            - listitem:
+                              - link "COURT BLUE/SAIL-BLACK-GUM LIGHT BROWN":
+                                - /url: /Nike-HQ2052-Pacific/dp/B0FDVYCWTH/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                          - generic [ref=e4277]:
+                            - listitem:
+                              - link "WHITE/LT CRIMSON-PLATINUM TINT":
+                                - /url: /Nike-HQ2052-Pacific/dp/B0G2R545JQ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                          - generic [ref=e4280]:
+                            - listitem:
+                              - link "TEAM CRIMSON/WHITE-BLACK-GUM LIGHT BROWN":
+                                - /url: /Nike-HQ2052-Pacific/dp/B0FDVDYVSY/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                          - generic [ref=e4283]:
+                            - listitem:
+                              - link "WHITE/BLACK-PLATINUM TINT":
+                                - /url: /Nike-HQ2052-Pacific/dp/B0DYKTG68M/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                      - generic [ref=e4286]:
+                        - heading "Nike" [level=2] [ref=e4288]
+                        - link "Nike Mens Pacific Running Shoes" [ref=e4289] [cursor=pointer]:
+                          - /url: /Nike-HQ2052-Pacific/dp/B0DYL3QJRH/ref=sr_1_46?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                          - heading "Nike Mens Pacific Running Shoes" [level=2] [ref=e4290]
+                      - generic [ref=e4292]:
+                        - text: "3.6"
+                        - button "3.6 out of 5 stars, rating details" [ref=e4294] [cursor=pointer]:
+                          - generic [ref=e4296]: 3.6 out of 5 stars
+                        - link "27 ratings" [ref=e4298] [cursor=pointer]:
+                          - /url: /Nike-HQ2052-Pacific/dp/B0DYL3QJRH/ref=sr_1_46?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46#customerReviews
+                          - text: (27)
+                      - generic [ref=e4299]:
+                        - generic [ref=e4301]:
+                          - generic [ref=e4302]: Price, product page
+                          - link "₹6,295" [ref=e4303] [cursor=pointer]:
+                            - /url: /Nike-HQ2052-Pacific/dp/B0DYL3QJRH/ref=sr_1_46?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-46
+                            - generic [ref=e4304]:
+                              - generic [ref=e4305]: ₹6,295
+                              - generic [ref=e4306]: ₹6,295
+                        - generic [ref=e4310]:
+                          - generic [ref=e4311]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4312]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4317]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4327] [cursor=pointer]
+                - listitem [ref=e4328]:
+                  - generic [ref=e4333]:
+                    - generic [ref=e4338]: New Season
+                    - link [ref=e4342] [cursor=pointer]:
+                      - /url: /AIR-MAX-Alpha-Trainer/dp/B0FBRZDPQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-47
+                      - img [ref=e4344]
+                    - generic [ref=e4345]:
+                      - group "colours available" [ref=e4347]:
+                        - list [ref=e4348]:
+                          - generic [ref=e4349]:
+                            - listitem:
+                              - link "WORK BLUE/BLACK-DIFFUSED BLUE":
+                                - /url: /AIR-MAX-Alpha-Trainer/dp/B0FBRZDPQM/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-47
+                          - generic [ref=e4352]:
+                            - listitem:
+                              - link "MEDIUM OLIVE/BLACK-ANTHRACITE-SEQUOIA":
+                                - /url: /AIR-MAX-Alpha-Trainer/dp/B0FDWDJLYL/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-47
+                      - generic [ref=e4355]:
+                        - heading "Nike" [level=2] [ref=e4357]
+                        - link "Nike Mens Air Max Alpha Trainer 6 Cross Training Shoes" [ref=e4358] [cursor=pointer]:
+                          - /url: /AIR-MAX-Alpha-Trainer/dp/B0FBRZDPQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-47
+                          - heading "Nike Mens Air Max Alpha Trainer 6 Cross Training Shoes" [level=2] [ref=e4359]
+                      - generic [ref=e4361]:
+                        - text: "4.6"
+                        - button "4.6 out of 5 stars, rating details" [ref=e4363] [cursor=pointer]:
+                          - generic [ref=e4365]: 4.6 out of 5 stars
+                        - link "6 ratings" [ref=e4367] [cursor=pointer]:
+                          - /url: /AIR-MAX-Alpha-Trainer/dp/B0FBRZDPQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-47#customerReviews
+                          - text: (6)
+                      - generic [ref=e4368]:
+                        - generic [ref=e4370]:
+                          - generic [ref=e4371]: Price, product page
+                          - link "₹8,495" [ref=e4372] [cursor=pointer]:
+                            - /url: /AIR-MAX-Alpha-Trainer/dp/B0FBRZDPQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-47
+                            - generic [ref=e4373]:
+                              - generic [ref=e4374]: ₹8,495
+                              - generic [ref=e4375]: ₹8,495
+                        - generic [ref=e4379]:
+                          - generic [ref=e4380]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4381]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4386]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4396] [cursor=pointer]
+                - listitem [ref=e4397]:
+                  - generic [ref=e4402]:
+                    - link [ref=e4406] [cursor=pointer]:
+                      - /url: /Nike-Legacy-NN-White-Black-Desert-OCHRE-DH3162-100-9UK/dp/B09NMJHWBV/ref=sr_1_48?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-48
+                      - img [ref=e4408]
+                    - generic [ref=e4409]:
+                      - generic [ref=e4410]:
+                        - heading "Nike" [level=2] [ref=e4412]
+                        - link "Nike Mens Court Legacy Next Nature Sneakers" [ref=e4413] [cursor=pointer]:
+                          - /url: /Nike-Legacy-NN-White-Black-Desert-OCHRE-DH3162-100-9UK/dp/B09NMJHWBV/ref=sr_1_48?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-48
+                          - heading "Nike Mens Court Legacy Next Nature Sneakers" [level=2] [ref=e4414]
+                      - generic [ref=e4416]:
+                        - text: "3.8"
+                        - button "3.8 out of 5 stars, rating details" [ref=e4418] [cursor=pointer]:
+                          - generic [ref=e4420]: 3.8 out of 5 stars
+                        - link "383 ratings" [ref=e4422] [cursor=pointer]:
+                          - /url: /Nike-Legacy-NN-White-Black-Desert-OCHRE-DH3162-100-9UK/dp/B09NMJHWBV/ref=sr_1_48?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-48#customerReviews
+                          - text: (383)
+                      - generic [ref=e4423]:
+                        - generic [ref=e4425]:
+                          - generic [ref=e4426]: Price, product page
+                          - 'link "₹3,986 M.R.P: ₹5,695 M.R.P: ₹5,695" [ref=e4427] [cursor=pointer]':
+                            - /url: /Nike-Legacy-NN-White-Black-Desert-OCHRE-DH3162-100-9UK/dp/B09NMJHWBV/ref=sr_1_48?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-48
+                            - generic [ref=e4428]:
+                              - generic [ref=e4429]: ₹3,986
+                              - generic [ref=e4430]: ₹3,986
+                            - generic [ref=e4431]: "M.R.P: ₹5,695"
+                            - generic [ref=e4432]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4433]:
+                                - generic [ref=e4434]: ₹5,695
+                                - text: ₹5,695
+                          - text: (30% off)
+                        - generic [ref=e4438]:
+                          - generic [ref=e4439]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4440]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4443]:
+                        - generic [ref=e4445]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e4447]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e4457] [cursor=pointer]
+                - listitem [ref=e4458]:
+                  - generic [ref=e4463]:
+                    - generic [ref=e4468]: New Season
+                    - link [ref=e4472] [cursor=pointer]:
+                      - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3VVJ5B/ref=sr_1_49?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49
+                      - img [ref=e4474]
+                    - generic [ref=e4475]:
+                      - group "colours available" [ref=e4477]:
+                        - list [ref=e4478]:
+                          - generic [ref=e4479]:
+                            - listitem:
+                              - link "WORK BLUE/BLACK-SUMMIT WHITE":
+                                - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3VVJ5B/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49
+                          - generic [ref=e4482]:
+                            - listitem:
+                              - link "BLACK/WHITE":
+                                - /url: /Nike-FV5285-M-PROMINA/dp/B0DJMMKLXS/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49
+                          - generic [ref=e4485]:
+                            - listitem:
+                              - link "SEA GLASS/VOLT-WHITE":
+                                - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3ZC357/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49
+                      - generic [ref=e4488]:
+                        - heading "Nike" [level=2] [ref=e4490]
+                        - link "Nike Mens M Promina Walking Shoes" [ref=e4491] [cursor=pointer]:
+                          - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3VVJ5B/ref=sr_1_49?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49
+                          - heading "Nike Mens M Promina Walking Shoes" [level=2] [ref=e4492]
+                      - generic [ref=e4494]:
+                        - text: "4.1"
+                        - button "4.1 out of 5 stars, rating details" [ref=e4496] [cursor=pointer]:
+                          - generic [ref=e4498]: 4.1 out of 5 stars
+                        - link "477 ratings" [ref=e4500] [cursor=pointer]:
+                          - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3VVJ5B/ref=sr_1_49?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49#customerReviews
+                          - text: (477)
+                      - generic [ref=e4501]:
+                        - generic [ref=e4503]:
+                          - generic [ref=e4504]: Price, product page
+                          - link "₹4,995" [ref=e4505] [cursor=pointer]:
+                            - /url: /Nike-FV5285-M-PROMINA/dp/B0FC3VVJ5B/ref=sr_1_49?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-49
+                            - generic [ref=e4506]:
+                              - generic [ref=e4507]: ₹4,995
+                              - generic [ref=e4508]: ₹4,995
+                        - generic [ref=e4512]:
+                          - generic [ref=e4513]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4514]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4517]:
+                        - generic [ref=e4519]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e4521]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e4531] [cursor=pointer]
+                - listitem [ref=e4532]:
+                  - generic [ref=e4537]:
+                    - link [ref=e4541] [cursor=pointer]:
+                      - /url: /Nike-Womens-Vision-Running-DH3158-100/dp/B0983LY2K6/ref=sr_1_50?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-50
+                      - img [ref=e4543]
+                    - generic [ref=e4544]:
+                      - group "colours available" [ref=e4546]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e4548] [cursor=pointer]:
+                          - /url: /Nike-Womens-Vision-Running-DH3158-100/dp/B0983LY2K6/ref=cs_sr_dp?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-50
+                      - generic [ref=e4549]:
+                        - heading "Nike" [level=2] [ref=e4551]
+                        - link "Nike Womens W Court Vision Lo Nn Basketball Shoes" [ref=e4552] [cursor=pointer]:
+                          - /url: /Nike-Womens-Vision-Running-DH3158-100/dp/B0983LY2K6/ref=sr_1_50?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-50
+                          - heading "Nike Womens W Court Vision Lo Nn Basketball Shoes" [level=2] [ref=e4553]
+                      - generic [ref=e4555]:
+                        - text: "4.4"
+                        - button "4.4 out of 5 stars, rating details" [ref=e4557] [cursor=pointer]:
+                          - generic [ref=e4559]: 4.4 out of 5 stars
+                        - link "979 ratings" [ref=e4561] [cursor=pointer]:
+                          - /url: /Nike-Womens-Vision-Running-DH3158-100/dp/B0983LY2K6/ref=sr_1_50?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-50#customerReviews
+                          - text: (979)
+                      - generic [ref=e4562]:
+                        - generic [ref=e4564]:
+                          - generic [ref=e4565]: Price, product page
+                          - link "₹4,995" [ref=e4566] [cursor=pointer]:
+                            - /url: /Nike-Womens-Vision-Running-DH3158-100/dp/B0983LY2K6/ref=sr_1_50?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-50
+                            - generic [ref=e4567]:
+                              - generic [ref=e4568]: ₹4,995
+                              - generic [ref=e4569]: ₹4,995
+                        - generic [ref=e4573]:
+                          - generic [ref=e4574]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4575]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4580]: FREE delivery Sun, 26 Apr
+                      - button "Add to cart" [ref=e4590] [cursor=pointer]
+                - listitem [ref=e4591]:
+                  - generic [ref=e4596]:
+                    - generic [ref=e4601]: New Season
+                    - link [ref=e4605] [cursor=pointer]:
+                      - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B0FBS12CDH/ref=sr_1_51?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                      - img [ref=e4607]
+                    - generic [ref=e4608]:
+                      - group "colours available" [ref=e4610]:
+                        - list [ref=e4611]:
+                          - generic [ref=e4612]:
+                            - listitem:
+                              - link "GOLD LEAF/BLACK-SAIL":
+                                - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B0FBS12CDH/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                          - generic [ref=e4615]:
+                            - listitem:
+                              - link "WHITE/BLACK-WHITE":
+                                - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B09NMFTH6W/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                          - generic [ref=e4618]:
+                            - listitem:
+                              - link "Black/White/Black":
+                                - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B09NMGZD53/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                          - generic [ref=e4621]:
+                            - listitem:
+                              - link "WHITE/WHITE-WHITE":
+                                - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B09NMG5Y9H/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                      - generic [ref=e4624]:
+                        - heading "Nike" [level=2] [ref=e4626]
+                        - link "Nike Mens Court Vision Mid Next Nature Basketball Shoes" [ref=e4627] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B0FBS12CDH/ref=sr_1_51?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                          - heading "Nike Mens Court Vision Mid Next Nature Basketball Shoes" [level=2] [ref=e4628]
+                      - generic [ref=e4630]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e4632] [cursor=pointer]:
+                          - generic [ref=e4634]: 3.9 out of 5 stars
+                        - link "1,394 ratings" [ref=e4636] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B0FBS12CDH/ref=sr_1_51?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51#customerReviews
+                          - text: (1.3K)
+                      - generic [ref=e4637]:
+                        - link "Limited time deal" [ref=e4639] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4642]: Limited time deal
+                        - generic [ref=e4644]:
+                          - generic [ref=e4645]: Price, product page
+                          - 'link "₹4,796 M.R.P: ₹5,995 M.R.P: ₹5,995" [ref=e4646] [cursor=pointer]':
+                            - /url: /Nike-Court-Vision-Black-SAIL-Basketball/dp/B0FBS12CDH/ref=sr_1_51?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-51
+                            - generic [ref=e4647]:
+                              - generic [ref=e4648]: ₹4,796
+                              - generic [ref=e4649]: ₹4,796
+                            - generic [ref=e4650]: "M.R.P: ₹5,995"
+                            - generic [ref=e4651]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4652]:
+                                - generic [ref=e4653]: ₹5,995
+                                - text: ₹5,995
+                          - text: (20% off)
+                        - generic [ref=e4657]:
+                          - generic [ref=e4658]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4659]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4664]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4674] [cursor=pointer]
+                - listitem [ref=e4675]:
+                  - generic [ref=e4680]:
+                    - link [ref=e4684] [cursor=pointer]:
+                      - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMGK2LC/ref=sr_1_52?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                      - img [ref=e4686]
+                    - generic [ref=e4687]:
+                      - group "colours available" [ref=e4689]:
+                        - list [ref=e4690]:
+                          - generic [ref=e4691]:
+                            - listitem:
+                              - link "WHITE/BLACK-WHITE":
+                                - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMGK2LC/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                          - generic [ref=e4694]:
+                            - listitem:
+                              - link "Black/White/Black":
+                                - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMHCBJP/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                          - generic [ref=e4697]:
+                            - listitem:
+                              - link "GOLD LEAF/BLACK-SAIL":
+                                - /url: /Nike-Court-Vision-Black-White-Running/dp/B0FBRXR9LV/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                          - generic [ref=e4700]:
+                            - listitem:
+                              - link "WHITE/WHITE-WHITE":
+                                - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMDH51K/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                      - generic [ref=e4703]:
+                        - heading "Nike" [level=2] [ref=e4705]
+                        - link "Nike Mens Court Vision Mid Next Nature Basketball Shoes" [ref=e4706] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMGK2LC/ref=sr_1_52?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                          - heading "Nike Mens Court Vision Mid Next Nature Basketball Shoes" [level=2] [ref=e4707]
+                      - generic [ref=e4709]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e4711] [cursor=pointer]:
+                          - generic [ref=e4713]: 3.9 out of 5 stars
+                        - link "1,394 ratings" [ref=e4715] [cursor=pointer]:
+                          - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMGK2LC/ref=sr_1_52?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52#customerReviews
+                          - text: (1.3K)
+                      - generic [ref=e4716]:
+                        - link "Limited time deal" [ref=e4718] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4721]: Limited time deal
+                        - generic [ref=e4723]:
+                          - generic [ref=e4724]: Price, product page
+                          - 'link "₹4,796 M.R.P: ₹5,995 M.R.P: ₹5,995" [ref=e4725] [cursor=pointer]':
+                            - /url: /Nike-Court-Vision-Black-White-Running/dp/B09NMGK2LC/ref=sr_1_52?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-52
+                            - generic [ref=e4726]:
+                              - generic [ref=e4727]: ₹4,796
+                              - generic [ref=e4728]: ₹4,796
+                            - generic [ref=e4729]: "M.R.P: ₹5,995"
+                            - generic [ref=e4730]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4731]:
+                                - generic [ref=e4732]: ₹5,995
+                                - text: ₹5,995
+                          - text: (20% off)
+                        - generic [ref=e4736]:
+                          - generic [ref=e4737]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4738]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4743]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4753] [cursor=pointer]
+                - listitem [ref=e4754]:
+                  - generic [ref=e4759]:
+                    - link [ref=e4763] [cursor=pointer]:
+                      - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0D93VXRYW/ref=sr_1_53?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                      - img [ref=e4765]
+                    - generic [ref=e4766]:
+                      - group "colours available" [ref=e4768]:
+                        - list [ref=e4769]:
+                          - generic [ref=e4770]:
+                            - listitem:
+                              - link "BLACK/BLACK-PHANTOM":
+                                - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0D93VXRYW/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - generic [ref=e4773]:
+                            - listitem:
+                              - link "BAROQUE BROWN/CACAO WOW-LT BRITISH TAN":
+                                - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0DVJ8ML6Y/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - generic [ref=e4776]:
+                            - listitem:
+                              - link "SAIL/MIDNIGHT NAVY-GUM YELLOW":
+                                - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B00770CBL2/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - generic [ref=e4779]:
+                            - listitem:
+                              - link "SAIL/OIL GREY-GUM YELLOW":
+                                - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B07ZL1WL2C/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - generic [ref=e4782]:
+                            - listitem:
+                              - link "BLACK/SAIL-GUM YELLOW":
+                                - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0CTKQ4WLX/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - generic [ref=e4785]:
+                            - listitem:
+                              - link "SAIL/ORANGE ICE-PALE IVORY-OBSIDIAN":
+                                - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0FL6729DM/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                        - link "+7 other colors/patterns" [ref=e4789] [cursor=pointer]:
+                          - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0D93VXRYW/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - text: "+7"
+                      - generic [ref=e4790]:
+                        - heading "Nike" [level=2] [ref=e4792]
+                        - link "Nike Mens Killshot 2 Leather Sneakers" [ref=e4793] [cursor=pointer]:
+                          - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0D93VXRYW/ref=sr_1_53?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                          - heading "Nike Mens Killshot 2 Leather Sneakers" [level=2] [ref=e4794]
+                      - generic [ref=e4796]:
+                        - text: "4.5"
+                        - button "4.5 out of 5 stars, rating details" [ref=e4798] [cursor=pointer]:
+                          - generic [ref=e4800]: 4.5 out of 5 stars
+                        - link "1,473 ratings" [ref=e4802] [cursor=pointer]:
+                          - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0D93VXRYW/ref=sr_1_53?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53#customerReviews
+                          - text: (1.4K)
+                      - generic [ref=e4803]:
+                        - link "Limited time deal" [ref=e4805] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4808]: Limited time deal
+                        - generic [ref=e4810]:
+                          - generic [ref=e4811]: Price, product page
+                          - 'link "₹6,876 M.R.P: ₹8,595 M.R.P: ₹8,595" [ref=e4812] [cursor=pointer]':
+                            - /url: /Nike-Killshot-Leather-Black-Phantom-Tennis/dp/B0D93VXRYW/ref=sr_1_53?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-53
+                            - generic [ref=e4813]:
+                              - generic [ref=e4814]: ₹6,876
+                              - generic [ref=e4815]: ₹6,876
+                            - generic [ref=e4816]: "M.R.P: ₹8,595"
+                            - generic [ref=e4817]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4818]:
+                                - generic [ref=e4819]: ₹8,595
+                                - text: ₹8,595
+                          - text: (20% off)
+                        - generic [ref=e4823]:
+                          - generic [ref=e4824]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4825]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4828]:
+                        - generic [ref=e4830]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e4832]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e4842] [cursor=pointer]
+                - listitem [ref=e4843]:
+                  - generic [ref=e4848]:
+                    - generic [ref=e4853]: New Season
+                    - link [ref=e4857] [cursor=pointer]:
+                      - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVVXXXL/ref=sr_1_54?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54
+                      - img [ref=e4859]
+                    - generic [ref=e4860]:
+                      - group "colours available" [ref=e4862]:
+                        - list [ref=e4863]:
+                          - generic [ref=e4864]:
+                            - listitem:
+                              - link "WHITE/BLACK-PLATINUM TINT-ANTHRACITE":
+                                - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVVXXXL/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54
+                          - generic [ref=e4867]:
+                            - listitem:
+                              - link "VIOLET MIST/WHITE-SAPPHIRE-BRIGHT VIOLET":
+                                - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVZ6P9H/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54
+                          - generic [ref=e4870]:
+                            - listitem:
+                              - link "SAIL/HYDROGEN BLUE-WHITE-TATTOO":
+                                - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVGP76L/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54
+                      - generic [ref=e4873]:
+                        - heading "Nike" [level=2] [ref=e4875]
+                        - link "Nike Womens Downshifter 14 Running Shoes" [ref=e4876] [cursor=pointer]:
+                          - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVVXXXL/ref=sr_1_54?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54
+                          - heading "Nike Womens Downshifter 14 Running Shoes" [level=2] [ref=e4877]
+                      - generic [ref=e4879]:
+                        - text: "5.0"
+                        - button "5.0 out of 5 stars, rating details" [ref=e4881] [cursor=pointer]:
+                          - generic [ref=e4883]: 5.0 out of 5 stars
+                        - link "7 ratings" [ref=e4885] [cursor=pointer]:
+                          - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVVXXXL/ref=sr_1_54?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54#customerReviews
+                          - text: (7)
+                      - generic [ref=e4886]:
+                        - generic [ref=e4888]:
+                          - generic [ref=e4889]: Price, product page
+                          - link "₹4,895" [ref=e4890] [cursor=pointer]:
+                            - /url: /Nike-IB1899-W-Downshifter-14/dp/B0FFVVXXXL/ref=sr_1_54?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-54
+                            - generic [ref=e4891]:
+                              - generic [ref=e4892]: ₹4,895
+                              - generic [ref=e4893]: ₹4,895
+                        - generic [ref=e4897]:
+                          - generic [ref=e4898]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4899]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4904]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4914] [cursor=pointer]
+                - listitem [ref=e4915]:
+                  - generic [ref=e4920]:
+                    - generic [ref=e4925]: New Season
+                    - link [ref=e4929] [cursor=pointer]:
+                      - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMHSMG8/ref=sr_1_55?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                      - img [ref=e4931]
+                    - generic [ref=e4932]:
+                      - group "colours available" [ref=e4934]:
+                        - list [ref=e4935]:
+                          - generic [ref=e4936]:
+                            - listitem:
+                              - link "SILVER SAGE/BLACK-BLACK SPRUCE-PHANTOM":
+                                - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMHSMG8/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                          - generic [ref=e4939]:
+                            - listitem:
+                              - link "BLACK/WHITE-ANTHRACITE":
+                                - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0CZHS78LV/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                          - generic [ref=e4942]:
+                            - listitem:
+                              - link "WHITE/BLACK-GREEN STRIKE-GLACIER BLUE":
+                                - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMG91LZ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                          - generic [ref=e4945]:
+                            - listitem:
+                              - link "WHITE/BRIGHT CRIMSON-SPRUCE AURA":
+                                - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMK9F41/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                      - generic [ref=e4948]:
+                        - heading "Nike" [level=2] [ref=e4950]
+                        - link "Nike Mens Journey Run Running Shoes" [ref=e4951] [cursor=pointer]:
+                          - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMHSMG8/ref=sr_1_55?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                          - heading "Nike Mens Journey Run Running Shoes" [level=2] [ref=e4952]
+                      - generic [ref=e4954]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e4956] [cursor=pointer]:
+                          - generic [ref=e4958]: 4.2 out of 5 stars
+                        - link "175 ratings" [ref=e4960] [cursor=pointer]:
+                          - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMHSMG8/ref=sr_1_55?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55#customerReviews
+                          - text: (175)
+                      - generic [ref=e4961]:
+                        - link "Limited time deal" [ref=e4963] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4966]: Limited time deal
+                        - generic [ref=e4968]:
+                          - generic [ref=e4969]: Price, product page
+                          - 'link "₹6,796 M.R.P: ₹8,495 M.R.P: ₹8,495" [ref=e4970] [cursor=pointer]':
+                            - /url: /Nike-Journey-Black-Black-Spruce-Phantom-Running/dp/B0FCMHSMG8/ref=sr_1_55?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-55
+                            - generic [ref=e4971]:
+                              - generic [ref=e4972]: ₹6,796
+                              - generic [ref=e4973]: ₹6,796
+                            - generic [ref=e4974]: "M.R.P: ₹8,495"
+                            - generic [ref=e4975]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4976]:
+                                - generic [ref=e4977]: ₹8,495
+                                - text: ₹8,495
+                          - text: (20% off)
+                        - generic [ref=e4981]:
+                          - generic [ref=e4982]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4983]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4988]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e4998] [cursor=pointer]
+                - listitem [ref=e4999]:
+                  - generic [ref=e5004]:
+                    - generic [ref=e5009]: New Season
+                    - link [ref=e5013] [cursor=pointer]:
+                      - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX85PT/ref=sr_1_56?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                      - img [ref=e5015]
+                    - generic [ref=e5016]:
+                      - group "colours available" [ref=e5018]:
+                        - list [ref=e5019]:
+                          - generic [ref=e5020]:
+                            - listitem:
+                              - link "Lt Smoke Grey/Black-Smoke Grey-White":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX85PT/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - generic [ref=e5023]:
+                            - listitem:
+                              - link "Midnight Navy/Sail/Gum Med Brown":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DVNR4B52/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - generic [ref=e5026]:
+                            - listitem:
+                              - link "White/Black/Pure Platinum":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHYWPXH/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - generic [ref=e5029]:
+                            - listitem:
+                              - link "Black/Anthracite":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHW2DQG/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - generic [ref=e5032]:
+                            - listitem:
+                              - link "Lt Smoke Grey/Black/Smoke Grey/White":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX1829/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - generic [ref=e5035]:
+                            - listitem:
+                              - link "White/Pure Platinum":
+                                - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHV59B1/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                        - link "+5 other colors/patterns" [ref=e5039] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX85PT/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - text: "+5"
+                      - generic [ref=e5040]:
+                        - heading "Nike" [level=2] [ref=e5042]
+                        - link "Men's Revolution 8 Road Running Shoes" [ref=e5043] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX85PT/ref=sr_1_56?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                          - heading "Men's Revolution 8 Road Running Shoes" [level=2] [ref=e5044]
+                      - generic [ref=e5046]:
+                        - text: "4.4"
+                        - button "4.4 out of 5 stars, rating details" [ref=e5048] [cursor=pointer]:
+                          - generic [ref=e5050]: 4.4 out of 5 stars
+                        - link "483 ratings" [ref=e5052] [cursor=pointer]:
+                          - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX85PT/ref=sr_1_56?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56#customerReviews
+                          - text: (483)
+                      - generic [ref=e5053]:
+                        - generic [ref=e5055]:
+                          - generic [ref=e5056]: Price, product page
+                          - link "₹4,295" [ref=e5057] [cursor=pointer]:
+                            - /url: /Nike-Revolution-Black-Smoke-Grey-White-Running/dp/B0DPHX85PT/ref=sr_1_56?dib=eyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U&dib_tag=se&keywords=Nike+shoes&qid=1776676179&sr=8-56
+                            - generic [ref=e5058]:
+                              - generic [ref=e5059]: ₹4,295
+                              - generic [ref=e5060]: ₹4,295
+                        - generic [ref=e5064]:
+                          - generic [ref=e5065]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5066]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e5071]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e5085] [cursor=pointer]
+                - listitem [ref=e5086]:
+                  - generic [ref=e5093]:
+                    - link [ref=e5097] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDkxNDMwMzA5MTAzMjo6MDo6&url=%2FNike-W-Journey-RUN-BLACK-WHITE-FJ7765-001-7UK%2Fdp%2FB0CZHNKSYZ%2Fref%3Dsr_1_57_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-57-spons%26aref%3DNGUxUt3tx3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=NGUxUt3tx3&sp_cr=ZAZ
+                      - img [ref=e5099]
+                    - generic [ref=e5100]:
+                      - group "colours available" [ref=e5102]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e5104] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDkxNDMwMzA5MTAzMjo6MDo6&url=%2FNike-W-Journey-RUN-BLACK-WHITE-FJ7765-001-7UK%2Fdp%2FB0CZHNKSYZ%2Fref%3Dsr_1_57_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-57-spons%26aref%3DNGUxUt3tx3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=NGUxUt3tx3&sp_cr=ZAZ
+                      - generic [ref=e5105]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e5108] [cursor=pointer]:
+                          - generic [ref=e5109]: Sponsored
+                        - heading "Nike" [level=2] [ref=e5112]
+                        - link "Sponsored Ad - Nike Womens Journey Run Running Shoes" [ref=e5113] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDkxNDMwMzA5MTAzMjo6MDo6&url=%2FNike-W-Journey-RUN-BLACK-WHITE-FJ7765-001-7UK%2Fdp%2FB0CZHNKSYZ%2Fref%3Dsr_1_57_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-57-spons%26aref%3DNGUxUt3tx3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=NGUxUt3tx3&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Womens Journey Run Running Shoes" [level=2] [ref=e5114]: Nike Womens Journey Run Running Shoes
+                      - generic [ref=e5116]:
+                        - text: "4.6"
+                        - button "4.6 out of 5 stars, rating details" [ref=e5118] [cursor=pointer]:
+                          - generic [ref=e5120]: 4.6 out of 5 stars
+                        - link "53 ratings" [ref=e5122] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDkxNDMwMzA5MTAzMjo6MDo6&url=%2FNike-W-Journey-RUN-BLACK-WHITE-FJ7765-001-7UK%2Fdp%2FB0CZHNKSYZ%2Fref%3Dsr_1_57_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-57-spons%26aref%3DNGUxUt3tx3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=NGUxUt3tx3&sp_cr=ZAZ#customerReviews
+                          - text: (53)
+                      - generic [ref=e5123]:
+                        - generic [ref=e5125]:
+                          - generic [ref=e5126]: Price, product page
+                          - link "₹8,495" [ref=e5127] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDkxNDMwMzA5MTAzMjo6MDo6&url=%2FNike-W-Journey-RUN-BLACK-WHITE-FJ7765-001-7UK%2Fdp%2FB0CZHNKSYZ%2Fref%3Dsr_1_57_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-57-spons%26aref%3DNGUxUt3tx3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=NGUxUt3tx3&sp_cr=ZAZ
+                            - generic [ref=e5128]:
+                              - generic [ref=e5129]: ₹8,495
+                              - generic [ref=e5130]: ₹8,495
+                        - generic [ref=e5134]:
+                          - generic [ref=e5135]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5136]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e5141]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e5151] [cursor=pointer]
+                - listitem [ref=e5152]:
+                  - generic [ref=e5159]:
+                    - link [ref=e5163] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUxOTkzMjo6MDo6&url=%2FPuma-White-Quarry-Running-Shoe-9UK-38889202%2Fdp%2FB09RFSWMQ6%2Fref%3Dsr_1_58_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-58-spons%26aref%3DjzqFOltdE4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=jzqFOltdE4&sp_cr=ZAZ
+                      - img [ref=e5165]
+                    - generic [ref=e5166]:
+                      - group "colours available" [ref=e5168]:
+                        - list
+                        - link "+4 other colors/patterns" [ref=e5170] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUxOTkzMjo6MDo6&url=%2FPuma-White-Quarry-Running-Shoe-9UK-38889202%2Fdp%2FB09RFSWMQ6%2Fref%3Dsr_1_58_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-58-spons%26aref%3DjzqFOltdE4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=jzqFOltdE4&sp_cr=ZAZ
+                      - generic [ref=e5171]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e5174] [cursor=pointer]:
+                          - generic [ref=e5175]: Sponsored
+                        - heading "PUMA" [level=2] [ref=e5178]
+                        - link "Sponsored Ad - Men Duke Sneaker" [ref=e5179] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUxOTkzMjo6MDo6&url=%2FPuma-White-Quarry-Running-Shoe-9UK-38889202%2Fdp%2FB09RFSWMQ6%2Fref%3Dsr_1_58_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-58-spons%26aref%3DjzqFOltdE4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=jzqFOltdE4&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Men Duke Sneaker" [level=2] [ref=e5180]: Men Duke Sneaker
+                      - generic [ref=e5181]:
+                        - generic [ref=e5182]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e5184] [cursor=pointer]:
+                            - generic [ref=e5186]: 4.0 out of 5 stars
+                          - link "1,460 ratings" [ref=e5188] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUxOTkzMjo6MDo6&url=%2FPuma-White-Quarry-Running-Shoe-9UK-38889202%2Fdp%2FB09RFSWMQ6%2Fref%3Dsr_1_58_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-58-spons%26aref%3DjzqFOltdE4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=jzqFOltdE4&sp_cr=ZAZ#customerReviews
+                            - text: (1.4K)
+                        - generic [ref=e5189]: 50+ bought in past month
+                      - generic [ref=e5190]:
+                        - link "Limited time deal" [ref=e5192] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e5195]: Limited time deal
+                        - generic [ref=e5197]:
+                          - generic [ref=e5198]: Price, product page
+                          - 'link "₹1,599 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=e5199] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUxOTkzMjo6MDo6&url=%2FPuma-White-Quarry-Running-Shoe-9UK-38889202%2Fdp%2FB09RFSWMQ6%2Fref%3Dsr_1_58_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-58-spons%26aref%3DjzqFOltdE4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=jzqFOltdE4&sp_cr=ZAZ
+                            - generic [ref=e5200]:
+                              - generic [ref=e5201]: ₹1,599
+                              - generic [ref=e5202]: ₹1,599
+                            - generic [ref=e5203]: "M.R.P: ₹3,999"
+                            - generic [ref=e5204]:
+                              - text: "M.R.P:"
+                              - generic [ref=e5205]:
+                                - generic [ref=e5206]: ₹3,999
+                                - text: ₹3,999
+                          - text: (60% off)
+                        - generic [ref=e5210]:
+                          - generic [ref=e5211]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5212]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e5215]:
+                        - generic [ref=e5217]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e5219]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e5229] [cursor=pointer]
+                - listitem [ref=e5230]:
+                  - generic [ref=e5237]:
+                    - link [ref=e5241] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUyMTUzMjo6MDo6&url=%2FPuma-Mens-Melanite-Black-White-Sneaker%2Fdp%2FB0C5J93ZHQ%2Fref%3Dsr_1_59_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-59-spons%26aref%3DVqou3ZEnBP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=Vqou3ZEnBP&sp_cr=ZAZ
+                      - img [ref=e5243]
+                    - generic [ref=e5244]:
+                      - group "colours available" [ref=e5246]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=e5248] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUyMTUzMjo6MDo6&url=%2FPuma-Mens-Melanite-Black-White-Sneaker%2Fdp%2FB0C5J93ZHQ%2Fref%3Dsr_1_59_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-59-spons%26aref%3DVqou3ZEnBP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=Vqou3ZEnBP&sp_cr=ZAZ
+                      - generic [ref=e5249]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e5252] [cursor=pointer]:
+                          - generic [ref=e5253]: Sponsored
+                        - heading "PUMA" [level=2] [ref=e5256]
+                        - link "Sponsored Ad - Men Melanite Sneaker" [ref=e5257] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUyMTUzMjo6MDo6&url=%2FPuma-Mens-Melanite-Black-White-Sneaker%2Fdp%2FB0C5J93ZHQ%2Fref%3Dsr_1_59_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-59-spons%26aref%3DVqou3ZEnBP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=Vqou3ZEnBP&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Men Melanite Sneaker" [level=2] [ref=e5258]: Men Melanite Sneaker
+                      - generic [ref=e5259]:
+                        - generic [ref=e5260]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e5262] [cursor=pointer]:
+                            - generic [ref=e5264]: 4.0 out of 5 stars
+                          - link "1,132 ratings" [ref=e5266] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUyMTUzMjo6MDo6&url=%2FPuma-Mens-Melanite-Black-White-Sneaker%2Fdp%2FB0C5J93ZHQ%2Fref%3Dsr_1_59_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-59-spons%26aref%3DVqou3ZEnBP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=Vqou3ZEnBP&sp_cr=ZAZ#customerReviews
+                            - text: (1.1K)
+                        - generic [ref=e5267]: 100+ bought in past month
+                      - generic [ref=e5268]:
+                        - link "Limited time deal" [ref=e5270] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e5273]: Limited time deal
+                        - generic [ref=e5275]:
+                          - generic [ref=e5276]: Price, product page
+                          - 'link "₹1,899 M.R.P: ₹4,499 M.R.P: ₹4,499" [ref=e5277] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMTA0Mzk5OTUyMTUzMjo6MDo6&url=%2FPuma-Mens-Melanite-Black-White-Sneaker%2Fdp%2FB0C5J93ZHQ%2Fref%3Dsr_1_59_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-59-spons%26aref%3DVqou3ZEnBP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=Vqou3ZEnBP&sp_cr=ZAZ
+                            - generic [ref=e5278]:
+                              - generic [ref=e5279]: ₹1,899
+                              - generic [ref=e5280]: ₹1,899
+                            - generic [ref=e5281]: "M.R.P: ₹4,499"
+                            - generic [ref=e5282]:
+                              - text: "M.R.P:"
+                              - generic [ref=e5283]:
+                                - generic [ref=e5284]: ₹4,499
+                                - text: ₹4,499
+                          - text: (58% off)
+                        - generic [ref=e5288]:
+                          - generic [ref=e5289]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5290]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e5295]: FREE delivery Sat, 25 Apr
+                      - button "Add to cart" [ref=e5305] [cursor=pointer]
+                - listitem [ref=e5306]:
+                  - generic [ref=e5313]:
+                    - link [ref=e5317] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDk3MTQ5NTA4MjgzMjo6MDo6&url=%2FNike-Quest-Running-Shoes-Black%2Fdp%2FB0D8W9XRDQ%2Fref%3Dsr_1_60_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-60-spons%26aref%3D2RSKwF3UHz%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=2RSKwF3UHz&sp_cr=ZAZ
+                      - img [ref=e5319]
+                    - generic [ref=e5320]:
+                      - group "colours available" [ref=e5322]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=e5324] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDk3MTQ5NTA4MjgzMjo6MDo6&url=%2FNike-Quest-Running-Shoes-Black%2Fdp%2FB0D8W9XRDQ%2Fref%3Dsr_1_60_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-60-spons%26aref%3D2RSKwF3UHz%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=2RSKwF3UHz&sp_cr=ZAZ
+                      - generic [ref=e5325]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e5328] [cursor=pointer]:
+                          - generic [ref=e5329]: Sponsored
+                        - heading "Nike" [level=2] [ref=e5332]
+                        - link "Sponsored Ad - Nike Mens Quest 6 Running Shoes" [ref=e5333] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDk3MTQ5NTA4MjgzMjo6MDo6&url=%2FNike-Quest-Running-Shoes-Black%2Fdp%2FB0D8W9XRDQ%2Fref%3Dsr_1_60_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-60-spons%26aref%3D2RSKwF3UHz%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=2RSKwF3UHz&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nike Mens Quest 6 Running Shoes" [level=2] [ref=e5334]: Nike Mens Quest 6 Running Shoes
+                      - generic [ref=e5336]:
+                        - text: "3.9"
+                        - button "3.9 out of 5 stars, rating details" [ref=e5338] [cursor=pointer]:
+                          - generic [ref=e5340]: 3.9 out of 5 stars
+                        - link "243 ratings" [ref=e5342] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDk3MTQ5NTA4MjgzMjo6MDo6&url=%2FNike-Quest-Running-Shoes-Black%2Fdp%2FB0D8W9XRDQ%2Fref%3Dsr_1_60_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-60-spons%26aref%3D2RSKwF3UHz%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=2RSKwF3UHz&sp_cr=ZAZ#customerReviews
+                          - text: (243)
+                      - generic [ref=e5343]:
+                        - generic [ref=e5345]:
+                          - generic [ref=e5346]: Price, product page
+                          - link "₹7,095" [ref=e5347] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1OTQ4ODkxMTcwMzE4NTc4OjE3NzY2NzYxNzk6c3BfYnRmOjMwMDk3MTQ5NTA4MjgzMjo6MDo6&url=%2FNike-Quest-Running-Shoes-Black%2Fdp%2FB0D8W9XRDQ%2Fref%3Dsr_1_60_sspa%3Fdib%3DeyJ2IjoiMSJ9.kyIpxbCT-SZVTz_qDKIN4AO3GQVz225rm4zVnm1NpCJl8Itz4FtiHaimP2hxMYk_cZdz2ol0ch0HdTXb9xGmkaKVqx0q36Sq1GmmBzk33vJlN1ZCpGv1DaS22lpzhY4GyMzdo2ZNssFhPN22Ksbk7TM7yY8E8kDECQuQzd5ZU-y2dgH4mwcBOZRqBVh4maQ9QbICIxRYA_4IkBVmMgyxYEl35aWVmy_Y21n-U2psM7ILHwgiAT7M0d_FxtZLOyrynvMgfMsln8yDtQTLT3jeUeTeqNGDSGZxSAUaQDmYdSQ.8v7QjTFBcTvq7yD1nnx9ZdclKwbKASk2J5NqO-FXg7U%26dib_tag%3Dse%26keywords%3DNike%2Bshoes%26qid%3D1776676179%26sr%3D8-60-spons%26aref%3D2RSKwF3UHz%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=2RSKwF3UHz&sp_cr=ZAZ
+                            - generic [ref=e5348]:
+                              - generic [ref=e5349]: ₹7,095
+                              - generic [ref=e5350]: ₹7,095
+                        - generic [ref=e5354]:
+                          - generic [ref=e5355]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5356]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e5359]:
+                        - generic [ref=e5361]: FREE delivery Wed, 22 Apr
+                        - generic [ref=e5363]: Or fastest delivery Tomorrow, 21 Apr
+                      - button "Add to cart" [ref=e5373] [cursor=pointer]
+          - generic [ref=e5379]:
+            - generic "Related searches in Nike shoes" [ref=e5380]:
+              - heading "Related searches" [level=2] [ref=e5383]
+            - list [ref=e5385]:
+              - generic [ref=e5386]:
+                - listitem [ref=e5387]:
+                  - link "adidas shoes" [ref=e5389] [cursor=pointer]:
+                    - /url: /s?k=adidas+shoes&ref=rsl_sug_0_0&pd_rd_w=LhYn0&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=mqOCi&pd_rd_r=d4b374c0-3880-4d11-aff5-fd6919603d25&qid=1776676179
+                    - generic [ref=e5394]: adidas shoes
+                - listitem [ref=e5395]:
+                  - link "puma shoes for mens" [ref=e5397] [cursor=pointer]:
+                    - /url: /s?k=puma+shoes+for+mens&ref=rsl_sug_0_3&pd_rd_w=LhYn0&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=mqOCi&pd_rd_r=d4b374c0-3880-4d11-aff5-fd6919603d25&qid=1776676179
+                    - generic [ref=e5402]: puma shoes for mens
+              - generic [ref=e5403]:
+                - listitem [ref=e5404]:
+                  - link "nike air jordan" [ref=e5406] [cursor=pointer]:
+                    - /url: /s?k=nike+air+jordan&ref=rsl_sug_0_1&pd_rd_w=LhYn0&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=mqOCi&pd_rd_r=d4b374c0-3880-4d11-aff5-fd6919603d25&qid=1776676179
+                    - generic [ref=e5411]: nike air jordan
+                - listitem [ref=e5412]:
+                  - link "nike sneakers" [ref=e5414] [cursor=pointer]:
+                    - /url: /s?k=nike+sneakers&ref=rsl_sug_0_4&pd_rd_w=LhYn0&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=mqOCi&pd_rd_r=d4b374c0-3880-4d11-aff5-fd6919603d25&qid=1776676179
+                    - generic [ref=e5419]: nike sneakers
+              - generic [ref=e5420]:
+                - listitem [ref=e5421]:
+                  - link "shoes" [ref=e5423] [cursor=pointer]:
+                    - /url: /s?k=shoes&ref=rsl_sug_0_2&pd_rd_w=LhYn0&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=mqOCi&pd_rd_r=d4b374c0-3880-4d11-aff5-fd6919603d25&qid=1776676179
+                    - generic [ref=e5428]: shoes
+                - listitem [ref=e5429]:
+                  - link "nike shoes for boys" [ref=e5431] [cursor=pointer]:
+                    - /url: /s?k=nike+shoes+for+boys&ref=rsl_sug_0_5&pd_rd_w=LhYn0&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=mqOCi&pd_rd_r=d4b374c0-3880-4d11-aff5-fd6919603d25&qid=1776676179
+                    - generic [ref=e5436]: nike shoes for boys
+          - navigation "pagination" [ref=e5439]:
+            - list [ref=e5441]:
+              - listitem [ref=e5442]:
+                - button "Previous" [disabled] [ref=e5444]:
+                  - img [ref=e5445]
+                  - text: Previous
+              - listitem [ref=e5447]:
+                - button "Page 1" [ref=e5449]: "1"
+              - listitem [ref=e5450]:
+                - button "Go to page 2" [ref=e5452] [cursor=pointer]: "2"
+              - listitem [ref=e5453]:
+                - button "Go to page 3" [ref=e5455] [cursor=pointer]: "3"
+              - button [disabled] [ref=e5456]:
+                - img [ref=e5457]: ...
+              - button "7" [disabled] [ref=e5459]
+              - listitem [ref=e5460]:
+                - button "Go to next page, page 2" [ref=e5462] [cursor=pointer]:
+                  - text: Next
+                  - img [ref=e5463]
+          - generic [ref=e5467]:
+            - separator [ref=e5468]
+            - generic [ref=e5469]:
+              - heading "Brands related to your search" [ref=e5470]
+              - button "Leave feedback on Sponsored ad" [ref=e5475] [cursor=pointer]: Sponsored
+              - generic [ref=e5479]:
+                - generic [ref=e5481]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JLdUj086ixYmreGYGnpM1h4AAAGdqicPDAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDjmd5U/clv1c_ek-wBAH2FbbazjM3kId3r1eKTDKRmJm8p9qlJ93piw4CAnIz9iFKBywPu92CAXm5KlJ-_wEW7s0FvI2nVJcJ1VbC4KGlttSFk2nljicmvUB3t6Gbek8hOn_yznm0JnMiVtFaz6R3mX3f6lY8BF84RQMSAN2WsgVqkpizSj-9xNLfOaicN_ecjO5o4HTYgUioTVf-BxuCrycKUOXbvHIQQkfCS0ovlN_jtkcH-WXHjgucpLlH-gHlp5Cdp8erPQX31_4qpiQZ6rDUWFxv1VKFarlRxZWXOfYezscaA8q4c4CG4Ekw4Rn1ynhbA2nToBEhCsUyrUnHr7N-plVu_L-PMbM3lV6Kg4I8xpB-43Wa6Kao6rvAlUzaqcwz1AD6bO6xr9SAhHvtLddB8Iv1xwxYsoqwn5INZRC3JAWZK6XdjNmrLfQLv946tScGNTuD0whB8JEa85LTibM_nR1RakXSBc6_AvQShFPsPLuRzTsCexUOu3L3Y-6yX2pI1hbrOFQVSMEpZ1FwanLko2WfGpGukhmgg7u7ZCaudQDkqhG2kjH8hvqqr1eC11GTmxMF9kmz9Ptk7-UYCTj7T_2d2t9XrLpkBBGmFgvRUDKv3TcPI2I4TD4HYrypLAhxoL8tYVlYQd9Vy8c4v-kokjMagWFj_UkbOrhUgQaDJxc0dAaMaT2Sreo-PZl43ryZ_XnXx2nOJN6F8gyH0CyjU1sG82Q8Oa_LmJVP7c7afl7PUgu0ufzh4QEyqkPTkWG9G_CdIc4w7hHeKXbja9UowdIEmYc2IC8MrplCsywgJwI7iud20maha3yOeiAPpzJwDka81go-cQ-qNnBm1cdn8D7ueermGjWTYLMF3RN0ME865Dp4VFZQBievuI0TV5HAlsGClmm5DRlNQMX-ML3UDZyVM70PLxXY9SvEzExOTk6A00oMKLgqACN3S6O_0RbB6Eu18s3pI2bkQau5WIbM73F0XrPvogPWX4HiUnzpBRYDP1hK0Hx9OcjSJu-YZ2m-hkxuwum0hNPg6AIC6ZyD0A6S7bhaRcmUKSy_148XmFIppXFag9bCG_DQ-wjUk7WMIvZ3NKJEEFpBwlxe9PhtqNmothunyri-9r2lnxZy9nNvZpI5MCeIaB5nxvHr8Gc0coN4re9zLAITwc5wEuCz9xUWkItrB1SCisdgiF4EZ6vHleyqMgbkz2Ba2UOaZlB_MvmHZa3lUxMYnykqpgYdvTh9LSZKOd7ggnJn2BAj06-HaBzU1Ce9qvES9b25V-7TSdKAcnM3YF2bw98qDF005OGxstSALgmjGFZC51ZW5BC6eS5Vo_Q8OuiLuQlO-PHblXbehUOf4byfGtbo3gJ1mOMzlcg6yiSAr02KyTGSJ6WO98yfNxjgqM16g1cZDI25kLtuyxIE5dsUUUQWSw1qROoBiIUeKo5LmGyL7o4nysV-4J9geYnotCRW8Lk34dxYuqOPBkjWwFrk-SwMIVPjggu96KXgLYTMdFfnL70cDPFm71epdviEDR9OuAGgNlO4zXN9UD5-2wbh3LfL_AS-lVMlMDuUpo_W5qRerhAw3O4H-4U3uDcBSBuwJ39VQpxsqSIVyxvAL3aKzcfs8ZPSC33bSIiGcHbZ_WB-DDppx7sPgQ5qaTkYPnxBRlioOvKFZejX4hK7Ab_agMx6AJIhQeP7CjRAIlIa_Em5ghza_JXPIig8Obk/https://www.amazon.in/stores/page/3C051FC5-BE3D-490E-8ADB-4FA062905176/?_encoding=UTF8&store_ref=SB_A03412952ZBB7GPQ9FGN9-A0737237W2RB912WN0N0&pd_rd_plhdr=t&aaxitk=24f937a87db4d5892106a8802b471f5e&hsa_cr_id=0&lp_asins=B0G4MVNVP9%2CB07QWZ242H&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=8PVF1Li6KQ&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                      - link "Westburykommerce" [ref=e5482] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JLdUj086ixYmreGYGnpM1h4AAAGdqicPDAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDjmd5U/clv1c_ek-wBAH2FbbazjM3kId3r1eKTDKRmJm8p9qlJ93piw4CAnIz9iFKBywPu92CAXm5KlJ-_wEW7s0FvI2nVJcJ1VbC4KGlttSFk2nljicmvUB3t6Gbek8hOn_yznm0JnMiVtFaz6R3mX3f6lY8BF84RQMSAN2WsgVqkpizSj-9xNLfOaicN_ecjO5o4HTYgUioTVf-BxuCrycKUOXbvHIQQkfCS0ovlN_jtkcH-WXHjgucpLlH-gHlp5Cdp8erPQX31_4qpiQZ6rDUWFxv1VKFarlRxZWXOfYezscaA8q4c4CG4Ekw4Rn1ynhbA2nToBEhCsUyrUnHr7N-plVu_L-PMbM3lV6Kg4I8xpB-43Wa6Kao6rvAlUzaqcwz1AD6bO6xr9SAhHvtLddB8Iv1xwxYsoqwn5INZRC3JAWZK6XdjNmrLfQLv946tScGNTuD0whB8JEa85LTibM_nR1RakXSBc6_AvQShFPsPLuRzTsCexUOu3L3Y-6yX2pI1hbrOFQVSMEpZ1FwanLko2WfGpGukhmgg7u7ZCaudQDkqhG2kjH8hvqqr1eC11GTmxMF9kmz9Ptk7-UYCTj7T_2d2t9XrLpkBBGmFgvRUDKv3TcPI2I4TD4HYrypLAhxoL8tYVlYQd9Vy8c4v-kokjMagWFj_UkbOrhUgQaDJxc0dAaMaT2Sreo-PZl43ryZ_XnXx2nOJN6F8gyH0CyjU1sG82Q8Oa_LmJVP7c7afl7PUgu0ufzh4QEyqkPTkWG9G_CdIc4w7hHeKXbja9UowdIEmYc2IC8MrplCsywgJwI7iud20maha3yOeiAPpzJwDka81go-cQ-qNnBm1cdn8D7ueermGjWTYLMF3RN0ME865Dp4VFZQBievuI0TV5HAlsGClmm5DRlNQMX-ML3UDZyVM70PLxXY9SvEzExOTk6A00oMKLgqACN3S6O_0RbB6Eu18s3pI2bkQau5WIbM73F0XrPvogPWX4HiUnzpBRYDP1hK0Hx9OcjSJu-YZ2m-hkxuwum0hNPg6AIC6ZyD0A6S7bhaRcmUKSy_148XmFIppXFag9bCG_DQ-wjUk7WMIvZ3NKJEEFpBwlxe9PhtqNmothunyri-9r2lnxZy9nNvZpI5MCeIaB5nxvHr8Gc0coN4re9zLAITwc5wEuCz9xUWkItrB1SCisdgiF4EZ6vHleyqMgbkz2Ba2UOaZlB_MvmHZa3lUxMYnykqpgYdvTh9LSZKOd7ggnJn2BAj06-HaBzU1Ce9qvES9b25V-7TSdKAcnM3YF2bw98qDF005OGxstSALgmjGFZC51ZW5BC6eS5Vo_Q8OuiLuQlO-PHblXbehUOf4byfGtbo3gJ1mOMzlcg6yiSAr02KyTGSJ6WO98yfNxjgqM16g1cZDI25kLtuyxIE5dsUUUQWSw1qROoBiIUeKo5LmGyL7o4nysV-4J9geYnotCRW8Lk34dxYuqOPBkjWwFrk-SwMIVPjggu96KXgLYTMdFfnL70cDPFm71epdviEDR9OuAGgNlO4zXN9UD5-2wbh3LfL_AS-lVMlMDuUpo_W5qRerhAw3O4H-4U3uDcBSBuwJ39VQpxsqSIVyxvAL3aKzcfs8ZPSC33bSIiGcHbZ_WB-DDppx7sPgQ5qaTkYPnxBRlioOvKFZejX4hK7Ab_agMx6AJIhQeP7CjRAIlIa_Em5ghza_JXPIig8Obk/https://www.amazon.in/stores/page/3C051FC5-BE3D-490E-8ADB-4FA062905176/?_encoding=UTF8&store_ref=SB_A03412952ZBB7GPQ9FGN9-A0737237W2RB912WN0N0&pd_rd_plhdr=t&aaxitk=24f937a87db4d5892106a8802b471f5e&hsa_cr_id=0&lp_asins=B0G4MVNVP9%2CB07QWZ242H&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=8PVF1Li6KQ&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                        - img "Westburykommerce" [ref=e5483]
+                      - generic [ref=e5485]:
+                        - generic [ref=e5486]:
+                          - link [ref=e5487] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLdUj086ixYmreGYGnpM1h4AAAGdqicPDAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDjmd5U/clv1c_ek-wBAH2FbbazjM3kId3r1eKTDKRmJm8p9qlJ93piw4CAnIz9iFKBywPu92CAXm5KlJ-_wEW7s0FvI2nVJcJ1VbC4KGlttSFk2nljicmvUB3t6Gbek8hOn_yznm0JnMiVtFaz6R3mX3f6lY8BF84RQMSAN2WsgVqkpizSj-9xNLfOaicN_ecjO5o4HTYgUioTVf-BxuCrycKUOXbvHIQQkfCS0ovlN_jtkcH-WXHjgucpLlH-gHlp5Cdp8erPQX31_4qpiQZ6rDUWFxv1VKFarlRxZWXOfYezscaA8q4c4CG4Ekw4Rn1ynhbA2nToBEhCsUyrUnHr7N-plVu_L-PMbM3lV6Kg4I8xpB-43Wa6Kao6rvAlUzaqcwz1AD6bO6xr9SAhHvtLddB8Iv1xwxYsoqwn5INZRC3JAWZK6XdjNmrLfQLv946tScGNTuD0whB8JEa85LTibM_nR1RakXSBc6_AvQShFPsPLuRzTsCexUOu3L3Y-6yX2pI1hbrOFQVSMEpZ1FwanLko2WfGpGukhmgg7u7ZCaudQDkqhG2kjH8hvqqr1eC11GTmxMF9kmz9Ptk7-UYCTj7T_2d2t9XrLpkBBGmFgvRUDKv3TcPI2I4TD4HYrypLAhxoL8tYVlYQd9Vy8c4v-kokjMagWFj_UkbOrhUgQaDJxc0dAaMaT2Sreo-PZl43ryZ_XnXx2nOJN6F8gyH0CyjU1sG82Q8Oa_LmJVP7c7afl7PUgu0ufzh4QEyqkPTkWG9G_CdIc4w7hHeKXbja9UowdIEmYc2IC8MrplCsywgJwI7iud20maha3yOeiAPpzJwDka81go-cQ-qNnBm1cdn8D7ueermGjWTYLMF3RN0ME865Dp4VFZQBievuI0TV5HAlsGClmm5DRlNQMX-ML3UDZyVM70PLxXY9SvEzExOTk6A00oMKLgqACN3S6O_0RbB6Eu18s3pI2bkQau5WIbM73F0XrPvogPWX4HiUnzpBRYDP1hK0Hx9OcjSJu-YZ2m-hkxuwum0hNPg6AIC6ZyD0A6S7bhaRcmUKSy_148XmFIppXFag9bCG_DQ-wjUk7WMIvZ3NKJEEFpBwlxe9PhtqNmothunyri-9r2lnxZy9nNvZpI5MCeIaB5nxvHr8Gc0coN4re9zLAITwc5wEuCz9xUWkItrB1SCisdgiF4EZ6vHleyqMgbkz2Ba2UOaZlB_MvmHZa3lUxMYnykqpgYdvTh9LSZKOd7ggnJn2BAj06-HaBzU1Ce9qvES9b25V-7TSdKAcnM3YF2bw98qDF005OGxstSALgmjGFZC51ZW5BC6eS5Vo_Q8OuiLuQlO-PHblXbehUOf4byfGtbo3gJ1mOMzlcg6yiSAr02KyTGSJ6WO98yfNxjgqM16g1cZDI25kLtuyxIE5dsUUUQWSw1qROoBiIUeKo5LmGyL7o4nysV-4J9geYnotCRW8Lk34dxYuqOPBkjWwFrk-SwMIVPjggu96KXgLYTMdFfnL70cDPFm71epdviEDR9OuAGgNlO4zXN9UD5-2wbh3LfL_AS-lVMlMDuUpo_W5qRerhAw3O4H-4U3uDcBSBuwJ39VQpxsqSIVyxvAL3aKzcfs8ZPSC33bSIiGcHbZ_WB-DDppx7sPgQ5qaTkYPnxBRlioOvKFZejX4hK7Ab_agMx6AJIhQeP7CjRAIlIa_Em5ghza_JXPIig8Obk/https://www.amazon.in/stores/page/3C051FC5-BE3D-490E-8ADB-4FA062905176/?_encoding=UTF8&store_ref=SB_A03412952ZBB7GPQ9FGN9-A0737237W2RB912WN0N0&pd_rd_plhdr=t&aaxitk=24f937a87db4d5892106a8802b471f5e&hsa_cr_id=0&lp_asins=B0G4MVNVP9%2CB07QWZ242H&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=8PVF1Li6KQ&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                          - link "Westburykommerce" [ref=e5488] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLdUj086ixYmreGYGnpM1h4AAAGdqicPDAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDjmd5U/clv1c_ek-wBAH2FbbazjM3kId3r1eKTDKRmJm8p9qlJ93piw4CAnIz9iFKBywPu92CAXm5KlJ-_wEW7s0FvI2nVJcJ1VbC4KGlttSFk2nljicmvUB3t6Gbek8hOn_yznm0JnMiVtFaz6R3mX3f6lY8BF84RQMSAN2WsgVqkpizSj-9xNLfOaicN_ecjO5o4HTYgUioTVf-BxuCrycKUOXbvHIQQkfCS0ovlN_jtkcH-WXHjgucpLlH-gHlp5Cdp8erPQX31_4qpiQZ6rDUWFxv1VKFarlRxZWXOfYezscaA8q4c4CG4Ekw4Rn1ynhbA2nToBEhCsUyrUnHr7N-plVu_L-PMbM3lV6Kg4I8xpB-43Wa6Kao6rvAlUzaqcwz1AD6bO6xr9SAhHvtLddB8Iv1xwxYsoqwn5INZRC3JAWZK6XdjNmrLfQLv946tScGNTuD0whB8JEa85LTibM_nR1RakXSBc6_AvQShFPsPLuRzTsCexUOu3L3Y-6yX2pI1hbrOFQVSMEpZ1FwanLko2WfGpGukhmgg7u7ZCaudQDkqhG2kjH8hvqqr1eC11GTmxMF9kmz9Ptk7-UYCTj7T_2d2t9XrLpkBBGmFgvRUDKv3TcPI2I4TD4HYrypLAhxoL8tYVlYQd9Vy8c4v-kokjMagWFj_UkbOrhUgQaDJxc0dAaMaT2Sreo-PZl43ryZ_XnXx2nOJN6F8gyH0CyjU1sG82Q8Oa_LmJVP7c7afl7PUgu0ufzh4QEyqkPTkWG9G_CdIc4w7hHeKXbja9UowdIEmYc2IC8MrplCsywgJwI7iud20maha3yOeiAPpzJwDka81go-cQ-qNnBm1cdn8D7ueermGjWTYLMF3RN0ME865Dp4VFZQBievuI0TV5HAlsGClmm5DRlNQMX-ML3UDZyVM70PLxXY9SvEzExOTk6A00oMKLgqACN3S6O_0RbB6Eu18s3pI2bkQau5WIbM73F0XrPvogPWX4HiUnzpBRYDP1hK0Hx9OcjSJu-YZ2m-hkxuwum0hNPg6AIC6ZyD0A6S7bhaRcmUKSy_148XmFIppXFag9bCG_DQ-wjUk7WMIvZ3NKJEEFpBwlxe9PhtqNmothunyri-9r2lnxZy9nNvZpI5MCeIaB5nxvHr8Gc0coN4re9zLAITwc5wEuCz9xUWkItrB1SCisdgiF4EZ6vHleyqMgbkz2Ba2UOaZlB_MvmHZa3lUxMYnykqpgYdvTh9LSZKOd7ggnJn2BAj06-HaBzU1Ce9qvES9b25V-7TSdKAcnM3YF2bw98qDF005OGxstSALgmjGFZC51ZW5BC6eS5Vo_Q8OuiLuQlO-PHblXbehUOf4byfGtbo3gJ1mOMzlcg6yiSAr02KyTGSJ6WO98yfNxjgqM16g1cZDI25kLtuyxIE5dsUUUQWSw1qROoBiIUeKo5LmGyL7o4nysV-4J9geYnotCRW8Lk34dxYuqOPBkjWwFrk-SwMIVPjggu96KXgLYTMdFfnL70cDPFm71epdviEDR9OuAGgNlO4zXN9UD5-2wbh3LfL_AS-lVMlMDuUpo_W5qRerhAw3O4H-4U3uDcBSBuwJ39VQpxsqSIVyxvAL3aKzcfs8ZPSC33bSIiGcHbZ_WB-DDppx7sPgQ5qaTkYPnxBRlioOvKFZejX4hK7Ab_agMx6AJIhQeP7CjRAIlIa_Em5ghza_JXPIig8Obk/https://www.amazon.in/stores/page/3C051FC5-BE3D-490E-8ADB-4FA062905176/?_encoding=UTF8&store_ref=SB_A03412952ZBB7GPQ9FGN9-A0737237W2RB912WN0N0&pd_rd_plhdr=t&aaxitk=24f937a87db4d5892106a8802b471f5e&hsa_cr_id=0&lp_asins=B0G4MVNVP9%2CB07QWZ242H&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=8PVF1Li6KQ&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                            - img "Westburykommerce" [ref=e5490]
+                        - generic [ref=e5491]:
+                          - link [ref=e5492] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLdUj086ixYmreGYGnpM1h4AAAGdqicPDAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDjmd5U/clv1c_ek-wBAH2FbbazjM3kId3r1eKTDKRmJm8p9qlJ93piw4CAnIz9iFKBywPu92CAXm5KlJ-_wEW7s0FvI2nVJcJ1VbC4KGlttSFk2nljicmvUB3t6Gbek8hOn_yznm0JnMiVtFaz6R3mX3f6lY8BF84RQMSAN2WsgVqkpizSj-9xNLfOaicN_ecjO5o4HTYgUioTVf-BxuCrycKUOXbvHIQQkfCS0ovlN_jtkcH-WXHjgucpLlH-gHlp5Cdp8erPQX31_4qpiQZ6rDUWFxv1VKFarlRxZWXOfYezscaA8q4c4CG4Ekw4Rn1ynhbA2nToBEhCsUyrUnHr7N-plVu_L-PMbM3lV6Kg4I8xpB-43Wa6Kao6rvAlUzaqcwz1AD6bO6xr9SAhHvtLddB8Iv1xwxYsoqwn5INZRC3JAWZK6XdjNmrLfQLv946tScGNTuD0whB8JEa85LTibM_nR1RakXSBc6_AvQShFPsPLuRzTsCexUOu3L3Y-6yX2pI1hbrOFQVSMEpZ1FwanLko2WfGpGukhmgg7u7ZCaudQDkqhG2kjH8hvqqr1eC11GTmxMF9kmz9Ptk7-UYCTj7T_2d2t9XrLpkBBGmFgvRUDKv3TcPI2I4TD4HYrypLAhxoL8tYVlYQd9Vy8c4v-kokjMagWFj_UkbOrhUgQaDJxc0dAaMaT2Sreo-PZl43ryZ_XnXx2nOJN6F8gyH0CyjU1sG82Q8Oa_LmJVP7c7afl7PUgu0ufzh4QEyqkPTkWG9G_CdIc4w7hHeKXbja9UowdIEmYc2IC8MrplCsywgJwI7iud20maha3yOeiAPpzJwDka81go-cQ-qNnBm1cdn8D7ueermGjWTYLMF3RN0ME865Dp4VFZQBievuI0TV5HAlsGClmm5DRlNQMX-ML3UDZyVM70PLxXY9SvEzExOTk6A00oMKLgqACN3S6O_0RbB6Eu18s3pI2bkQau5WIbM73F0XrPvogPWX4HiUnzpBRYDP1hK0Hx9OcjSJu-YZ2m-hkxuwum0hNPg6AIC6ZyD0A6S7bhaRcmUKSy_148XmFIppXFag9bCG_DQ-wjUk7WMIvZ3NKJEEFpBwlxe9PhtqNmothunyri-9r2lnxZy9nNvZpI5MCeIaB5nxvHr8Gc0coN4re9zLAITwc5wEuCz9xUWkItrB1SCisdgiF4EZ6vHleyqMgbkz2Ba2UOaZlB_MvmHZa3lUxMYnykqpgYdvTh9LSZKOd7ggnJn2BAj06-HaBzU1Ce9qvES9b25V-7TSdKAcnM3YF2bw98qDF005OGxstSALgmjGFZC51ZW5BC6eS5Vo_Q8OuiLuQlO-PHblXbehUOf4byfGtbo3gJ1mOMzlcg6yiSAr02KyTGSJ6WO98yfNxjgqM16g1cZDI25kLtuyxIE5dsUUUQWSw1qROoBiIUeKo5LmGyL7o4nysV-4J9geYnotCRW8Lk34dxYuqOPBkjWwFrk-SwMIVPjggu96KXgLYTMdFfnL70cDPFm71epdviEDR9OuAGgNlO4zXN9UD5-2wbh3LfL_AS-lVMlMDuUpo_W5qRerhAw3O4H-4U3uDcBSBuwJ39VQpxsqSIVyxvAL3aKzcfs8ZPSC33bSIiGcHbZ_WB-DDppx7sPgQ5qaTkYPnxBRlioOvKFZejX4hK7Ab_agMx6AJIhQeP7CjRAIlIa_Em5ghza_JXPIig8Obk/https://www.amazon.in/stores/page/3C051FC5-BE3D-490E-8ADB-4FA062905176/?_encoding=UTF8&store_ref=SB_A03412952ZBB7GPQ9FGN9-A0737237W2RB912WN0N0&pd_rd_plhdr=t&aaxitk=24f937a87db4d5892106a8802b471f5e&hsa_cr_id=0&lp_asins=B0G4MVNVP9%2CB07QWZ242H&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=8PVF1Li6KQ&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                          - link "Innovation For Every Run" [ref=e5493] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLdUj086ixYmreGYGnpM1h4AAAGdqicPDAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDjmd5U/clv1c_ek-wBAH2FbbazjM3kId3r1eKTDKRmJm8p9qlJ93piw4CAnIz9iFKBywPu92CAXm5KlJ-_wEW7s0FvI2nVJcJ1VbC4KGlttSFk2nljicmvUB3t6Gbek8hOn_yznm0JnMiVtFaz6R3mX3f6lY8BF84RQMSAN2WsgVqkpizSj-9xNLfOaicN_ecjO5o4HTYgUioTVf-BxuCrycKUOXbvHIQQkfCS0ovlN_jtkcH-WXHjgucpLlH-gHlp5Cdp8erPQX31_4qpiQZ6rDUWFxv1VKFarlRxZWXOfYezscaA8q4c4CG4Ekw4Rn1ynhbA2nToBEhCsUyrUnHr7N-plVu_L-PMbM3lV6Kg4I8xpB-43Wa6Kao6rvAlUzaqcwz1AD6bO6xr9SAhHvtLddB8Iv1xwxYsoqwn5INZRC3JAWZK6XdjNmrLfQLv946tScGNTuD0whB8JEa85LTibM_nR1RakXSBc6_AvQShFPsPLuRzTsCexUOu3L3Y-6yX2pI1hbrOFQVSMEpZ1FwanLko2WfGpGukhmgg7u7ZCaudQDkqhG2kjH8hvqqr1eC11GTmxMF9kmz9Ptk7-UYCTj7T_2d2t9XrLpkBBGmFgvRUDKv3TcPI2I4TD4HYrypLAhxoL8tYVlYQd9Vy8c4v-kokjMagWFj_UkbOrhUgQaDJxc0dAaMaT2Sreo-PZl43ryZ_XnXx2nOJN6F8gyH0CyjU1sG82Q8Oa_LmJVP7c7afl7PUgu0ufzh4QEyqkPTkWG9G_CdIc4w7hHeKXbja9UowdIEmYc2IC8MrplCsywgJwI7iud20maha3yOeiAPpzJwDka81go-cQ-qNnBm1cdn8D7ueermGjWTYLMF3RN0ME865Dp4VFZQBievuI0TV5HAlsGClmm5DRlNQMX-ML3UDZyVM70PLxXY9SvEzExOTk6A00oMKLgqACN3S6O_0RbB6Eu18s3pI2bkQau5WIbM73F0XrPvogPWX4HiUnzpBRYDP1hK0Hx9OcjSJu-YZ2m-hkxuwum0hNPg6AIC6ZyD0A6S7bhaRcmUKSy_148XmFIppXFag9bCG_DQ-wjUk7WMIvZ3NKJEEFpBwlxe9PhtqNmothunyri-9r2lnxZy9nNvZpI5MCeIaB5nxvHr8Gc0coN4re9zLAITwc5wEuCz9xUWkItrB1SCisdgiF4EZ6vHleyqMgbkz2Ba2UOaZlB_MvmHZa3lUxMYnykqpgYdvTh9LSZKOd7ggnJn2BAj06-HaBzU1Ce9qvES9b25V-7TSdKAcnM3YF2bw98qDF005OGxstSALgmjGFZC51ZW5BC6eS5Vo_Q8OuiLuQlO-PHblXbehUOf4byfGtbo3gJ1mOMzlcg6yiSAr02KyTGSJ6WO98yfNxjgqM16g1cZDI25kLtuyxIE5dsUUUQWSw1qROoBiIUeKo5LmGyL7o4nysV-4J9geYnotCRW8Lk34dxYuqOPBkjWwFrk-SwMIVPjggu96KXgLYTMdFfnL70cDPFm71epdviEDR9OuAGgNlO4zXN9UD5-2wbh3LfL_AS-lVMlMDuUpo_W5qRerhAw3O4H-4U3uDcBSBuwJ39VQpxsqSIVyxvAL3aKzcfs8ZPSC33bSIiGcHbZ_WB-DDppx7sPgQ5qaTkYPnxBRlioOvKFZejX4hK7Ab_agMx6AJIhQeP7CjRAIlIa_Em5ghza_JXPIig8Obk/https://www.amazon.in/stores/page/3C051FC5-BE3D-490E-8ADB-4FA062905176/?_encoding=UTF8&store_ref=SB_A03412952ZBB7GPQ9FGN9-A0737237W2RB912WN0N0&pd_rd_plhdr=t&aaxitk=24f937a87db4d5892106a8802b471f5e&hsa_cr_id=0&lp_asins=B0G4MVNVP9%2CB07QWZ242H&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=8PVF1Li6KQ&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                            - generic [ref=e5495]:
+                              - generic [ref=e5496]: Innovation For Every Run
+                              - generic [ref=e5497]: Innovation For Every Run
+                - generic [ref=e5499]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JLJLuNU9984N4PTJ9fkgVZgAAAGdqicPDQoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICB5Ncow/clv1c_ek-wBIHXFcbWDn2nI5drJ16WdB1VqvSN8uCNR17ym_FtFPtR33pb3YB-YwpGc73QJkiHPphL1n7y5Rb3KTKGSU0RoAwTHoaiSnVpTqn-7Q4-qJ376e4-HtIhcpl2qlRFz5BvuaJGRMalSFbMX-QWLzIgo9zIVtTslJSw5R-6LIaaV3MxxvCJQwpCZKKcthG68k69CsM1GATu0dwtVnpg82PwlP0ThcY8vp1To3QNCjILtjZJbrQ4c7SkVCIPIwzDh2OdclPeaE3E1PItkWZnThai82erbNQIPW4g7xRNOns5N11Q3FTh9zPvcka1T_qOXFHYFJUFWDqJnNeGyLxTyR2X6dH23JdnI5fRj5gUkxCE4V93w3AYvz3ijFXseqQkPfq0PtYZK3oBAzsk04ZBBzcb7z5eyTh7vNP243ZBZTHacKO0Bac9DxuCqqmFUOp8w8SZ6xr43NZjJADDDnIj1V7MuSF48Gnm1W_MJOkKLcUQGkrHtGNbWL0Kp5hv9SIUyh7gg3VjoMD0TPUsc_1Ikv85J9ChcrSrV0cdPZCp719wC1e94Qmg4JfPEVfAmkUiLAcQw5lfkl6VoVpwYsNJeVBEyCIgAiVvSH4QtvJi9cz54chlr9esdkAUmAp9pYl_8Pr98a9uaxSrbIPJipBa2FNNVvodaj3YJHMIRvtQ8Vq-9xPsva_6n-NM8YzdElFSYOnUVKAd1tKGNAWotUj25dIUGSrEFSc7q8AzVEbn8NP0-JDGkCkJk5YFsSkx6sz_uwllnF_60iCBpKTgVw75znlOhmpXRg1gYUAQxKsSZj0yRXR0GvLb10qUtN_BnYRxYFgEQXlq3t3iTZCLCUi50KGKqP3RPRdpMsyTNgeegM2AYNp-M6d3KFdjZhFCCjCPlBrGCXGQ6b-2zJVZpMRNSEv7r9G6CAFmzo9Cbrr6DUQfNF69rkK0xTvhgQfhDOnN-wRTmYbuLMsg8gA_Df_8SDEAyE7fx7ihsYVs5lmUn71bu0eCawPkMcye4zS1FapMm2vzBwEUXwdKQpGTYtSBnAJIJSINQcslIQQu9egwwd3M9_XLMdwJDm6vlDH2aBPOUspH64GV3BLX3qRA25iN0f4josRZb8y_FZ-uwodYc8ACBCPgzS79H3693lU8dJX4WbIhpLfJkE9iRpv4MRc0cWv3RfKvcmJHMpv70nYB19VVu3cyrzmofumL5SjO9J7hYWhOLwWwWXRjaMlg0Nw4USoJCvAr4s9v9Hn9kl7sOdCGKW-_wDDjTBpcNgdWflU-QU2wVIEhvTck-9uFvLfuRFckoPjqQPeBafKzqEOLT_aan8C6zgt4TaG00iHoiOnbhIm4xtrtwoJwGedr2mu4GtsNLoCl-aysNjDyoBSFHt4sZEreRP6RZysLFmgazOENlf3ahs2nZYrLtNTd7p7ib_EzHz2stXAU-4WnSTkw5LiP3fQBhsvmv0Eg5uVgSYIenk2Rhj34nX2EvmB46LZhPzjGwurwIi1Oo5LLfdvnxEhrV5S1N9BHElVolAK0xJJtbc7v8vmbjEVcLU-5ucFDUiN3lnviIENL756m8EXSZBEwazZPV7uTqWLuwWQdAfhZYHY51cMPBR4tSC9aCZ382xIepJXYKdtR-T1DZYo4eHgZpkTEAKK4GCDTbR4gk51nNI5yLs769wiT1eETdIX_-fmYzJM9d0YlpfbrfTNxdpw3KReKNlYBZ0s/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=6sXk61Pkva&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                      - link "Boldfit" [ref=e5500] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JLJLuNU9984N4PTJ9fkgVZgAAAGdqicPDQoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICB5Ncow/clv1c_ek-wBIHXFcbWDn2nI5drJ16WdB1VqvSN8uCNR17ym_FtFPtR33pb3YB-YwpGc73QJkiHPphL1n7y5Rb3KTKGSU0RoAwTHoaiSnVpTqn-7Q4-qJ376e4-HtIhcpl2qlRFz5BvuaJGRMalSFbMX-QWLzIgo9zIVtTslJSw5R-6LIaaV3MxxvCJQwpCZKKcthG68k69CsM1GATu0dwtVnpg82PwlP0ThcY8vp1To3QNCjILtjZJbrQ4c7SkVCIPIwzDh2OdclPeaE3E1PItkWZnThai82erbNQIPW4g7xRNOns5N11Q3FTh9zPvcka1T_qOXFHYFJUFWDqJnNeGyLxTyR2X6dH23JdnI5fRj5gUkxCE4V93w3AYvz3ijFXseqQkPfq0PtYZK3oBAzsk04ZBBzcb7z5eyTh7vNP243ZBZTHacKO0Bac9DxuCqqmFUOp8w8SZ6xr43NZjJADDDnIj1V7MuSF48Gnm1W_MJOkKLcUQGkrHtGNbWL0Kp5hv9SIUyh7gg3VjoMD0TPUsc_1Ikv85J9ChcrSrV0cdPZCp719wC1e94Qmg4JfPEVfAmkUiLAcQw5lfkl6VoVpwYsNJeVBEyCIgAiVvSH4QtvJi9cz54chlr9esdkAUmAp9pYl_8Pr98a9uaxSrbIPJipBa2FNNVvodaj3YJHMIRvtQ8Vq-9xPsva_6n-NM8YzdElFSYOnUVKAd1tKGNAWotUj25dIUGSrEFSc7q8AzVEbn8NP0-JDGkCkJk5YFsSkx6sz_uwllnF_60iCBpKTgVw75znlOhmpXRg1gYUAQxKsSZj0yRXR0GvLb10qUtN_BnYRxYFgEQXlq3t3iTZCLCUi50KGKqP3RPRdpMsyTNgeegM2AYNp-M6d3KFdjZhFCCjCPlBrGCXGQ6b-2zJVZpMRNSEv7r9G6CAFmzo9Cbrr6DUQfNF69rkK0xTvhgQfhDOnN-wRTmYbuLMsg8gA_Df_8SDEAyE7fx7ihsYVs5lmUn71bu0eCawPkMcye4zS1FapMm2vzBwEUXwdKQpGTYtSBnAJIJSINQcslIQQu9egwwd3M9_XLMdwJDm6vlDH2aBPOUspH64GV3BLX3qRA25iN0f4josRZb8y_FZ-uwodYc8ACBCPgzS79H3693lU8dJX4WbIhpLfJkE9iRpv4MRc0cWv3RfKvcmJHMpv70nYB19VVu3cyrzmofumL5SjO9J7hYWhOLwWwWXRjaMlg0Nw4USoJCvAr4s9v9Hn9kl7sOdCGKW-_wDDjTBpcNgdWflU-QU2wVIEhvTck-9uFvLfuRFckoPjqQPeBafKzqEOLT_aan8C6zgt4TaG00iHoiOnbhIm4xtrtwoJwGedr2mu4GtsNLoCl-aysNjDyoBSFHt4sZEreRP6RZysLFmgazOENlf3ahs2nZYrLtNTd7p7ib_EzHz2stXAU-4WnSTkw5LiP3fQBhsvmv0Eg5uVgSYIenk2Rhj34nX2EvmB46LZhPzjGwurwIi1Oo5LLfdvnxEhrV5S1N9BHElVolAK0xJJtbc7v8vmbjEVcLU-5ucFDUiN3lnviIENL756m8EXSZBEwazZPV7uTqWLuwWQdAfhZYHY51cMPBR4tSC9aCZ382xIepJXYKdtR-T1DZYo4eHgZpkTEAKK4GCDTbR4gk51nNI5yLs769wiT1eETdIX_-fmYzJM9d0YlpfbrfTNxdpw3KReKNlYBZ0s/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=6sXk61Pkva&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                        - img "Boldfit" [ref=e5501]
+                      - generic [ref=e5503]:
+                        - generic [ref=e5504]:
+                          - link [ref=e5505] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLJLuNU9984N4PTJ9fkgVZgAAAGdqicPDQoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICB5Ncow/clv1c_ek-wBIHXFcbWDn2nI5drJ16WdB1VqvSN8uCNR17ym_FtFPtR33pb3YB-YwpGc73QJkiHPphL1n7y5Rb3KTKGSU0RoAwTHoaiSnVpTqn-7Q4-qJ376e4-HtIhcpl2qlRFz5BvuaJGRMalSFbMX-QWLzIgo9zIVtTslJSw5R-6LIaaV3MxxvCJQwpCZKKcthG68k69CsM1GATu0dwtVnpg82PwlP0ThcY8vp1To3QNCjILtjZJbrQ4c7SkVCIPIwzDh2OdclPeaE3E1PItkWZnThai82erbNQIPW4g7xRNOns5N11Q3FTh9zPvcka1T_qOXFHYFJUFWDqJnNeGyLxTyR2X6dH23JdnI5fRj5gUkxCE4V93w3AYvz3ijFXseqQkPfq0PtYZK3oBAzsk04ZBBzcb7z5eyTh7vNP243ZBZTHacKO0Bac9DxuCqqmFUOp8w8SZ6xr43NZjJADDDnIj1V7MuSF48Gnm1W_MJOkKLcUQGkrHtGNbWL0Kp5hv9SIUyh7gg3VjoMD0TPUsc_1Ikv85J9ChcrSrV0cdPZCp719wC1e94Qmg4JfPEVfAmkUiLAcQw5lfkl6VoVpwYsNJeVBEyCIgAiVvSH4QtvJi9cz54chlr9esdkAUmAp9pYl_8Pr98a9uaxSrbIPJipBa2FNNVvodaj3YJHMIRvtQ8Vq-9xPsva_6n-NM8YzdElFSYOnUVKAd1tKGNAWotUj25dIUGSrEFSc7q8AzVEbn8NP0-JDGkCkJk5YFsSkx6sz_uwllnF_60iCBpKTgVw75znlOhmpXRg1gYUAQxKsSZj0yRXR0GvLb10qUtN_BnYRxYFgEQXlq3t3iTZCLCUi50KGKqP3RPRdpMsyTNgeegM2AYNp-M6d3KFdjZhFCCjCPlBrGCXGQ6b-2zJVZpMRNSEv7r9G6CAFmzo9Cbrr6DUQfNF69rkK0xTvhgQfhDOnN-wRTmYbuLMsg8gA_Df_8SDEAyE7fx7ihsYVs5lmUn71bu0eCawPkMcye4zS1FapMm2vzBwEUXwdKQpGTYtSBnAJIJSINQcslIQQu9egwwd3M9_XLMdwJDm6vlDH2aBPOUspH64GV3BLX3qRA25iN0f4josRZb8y_FZ-uwodYc8ACBCPgzS79H3693lU8dJX4WbIhpLfJkE9iRpv4MRc0cWv3RfKvcmJHMpv70nYB19VVu3cyrzmofumL5SjO9J7hYWhOLwWwWXRjaMlg0Nw4USoJCvAr4s9v9Hn9kl7sOdCGKW-_wDDjTBpcNgdWflU-QU2wVIEhvTck-9uFvLfuRFckoPjqQPeBafKzqEOLT_aan8C6zgt4TaG00iHoiOnbhIm4xtrtwoJwGedr2mu4GtsNLoCl-aysNjDyoBSFHt4sZEreRP6RZysLFmgazOENlf3ahs2nZYrLtNTd7p7ib_EzHz2stXAU-4WnSTkw5LiP3fQBhsvmv0Eg5uVgSYIenk2Rhj34nX2EvmB46LZhPzjGwurwIi1Oo5LLfdvnxEhrV5S1N9BHElVolAK0xJJtbc7v8vmbjEVcLU-5ucFDUiN3lnviIENL756m8EXSZBEwazZPV7uTqWLuwWQdAfhZYHY51cMPBR4tSC9aCZ382xIepJXYKdtR-T1DZYo4eHgZpkTEAKK4GCDTbR4gk51nNI5yLs769wiT1eETdIX_-fmYzJM9d0YlpfbrfTNxdpw3KReKNlYBZ0s/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=6sXk61Pkva&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                          - link "Boldfit" [ref=e5506] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLJLuNU9984N4PTJ9fkgVZgAAAGdqicPDQoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICB5Ncow/clv1c_ek-wBIHXFcbWDn2nI5drJ16WdB1VqvSN8uCNR17ym_FtFPtR33pb3YB-YwpGc73QJkiHPphL1n7y5Rb3KTKGSU0RoAwTHoaiSnVpTqn-7Q4-qJ376e4-HtIhcpl2qlRFz5BvuaJGRMalSFbMX-QWLzIgo9zIVtTslJSw5R-6LIaaV3MxxvCJQwpCZKKcthG68k69CsM1GATu0dwtVnpg82PwlP0ThcY8vp1To3QNCjILtjZJbrQ4c7SkVCIPIwzDh2OdclPeaE3E1PItkWZnThai82erbNQIPW4g7xRNOns5N11Q3FTh9zPvcka1T_qOXFHYFJUFWDqJnNeGyLxTyR2X6dH23JdnI5fRj5gUkxCE4V93w3AYvz3ijFXseqQkPfq0PtYZK3oBAzsk04ZBBzcb7z5eyTh7vNP243ZBZTHacKO0Bac9DxuCqqmFUOp8w8SZ6xr43NZjJADDDnIj1V7MuSF48Gnm1W_MJOkKLcUQGkrHtGNbWL0Kp5hv9SIUyh7gg3VjoMD0TPUsc_1Ikv85J9ChcrSrV0cdPZCp719wC1e94Qmg4JfPEVfAmkUiLAcQw5lfkl6VoVpwYsNJeVBEyCIgAiVvSH4QtvJi9cz54chlr9esdkAUmAp9pYl_8Pr98a9uaxSrbIPJipBa2FNNVvodaj3YJHMIRvtQ8Vq-9xPsva_6n-NM8YzdElFSYOnUVKAd1tKGNAWotUj25dIUGSrEFSc7q8AzVEbn8NP0-JDGkCkJk5YFsSkx6sz_uwllnF_60iCBpKTgVw75znlOhmpXRg1gYUAQxKsSZj0yRXR0GvLb10qUtN_BnYRxYFgEQXlq3t3iTZCLCUi50KGKqP3RPRdpMsyTNgeegM2AYNp-M6d3KFdjZhFCCjCPlBrGCXGQ6b-2zJVZpMRNSEv7r9G6CAFmzo9Cbrr6DUQfNF69rkK0xTvhgQfhDOnN-wRTmYbuLMsg8gA_Df_8SDEAyE7fx7ihsYVs5lmUn71bu0eCawPkMcye4zS1FapMm2vzBwEUXwdKQpGTYtSBnAJIJSINQcslIQQu9egwwd3M9_XLMdwJDm6vlDH2aBPOUspH64GV3BLX3qRA25iN0f4josRZb8y_FZ-uwodYc8ACBCPgzS79H3693lU8dJX4WbIhpLfJkE9iRpv4MRc0cWv3RfKvcmJHMpv70nYB19VVu3cyrzmofumL5SjO9J7hYWhOLwWwWXRjaMlg0Nw4USoJCvAr4s9v9Hn9kl7sOdCGKW-_wDDjTBpcNgdWflU-QU2wVIEhvTck-9uFvLfuRFckoPjqQPeBafKzqEOLT_aan8C6zgt4TaG00iHoiOnbhIm4xtrtwoJwGedr2mu4GtsNLoCl-aysNjDyoBSFHt4sZEreRP6RZysLFmgazOENlf3ahs2nZYrLtNTd7p7ib_EzHz2stXAU-4WnSTkw5LiP3fQBhsvmv0Eg5uVgSYIenk2Rhj34nX2EvmB46LZhPzjGwurwIi1Oo5LLfdvnxEhrV5S1N9BHElVolAK0xJJtbc7v8vmbjEVcLU-5ucFDUiN3lnviIENL756m8EXSZBEwazZPV7uTqWLuwWQdAfhZYHY51cMPBR4tSC9aCZ382xIepJXYKdtR-T1DZYo4eHgZpkTEAKK4GCDTbR4gk51nNI5yLs769wiT1eETdIX_-fmYzJM9d0YlpfbrfTNxdpw3KReKNlYBZ0s/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=6sXk61Pkva&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                            - img "Boldfit" [ref=e5508]
+                        - generic [ref=e5509]:
+                          - link [ref=e5510] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLJLuNU9984N4PTJ9fkgVZgAAAGdqicPDQoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICB5Ncow/clv1c_ek-wBIHXFcbWDn2nI5drJ16WdB1VqvSN8uCNR17ym_FtFPtR33pb3YB-YwpGc73QJkiHPphL1n7y5Rb3KTKGSU0RoAwTHoaiSnVpTqn-7Q4-qJ376e4-HtIhcpl2qlRFz5BvuaJGRMalSFbMX-QWLzIgo9zIVtTslJSw5R-6LIaaV3MxxvCJQwpCZKKcthG68k69CsM1GATu0dwtVnpg82PwlP0ThcY8vp1To3QNCjILtjZJbrQ4c7SkVCIPIwzDh2OdclPeaE3E1PItkWZnThai82erbNQIPW4g7xRNOns5N11Q3FTh9zPvcka1T_qOXFHYFJUFWDqJnNeGyLxTyR2X6dH23JdnI5fRj5gUkxCE4V93w3AYvz3ijFXseqQkPfq0PtYZK3oBAzsk04ZBBzcb7z5eyTh7vNP243ZBZTHacKO0Bac9DxuCqqmFUOp8w8SZ6xr43NZjJADDDnIj1V7MuSF48Gnm1W_MJOkKLcUQGkrHtGNbWL0Kp5hv9SIUyh7gg3VjoMD0TPUsc_1Ikv85J9ChcrSrV0cdPZCp719wC1e94Qmg4JfPEVfAmkUiLAcQw5lfkl6VoVpwYsNJeVBEyCIgAiVvSH4QtvJi9cz54chlr9esdkAUmAp9pYl_8Pr98a9uaxSrbIPJipBa2FNNVvodaj3YJHMIRvtQ8Vq-9xPsva_6n-NM8YzdElFSYOnUVKAd1tKGNAWotUj25dIUGSrEFSc7q8AzVEbn8NP0-JDGkCkJk5YFsSkx6sz_uwllnF_60iCBpKTgVw75znlOhmpXRg1gYUAQxKsSZj0yRXR0GvLb10qUtN_BnYRxYFgEQXlq3t3iTZCLCUi50KGKqP3RPRdpMsyTNgeegM2AYNp-M6d3KFdjZhFCCjCPlBrGCXGQ6b-2zJVZpMRNSEv7r9G6CAFmzo9Cbrr6DUQfNF69rkK0xTvhgQfhDOnN-wRTmYbuLMsg8gA_Df_8SDEAyE7fx7ihsYVs5lmUn71bu0eCawPkMcye4zS1FapMm2vzBwEUXwdKQpGTYtSBnAJIJSINQcslIQQu9egwwd3M9_XLMdwJDm6vlDH2aBPOUspH64GV3BLX3qRA25iN0f4josRZb8y_FZ-uwodYc8ACBCPgzS79H3693lU8dJX4WbIhpLfJkE9iRpv4MRc0cWv3RfKvcmJHMpv70nYB19VVu3cyrzmofumL5SjO9J7hYWhOLwWwWXRjaMlg0Nw4USoJCvAr4s9v9Hn9kl7sOdCGKW-_wDDjTBpcNgdWflU-QU2wVIEhvTck-9uFvLfuRFckoPjqQPeBafKzqEOLT_aan8C6zgt4TaG00iHoiOnbhIm4xtrtwoJwGedr2mu4GtsNLoCl-aysNjDyoBSFHt4sZEreRP6RZysLFmgazOENlf3ahs2nZYrLtNTd7p7ib_EzHz2stXAU-4WnSTkw5LiP3fQBhsvmv0Eg5uVgSYIenk2Rhj34nX2EvmB46LZhPzjGwurwIi1Oo5LLfdvnxEhrV5S1N9BHElVolAK0xJJtbc7v8vmbjEVcLU-5ucFDUiN3lnviIENL756m8EXSZBEwazZPV7uTqWLuwWQdAfhZYHY51cMPBR4tSC9aCZ382xIepJXYKdtR-T1DZYo4eHgZpkTEAKK4GCDTbR4gk51nNI5yLs769wiT1eETdIX_-fmYzJM9d0YlpfbrfTNxdpw3KReKNlYBZ0s/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=6sXk61Pkva&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                          - link "Trekking shoes designed for maximum durability" [ref=e5511] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JLJLuNU9984N4PTJ9fkgVZgAAAGdqicPDQoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICB5Ncow/clv1c_ek-wBIHXFcbWDn2nI5drJ16WdB1VqvSN8uCNR17ym_FtFPtR33pb3YB-YwpGc73QJkiHPphL1n7y5Rb3KTKGSU0RoAwTHoaiSnVpTqn-7Q4-qJ376e4-HtIhcpl2qlRFz5BvuaJGRMalSFbMX-QWLzIgo9zIVtTslJSw5R-6LIaaV3MxxvCJQwpCZKKcthG68k69CsM1GATu0dwtVnpg82PwlP0ThcY8vp1To3QNCjILtjZJbrQ4c7SkVCIPIwzDh2OdclPeaE3E1PItkWZnThai82erbNQIPW4g7xRNOns5N11Q3FTh9zPvcka1T_qOXFHYFJUFWDqJnNeGyLxTyR2X6dH23JdnI5fRj5gUkxCE4V93w3AYvz3ijFXseqQkPfq0PtYZK3oBAzsk04ZBBzcb7z5eyTh7vNP243ZBZTHacKO0Bac9DxuCqqmFUOp8w8SZ6xr43NZjJADDDnIj1V7MuSF48Gnm1W_MJOkKLcUQGkrHtGNbWL0Kp5hv9SIUyh7gg3VjoMD0TPUsc_1Ikv85J9ChcrSrV0cdPZCp719wC1e94Qmg4JfPEVfAmkUiLAcQw5lfkl6VoVpwYsNJeVBEyCIgAiVvSH4QtvJi9cz54chlr9esdkAUmAp9pYl_8Pr98a9uaxSrbIPJipBa2FNNVvodaj3YJHMIRvtQ8Vq-9xPsva_6n-NM8YzdElFSYOnUVKAd1tKGNAWotUj25dIUGSrEFSc7q8AzVEbn8NP0-JDGkCkJk5YFsSkx6sz_uwllnF_60iCBpKTgVw75znlOhmpXRg1gYUAQxKsSZj0yRXR0GvLb10qUtN_BnYRxYFgEQXlq3t3iTZCLCUi50KGKqP3RPRdpMsyTNgeegM2AYNp-M6d3KFdjZhFCCjCPlBrGCXGQ6b-2zJVZpMRNSEv7r9G6CAFmzo9Cbrr6DUQfNF69rkK0xTvhgQfhDOnN-wRTmYbuLMsg8gA_Df_8SDEAyE7fx7ihsYVs5lmUn71bu0eCawPkMcye4zS1FapMm2vzBwEUXwdKQpGTYtSBnAJIJSINQcslIQQu9egwwd3M9_XLMdwJDm6vlDH2aBPOUspH64GV3BLX3qRA25iN0f4josRZb8y_FZ-uwodYc8ACBCPgzS79H3693lU8dJX4WbIhpLfJkE9iRpv4MRc0cWv3RfKvcmJHMpv70nYB19VVu3cyrzmofumL5SjO9J7hYWhOLwWwWXRjaMlg0Nw4USoJCvAr4s9v9Hn9kl7sOdCGKW-_wDDjTBpcNgdWflU-QU2wVIEhvTck-9uFvLfuRFckoPjqQPeBafKzqEOLT_aan8C6zgt4TaG00iHoiOnbhIm4xtrtwoJwGedr2mu4GtsNLoCl-aysNjDyoBSFHt4sZEreRP6RZysLFmgazOENlf3ahs2nZYrLtNTd7p7ib_EzHz2stXAU-4WnSTkw5LiP3fQBhsvmv0Eg5uVgSYIenk2Rhj34nX2EvmB46LZhPzjGwurwIi1Oo5LLfdvnxEhrV5S1N9BHElVolAK0xJJtbc7v8vmbjEVcLU-5ucFDUiN3lnviIENL756m8EXSZBEwazZPV7uTqWLuwWQdAfhZYHY51cMPBR4tSC9aCZ382xIepJXYKdtR-T1DZYo4eHgZpkTEAKK4GCDTbR4gk51nNI5yLs769wiT1eETdIX_-fmYzJM9d0YlpfbrfTNxdpw3KReKNlYBZ0s/https://www.amazon.in/stores/page/2F53ACC0-6439-497E-97D2-5739FE914F0C/?_encoding=UTF8&store_ref=SB_A08696352E7M0FKQ4HGKN-A09057862FWVQQGL5MGZ4&pd_rd_plhdr=t&aaxitk=5ae2e49412e6e0d90006fafb0c49e497&hsa_cr_id=0&lp_asins=B0D1KPCX5B%2CB0DGXH8GJY%2CB0DGXHHY4D&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=6sXk61Pkva&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                            - generic [ref=e5513]:
+                              - generic [ref=e5514]: Trekking shoes designed for maximum durability
+                              - generic [ref=e5515]: Trekking shoes designed for maximum durability
+                - generic [ref=e5517]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JMQmvZ-A4xyswkgwCusoEzcAAAGdqicPDgoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA_Fm7q/clv1c_ek-wBIHXLUjXTu4itD6dy_t5LgsKMRHUfZHdtZpsk5ObhO0emKv5g5Hou19I4QKg--kJFjjyjZHz5DpxqIzOkMDflrd8HQE_FVGFjilIVl0cTQkKiylnNVdCeDn3pBKRlBgSKczoA6a0KfU0bCtu_Ajn24q6llCKEsbEjzb4ToUZe0sMH86HpupZgoNUd0mrmsjIFDlBR_fkFOmE58hB-mvvF9e_BRuhkJ9NrEHHUh-XKUrsUJVM_UsxJXUaz665qlD2ww8U6-2gRVo8sFc0q7Qb7QUWDIl0bA2uRTqlGnyXPJTZV9RX5Wx8hp-I737IrEu5jvOxjlfLRHabJ_KbeoxH1PZuFfcj0hfNeGj9CNo9UihJTdvY8e5CN03HVrBPeZSnQTyzaBUOUUy3of1-m0Hm8hkDgw8VVAIYBtWR6tz0PPq1KYUp0OdHfg18_8hFdZd3ip46scQ2w970XJxh6PpaM8BkclZKqvn1PhBzfOoH1tkQ7-6Z7E67hCF4NXLzrJhFg7Mxl8Gic7Zw12F3lgIwDYlyVojKo_YSsWFtkp7g3xCo8639ZYO_jZT_awsYfh4aqjlTKmzRy4YQqvLs2JdIHpLayrNdifh8UQPlmF9BkQgktKmvud0NwpQysK47J0ymcYatz3_udw6DGaw0wsA0ICfKeg2MnOTEDWcgTB1_NdLZpTZJkn20UQF_xnj9sAEldUOgtwrA7OaJrK49Tj6dytLi7v-choJkLNsoOL5RHSVjfmjTEmj_EDnBBhLypM8QQTDYUBJS0h5gUchlPFXd7v2Ubxq-zaiPsvVNeoDVPTmjTencMs_SfqOxp13ZHT-0OYkGY28oTjYYj222XgcPv63A4iOtwD-mQq8ab-asjWdgvsrqn-MhKfMhCI5uBt5-jv2C6XKmy0admdah0c53F_uP7S4n-kBc6pkN5y0B-oWUjFv43X7DLIPmrjla2VXgBekF1P3vfbXGxYmdnJt9RoUB-JWlrE841Qv2POfNDPzBC6gnVMtugBs67Fzl5R8DAfMmiuRV2DVpH96MpZaFC4gUuxTMF8sesMV-T3KE-KhWm0-ICn0BCz4sVgDNuZxoYn8HrLB6ZwvEHBcP6txDL02NVgGG0lNIFPj-mHOlJc4zuYmTRqQ455cKfReAfYUinsvVt7moAuFmw8WtrLoiyUH6XGFdcmd0GNF5CgNrRWn2hAk0vVwEuLmYM4DfDthzNHDl4kL01587ockQrvXSWbsN59NuAaUey1Qp7iqFPLYod18rsn9pnK-kvBQnND_HIQ78pSMOb2VhtFaACp_A0BCaT4J4d9UNEFgOV0rBj8BAdK-ORcNV52hhu72JsjCAyd8sr31q9bN8pZSq4uQ7MS6_yIpbyBjJjd9zoLuwJrj8UjK8zFC9aJO8V6i8wg222NWKhBFsDEtx-QgAKfaOuzNBxtJkJzmGCuLhTO_fpW1NdsCc4ScLtEhWkoQ3huoF_Ij9tX2BgvBDinqPYahF2XkWEm0-lVHYuv18wQIsLDNC5zcFFcyfgw9Bfjjai-FSXamNRRvyjSQ7w0r6gUgkSaVxa7wTUYRlsjUJqZVgZsf4bRQIxZd3PgsXpvFU5FGgNiAaWB6wGLKJp0qmfWY3NRwEMSy_fEtcd0AiZJ8UxmQjraJNuwfakKX5RsarEuJmtvpQayoAyN57EZTdTk6ZLJanQI0rwtKcZxODNeBqhTGAFk6i/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                      - link "RC. ROYAL CLASS" [ref=e5518] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JMQmvZ-A4xyswkgwCusoEzcAAAGdqicPDgoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA_Fm7q/clv1c_ek-wBIHXLUjXTu4itD6dy_t5LgsKMRHUfZHdtZpsk5ObhO0emKv5g5Hou19I4QKg--kJFjjyjZHz5DpxqIzOkMDflrd8HQE_FVGFjilIVl0cTQkKiylnNVdCeDn3pBKRlBgSKczoA6a0KfU0bCtu_Ajn24q6llCKEsbEjzb4ToUZe0sMH86HpupZgoNUd0mrmsjIFDlBR_fkFOmE58hB-mvvF9e_BRuhkJ9NrEHHUh-XKUrsUJVM_UsxJXUaz665qlD2ww8U6-2gRVo8sFc0q7Qb7QUWDIl0bA2uRTqlGnyXPJTZV9RX5Wx8hp-I737IrEu5jvOxjlfLRHabJ_KbeoxH1PZuFfcj0hfNeGj9CNo9UihJTdvY8e5CN03HVrBPeZSnQTyzaBUOUUy3of1-m0Hm8hkDgw8VVAIYBtWR6tz0PPq1KYUp0OdHfg18_8hFdZd3ip46scQ2w970XJxh6PpaM8BkclZKqvn1PhBzfOoH1tkQ7-6Z7E67hCF4NXLzrJhFg7Mxl8Gic7Zw12F3lgIwDYlyVojKo_YSsWFtkp7g3xCo8639ZYO_jZT_awsYfh4aqjlTKmzRy4YQqvLs2JdIHpLayrNdifh8UQPlmF9BkQgktKmvud0NwpQysK47J0ymcYatz3_udw6DGaw0wsA0ICfKeg2MnOTEDWcgTB1_NdLZpTZJkn20UQF_xnj9sAEldUOgtwrA7OaJrK49Tj6dytLi7v-choJkLNsoOL5RHSVjfmjTEmj_EDnBBhLypM8QQTDYUBJS0h5gUchlPFXd7v2Ubxq-zaiPsvVNeoDVPTmjTencMs_SfqOxp13ZHT-0OYkGY28oTjYYj222XgcPv63A4iOtwD-mQq8ab-asjWdgvsrqn-MhKfMhCI5uBt5-jv2C6XKmy0admdah0c53F_uP7S4n-kBc6pkN5y0B-oWUjFv43X7DLIPmrjla2VXgBekF1P3vfbXGxYmdnJt9RoUB-JWlrE841Qv2POfNDPzBC6gnVMtugBs67Fzl5R8DAfMmiuRV2DVpH96MpZaFC4gUuxTMF8sesMV-T3KE-KhWm0-ICn0BCz4sVgDNuZxoYn8HrLB6ZwvEHBcP6txDL02NVgGG0lNIFPj-mHOlJc4zuYmTRqQ455cKfReAfYUinsvVt7moAuFmw8WtrLoiyUH6XGFdcmd0GNF5CgNrRWn2hAk0vVwEuLmYM4DfDthzNHDl4kL01587ockQrvXSWbsN59NuAaUey1Qp7iqFPLYod18rsn9pnK-kvBQnND_HIQ78pSMOb2VhtFaACp_A0BCaT4J4d9UNEFgOV0rBj8BAdK-ORcNV52hhu72JsjCAyd8sr31q9bN8pZSq4uQ7MS6_yIpbyBjJjd9zoLuwJrj8UjK8zFC9aJO8V6i8wg222NWKhBFsDEtx-QgAKfaOuzNBxtJkJzmGCuLhTO_fpW1NdsCc4ScLtEhWkoQ3huoF_Ij9tX2BgvBDinqPYahF2XkWEm0-lVHYuv18wQIsLDNC5zcFFcyfgw9Bfjjai-FSXamNRRvyjSQ7w0r6gUgkSaVxa7wTUYRlsjUJqZVgZsf4bRQIxZd3PgsXpvFU5FGgNiAaWB6wGLKJp0qmfWY3NRwEMSy_fEtcd0AiZJ8UxmQjraJNuwfakKX5RsarEuJmtvpQayoAyN57EZTdTk6ZLJanQI0rwtKcZxODNeBqhTGAFk6i/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                        - img "RC. ROYAL CLASS" [ref=e5519]
+                      - generic [ref=e5521]:
+                        - generic [ref=e5522]:
+                          - link [ref=e5523] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JMQmvZ-A4xyswkgwCusoEzcAAAGdqicPDgoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA_Fm7q/clv1c_ek-wBIHXLUjXTu4itD6dy_t5LgsKMRHUfZHdtZpsk5ObhO0emKv5g5Hou19I4QKg--kJFjjyjZHz5DpxqIzOkMDflrd8HQE_FVGFjilIVl0cTQkKiylnNVdCeDn3pBKRlBgSKczoA6a0KfU0bCtu_Ajn24q6llCKEsbEjzb4ToUZe0sMH86HpupZgoNUd0mrmsjIFDlBR_fkFOmE58hB-mvvF9e_BRuhkJ9NrEHHUh-XKUrsUJVM_UsxJXUaz665qlD2ww8U6-2gRVo8sFc0q7Qb7QUWDIl0bA2uRTqlGnyXPJTZV9RX5Wx8hp-I737IrEu5jvOxjlfLRHabJ_KbeoxH1PZuFfcj0hfNeGj9CNo9UihJTdvY8e5CN03HVrBPeZSnQTyzaBUOUUy3of1-m0Hm8hkDgw8VVAIYBtWR6tz0PPq1KYUp0OdHfg18_8hFdZd3ip46scQ2w970XJxh6PpaM8BkclZKqvn1PhBzfOoH1tkQ7-6Z7E67hCF4NXLzrJhFg7Mxl8Gic7Zw12F3lgIwDYlyVojKo_YSsWFtkp7g3xCo8639ZYO_jZT_awsYfh4aqjlTKmzRy4YQqvLs2JdIHpLayrNdifh8UQPlmF9BkQgktKmvud0NwpQysK47J0ymcYatz3_udw6DGaw0wsA0ICfKeg2MnOTEDWcgTB1_NdLZpTZJkn20UQF_xnj9sAEldUOgtwrA7OaJrK49Tj6dytLi7v-choJkLNsoOL5RHSVjfmjTEmj_EDnBBhLypM8QQTDYUBJS0h5gUchlPFXd7v2Ubxq-zaiPsvVNeoDVPTmjTencMs_SfqOxp13ZHT-0OYkGY28oTjYYj222XgcPv63A4iOtwD-mQq8ab-asjWdgvsrqn-MhKfMhCI5uBt5-jv2C6XKmy0admdah0c53F_uP7S4n-kBc6pkN5y0B-oWUjFv43X7DLIPmrjla2VXgBekF1P3vfbXGxYmdnJt9RoUB-JWlrE841Qv2POfNDPzBC6gnVMtugBs67Fzl5R8DAfMmiuRV2DVpH96MpZaFC4gUuxTMF8sesMV-T3KE-KhWm0-ICn0BCz4sVgDNuZxoYn8HrLB6ZwvEHBcP6txDL02NVgGG0lNIFPj-mHOlJc4zuYmTRqQ455cKfReAfYUinsvVt7moAuFmw8WtrLoiyUH6XGFdcmd0GNF5CgNrRWn2hAk0vVwEuLmYM4DfDthzNHDl4kL01587ockQrvXSWbsN59NuAaUey1Qp7iqFPLYod18rsn9pnK-kvBQnND_HIQ78pSMOb2VhtFaACp_A0BCaT4J4d9UNEFgOV0rBj8BAdK-ORcNV52hhu72JsjCAyd8sr31q9bN8pZSq4uQ7MS6_yIpbyBjJjd9zoLuwJrj8UjK8zFC9aJO8V6i8wg222NWKhBFsDEtx-QgAKfaOuzNBxtJkJzmGCuLhTO_fpW1NdsCc4ScLtEhWkoQ3huoF_Ij9tX2BgvBDinqPYahF2XkWEm0-lVHYuv18wQIsLDNC5zcFFcyfgw9Bfjjai-FSXamNRRvyjSQ7w0r6gUgkSaVxa7wTUYRlsjUJqZVgZsf4bRQIxZd3PgsXpvFU5FGgNiAaWB6wGLKJp0qmfWY3NRwEMSy_fEtcd0AiZJ8UxmQjraJNuwfakKX5RsarEuJmtvpQayoAyN57EZTdTk6ZLJanQI0rwtKcZxODNeBqhTGAFk6i/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                          - link "RC. ROYAL CLASS" [ref=e5524] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JMQmvZ-A4xyswkgwCusoEzcAAAGdqicPDgoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA_Fm7q/clv1c_ek-wBIHXLUjXTu4itD6dy_t5LgsKMRHUfZHdtZpsk5ObhO0emKv5g5Hou19I4QKg--kJFjjyjZHz5DpxqIzOkMDflrd8HQE_FVGFjilIVl0cTQkKiylnNVdCeDn3pBKRlBgSKczoA6a0KfU0bCtu_Ajn24q6llCKEsbEjzb4ToUZe0sMH86HpupZgoNUd0mrmsjIFDlBR_fkFOmE58hB-mvvF9e_BRuhkJ9NrEHHUh-XKUrsUJVM_UsxJXUaz665qlD2ww8U6-2gRVo8sFc0q7Qb7QUWDIl0bA2uRTqlGnyXPJTZV9RX5Wx8hp-I737IrEu5jvOxjlfLRHabJ_KbeoxH1PZuFfcj0hfNeGj9CNo9UihJTdvY8e5CN03HVrBPeZSnQTyzaBUOUUy3of1-m0Hm8hkDgw8VVAIYBtWR6tz0PPq1KYUp0OdHfg18_8hFdZd3ip46scQ2w970XJxh6PpaM8BkclZKqvn1PhBzfOoH1tkQ7-6Z7E67hCF4NXLzrJhFg7Mxl8Gic7Zw12F3lgIwDYlyVojKo_YSsWFtkp7g3xCo8639ZYO_jZT_awsYfh4aqjlTKmzRy4YQqvLs2JdIHpLayrNdifh8UQPlmF9BkQgktKmvud0NwpQysK47J0ymcYatz3_udw6DGaw0wsA0ICfKeg2MnOTEDWcgTB1_NdLZpTZJkn20UQF_xnj9sAEldUOgtwrA7OaJrK49Tj6dytLi7v-choJkLNsoOL5RHSVjfmjTEmj_EDnBBhLypM8QQTDYUBJS0h5gUchlPFXd7v2Ubxq-zaiPsvVNeoDVPTmjTencMs_SfqOxp13ZHT-0OYkGY28oTjYYj222XgcPv63A4iOtwD-mQq8ab-asjWdgvsrqn-MhKfMhCI5uBt5-jv2C6XKmy0admdah0c53F_uP7S4n-kBc6pkN5y0B-oWUjFv43X7DLIPmrjla2VXgBekF1P3vfbXGxYmdnJt9RoUB-JWlrE841Qv2POfNDPzBC6gnVMtugBs67Fzl5R8DAfMmiuRV2DVpH96MpZaFC4gUuxTMF8sesMV-T3KE-KhWm0-ICn0BCz4sVgDNuZxoYn8HrLB6ZwvEHBcP6txDL02NVgGG0lNIFPj-mHOlJc4zuYmTRqQ455cKfReAfYUinsvVt7moAuFmw8WtrLoiyUH6XGFdcmd0GNF5CgNrRWn2hAk0vVwEuLmYM4DfDthzNHDl4kL01587ockQrvXSWbsN59NuAaUey1Qp7iqFPLYod18rsn9pnK-kvBQnND_HIQ78pSMOb2VhtFaACp_A0BCaT4J4d9UNEFgOV0rBj8BAdK-ORcNV52hhu72JsjCAyd8sr31q9bN8pZSq4uQ7MS6_yIpbyBjJjd9zoLuwJrj8UjK8zFC9aJO8V6i8wg222NWKhBFsDEtx-QgAKfaOuzNBxtJkJzmGCuLhTO_fpW1NdsCc4ScLtEhWkoQ3huoF_Ij9tX2BgvBDinqPYahF2XkWEm0-lVHYuv18wQIsLDNC5zcFFcyfgw9Bfjjai-FSXamNRRvyjSQ7w0r6gUgkSaVxa7wTUYRlsjUJqZVgZsf4bRQIxZd3PgsXpvFU5FGgNiAaWB6wGLKJp0qmfWY3NRwEMSy_fEtcd0AiZJ8UxmQjraJNuwfakKX5RsarEuJmtvpQayoAyN57EZTdTk6ZLJanQI0rwtKcZxODNeBqhTGAFk6i/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                            - img "RC. ROYAL CLASS" [ref=e5526]
+                        - generic [ref=e5527]:
+                          - link [ref=e5528] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JMQmvZ-A4xyswkgwCusoEzcAAAGdqicPDgoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA_Fm7q/clv1c_ek-wBIHXLUjXTu4itD6dy_t5LgsKMRHUfZHdtZpsk5ObhO0emKv5g5Hou19I4QKg--kJFjjyjZHz5DpxqIzOkMDflrd8HQE_FVGFjilIVl0cTQkKiylnNVdCeDn3pBKRlBgSKczoA6a0KfU0bCtu_Ajn24q6llCKEsbEjzb4ToUZe0sMH86HpupZgoNUd0mrmsjIFDlBR_fkFOmE58hB-mvvF9e_BRuhkJ9NrEHHUh-XKUrsUJVM_UsxJXUaz665qlD2ww8U6-2gRVo8sFc0q7Qb7QUWDIl0bA2uRTqlGnyXPJTZV9RX5Wx8hp-I737IrEu5jvOxjlfLRHabJ_KbeoxH1PZuFfcj0hfNeGj9CNo9UihJTdvY8e5CN03HVrBPeZSnQTyzaBUOUUy3of1-m0Hm8hkDgw8VVAIYBtWR6tz0PPq1KYUp0OdHfg18_8hFdZd3ip46scQ2w970XJxh6PpaM8BkclZKqvn1PhBzfOoH1tkQ7-6Z7E67hCF4NXLzrJhFg7Mxl8Gic7Zw12F3lgIwDYlyVojKo_YSsWFtkp7g3xCo8639ZYO_jZT_awsYfh4aqjlTKmzRy4YQqvLs2JdIHpLayrNdifh8UQPlmF9BkQgktKmvud0NwpQysK47J0ymcYatz3_udw6DGaw0wsA0ICfKeg2MnOTEDWcgTB1_NdLZpTZJkn20UQF_xnj9sAEldUOgtwrA7OaJrK49Tj6dytLi7v-choJkLNsoOL5RHSVjfmjTEmj_EDnBBhLypM8QQTDYUBJS0h5gUchlPFXd7v2Ubxq-zaiPsvVNeoDVPTmjTencMs_SfqOxp13ZHT-0OYkGY28oTjYYj222XgcPv63A4iOtwD-mQq8ab-asjWdgvsrqn-MhKfMhCI5uBt5-jv2C6XKmy0admdah0c53F_uP7S4n-kBc6pkN5y0B-oWUjFv43X7DLIPmrjla2VXgBekF1P3vfbXGxYmdnJt9RoUB-JWlrE841Qv2POfNDPzBC6gnVMtugBs67Fzl5R8DAfMmiuRV2DVpH96MpZaFC4gUuxTMF8sesMV-T3KE-KhWm0-ICn0BCz4sVgDNuZxoYn8HrLB6ZwvEHBcP6txDL02NVgGG0lNIFPj-mHOlJc4zuYmTRqQ455cKfReAfYUinsvVt7moAuFmw8WtrLoiyUH6XGFdcmd0GNF5CgNrRWn2hAk0vVwEuLmYM4DfDthzNHDl4kL01587ockQrvXSWbsN59NuAaUey1Qp7iqFPLYod18rsn9pnK-kvBQnND_HIQ78pSMOb2VhtFaACp_A0BCaT4J4d9UNEFgOV0rBj8BAdK-ORcNV52hhu72JsjCAyd8sr31q9bN8pZSq4uQ7MS6_yIpbyBjJjd9zoLuwJrj8UjK8zFC9aJO8V6i8wg222NWKhBFsDEtx-QgAKfaOuzNBxtJkJzmGCuLhTO_fpW1NdsCc4ScLtEhWkoQ3huoF_Ij9tX2BgvBDinqPYahF2XkWEm0-lVHYuv18wQIsLDNC5zcFFcyfgw9Bfjjai-FSXamNRRvyjSQ7w0r6gUgkSaVxa7wTUYRlsjUJqZVgZsf4bRQIxZd3PgsXpvFU5FGgNiAaWB6wGLKJp0qmfWY3NRwEMSy_fEtcd0AiZJ8UxmQjraJNuwfakKX5RsarEuJmtvpQayoAyN57EZTdTk6ZLJanQI0rwtKcZxODNeBqhTGAFk6i/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                          - link "Warm Thick Winter Wear Thermal Socks For Men" [ref=e5529] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JMQmvZ-A4xyswkgwCusoEzcAAAGdqicPDgoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA_Fm7q/clv1c_ek-wBIHXLUjXTu4itD6dy_t5LgsKMRHUfZHdtZpsk5ObhO0emKv5g5Hou19I4QKg--kJFjjyjZHz5DpxqIzOkMDflrd8HQE_FVGFjilIVl0cTQkKiylnNVdCeDn3pBKRlBgSKczoA6a0KfU0bCtu_Ajn24q6llCKEsbEjzb4ToUZe0sMH86HpupZgoNUd0mrmsjIFDlBR_fkFOmE58hB-mvvF9e_BRuhkJ9NrEHHUh-XKUrsUJVM_UsxJXUaz665qlD2ww8U6-2gRVo8sFc0q7Qb7QUWDIl0bA2uRTqlGnyXPJTZV9RX5Wx8hp-I737IrEu5jvOxjlfLRHabJ_KbeoxH1PZuFfcj0hfNeGj9CNo9UihJTdvY8e5CN03HVrBPeZSnQTyzaBUOUUy3of1-m0Hm8hkDgw8VVAIYBtWR6tz0PPq1KYUp0OdHfg18_8hFdZd3ip46scQ2w970XJxh6PpaM8BkclZKqvn1PhBzfOoH1tkQ7-6Z7E67hCF4NXLzrJhFg7Mxl8Gic7Zw12F3lgIwDYlyVojKo_YSsWFtkp7g3xCo8639ZYO_jZT_awsYfh4aqjlTKmzRy4YQqvLs2JdIHpLayrNdifh8UQPlmF9BkQgktKmvud0NwpQysK47J0ymcYatz3_udw6DGaw0wsA0ICfKeg2MnOTEDWcgTB1_NdLZpTZJkn20UQF_xnj9sAEldUOgtwrA7OaJrK49Tj6dytLi7v-choJkLNsoOL5RHSVjfmjTEmj_EDnBBhLypM8QQTDYUBJS0h5gUchlPFXd7v2Ubxq-zaiPsvVNeoDVPTmjTencMs_SfqOxp13ZHT-0OYkGY28oTjYYj222XgcPv63A4iOtwD-mQq8ab-asjWdgvsrqn-MhKfMhCI5uBt5-jv2C6XKmy0admdah0c53F_uP7S4n-kBc6pkN5y0B-oWUjFv43X7DLIPmrjla2VXgBekF1P3vfbXGxYmdnJt9RoUB-JWlrE841Qv2POfNDPzBC6gnVMtugBs67Fzl5R8DAfMmiuRV2DVpH96MpZaFC4gUuxTMF8sesMV-T3KE-KhWm0-ICn0BCz4sVgDNuZxoYn8HrLB6ZwvEHBcP6txDL02NVgGG0lNIFPj-mHOlJc4zuYmTRqQ455cKfReAfYUinsvVt7moAuFmw8WtrLoiyUH6XGFdcmd0GNF5CgNrRWn2hAk0vVwEuLmYM4DfDthzNHDl4kL01587ockQrvXSWbsN59NuAaUey1Qp7iqFPLYod18rsn9pnK-kvBQnND_HIQ78pSMOb2VhtFaACp_A0BCaT4J4d9UNEFgOV0rBj8BAdK-ORcNV52hhu72JsjCAyd8sr31q9bN8pZSq4uQ7MS6_yIpbyBjJjd9zoLuwJrj8UjK8zFC9aJO8V6i8wg222NWKhBFsDEtx-QgAKfaOuzNBxtJkJzmGCuLhTO_fpW1NdsCc4ScLtEhWkoQ3huoF_Ij9tX2BgvBDinqPYahF2XkWEm0-lVHYuv18wQIsLDNC5zcFFcyfgw9Bfjjai-FSXamNRRvyjSQ7w0r6gUgkSaVxa7wTUYRlsjUJqZVgZsf4bRQIxZd3PgsXpvFU5FGgNiAaWB6wGLKJp0qmfWY3NRwEMSy_fEtcd0AiZJ8UxmQjraJNuwfakKX5RsarEuJmtvpQayoAyN57EZTdTk6ZLJanQI0rwtKcZxODNeBqhTGAFk6i/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=Nike%20shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=EOkxB&content-id=amzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f%3Aamzn1.sym.bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_p=bc606c7d-efde-4100-b402-6b6b85a5936f&pf_rd_r=9DTTBMDYPJN5FVCTGBFY&pd_rd_wg=QF77J&pd_rd_r=7688635e-bb7c-4049-a1ee-fe3d56951271
+                            - generic [ref=e5531]:
+                              - generic [ref=e5532]: Warm Thick Winter Wear Thermal Socks For Men
+                              - generic [ref=e5533]: Warm Thick Winter Wear Thermal Socks For Men
+          - generic [ref=e5539]:
+            - heading "Need help?" [level=2] [ref=e5542]
+            - generic [ref=e5543]:
+              - link "Visit the help section" [ref=e5544] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=201889520
+              - text: or
+              - link "contact us" [ref=e5545] [cursor=pointer]:
+                - /url: /gp/help/customer/contact-us
+          - generic [ref=e5548]:
+            - iframe [ref=e5549]:
+              - generic [ref=f1e4]:
+                - link "Nike Men Court Vision LO NN White/Black-White Basketball Shoes 8 UK" [ref=f1e7] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/RIYEp6FiJtkgBDZbzAviIK8AAAGdqicO2QoAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtTPfW/clv1c_ek8OM3GX57OOBXc7_aNgDR0ttoy53YQLta13gwJ-fWIETsNR6TGA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlu-04emyXgnTNgNZPjxqcwTgVuc0CL-U9kj2T_9d8s0DZZoqd7Il-Aik1bm-FP-MnlCTXq_qXj0We6f5-0_PejPfLITV35J-cZdSe0bRR0WcxBK2SB1EnjYTbXZXkQIFy013KLNX5kQ1zwgg2Mly5aFKbMZIqCYo5ooQb65x3-oNpOitnoGbg3jPZff2ZQ1jm0RUOpj-msViIBaK6LKjc2WiXKu2PzBSRpivm6b_YpC4QgABayrPTa7mgh8hGv28aaBt5HhDL8jJYnNzXsUsQSjkEQnDCpYp4HdL-dgTGiKSI4UsjXSwA/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDg0NzcyMTI2ODI3NzA1OjE3NzY2NzYxNzk6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAwOTE0MjI1MjQwODMyOjo6Og&url=%2Fdp%2FB098F6QPLK%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA&aref=quZuPvaFkt&sp_cr=ZAZ
+                - generic [ref=f1e8]:
+                  - img "Nike Men Court Vision LO NN White/Black-White Basketball Shoes 8 UK" [ref=f1e10]
+                  - generic [ref=f1e11]:
+                    - generic [ref=f1e12]: Nike Men Court Vision LO NN White/Black-White Basketball Shoes 8 UK
+                    - generic [ref=f1e13]:
+                      - text: ₹4,995.00
+                      - link "4,223" [ref=f1e14] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/RIYEp6FiJtkgBDZbzAviIK8AAAGdqicO2QoAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtTPfW/clv1c_ek8OM3GX57OOBXc7_aNgDR0ttoy53YQLta13gwJ-fWIETsNR6TGA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlu-04emyXgnTNgNZPjxqcwTgVuc0CL-U9kj2T_9d8s0DZZoqd7Il-Aik1bm-FP-MnlCTXq_qXj0We6f5-0_PejPfLITV35J-cZdSe0bRR0WcxBK2SB1EnjYTbXZXkQIFy013KLNX5kQ1zwgg2Mly5aFKbMZIqCYo5ooQb65x3-oNpOitnoGbg3jPZff2ZQ1jm0RUOpj-msViIBaK6LKjc2WiXKu2PzBSRpivm6b_YpC4QgABayrPTa7mgh8hGv28aaBt5HhDL8jJYnNzXsUsQSjkEQnDCpYp4HdL-dgTGiKSI4UsjXSwA/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDg0NzcyMTI2ODI3NzA1OjE3NzY2NzYxNzk6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAwOTE0MjI1MjQwODMyOjo6Og&url=%2Fdp%2FB098F6QPLK%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA&aref=quZuPvaFkt&sp_cr=ZAZ#customerReviews
+                        - text: 4,223
+                  - link "Shop now" [ref=f1e18] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/RIYEp6FiJtkgBDZbzAviIK8AAAGdqicO2QoAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtTPfW/clv1c_ek8OM3GX57OOBXc7_aNgDR0ttoy53YQLta13gwJ-fWIETsNR6TGA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlu-04emyXgnTNgNZPjxqcwTgVuc0CL-U9kj2T_9d8s0DZZoqd7Il-Aik1bm-FP-MnlCTXq_qXj0We6f5-0_PejPfLITV35J-cZdSe0bRR0WcxBK2SB1EnjYTbXZXkQIFy013KLNX5kQ1zwgg2Mly5aFKbMZIqCYo5ooQb65x3-oNpOitnoGbg3jPZff2ZQ1jm0RUOpj-msViIBaK6LKjc2WiXKu2PzBSRpivm6b_YpC4QgABayrPTa7mgh8hGv28aaBt5HhDL8jJYnNzXsUsQSjkEQnDCpYp4HdL-dgTGiKSI4UsjXSwA/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDg0NzcyMTI2ODI3NzA1OjE3NzY2NzYxNzk6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAwOTE0MjI1MjQwODMyOjo6Og&url=%2Fdp%2FB098F6QPLK%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26aref%3DquZuPvaFkt%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA&aref=quZuPvaFkt&sp_cr=ZAZ
+            - button "Leave feedback on Sponsored advertisement" [ref=e5551] [cursor=pointer]:
+              - generic [ref=e5552]: Sponsored
+        - link "Go back to filtering menu" [ref=e5554] [cursor=pointer]:
+          - /url: "#s-skipLinkTargetForFilterOptions"
+      - dialog "Filters" [ref=e5555]:
+        - generic [ref=e5556]:
+          - link "Skip to main search results" [ref=e5557] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e5559]:
+            - generic [ref=e5563]:
+              - group "Delivery Day" [ref=e5564]:
+                - heading "Delivery Day" [level=2] [ref=e5565]
+                - list "Delivery Day" [ref=e5566]:
+                  - listitem [ref=e5567]:
+                    - link "Apply the filter Get It by Tomorrow to narrow results" [ref=e5569] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_90%3A6741118031&dc&qid=1776676179&rnid=6741116031&ref=sr_nr_p_90_1&ds=v1%3Ab2u4MqRj%2FNENeoFrfm6Ebqd2WjQL%2FJO6uBJ%2BvksLREw
+                      - checkbox [ref=e5572]
+                      - text: Get It by Tomorrow
+                  - listitem [ref=e5574]:
+                    - link "Apply the filter Get It in 2 Days to narrow results" [ref=e5576] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_90%3A20912642031&dc&qid=1776676179&rnid=6741116031&ref=sr_nr_p_90_2&ds=v1%3ARbNaXc260LQXWyduFt27d7DRH0EL3xIaRQAlsA%2F9DkM
+                      - checkbox [ref=e5579]
+                      - text: Get It in 2 Days
+                - heading "Eligible for Free Shipping" [level=2] [ref=e5581]
+                - list "Eligible for Free Shipping" [ref=e5582]:
+                  - listitem [ref=e5583]:
+                    - link "Apply the filter Free Shipping to narrow results" [ref=e5585] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_free_shipping_eligible%3A205563695031&dc&qid=1776676179&rnid=205563694031&ref=sr_nr_p_n_free_shipping_eligible_1&ds=v1%3AjPYjmC77WvvfQhnxNOW3pbBr0CNs3gOv07%2BlbB5AxZA
+                      - checkbox [ref=e5588]
+                      - text: Free Shipping
+                      - generic [ref=e5590]: Get FREE Shipping on eligible orders shipped by Amazon
+              - group [ref=e5591]:
+                - generic [ref=e5592]:
+                  - generic [ref=e5593]: Price
+                  - generic [ref=e5596]:
+                    - generic [ref=e5597]:
+                      - generic [ref=e5598]: ₹390
+                      - generic [ref=e5599]: –
+                      - generic [ref=e5600]: ₹66,900+
+                    - generic [ref=e5602]:
+                      - generic:
+                        - slider "Minimum price": "0"
+                      - generic [ref=e5603]:
+                        - slider "Maximum price": "185"
+                - list [ref=e5604]:
+                  - listitem [ref=e5605]:
+                    - link "Up to ₹1,600" [ref=e5607] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=p_36%3A-160000&dc&qid=1776676179&rnid=4516629031&ref=sr_nr_p_36_1&ds=v1%3Aq5mgLFOrfvAQ1eXKLdsWlyQoVDTTO2ck0u93nTitt3Q
+                  - listitem [ref=e5608]:
+                    - link "₹1,600 - ₹4,500" [ref=e5610] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=p_36%3A160000-450000&dc&qid=1776676179&rnid=4516629031&ref=sr_nr_p_36_2&ds=v1%3AzP6%2FWbRfq1Ft839xZqLszqMAw%2FOuuiZ5vHlfWFiwyDg
+                  - listitem [ref=e5611]:
+                    - link "₹4,500 - ₹6,000" [ref=e5613] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=p_36%3A450000-600000&dc&qid=1776676179&rnid=4516629031&ref=sr_nr_p_36_3&ds=v1%3ASf42d3ZbcSkiegUoDD3ZxVsTUkUPRPxCeYymsIEouD8
+                  - listitem [ref=e5614]:
+                    - link "₹6,000 - ₹8,000" [ref=e5616] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=p_36%3A600000-800000&dc&qid=1776676179&rnid=4516629031&ref=sr_nr_p_36_4&ds=v1%3AtFcMFA7QYKC9r1yJmceFe%2BM2piKaswpxjhXdD90JnaI
+                  - listitem [ref=e5617]:
+                    - link "Over ₹8,000" [ref=e5619] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=p_36%3A800000-&dc&qid=1776676179&rnid=4516629031&ref=sr_nr_p_36_5&ds=v1%3Ag68Fs6p%2FTl1ueUfE23cUJijUiHq%2B244yMqLpZI7tSAw
+                - heading "Deals & Discounts" [level=2] [ref=e5620]
+                - list "Deals & Discounts" [ref=e5621]:
+                  - listitem [ref=e5622]:
+                    - link "All Discounts" [ref=e5624] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_deal_type%3A26921226031&dc&qid=1776676179&rnid=26921223031&ref=sr_nr_p_n_deal_type_1&ds=v1%3Ayeb%2B02qTkiG1QnxCH9QBNhGWtZq0ohhzncc%2Fw0j7j0k
+                  - listitem [ref=e5625]:
+                    - link "Buy More, Save More" [ref=e5627] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_deal_type%3A210770213031&dc&qid=1776676179&rnid=26921223031&ref=sr_nr_p_n_deal_type_2&ds=v1%3AA51S5Pwveb71MZqyXOL6c5%2BmF0uXjA%2FnY0mguZYCJwY
+                  - listitem [ref=e5628]:
+                    - link "Coupons" [ref=e5630] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_deal_type%3A210770212031&dc&qid=1776676179&rnid=26921223031&ref=sr_nr_p_n_deal_type_3&ds=v1%3AZ%2BDnc1GYW8hwPdwuKPPvo229iCnSt97%2B0iKLLy7rujk
+                  - listitem [ref=e5631]:
+                    - link "Today's Deals" [ref=e5633] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_deal_type%3A26921224031&dc&qid=1776676179&rnid=26921223031&ref=sr_nr_p_n_deal_type_4&ds=v1%3AuxIoLbgaIaPGThdzTPPeDoON%2FVPpc9FFW%2BTL5U2fJ2Y
+              - group "Brands" [ref=e5634]:
+                - heading "Brands" [level=2] [ref=e5635]
+                - list "Brands" [ref=e5636]:
+                  - listitem [ref=e5637]:
+                    - link "Apply the filter Nike to narrow results" [ref=e5639] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A234394&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_1&ds=v1%3Am5BvA2FCAQ6DC7G9W6j0wS8zzYyaO7hqDE2FC0iNRY8
+                      - checkbox [ref=e5642]
+                      - text: Nike
+                  - listitem [ref=e5644]:
+                    - link "Apply the filter PUMA to narrow results" [ref=e5646] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A256097&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_2&ds=v1%3Aw5QYrzE3M1BqdJOvcwcGK7W6qu7l5VwpabpANP1uFvc
+                      - checkbox [ref=e5649]
+                      - text: PUMA
+                  - listitem [ref=e5651]:
+                    - link "Apply the filter adidas to narrow results" [ref=e5653] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A198664&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_3&ds=v1%3A7FiaYtYsgx6nPXnAWK978U8LnvqOi4ZUVC%2BzZ0KpvcA
+                      - checkbox [ref=e5656]
+                      - text: adidas
+                  - listitem [ref=e5658]:
+                    - link "Apply the filter new balance to narrow results" [ref=e5660] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A197955&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_4&ds=v1%3AtjZY%2BIPkxAI4vqUxkYS3A%2FsxvLrFZ8reI0dNPN1zl9Q
+                      - checkbox [ref=e5663]
+                      - text: new balance
+                  - listitem [ref=e5665]:
+                    - link "Apply the filter Campus to narrow results" [ref=e5667] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A495128&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_5&ds=v1%3A%2FcfeNDPUyUFY7SMwVN9f%2BjQLHAZNM1iZg12x5tq0pZI
+                      - checkbox [ref=e5670]
+                      - text: Campus
+                  - listitem [ref=e5672]:
+                    - link "Apply the filter WROGN to narrow results" [ref=e5674] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A1363530&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_6&ds=v1%3ApzZkimZVMmL%2FMilF3QCs6eClfZyJ0GJ7NMAHt3Y4pVU
+                      - checkbox [ref=e5677]
+                      - text: WROGN
+                  - listitem [ref=e5679]:
+                    - link "Apply the filter JQR to narrow results" [ref=e5681] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_123%3A1725654&dc&qid=1776676179&rnid=91049095031&ref=sr_nr_p_123_7&ds=v1%3APhWQy0A0fOU2TqC2l%2FJD5QlHhZ7bzppJPafhAHS7MVA
+                      - checkbox [ref=e5684]
+                      - text: JQR
+                  - listitem [ref=e5686]:
+                    - button "See more, Brands" [ref=e5689] [cursor=pointer]: See more
+              - group "Men's Shoe Size (UK/India)" [ref=e5691]:
+                - heading "Men's Shoe Size (UK/India)" [level=2] [ref=e5692]
+                - list "Men's Shoe Size (UK/India)" [ref=e5693]:
+                  - listitem [ref=e5694]:
+                    - generic:
+                      - link "Apply the filter 3.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022648031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_1&ds=v1%3Abl7eB93KfruRMSO2VztZpIgM7D97BJcfEexSSWjJXqo
+                        - button "3.5" [ref=e5697] [cursor=pointer]
+                  - listitem [ref=e5698]:
+                    - generic:
+                      - link "Apply the filter 4 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022649031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_2&ds=v1%3A7JFZq98DbNraJNmjsBKAtHfgk%2Bm8XTOgjlVqdzA2XE4
+                        - button "4" [ref=e5701] [cursor=pointer]
+                  - listitem [ref=e5702]:
+                    - generic:
+                      - link "Apply the filter 5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022651031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_3&ds=v1%3AOmjral8OfAMTKV2P8RQqPdsmwqMVHpcCYRpziOkyj0o
+                        - button "5" [ref=e5705] [cursor=pointer]
+                  - listitem [ref=e5706]:
+                    - generic:
+                      - link "Apply the filter 5.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022652031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_4&ds=v1%3ASvOf5FZrmi%2Fn8iVJ1VMSALo3006nWuhVmnr6aJU5R9w
+                        - button "5.5" [ref=e5709] [cursor=pointer]
+                  - listitem [ref=e5710]:
+                    - generic:
+                      - link "Apply the filter 6 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022653031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_5&ds=v1%3APSEbqn7WLUzYcrCjn3qcnwJu4WDOzmvgmWm4QUR%2FDTY
+                        - button "6" [ref=e5713] [cursor=pointer]
+                  - listitem [ref=e5714]:
+                    - generic:
+                      - link "Apply the filter 7 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022655031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_6&ds=v1%3AW6r%2F%2BEFgETgYo1v9flOBA5iG7JALgaVSrW6cqOcf9N8
+                        - button "7" [ref=e5717] [cursor=pointer]
+                  - listitem [ref=e5718]:
+                    - generic:
+                      - link "Apply the filter 7.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022656031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_7&ds=v1%3A3AuzSBDSqVIzOrdeeVKfQ4jDegJ1GMSHPgKO5LmnkqQ
+                        - button "7.5" [ref=e5721] [cursor=pointer]
+                  - listitem [ref=e5722]:
+                    - generic:
+                      - link "Apply the filter 8 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022657031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_8&ds=v1%3AECl5rfT9c5gnUTT2eECuRsQBfhw75JTIomW7ra4QuDQ
+                        - button "8" [ref=e5725] [cursor=pointer]
+                  - listitem [ref=e5726]:
+                    - generic:
+                      - link "Apply the filter 9 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022659031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_9&ds=v1%3ATZ%2BC0y4%2BUS9HTtiDB2LlDcujrs9TIgQmKpvkYfnPY5o
+                        - button "9" [ref=e5729] [cursor=pointer]
+                  - listitem [ref=e5730]:
+                    - generic:
+                      - link "Apply the filter 10 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022661031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_10&ds=v1%3A%2BnBmtm9AzqOIYmiYruuKcM8p8oyNc32HDM1Xz7WgF%2Bc
+                        - button "10" [ref=e5733] [cursor=pointer]
+                  - listitem [ref=e5734]:
+                    - generic:
+                      - link "Apply the filter 11 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022663031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_11&ds=v1%3AlAyS1Ocmftgz3Rj7y%2FbBgFXoHxMMiQhEiPzvvvksIrQ
+                        - button "11" [ref=e5737] [cursor=pointer]
+                  - listitem [ref=e5738]:
+                    - generic:
+                      - link "Apply the filter 12 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004152217091%3A2022665031&dc&qid=1776676179&rnid=2022058031&ref=sr_nr_p_n_g-1004152217091_12&ds=v1%3AKMWXiknE9HzZWo%2FCY7cRMKFydFFGDZ601RrIS9rtgMI
+                        - button "12" [ref=e5741] [cursor=pointer]
+                - heading "Women's Shoe Size (UK/India)" [level=2] [ref=e5742]
+                - list "Women's Shoe Size (UK/India)" [ref=e5743]:
+                  - listitem [ref=e5744]:
+                    - generic:
+                      - link "Apply the filter 3 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022610031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_1&ds=v1%3ACFXrGgKG%2F2hW3PTtPhL5o%2F54qgD3D4HMM4EESd13tlo
+                        - button "3" [ref=e5747] [cursor=pointer]
+                  - listitem [ref=e5748]:
+                    - generic:
+                      - link "Apply the filter 3.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022611031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_2&ds=v1%3APvWDyHbxfLZ%2FNIYygyXQoCVHlvFJufEkO7mh7GFgXLw
+                        - button "3.5" [ref=e5751] [cursor=pointer]
+                  - listitem [ref=e5752]:
+                    - generic:
+                      - link "Apply the filter 4 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022612031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_3&ds=v1%3AY7GezdO6BHefDMDTX%2F5DYUc%2FaRaP6rZPsoSeJ0c3eXY
+                        - button "4" [ref=e5755] [cursor=pointer]
+                  - listitem [ref=e5756]:
+                    - generic:
+                      - link "Apply the filter 4.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022613031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_4&ds=v1%3AEmdkTjUI5YgAEkU0x7icjI0ySpMNHvws4Gap%2FCq0RCM
+                        - button "4.5" [ref=e5759] [cursor=pointer]
+                  - listitem [ref=e5760]:
+                    - generic:
+                      - link "Apply the filter 5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022614031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_5&ds=v1%3AQLHHUbRboahliql9EKHG9qK1SI5TsM%2B6Zz1E1jHKK5w
+                        - button "5" [ref=e5763] [cursor=pointer]
+                  - listitem [ref=e5764]:
+                    - generic:
+                      - link "Apply the filter 5.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022615031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_6&ds=v1%3AOjecLQwNVfB%2FOdMToBSIsLNOcJp1OnTkIbKdyo76HBo
+                        - button "5.5" [ref=e5767] [cursor=pointer]
+                  - listitem [ref=e5768]:
+                    - generic:
+                      - link "Apply the filter 6 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022616031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_7&ds=v1%3AObCRuohWsgvwyyxoY5CNbwXar5qbauLjiVpI6O9JTXs
+                        - button "6" [ref=e5771] [cursor=pointer]
+                  - listitem [ref=e5772]:
+                    - generic:
+                      - link "Apply the filter 6.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022617031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_8&ds=v1%3A92tgumd0oHYbzgKRrJ4XKplL5Ja6Dtx5TX%2B2tmBiLAI
+                        - button "6.5" [ref=e5775] [cursor=pointer]
+                  - listitem [ref=e5776]:
+                    - generic:
+                      - link "Apply the filter 7 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022618031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_9&ds=v1%3AyvA9ih56Rn3pqfisdVh8lqCk8E9Qo%2FqiovzzB4bEtA4
+                        - button "7" [ref=e5779] [cursor=pointer]
+                  - listitem [ref=e5780]:
+                    - generic:
+                      - link "Apply the filter 7.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022619031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_10&ds=v1%3At8qd%2FmmjsjIXYJpKDnCO8dP77yweTxDh4UuKhctDlmw
+                        - button "7.5" [ref=e5783] [cursor=pointer]
+                  - listitem [ref=e5784]:
+                    - generic:
+                      - link "Apply the filter 8 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A2022620031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_11&ds=v1%3A9IlCjVI9sn42%2BfKfxzIz%2F7sUz6a33zMTpLW9ZpZ4fa8
+                        - button "8" [ref=e5787] [cursor=pointer]
+                  - listitem [ref=e5788]:
+                    - generic:
+                      - link "Apply the filter 8.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A22943436031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_12&ds=v1%3ANqTkrkXg96OYvR6RUXor4twoZUJJIu5ycmfXqt6HqDU
+                        - button "8.5" [ref=e5791] [cursor=pointer]
+                  - listitem [ref=e5792]:
+                    - generic:
+                      - link "Apply the filter 9 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1004158520091%3A22943437031&dc&qid=1776676179&rnid=2022076031&ref=sr_nr_p_n_g-1004158520091_13&ds=v1%3A%2Bj53PxySZmqHt2Z%2BOv%2BmlOQPe3Qp714QZblC7wsskBY
+                        - button "9" [ref=e5795] [cursor=pointer]
+                - heading "Bigger Boys' Shoe Size" [level=2] [ref=e5796]
+                - list "Bigger Boys' Shoe Size" [ref=e5797]:
+                  - listitem [ref=e5798]:
+                    - generic:
+                      - link "Apply the filter 1.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763898031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_1&ds=v1%3ACimWlL7QwrQ84PLD839saQsvrA%2FV6aESWDbvJYMWJVs
+                        - button "1.5" [ref=e5801] [cursor=pointer]
+                  - listitem [ref=e5802]:
+                    - generic:
+                      - link "Apply the filter 2.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763900031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_2&ds=v1%3A1fCD7NhgZIab3%2Fubg%2FFjBNkbfKCiMCAeVqdnRDk6JYw
+                        - button "2.5" [ref=e5805] [cursor=pointer]
+                  - listitem [ref=e5806]:
+                    - generic:
+                      - link "Apply the filter 3.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763902031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_3&ds=v1%3Ap1Cy1ZF40j%2Bcb%2BlNR3EzLgk2RYjaVey7nwFOQRqtPng
+                        - button "3.5" [ref=e5809] [cursor=pointer]
+                  - listitem [ref=e5810]:
+                    - generic:
+                      - link "Apply the filter 4 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763903031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_4&ds=v1%3ADzaBuTs4MYMBzQtfa3%2FAhDUORcW%2FXKRGB7B139dzsHg
+                        - button "4" [ref=e5813] [cursor=pointer]
+                  - listitem [ref=e5814]:
+                    - generic:
+                      - link "Apply the filter 4.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763904031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_5&ds=v1%3A1gY7Xu2dNRFzZ0iI7nVkAKggeKZ8183577TqSUOpoAk
+                        - button "4.5" [ref=e5817] [cursor=pointer]
+                  - listitem [ref=e5818]:
+                    - generic:
+                      - link "Apply the filter 5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763905031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_6&ds=v1%3AD5XC2%2B7gxEVjCgLSuTnF1sGxtnfhZWbLLe%2Fgd9kJ3m0
+                        - button "5" [ref=e5821] [cursor=pointer]
+                  - listitem [ref=e5822]:
+                    - generic:
+                      - link "Apply the filter 5.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763906031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_7&ds=v1%3An%2BVDaUtcgCBG5HbCt6SFcgKWySpNlAAItzo9pkyWkPI
+                        - button "5.5" [ref=e5825] [cursor=pointer]
+                  - listitem [ref=e5826]:
+                    - generic:
+                      - link "Apply the filter 6 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_three_browse-vebin%3A15763907031&dc&qid=1776676179&rnid=15763896031&ref=sr_nr_p_n_size_three_browse-vebin_8&ds=v1%3AnNHutsUsA%2BMluey8Oy8Iff4C4BM9fv2%2BgOCgnROEldg
+                        - button "6" [ref=e5829] [cursor=pointer]
+                - heading "Bigger Girls' Shoe Size" [level=2] [ref=e5830]
+                - list "Bigger Girls' Shoe Size" [ref=e5831]:
+                  - listitem [ref=e5832]:
+                    - generic:
+                      - link "Apply the filter 1.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763910031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_1&ds=v1%3AD4VRisK4Ety%2FVg2RX2x1FRetT4o%2BYdKywiY6w88MopE
+                        - button "1.5" [ref=e5835] [cursor=pointer]
+                  - listitem [ref=e5836]:
+                    - generic:
+                      - link "Apply the filter 2.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763912031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_2&ds=v1%3AK9Teputw9DatXtjtE%2BItGpdKvq2E83WzHUjfJ7Ve3BY
+                        - button "2.5" [ref=e5839] [cursor=pointer]
+                  - listitem [ref=e5840]:
+                    - generic:
+                      - link "Apply the filter 3.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763914031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_3&ds=v1%3AanZnIrmuj%2BVjidCj8%2B%2FehqByCXbqGN9hZmZs%2BUT0WJA
+                        - button "3.5" [ref=e5843] [cursor=pointer]
+                  - listitem [ref=e5844]:
+                    - generic:
+                      - link "Apply the filter 4 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763915031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_4&ds=v1%3A37Irzk8Wn%2B2zaH%2FBK0UKJjqBDLV0tL7O1DuyhLaIpYE
+                        - button "4" [ref=e5847] [cursor=pointer]
+                  - listitem [ref=e5848]:
+                    - generic:
+                      - link "Apply the filter 4.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763916031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_5&ds=v1%3AoaE1CG35POOuyxdzHTd29seDP3kaBFXieagj9UPaVKM
+                        - button "4.5" [ref=e5851] [cursor=pointer]
+                  - listitem [ref=e5852]:
+                    - generic:
+                      - link "Apply the filter 5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763917031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_6&ds=v1%3Al92whUs9UuHwKbP0v5xYzO8cBV0NXF8%2FwsOYjoVjKhs
+                        - button "5" [ref=e5855] [cursor=pointer]
+                  - listitem [ref=e5856]:
+                    - generic:
+                      - link "Apply the filter 5.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763918031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_7&ds=v1%3AJY2aPwPHrnBa3Fw4y0X4XQIcEnDHITc3JbiR3NkYHzc
+                        - button "5.5" [ref=e5859] [cursor=pointer]
+                  - listitem [ref=e5860]:
+                    - generic:
+                      - link "Apply the filter 6 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_girls_big%3A15763919031&dc&qid=1776676179&rnid=15763908031&ref=sr_nr_p_n_pt_nav_size_girls_big_8&ds=v1%3AC%2BwC9nl5zT9uEFO%2Fpm1J5lmremCfD%2FvjZNeGIoAzyOU
+                        - button "6" [ref=e5863] [cursor=pointer]
+                - heading "Children's Shoe Sizes" [level=2] [ref=e5864]
+                - list "Children's Shoe Sizes" [ref=e5865]:
+                  - listitem [ref=e5866]:
+                    - generic:
+                      - link "Apply the filter 1 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_kids_shoe%3A2022580031&dc&qid=1776676179&rnid=2022050031&ref=sr_nr_p_n_pt_nav_size_kids_shoe_1&ds=v1%3AcjXKbBWK93HirsoSqXoO%2F3E0dAf2dNsLIh256e8lkVk
+                        - button "1" [ref=e5869] [cursor=pointer]
+                  - listitem [ref=e5870]:
+                    - generic:
+                      - link "Apply the filter 1.5 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_kids_shoe%3A2022581031&dc&qid=1776676179&rnid=2022050031&ref=sr_nr_p_n_pt_nav_size_kids_shoe_2&ds=v1%3APDvTvTzvcLgUu1HFlPzKPo7GazxJyRjV%2BaG%2BpkB9fz8
+                        - button "1.5" [ref=e5873] [cursor=pointer]
+                  - listitem [ref=e5874]:
+                    - generic:
+                      - link "Apply the filter 2 to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_size_kids_shoe%3A2022582031&dc&qid=1776676179&rnid=2022050031&ref=sr_nr_p_n_pt_nav_size_kids_shoe_3&ds=v1%3ARK5qZdZ7PVZcxhhi3cjatfugbTio%2BziuDclzBw84VOI
+                        - button "2" [ref=e5877] [cursor=pointer]
+              - group "Colour" [ref=e5878]:
+                - heading "Colour" [level=2] [ref=e5879]
+                - list "Colour" [ref=e5880]:
+                  - listitem [ref=e5881]:
+                    - generic:
+                      - link "Apply the filter Black to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022299031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_1&ds=v1%3A%2BGD2foQ0yGKawkCSJFvwhWuW%2FfUd2ioOmIzzAct4vPU
+                  - listitem [ref=e5883]:
+                    - generic:
+                      - link "Apply the filter Grey to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022300031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_2&ds=v1%3AZZsp11RqfmUyOrAUzaYtOQwkp6o9hTztDCyg%2BJUvsvE
+                  - listitem [ref=e5885]:
+                    - generic:
+                      - link "Apply the filter White to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022301031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_3&ds=v1%3AJn8BXFAHfHygERtkdav0wIhcbwmtSQzfQDhSSNBDamI
+                  - listitem [ref=e5887]:
+                    - generic:
+                      - link "Apply the filter Brown to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022302031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_4&ds=v1%3A7Bfm5QBqKidyOAjF3OH23Z3Cqr06PcmyKV81bn6Gpwg
+                  - listitem [ref=e5889]:
+                    - generic:
+                      - link "Apply the filter Beige to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022303031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_5&ds=v1%3AH6r4VdQnJvluFZsRTJmpQ2RBvZ54fujahPuI0Q1TRbA
+                  - listitem [ref=e5891]:
+                    - generic:
+                      - link "Apply the filter Red to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022304031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_6&ds=v1%3AfS9PTsPDqTj9tNDeuW8blrMIxYfYtkazGlRLtQk5I48
+                  - listitem [ref=e5893]:
+                    - generic:
+                      - link "Apply the filter Pink to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022305031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_7&ds=v1%3AkulMBJJ8wWqMQ8qfdJGMwO57TGogbBg9yFuxhFKajs8
+                  - listitem [ref=e5895]:
+                    - generic:
+                      - link "Apply the filter Orange to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022306031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_8&ds=v1%3Atp6hL6MyPxHXF1UXiL0VEfb5HsJoNY9DhuN%2BnOX%2B6kI
+                  - listitem [ref=e5897]:
+                    - generic:
+                      - link "Apply the filter Ivory to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022308031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_9&ds=v1%3A1G7G%2FCMzNULSrHxOuX0W0iF2IDEt0gAgc4uegYg7ZHM
+                  - listitem [ref=e5899]:
+                    - generic:
+                      - link "Apply the filter Green to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022309031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_10&ds=v1%3A%2BlOf6ExvA8CDQAl7vRU%2Fvmgx984g86X7FSq4MmqClt0
+                  - listitem [ref=e5901]:
+                    - generic:
+                      - link "Apply the filter Blue to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022311031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_11&ds=v1%3AeFgXST5ikOor8P9l%2B9SfdDAuCzoAYqNkZJibHxG7bQI
+                  - listitem [ref=e5903]:
+                    - generic:
+                      - link "Apply the filter Purple to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022312031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_12&ds=v1%3AdviXAq8sPrVFuKBEvPqPyWeTQNuPhYxhrDqj6NClHAs
+                  - listitem [ref=e5905]:
+                    - generic:
+                      - link "Apply the filter Silver to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022314031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_13&ds=v1%3AVxwFwJRtKNl51F3P2nFnn%2BD%2B6sfi8zs%2Fv%2FzeAKcUNZg
+                  - listitem [ref=e5907]:
+                    - generic:
+                      - link "Apply the filter Multi to narrow results":
+                        - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_size_two_browse-vebin%3A2022315031&dc&qid=1776676179&rnid=2022042031&ref=sr_nr_p_n_size_two_browse-vebin_14&ds=v1%3AoDL%2Br2Q6SgMn8P7VPGZTg5IoMalMV1FYq1%2FDNS%2BzK%2FQ
+              - group "Discount" [ref=e5909]:
+                - heading "Discount" [level=2] [ref=e5910]
+                - list "Discount" [ref=e5911]:
+                  - listitem [ref=e5912]:
+                    - link "10% Off or more" [ref=e5914] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pct-off-with-tax%3A2665399031&dc&qid=1776676179&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_1&ds=v1%3ARZFlgbYsH461jkwHS6w6wB9Zonsipr6kHaMujAkHV98
+                  - listitem [ref=e5915]:
+                    - link "25% Off or more" [ref=e5917] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pct-off-with-tax%3A2665400031&dc&qid=1776676179&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_2&ds=v1%3ASLKzvf3Q4v1h23oyeCVq9hLcuE%2FxvOq2IlDye4vHPtc
+                  - listitem [ref=e5918]:
+                    - link "35% Off or more" [ref=e5920] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pct-off-with-tax%3A2665402031&dc&qid=1776676179&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_3&ds=v1%3AHnxbtvoAjiEFj2iTuDpl2UKWu85jLFeaEHraJtbKU8w
+                  - listitem [ref=e5921]:
+                    - link "50% Off or more" [ref=e5923] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pct-off-with-tax%3A2665401031&dc&qid=1776676179&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_4&ds=v1%3AySkrl6of8MT7SnLbWVRpBqPjZNsCSFaR2dcEsICZiQY
+                  - listitem [ref=e5924]:
+                    - link "60% Off or more" [ref=e5926] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pct-off-with-tax%3A27060456031&dc&qid=1776676179&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_5&ds=v1%3AezIDbjEUD0u8IObLlue5Ul3DiZnhwH36BSs%2Bu643TuY
+                  - listitem [ref=e5927]:
+                    - link "70% Off or more" [ref=e5929] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pct-off-with-tax%3A27060457031&dc&qid=1776676179&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_6&ds=v1%3ATOXUws4MW0s8TaWyottHfyPv78LSHSowCPxafEksoZU
+              - group "Customer Reviews" [ref=e5930]:
+                - heading "Customer Reviews" [level=2] [ref=e5931]
+                - list "Customer Reviews" [ref=e5932]:
+                  - listitem [ref=e5933]:
+                    - link "Apply the filter 4 Stars & Up to narrow results" [ref=e5936] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_72%3A1318476031&dc&qid=1776676179&rnid=1318475031&ref=sr_nr_p_72_1&ds=v1%3Ai04YeqeTMHqZ4lI%2BcXSsND7J5qQAwczNyMmreMZhWrU
+                      - generic [ref=e5938]: 4 Stars
+                      - text: "& Up"
+              - group "Amazon Fashion" [ref=e5939]:
+                - heading "Amazon Fashion" [level=2] [ref=e5940]
+                - list "Amazon Fashion" [ref=e5941]:
+                  - listitem [ref=e5942]:
+                    - link "Apply the filter Top Brands to narrow results" [ref=e5944] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_nineteen_browse-bin%3A11301363031&dc&qid=1776676179&rnid=11301362031&ref=sr_nr_p_n_feature_nineteen_browse-bin_1&ds=v1%3ANWUlYMcEUTIkwxRkXtr8RRVkk2II6GpI%2B4FApj473Rc
+                      - checkbox [ref=e5947]
+                      - text: Top Brands
+                  - listitem [ref=e5949]:
+                    - link "Apply the filter Made for Amazon to narrow results" [ref=e5951] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_nineteen_browse-bin%3A14917613031&dc&qid=1776676179&rnid=11301362031&ref=sr_nr_p_n_feature_nineteen_browse-bin_2&ds=v1%3A6IYMaHggq6TSxDUgI8my6dtgeINC%2F8lNRhxyb3okS04
+                      - checkbox [ref=e5954]
+                      - text: Made for Amazon
+              - group "Special Features" [ref=e5956]:
+                - heading "Special Features" [level=2] [ref=e5957]
+                - list "Special Features" [ref=e5958]:
+                  - listitem [ref=e5959]:
+                    - link "Apply the filter Lightweight to narrow results" [ref=e5961] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603808031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_1&ds=v1%3A%2BUMBcKK%2BkUzmhAiiCK3NpVNemTWmOFMNiBGDTsCiBEw
+                      - checkbox [ref=e5964]
+                      - text: Lightweight
+                  - listitem [ref=e5966]:
+                    - link "Apply the filter Breathable to narrow results" [ref=e5968] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603813031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_2&ds=v1%3AgQhFgSivHr2pDvSA04ryLDNnvsDHhcL4L%2FYiE9Ssvgc
+                      - checkbox [ref=e5971]
+                      - text: Breathable
+                  - listitem [ref=e5973]:
+                    - link "Apply the filter All Weather Grip to narrow results" [ref=e5975] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603815031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_3&ds=v1%3At0Vde%2BcRv82johxksMs4SH%2Bj4KaBWy%2BTT7tWtVW0%2FQY
+                      - checkbox [ref=e5978]
+                      - text: All Weather Grip
+                  - listitem [ref=e5980]:
+                    - link "Apply the filter Flexible to narrow results" [ref=e5982] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603807031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_4&ds=v1%3AGv1ewN9Sgm92aUR%2FRra5VSyeQKkOhHw24cnM%2Fbbj6W0
+                      - checkbox [ref=e5985]
+                      - text: Flexible
+                  - listitem [ref=e5987]:
+                    - link "Apply the filter Shock Resistant to narrow results" [ref=e5989] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603816031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_5&ds=v1%3ADuAw%2BwMBH%2BFaygVvWfeK6mMfbnn9oNC1GCKQGjIwRi0
+                      - checkbox [ref=e5992]
+                      - text: Shock Resistant
+                  - listitem [ref=e5994]:
+                    - link "Apply the filter Slip Resistant to narrow results" [ref=e5996] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603806031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_6&ds=v1%3AiXL0SFxeGIPlr4wdG9jGQHB%2B7zZZnmKcsZeM%2FAafDEA
+                      - checkbox [ref=e5999]
+                      - text: Slip Resistant
+                  - listitem [ref=e6001]:
+                    - link "Apply the filter Waterproof to narrow results" [ref=e6003] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003396948111%3A29603812031&dc&qid=1776676179&rnid=29603785031&ref=sr_nr_p_n_g-1003396948111_7&ds=v1%3As%2BZfnVNt2k%2Fi8a%2BasVdl428IL0dWV27z8VsrKBGQieM
+                      - checkbox [ref=e6006]
+                      - text: Waterproof
+              - group "Running Surface" [ref=e6008]:
+                - heading "Running Surface" [level=2] [ref=e6009]
+                - list "Running Surface" [ref=e6010]:
+                  - listitem [ref=e6011]:
+                    - link "Apply the filter Road to narrow results" [ref=e6013] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_shoe_running_surface%3A2022375031&dc&qid=1776676179&rnid=2022062031&ref=sr_nr_p_n_pt_nav_shoe_running_surface_1&ds=v1%3AA8WrlXVZ4817OYkX2OtOgnpM730x8jBCRHbTqDh72LA
+                      - checkbox [ref=e6016]
+                      - text: Road
+                  - listitem [ref=e6018]:
+                    - link "Apply the filter Track to narrow results" [ref=e6020] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_pt_nav_shoe_running_surface%3A2022376031&dc&qid=1776676179&rnid=2022062031&ref=sr_nr_p_n_pt_nav_shoe_running_surface_2&ds=v1%3AFXeuHM7jUiRuF5HZIFM6fm3d%2F0ZIfMS0lxRoqWxZ9uA
+                      - checkbox [ref=e6023]
+                      - text: Track
+              - group "Pay On Delivery" [ref=e6025]:
+                - heading "Pay On Delivery" [level=2] [ref=e6026]
+                - list "Pay On Delivery" [ref=e6027]:
+                  - listitem [ref=e6028]:
+                    - link "Apply the filter Eligible for Pay On Delivery to narrow results" [ref=e6030] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_is_cod_eligible%3A4931671031&dc&qid=1776676179&rnid=4931670031&ref=sr_nr_p_n_is_cod_eligible_1&ds=v1%3AOTq35E9D0uB0MmUmnIumDqJqmoCPpmBV8m3pCxe%2Ft3Q
+                      - checkbox [ref=e6033]
+                      - text: Eligible for Pay On Delivery
+              - group "Shoe Material" [ref=e6035]:
+                - heading "Shoe Material" [level=2] [ref=e6036]
+                - list "Shoe Material" [ref=e6037]:
+                  - listitem [ref=e6038]:
+                    - link "Apply the filter Mesh to narrow results" [ref=e6040] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265303031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_1&ds=v1%3A8Njpy6Yj3cBZEpgbWRhIOz32KWqQRuOULzYwJptArFk
+                      - checkbox [ref=e6043]
+                      - text: Mesh
+                  - listitem [ref=e6045]:
+                    - link "Apply the filter Leather to narrow results" [ref=e6047] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265317031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_2&ds=v1%3AnN52xx9zC5SHaAt%2FYqA2FBKrFDYrlUINFzMCDroZrvo
+                      - checkbox [ref=e6050]
+                      - text: Leather
+                  - listitem [ref=e6052]:
+                    - link "Apply the filter Rubber to narrow results" [ref=e6054] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A211000609031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_3&ds=v1%3AmYwroVIzU1iKn%2Bg9k%2FCJhQfV7UnIIKWqDb6s710NPcM
+                      - checkbox [ref=e6057]
+                      - text: Rubber
+                  - listitem [ref=e6059]:
+                    - link "Apply the filter Cotton to narrow results" [ref=e6061] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265309031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_4&ds=v1%3A%2FA7Z%2FDy3Z%2BV0kbDu0F4bYGjeHB8YTONoRGyQzWESB3w
+                      - checkbox [ref=e6064]
+                      - text: Cotton
+                  - listitem [ref=e6066]:
+                    - link "Apply the filter Ethylene Vinyl Acetate (EVA) to narrow results" [ref=e6068] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A211728418031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_5&ds=v1%3A3FdOYxc08D4c4J4YM4hK1UMHb0SC5R6YyRYrsx4sWXg
+                      - checkbox [ref=e6071]
+                      - text: Ethylene Vinyl Acetate (EVA)
+                  - listitem [ref=e6073]:
+                    - link "Apply the filter Faux Leather to narrow results" [ref=e6075] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265320031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_6&ds=v1%3AGfXOw7gw%2FYL2FVhTAdS4P7iWZ8byZKmV4993Mg7TbB4
+                      - checkbox [ref=e6078]
+                      - text: Faux Leather
+                  - listitem [ref=e6080]:
+                    - link "Apply the filter Nylon to narrow results" [ref=e6082] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265302031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_7&ds=v1%3ASy9gf0llSgVLPaQ1Fi1x20giin8Sgknag3IZL7Nkoic
+                      - checkbox [ref=e6085]
+                      - text: Nylon
+                  - listitem [ref=e6087]:
+                    - link "Apply the filter Plastic to narrow results" [ref=e6089] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A211000605031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_8&ds=v1%3AXReNkAqigxXh9VVOR6O292z7PL6mwoaGQE%2FNLIcTs7U
+                      - checkbox [ref=e6092]
+                      - text: Plastic
+                  - listitem [ref=e6094]:
+                    - link "Apply the filter Polyester to narrow results" [ref=e6096] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265299031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_9&ds=v1%3A%2By7PHdi4O%2FR7lVmjEtEVpG5P923ryptfMBkw5IDfo1w
+                      - checkbox [ref=e6099]
+                      - text: Polyester
+                  - listitem [ref=e6101]:
+                    - link "Apply the filter Polyurethane (PU) to narrow results" [ref=e6103] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A211728419031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_10&ds=v1%3A1HqDhQgKVDJysDnfcVIZ6rAMBgHuwj9rYnHHmmolgds
+                      - checkbox [ref=e6106]
+                      - text: Polyurethane (PU)
+                  - listitem [ref=e6108]:
+                    - link "Apply the filter Suede to narrow results" [ref=e6110] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A49265300031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_11&ds=v1%3AZZEwLJpheY5jx6eNJjtTDkE7I9PDqAuRpkx3kCg9Ihw
+                      - checkbox [ref=e6113]
+                      - text: Suede
+                  - listitem [ref=e6115]:
+                    - link "Apply the filter Synthetic Resin to narrow results" [ref=e6117] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_twenty_browse-bin%3A211000608031&dc&qid=1776676179&rnid=49265298031&ref=sr_nr_p_n_feature_twenty_browse-bin_12&ds=v1%3AUAj7WvTEhcClaT8vGYIS%2F3AkF%2Bcj2Maqnwk4coRjotw
+                      - checkbox [ref=e6120]
+                      - text: Synthetic Resin
+              - group "New Arrivals" [ref=e6122]:
+                - heading "New Arrivals" [level=2] [ref=e6123]
+                - list "New Arrivals" [ref=e6124]:
+                  - listitem [ref=e6125]:
+                    - link "Last 30 days" [ref=e6127] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_date_first_available_absolute%3A1318487031&dc&qid=1776676179&rnid=1318486031&ref=sr_nr_p_n_date_first_available_absolute_1&ds=v1%3ATrT%2BkJrC%2BIunFvnGP5ZAorFAQN8Ln3AVmUJGiDfz3jc
+                  - listitem [ref=e6128]:
+                    - link "Last 90 days" [ref=e6130] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_date_first_available_absolute%3A1318488031&dc&qid=1776676179&rnid=1318486031&ref=sr_nr_p_n_date_first_available_absolute_2&ds=v1%3AjJ7aQxdavEWzmXN%2BjSPia1HHgIeFjIYqxS5uVc%2Be7XU
+              - group "Seller" [ref=e6131]:
+                - heading "Seller" [level=2] [ref=e6132]
+                - list "Seller" [ref=e6133]:
+                  - listitem [ref=e6134]:
+                    - link "Apply the filter Westbury Sportswear to narrow results" [ref=e6136] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_6%3AA2O5KR0Y95DC4B&dc&qid=1776676179&rnid=1318474031&ref=sr_nr_p_6_1&ds=v1%3AL8x0UIb4WKu6%2Fsv0KDY40UtNgP5xXPBKWFP4rwiVEDo
+                      - checkbox [ref=e6139]
+                      - text: Westbury Sportswear
+                  - listitem [ref=e6141]:
+                    - link "Apply the filter Cocoblu Retail to narrow results" [ref=e6143] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_6%3AA1WYWER0W24N8S&dc&qid=1776676179&rnid=1318474031&ref=sr_nr_p_6_2&ds=v1%3AmOnzB62XyfB%2BFI6ceebVViJQoixbYPvGaUGd34iWlHs
+                      - checkbox [ref=e6146]
+                      - text: Cocoblu Retail
+                  - listitem [ref=e6148]:
+                    - button "See more, Seller" [ref=e6151] [cursor=pointer]: See more
+              - group "Pattern" [ref=e6153]:
+                - heading "Pattern" [level=2] [ref=e6154]
+                - list "Pattern" [ref=e6155]:
+                  - listitem [ref=e6156]:
+                    - link "Apply the filter Solid to narrow results" [ref=e6158] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-101017157714111%3A213395120031&dc&qid=1776676179&rnid=213395107031&ref=sr_nr_p_n_g-101017157714111_1&ds=v1%3AdICSohpaUIM8761W91%2FV6sXzYod1jc0a89FHWblriqo
+                      - checkbox [ref=e6161]
+                      - text: Solid
+              - group "Height Map" [ref=e6163]:
+                - heading "Height Map" [level=2] [ref=e6164]
+                - list "Height Map" [ref=e6165]:
+                  - listitem [ref=e6166]:
+                    - link "Apply the filter Low Top to narrow results" [ref=e6168] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003563006111%3A60620652031&dc&qid=1776676179&rnid=60620651031&ref=sr_nr_p_n_g-1003563006111_1&ds=v1%3AeOxAuxUNLfFeARzDY3XXjsBdWhUf3tnKLNCBAAmHKcQ
+                      - checkbox [ref=e6171]
+                      - text: Low Top
+                  - listitem [ref=e6173]:
+                    - link "Apply the filter Mid Top to narrow results" [ref=e6175] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003563006111%3A60620653031&dc&qid=1776676179&rnid=60620651031&ref=sr_nr_p_n_g-1003563006111_2&ds=v1%3AVsQppB2heNib8NztB1vp6mNo9SoPBlK7HZnanouGpeA
+                      - checkbox [ref=e6178]
+                      - text: Mid Top
+              - group "Sole Width" [ref=e6180]:
+                - heading "Sole Width" [level=2] [ref=e6181]
+                - list "Sole Width" [ref=e6182]:
+                  - listitem [ref=e6183]:
+                    - generic [ref=e6184]:
+                      - checkbox [disabled] [ref=e6187]
+                      - text: 3X-Narrow
+                  - listitem [ref=e6189]:
+                    - generic [ref=e6190]:
+                      - checkbox [disabled] [ref=e6193]
+                      - text: XX-Narrow
+                  - listitem [ref=e6195]:
+                    - generic [ref=e6196]:
+                      - checkbox [disabled] [ref=e6199]
+                      - text: X-Narrow
+                  - listitem [ref=e6201]:
+                    - generic [ref=e6202]:
+                      - checkbox [disabled] [ref=e6205]
+                      - text: Narrow
+                  - listitem [ref=e6207]:
+                    - link "Apply the filter Medium to narrow results" [ref=e6209] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_two_browse-bin%3A49835495031&dc&qid=1776676179&rnid=2022069031&ref=sr_nr_p_n_feature_two_browse-bin_5&ds=v1%3A7exa6IBn7IP6Y3EAwdrCUUqQNfKSlCL5cqhQZIVqt3I
+                      - checkbox [ref=e6212]
+                      - text: Medium
+                  - listitem [ref=e6214]:
+                    - generic [ref=e6215]:
+                      - checkbox [disabled] [ref=e6218]
+                      - text: Wide
+                  - listitem [ref=e6220]:
+                    - generic [ref=e6221]:
+                      - checkbox [disabled] [ref=e6224]
+                      - text: X-Wide
+                  - listitem [ref=e6226]:
+                    - generic [ref=e6227]:
+                      - checkbox [disabled] [ref=e6230]
+                      - text: XX-Wide
+                  - listitem [ref=e6232]:
+                    - generic [ref=e6233]:
+                      - checkbox [disabled] [ref=e6236]
+                      - text: 3X-Wide
+              - group "Availability" [ref=e6238]:
+                - heading "Availability" [level=2] [ref=e6239]
+                - list "Availability" [ref=e6240]:
+                  - listitem [ref=e6241]:
+                    - link "Apply the filter Include Out of Stock to narrow results" [ref=e6243] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_availability%3A1318485031&dc&qid=1776676179&rnid=1318483031&ref=sr_nr_p_n_availability_2&ds=v1%3Ak6dMyDIFKEdMBPSFg49HO7PlVpMfLbo%2FeQulfHRf5%2Bc
+                      - checkbox [ref=e6246]
+                      - text: Include Out of Stock
+              - group "Lifestyle" [ref=e6248]:
+                - heading "Lifestyle" [level=2] [ref=e6249]
+                - list "Lifestyle" [ref=e6250]:
+                  - listitem [ref=e6251]:
+                    - link "Apply the filter Casual to narrow results" [ref=e6253] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003446729111%3A30318712031&dc&qid=1776676179&rnid=30318709031&ref=sr_nr_p_n_g-1003446729111_1&ds=v1%3A56ks6mrmktvecrNey7jhAPRvke1I842iUIPSHdKaaik
+                      - checkbox [ref=e6256]
+                      - text: Casual
+                  - listitem [ref=e6258]:
+                    - link "Apply the filter Comfort to narrow results" [ref=e6260] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003446729111%3A30318710031&dc&qid=1776676179&rnid=30318709031&ref=sr_nr_p_n_g-1003446729111_2&ds=v1%3ANJBgxNy37kp6ni5vLdq2uoraG3VflAZp%2BpbiHBj8OuM
+                      - checkbox [ref=e6263]
+                      - text: Comfort
+                  - listitem [ref=e6265]:
+                    - link "Apply the filter Business Casual to narrow results" [ref=e6267] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003446729111%3A30318713031&dc&qid=1776676179&rnid=30318709031&ref=sr_nr_p_n_g-1003446729111_3&ds=v1%3AaAlby3S0He%2BKwpVHX4oy2TOh1jU3Qhr7aklFP%2Bc0Ufg
+                      - checkbox [ref=e6270]
+                      - text: Business Casual
+                  - listitem [ref=e6272]:
+                    - link "Apply the filter Evening to narrow results" [ref=e6274] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003446729111%3A30318711031&dc&qid=1776676179&rnid=30318709031&ref=sr_nr_p_n_g-1003446729111_4&ds=v1%3A2CMaFGZi9vkaO6QaHl27cGByP4zGMxH%2FHrno6GWE9YI
+                      - checkbox [ref=e6277]
+                      - text: Evening
+                  - listitem [ref=e6279]:
+                    - link "Apply the filter Formal to narrow results" [ref=e6281] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003446729111%3A30318714031&dc&qid=1776676179&rnid=30318709031&ref=sr_nr_p_n_g-1003446729111_5&ds=v1%3A8La0APym9RIWk7wO2gnlKKnT636fboFmBfVig3RJWZA
+                      - checkbox [ref=e6284]
+                      - text: Formal
+              - group "Heel Height" [ref=e6286]:
+                - heading "Heel Height" [level=2] [ref=e6287]
+                - list "Heel Height" [ref=e6288]:
+                  - listitem [ref=e6289]:
+                    - link "Apply the filter Up to 3 cm to narrow results" [ref=e6291] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_eight_browse-bin%3A2022574031&dc&qid=1776676179&rnid=2022047031&ref=sr_nr_p_n_feature_eight_browse-bin_1&ds=v1%3AoL%2Bloa8FTUktwrLw%2Fqm%2FLs1%2FtDvAKJZ6tvh5rf4ui3w
+                      - checkbox [ref=e6294]
+                      - text: Up to 3 cm
+              - group "Closure Type" [ref=e6296]:
+                - heading "Closure Type" [level=2] [ref=e6297]
+                - list "Closure Type" [ref=e6298]:
+                  - listitem [ref=e6299]:
+                    - link "Apply the filter Lace-Up to narrow results" [ref=e6301] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003465852111%3A38069025031&dc&qid=1776676179&rnid=38069012031&ref=sr_nr_p_n_g-1003465852111_1&ds=v1%3AITfXixTVZ3bbEBfVmbfdZWs1SDBtlGxJb%2FDn%2FfkSuhQ
+                      - checkbox [ref=e6304]
+                      - text: Lace-Up
+                  - listitem [ref=e6306]:
+                    - link "Apply the filter Buckle to narrow results" [ref=e6308] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003465852111%3A38069031031&dc&qid=1776676179&rnid=38069012031&ref=sr_nr_p_n_g-1003465852111_2&ds=v1%3A4rQ2c%2B5l73O0ttGTodWMP4m8qpAKF%2FOXFEcYqytN3u4
+                      - checkbox [ref=e6311]
+                      - text: Buckle
+                  - listitem [ref=e6313]:
+                    - link "Apply the filter Hook & Loop to narrow results" [ref=e6315] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003465852111%3A38069018031&dc&qid=1776676179&rnid=38069012031&ref=sr_nr_p_n_g-1003465852111_3&ds=v1%3AO3beR8waeysRQ5dzay7XVCTlGNrREsixhGMrsNQX%2F9o
+                      - checkbox [ref=e6318]
+                      - text: Hook & Loop
+                  - listitem [ref=e6320]:
+                    - link "Apply the filter Bungee to narrow results" [ref=e6322] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003465852111%3A38069028031&dc&qid=1776676179&rnid=38069012031&ref=sr_nr_p_n_g-1003465852111_4&ds=v1%3AT9ngo72aiuXIm3Acxb8NUFIVvK6iuyZNCjrdCrscDqM
+                      - checkbox [ref=e6325]
+                      - text: Bungee
+              - group "Toe Style" [ref=e6327]:
+                - heading "Toe Style" [level=2] [ref=e6328]
+                - list "Toe Style" [ref=e6329]:
+                  - listitem [ref=e6330]:
+                    - link "Apply the filter Round Toe to narrow results" [ref=e6332] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378815031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_1&ds=v1%3AvYaJLZMEPMz3wjW79qoe%2FFJ%2BRlx%2BOcvUdreVEGztufQ
+                      - checkbox [ref=e6335]
+                      - text: Round Toe
+                  - listitem [ref=e6337]:
+                    - link "Apply the filter Closed Toe to narrow results" [ref=e6339] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378807031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_2&ds=v1%3AC7G7s%2Foox1WKgIexpTdMx8NXNAKgP%2FEVrAtjhpGe5H0
+                      - checkbox [ref=e6342]
+                      - text: Closed Toe
+                  - listitem [ref=e6344]:
+                    - link "Apply the filter Open Toe to narrow results" [ref=e6346] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378808031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_3&ds=v1%3ArLezXaa1f%2BIm%2BDwAhRzxfvy4kEOJZbIKP468m5cA1bU
+                      - checkbox [ref=e6349]
+                      - text: Open Toe
+                  - listitem [ref=e6351]:
+                    - link "Apply the filter Almond Toe to narrow results" [ref=e6353] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378822031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_4&ds=v1%3AjvXHQm0Opp3qIBL0urWEwhQ%2Fuk4RXP%2FQzc7XaUW3KbU
+                      - checkbox [ref=e6356]
+                      - text: Almond Toe
+                  - listitem [ref=e6358]:
+                    - link "Apply the filter Bicycle Toe to narrow results" [ref=e6360] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378811031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_5&ds=v1%3AhVfrb3qZC26XZSMTIWe8c30Kx%2Fv3lR9YeMmEqwz0etw
+                      - checkbox [ref=e6363]
+                      - text: Bicycle Toe
+                  - listitem [ref=e6365]:
+                    - link "Apply the filter Moc Toe to narrow results" [ref=e6367] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378819031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_6&ds=v1%3A3X1e1UtvjmD9e2dxtHyUnaqMZG6Cn2WoQDkiAOCt274
+                      - checkbox [ref=e6370]
+                      - text: Moc Toe
+                  - listitem [ref=e6372]:
+                    - link "Apply the filter Plain Toe to narrow results" [ref=e6374] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003126687111%3A27378809031&dc&qid=1776676179&rnid=27378806031&ref=sr_nr_p_n_g-1003126687111_7&ds=v1%3AnGZAT%2FBM2OJtxphfQuPY%2B4aeyeqOBJj2OFwuzPk%2FfdE
+                      - checkbox [ref=e6377]
+                      - text: Plain Toe
+              - group "Gender" [ref=e6379]:
+                - heading "Gender" [level=2] [ref=e6380]
+                - list "Gender" [ref=e6381]:
+                  - listitem [ref=e6382]:
+                    - link "Apply the filter Men to narrow results" [ref=e6384] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-101015233022111%3A207199036031&dc&qid=1776676179&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_1&ds=v1%3A8VZFyvvsElMtZEJgUrhgm%2FoCV0qsrPY%2BPLe%2BCsTmr5o
+                      - checkbox [ref=e6387]
+                      - text: Men
+                  - listitem [ref=e6389]:
+                    - link "Apply the filter Women to narrow results" [ref=e6391] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-101015233022111%3A207199034031&dc&qid=1776676179&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_2&ds=v1%3AButNA4XkBeH8iVW7z659bvAv0Z60JFwed%2FhJK%2BKhthA
+                      - checkbox [ref=e6394]
+                      - text: Women
+                  - listitem [ref=e6396]:
+                    - link "Apply the filter Boys to narrow results" [ref=e6398] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-101015233022111%3A207199035031&dc&qid=1776676179&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_3&ds=v1%3ASxvAbRm%2BIxbm8O9ThnUJwti1GeldOOLJoGT1lnHkUDQ
+                      - checkbox [ref=e6401]
+                      - text: Boys
+                  - listitem [ref=e6403]:
+                    - link "Apply the filter Girls to narrow results" [ref=e6405] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-101015233022111%3A207199041031&dc&qid=1776676179&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_4&ds=v1%3ArZ6U3iOVE6YJ%2BwyP7Xm4K86WDOclK52myJlk6pIUSDc
+                      - checkbox [ref=e6408]
+                      - text: Girls
+                  - listitem [ref=e6410]:
+                    - link "Apply the filter Unisex to narrow results" [ref=e6412] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-101015233022111%3A207199039031&dc&qid=1776676179&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_5&ds=v1%3AA38d2KJRlvT9OaL90%2FVQrJKMH5mtaTv%2F8c8Df0Gu8cA
+                      - checkbox [ref=e6415]
+                      - text: Unisex
+              - group "Strap Type" [ref=e6417]:
+                - heading "Strap Type" [level=2] [ref=e6418]
+                - list "Strap Type" [ref=e6419]:
+                  - listitem [ref=e6420]:
+                    - link "Apply the filter Slingback to narrow results" [ref=e6422] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_g-1003499539111%3A48812532031&dc&qid=1776676179&rnid=48812336031&ref=sr_nr_p_n_g-1003499539111_1&ds=v1%3Awf%2Fs7Xpmx3rPB9%2BgH3ZGHtpHcUGOKqLVoQENnyuofmM
+                      - checkbox [ref=e6425]
+                      - text: Slingback
+              - group "Shoe Type" [ref=e6427]:
+                - heading "Shoe Type" [level=2] [ref=e6428]
+                - list "Shoe Type" [ref=e6429]:
+                  - listitem [ref=e6430]:
+                    - link "Apply the filter Athletic Shoe to narrow results" [ref=e6432] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_four_browse-bin%3A207358321031&dc&qid=1776676179&rnid=207358270031&ref=sr_nr_p_n_feature_four_browse-bin_1&ds=v1%3A9olyiReEO0KwusOqyTceo7wVwPpGGGHv3dVtT9fehHA
+                      - checkbox [ref=e6435]
+                      - text: Athletic Shoe
+                  - listitem [ref=e6437]:
+                    - link "Apply the filter Flats to narrow results" [ref=e6439] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_four_browse-bin%3A207358329031&dc&qid=1776676179&rnid=207358270031&ref=sr_nr_p_n_feature_four_browse-bin_2&ds=v1%3A5YcNhfBTEuWqRJotLdQixXJvuHyirIoDUQguqtk%2Bxtk
+                      - checkbox [ref=e6442]
+                      - text: Flats
+                  - listitem [ref=e6444]:
+                    - link "Apply the filter Loafer to narrow results" [ref=e6446] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_four_browse-bin%3A207358323031&dc&qid=1776676179&rnid=207358270031&ref=sr_nr_p_n_feature_four_browse-bin_3&ds=v1%3Agv%2F3QSLma8Pw9oWE2KlTWSNaBYLQpLJB29sXRfKwv3I
+                      - checkbox [ref=e6449]
+                      - text: Loafer
+                  - listitem [ref=e6451]:
+                    - link "Apply the filter Moccasin to narrow results" [ref=e6453] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_four_browse-bin%3A207358316031&dc&qid=1776676179&rnid=207358270031&ref=sr_nr_p_n_feature_four_browse-bin_4&ds=v1%3AYf2kE%2FSwghPQdv65ixsFkrSgVsHwiWB%2FgfplCzxPyiQ
+                      - checkbox [ref=e6456]
+                      - text: Moccasin
+                  - listitem [ref=e6458]:
+                    - link "Apply the filter Mule to narrow results" [ref=e6460] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_four_browse-bin%3A207358326031&dc&qid=1776676179&rnid=207358270031&ref=sr_nr_p_n_feature_four_browse-bin_5&ds=v1%3ATDsUTXQiI8mnd57H5lUjeBaI63iR5GfPcyH%2FhsiqQ8A
+                      - checkbox [ref=e6463]
+                      - text: Mule
+                  - listitem [ref=e6465]:
+                    - link "Apply the filter Oxford to narrow results" [ref=e6467] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_four_browse-bin%3A207358317031&dc&qid=1776676179&rnid=207358270031&ref=sr_nr_p_n_feature_four_browse-bin_6&ds=v1%3AE0QytPhBhEZw%2B52%2BLCUKCJdRGDsl5rIavbc73Z8FCU0
+                      - checkbox [ref=e6470]
+                      - text: Oxford
+              - group "Made for Amazon Brands" [ref=e6472]:
+                - heading "Made for Amazon Brands" [level=2] [ref=e6473]
+                - list "Made for Amazon Brands" [ref=e6474]:
+                  - listitem [ref=e6475]:
+                    - link "Apply the filter Made for Amazon to narrow results" [ref=e6477] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_is_private_label%3A16184648031&dc&qid=1776676179&rnid=16184647031&ref=sr_nr_p_n_is_private_label_1&ds=v1%3AI%2FThYVG1%2FHQWr%2Fuf%2FgAI2%2FWw0IevN2dqJNvJV2Bo308
+                      - checkbox [ref=e6480]
+                      - text: Made for Amazon
+              - group "Arch Type" [ref=e6482]:
+                - heading "Arch Type" [level=2] [ref=e6483]
+                - list "Arch Type" [ref=e6484]:
+                  - listitem [ref=e6485]:
+                    - link "Apply the filter Flat to narrow results" [ref=e6487] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_fifteen_browse-bin%3A2022262031&dc&qid=1776676179&rnid=2022034031&ref=sr_nr_p_n_feature_fifteen_browse-bin_1&ds=v1%3AgrgNAOUi07cOir%2F%2Fb4tHE4gVNMnEtY2SWiXOY69fDoQ
+                      - checkbox [ref=e6490]
+                      - text: Flat
+              - group "Heel Type" [ref=e6492]:
+                - heading "Heel Type" [level=2] [ref=e6493]
+                - list "Heel Type" [ref=e6494]:
+                  - listitem [ref=e6495]:
+                    - link "Apply the filter Wedge Heel to narrow results" [ref=e6497] [cursor=pointer]:
+                      - /url: /s?k=Nike+shoes&rh=n%3A22737467031%2Cp_n_feature_seven_browse-bin%3A27400655031&dc&qid=1776676179&rnid=2022048031&ref=sr_nr_p_n_feature_seven_browse-bin_1&ds=v1%3AOMQHx0uMtODe4%2F%2F98P2TC4gnHUp%2FHBPoH0pjGigReBk
+                      - checkbox [ref=e6500]
+                      - text: Wedge Heel
+            - generic [ref=e6505]:
+              - iframe [ref=e6506]:
+                - generic [ref=f2e4]:
+                  - generic [ref=f2e5]:
+                    - link "Nike Court Vision LO P NB" [ref=f2e6] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RPDQeii7qHznn1BkelWUP-AAAAGdqicO1goAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCE4tmA/clv1c_ek8OM3GX57OOBXc7_aNgzSYYcw0GWMIBvR9xeQ5OdJII-TWakDeA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlSp3BgB1kPnY6cqY-cmTRQ8asRP84m-E9kj2T_9d8sUNiXlbXrIl-AiuVnI4jwy4LiwgxxHp3bl09hr2aXrGRnkFm2ufoEFJFCAFfqMWQqD7UfexDfhlCgcLFZ1OhlnzQPRjdcZOoZMeMTwF8XLj3jSXUjUEpTdnPctX9G9pS38oIqxgg8RxJmGH8iwzO9jKx6svcy43SoBiw8eMWZiQ5bTST-8vTEJFrKIUeXWCaCkDtYq-wTvm2SydKYZ3aotqdoEjt68R3NZ2p7oWdUFL4oDAedu0KFJyMbSdryJiPREJ8uWb2Ydw/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDM5MTIzMzA0MTEwMTI6MTc3NjY3NjE3OTpzcF9zZWFyY2hfbGVmdF9zaGFyZWQ6MzAxMDI2MTI2MDEwNjMyOjo6Og&url=%2Fdp%2FB0FDW9G5MK%2Fref%3Dsspa_dk_left_sx_aax_0%3Fpsc%3D1%26aref%3D1up3bNJy57%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=1up3bNJy57&sp_cr=ZAZ
+                    - img "Nike Court Vision LO P NB" [ref=f2e10]
+                    - generic [ref=f2e12]:
+                      - generic [ref=f2e13]: Nike Court Vision LO P NB
+                      - link "15" [ref=f2e15] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/RPDQeii7qHznn1BkelWUP-AAAAGdqicO1goAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCE4tmA/clv1c_ek8OM3GX57OOBXc7_aNgzSYYcw0GWMIBvR9xeQ5OdJII-TWakDeA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlSp3BgB1kPnY6cqY-cmTRQ8asRP84m-E9kj2T_9d8sUNiXlbXrIl-AiuVnI4jwy4LiwgxxHp3bl09hr2aXrGRnkFm2ufoEFJFCAFfqMWQqD7UfexDfhlCgcLFZ1OhlnzQPRjdcZOoZMeMTwF8XLj3jSXUjUEpTdnPctX9G9pS38oIqxgg8RxJmGH8iwzO9jKx6svcy43SoBiw8eMWZiQ5bTST-8vTEJFrKIUeXWCaCkDtYq-wTvm2SydKYZ3aotqdoEjt68R3NZ2p7oWdUFL4oDAedu0KFJyMbSdryJiPREJ8uWb2Ydw/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDM5MTIzMzA0MTEwMTI6MTc3NjY3NjE3OTpzcF9zZWFyY2hfbGVmdF9zaGFyZWQ6MzAxMDI2MTI2MDEwNjMyOjo6Og&url=%2Fdp%2FB0FDW9G5MK%2Fref%3Dsspa_dk_left_sx_aax_0%3Fpsc%3D1%26aref%3D1up3bNJy57%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=1up3bNJy57&sp_cr=ZAZ#customerReviews
+                        - text: "15"
+                      - generic [ref=f2e17]: ₹5,196.00
+                    - link "Shop now" [ref=f2e22] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RPDQeii7qHznn1BkelWUP-AAAAGdqicO1goAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCE4tmA/clv1c_ek8OM3GX57OOBXc7_aNgzSYYcw0GWMIBvR9xeQ5OdJII-TWakDeA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlSp3BgB1kPnY6cqY-cmTRQ8asRP84m-E9kj2T_9d8sUNiXlbXrIl-AiuVnI4jwy4LiwgxxHp3bl09hr2aXrGRnkFm2ufoEFJFCAFfqMWQqD7UfexDfhlCgcLFZ1OhlnzQPRjdcZOoZMeMTwF8XLj3jSXUjUEpTdnPctX9G9pS38oIqxgg8RxJmGH8iwzO9jKx6svcy43SoBiw8eMWZiQ5bTST-8vTEJFrKIUeXWCaCkDtYq-wTvm2SydKYZ3aotqdoEjt68R3NZ2p7oWdUFL4oDAedu0KFJyMbSdryJiPREJ8uWb2Ydw/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDM5MTIzMzA0MTEwMTI6MTc3NjY3NjE3OTpzcF9zZWFyY2hfbGVmdF9zaGFyZWQ6MzAxMDI2MTI2MDEwNjMyOjo6Og&url=%2Fdp%2FB0FDW9G5MK%2Fref%3Dsspa_dk_left_sx_aax_0%3Fpsc%3D1%26aref%3D1up3bNJy57%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=1up3bNJy57&sp_cr=ZAZ
+                  - separator [ref=f2e24]
+                  - generic [ref=f2e25]:
+                    - link "Nike Men Court Vision MID NN Gold Leaf/Black-SAIL Basketball Shoes 8 UK" [ref=f2e26] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RPDQeii7qHznn1BkelWUP-AAAAGdqicO1goAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCE4tmA/clv1c_ek8OM3GX57OOBXc7_aNgzSYYcw0GWMIBvR9xeQ5OdJII-TWakDeA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlSp3BgB1kPnY6cqY-cmTRQ8asRP84m-E9kj2T_9d8sUNiXlbXrIl-AiuVnI4jwy4LiwgxxHp3bl09hr2aXrGRnkFm2ufoEFJFCAFfqMWQqD7UfexDfhlCgcLFZ1OhlnzQPRjdcZOoZMeMTwF8XLj3jSXUjUEpTdnPctX9G9pS38oIqxgg8RxJmGH8iwzO9jKx6svcy43SoBiw8eMWZiQ5bTST-8vTEJFrKIUeXWCaCkDtYq-wTvm2SydKYZ3aotqdoEjt68R3NZ2p7oWdUFL4oDAedu0KFJyMbSdryJiPREJ8uWb2Ydw/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDM5MTIzMzA0MTEwMTI6MTc3NjY3NjE3OTpzcF9zZWFyY2hfbGVmdF9zaGFyZWQ6MzAwOTk2NTUyMjYyMzMyOjo6Og&url=%2Fdp%2FB0FBRYKJDG%2Fref%3Dsspa_dk_left_sx_aax_1%3Fpsc%3D1%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=Nxa8M9bYjD&sp_cr=ZAZ
+                    - img "Nike Men Court Vision MID NN Gold Leaf/Black-SAIL Basketball Shoes 8 UK" [ref=f2e30]
+                    - generic [ref=f2e32]:
+                      - generic [ref=f2e33]: Nike Men Court Vision MID NN Gold Leaf/Black-SA...
+                      - link "1,394" [ref=f2e35] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/RPDQeii7qHznn1BkelWUP-AAAAGdqicO1goAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCE4tmA/clv1c_ek8OM3GX57OOBXc7_aNgzSYYcw0GWMIBvR9xeQ5OdJII-TWakDeA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlSp3BgB1kPnY6cqY-cmTRQ8asRP84m-E9kj2T_9d8sUNiXlbXrIl-AiuVnI4jwy4LiwgxxHp3bl09hr2aXrGRnkFm2ufoEFJFCAFfqMWQqD7UfexDfhlCgcLFZ1OhlnzQPRjdcZOoZMeMTwF8XLj3jSXUjUEpTdnPctX9G9pS38oIqxgg8RxJmGH8iwzO9jKx6svcy43SoBiw8eMWZiQ5bTST-8vTEJFrKIUeXWCaCkDtYq-wTvm2SydKYZ3aotqdoEjt68R3NZ2p7oWdUFL4oDAedu0KFJyMbSdryJiPREJ8uWb2Ydw/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDM5MTIzMzA0MTEwMTI6MTc3NjY3NjE3OTpzcF9zZWFyY2hfbGVmdF9zaGFyZWQ6MzAwOTk2NTUyMjYyMzMyOjo6Og&url=%2Fdp%2FB0FBRYKJDG%2Fref%3Dsspa_dk_left_sx_aax_1%3Fpsc%3D1%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=Nxa8M9bYjD&sp_cr=ZAZ#customerReviews
+                        - text: 1,394
+                      - generic [ref=f2e37]: ₹4,796.00
+                    - link "Shop now" [ref=f2e42] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RPDQeii7qHznn1BkelWUP-AAAAGdqicO1goAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCE4tmA/clv1c_ek8OM3GX57OOBXc7_aNgzSYYcw0GWMIBvR9xeQ5OdJII-TWakDeA6TiBeP6gwcHxvVxrp48mWOVTK3k6H9wvHqlSp3BgB1kPnY6cqY-cmTRQ8asRP84m-E9kj2T_9d8sUNiXlbXrIl-AiuVnI4jwy4LiwgxxHp3bl09hr2aXrGRnkFm2ufoEFJFCAFfqMWQqD7UfexDfhlCgcLFZ1OhlnzQPRjdcZOoZMeMTwF8XLj3jSXUjUEpTdnPctX9G9pS38oIqxgg8RxJmGH8iwzO9jKx6svcy43SoBiw8eMWZiQ5bTST-8vTEJFrKIUeXWCaCkDtYq-wTvm2SydKYZ3aotqdoEjt68R3NZ2p7oWdUFL4oDAedu0KFJyMbSdryJiPREJ8uWb2Ydw/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4NDM5MTIzMzA0MTEwMTI6MTc3NjY3NjE3OTpzcF9zZWFyY2hfbGVmdF9zaGFyZWQ6MzAwOTk2NTUyMjYyMzMyOjo6Og&url=%2Fdp%2FB0FBRYKJDG%2Fref%3Dsspa_dk_left_sx_aax_1%3Fpsc%3D1%26aref%3DNxa8M9bYjD%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=Nxa8M9bYjD&sp_cr=ZAZ
+              - button "Leave feedback on Sponsored advertisement" [ref=e6508] [cursor=pointer]:
+                - generic [ref=e6509]: Sponsored
+            - generic [ref=e6514]:
+              - iframe [ref=e6515]:
+                - generic [ref=f3e4]:
+                  - generic [ref=f3e5]: Sponsored Ad. Product image. Mikaasa Military Joggers Running Leather Shoes for Men… 1249 Shop now
+                  - generic [ref=f3e6]:
+                    - generic [ref=f3e8]:
+                      - img [ref=f3e10]
+                      - img [ref=f3e14]
+                    - link "Click to navigate to product detail page" [ref=f3e19] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RDMnpHntnRs66Z0D2aC7BK4AAAGdqicO1QoAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICDF-l3s/clv1c_ek-gg3fSFcbCTRFRX8PfeNj7JiaGaph0UNLi8dm2l04GH_J7yvp5Iwmj__tKMnIXOQs7gFfglP-XtwRIG2Uvirv_hzd_rPHUxp3dGvPq0MP2ibAgF8TMseH6ylN4zCxPUgCPDtoZAeF-G12UIRHjW5PbvuX8Fp-r04nn_S-UCtEzAoHHDiVtDE4mMwFJOwJhds5WUiJ6zkUcLPlytXBq_tyLFz9fJvrQFqrXQIrolAPakkm0MJKbiof86JvFJxBKJD4l152_wSB01Nmp8OCqDGWUYHOf6vsGYHf95P4u6IaKJlcqoaZhRfiODKd4Kv4NgW3ntWaa0kCOtbK3UpkT6PUMoSFEmLbuFxG3tCiUjB6oJwhg9TKppGT073xcBYzEIfQ9tf6gmC0VsmnpY4IyaHx3Wuy7PSz8vqbDzTaXrRwIpUuyPK3nTSKs5_h2b1JCR0bDkKNw6ZjvvL8Gl6_w7K3pYUpPB39E6sA_KbW2t-dWoXAI52FaBhktI8A9fdBs6kCTeq8ZWJsH1F0K2BvgzLDjO91llBJIeupObFQzXeTZhdsSg46uCHqg3CHyMKsF_o0lWfBJUEOSIhEyvhqHvxEKD1pESPLz106TWMa8jfUoavRajMB7mobWJt9-rcXWKcKiSdDwsgtZCPco7JX6zjlbBtz6S2xwZNU0EsnWIurAfMwmIsHTD3kW98UosS-JmU0nMyZ17h2RXyWr3V1Kgem3v1IUbHs0aPxM9idrRni8u5IdZgqEB9lOamKcJjl3hsG8lDfr-hyxLTYEw6ZRbFFa_il23egGeZEnoqS_uBV06NWOJP2UGolBC_uW38pzOf6fxMNQzZ99JABFyEJGALBpkdI8aJyCe59h-IJuGlVb1ndsytAi_UY7rbWrIJuySL0sZrYnb8s46-ZSHprOsqZ0Gx84Y8vBkeVljAIcNiNRuQmrOCPO42dczdhjCZizmmsJKe2aIjnBwFriKJ6N5purCGoalxZwdkEGOX3udspf2wd9Q2gK6zvF0Sqwiw4h/http://www.amazon.in/dp/B08BK45GMX/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=HRWOywlT3s
+                  - img "Product image" [ref=f3e24]
+              - button "Leave feedback on Sponsored advertisement" [ref=e6517] [cursor=pointer]:
+                - generic [ref=e6518]: Sponsored
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e6520]:
+    - button "Back to top" [ref=e6521] [cursor=pointer]:
+      - generic [ref=e6522]: Back to top
+    - generic [ref=e6523]:
+      - generic [ref=e6524]:
+        - heading "Get to Know Us" [level=6] [ref=e6525]
+        - list [ref=e6526]:
+          - listitem [ref=e6527]:
+            - link "About Amazon" [ref=e6528] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e6529]:
+            - link "Careers" [ref=e6530] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e6531]:
+            - link "Press Releases" [ref=e6532] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e6533]:
+            - link "Amazon Science" [ref=e6534] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e6536]:
+        - heading "Connect with Us" [level=6] [ref=e6537]
+        - list [ref=e6538]:
+          - listitem [ref=e6539]:
+            - link "Facebook" [ref=e6540] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e6541]:
+            - link "Twitter" [ref=e6542] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e6543]:
+            - link "Instagram" [ref=e6544] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e6546]:
+        - heading "Make Money with Us" [level=6] [ref=e6547]
+        - list [ref=e6548]:
+          - listitem [ref=e6549]:
+            - link "Sell on Amazon" [ref=e6550] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e6551]:
+            - link "Sell under Amazon Accelerator" [ref=e6552] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e6553]:
+            - link "Protect and Build Your Brand" [ref=e6554] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e6555]:
+            - link "Amazon Global Selling" [ref=e6556] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e6557]:
+            - link "Supply to Amazon" [ref=e6558] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e6559]:
+            - link "Become an Affiliate" [ref=e6560] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e6561]:
+            - link "Fulfilment by Amazon" [ref=e6562] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e6563]:
+            - link "Advertise Your Products" [ref=e6564] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e6565]:
+            - link "Amazon Pay on Merchants" [ref=e6566] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e6568]:
+        - heading "Let Us Help You" [level=6] [ref=e6569]
+        - list [ref=e6570]:
+          - listitem [ref=e6571]:
+            - link "Your Account" [ref=e6572] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e6573]:
+            - link "Returns Centre" [ref=e6574] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e6575]:
+            - link "Recalls and Product Safety Alerts" [ref=e6576] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e6577]:
+            - link "100% Purchase Protection" [ref=e6578] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e6579]:
+            - link "Amazon App Download" [ref=e6580] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e6581]:
+            - link "Help" [ref=e6582] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e6584]:
+      - link "Amazon India Home" [ref=e6587] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e6590]:
+        - generic [ref=e6591]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e6592] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e6594]: English
+          - button "Expand to Change Language or Country" [ref=e6595] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e6596] [cursor=pointer]:
+          - generic [ref=e6598]: India
+    - generic "More on Amazon" [ref=e6599]:
+      - generic "More on Amazon" [ref=e6600]:
+        - list [ref=e6601]:
+          - listitem [ref=e6602]:
+            - link "AbeBooks Books, art & collectibles" [ref=e6603] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e6604]
+              - generic [ref=e6605]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e6606]
+          - listitem [ref=e6607]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e6608] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e6609]
+              - generic [ref=e6610]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e6611]
+          - listitem [ref=e6612]:
+            - link "Audible Download Audio Books" [ref=e6613] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e6614]
+              - generic [ref=e6615]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e6616]
+          - listitem [ref=e6617]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e6618] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e6619]
+              - generic [ref=e6620]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e6621]:
+          - listitem [ref=e6622]:
+            - link "Shopbop Designer Fashion Brands" [ref=e6623] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e6624]
+              - generic [ref=e6625]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e6626]
+          - listitem [ref=e6627]:
+            - link "Amazon Business Everything For Your Business" [ref=e6628] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e6629]
+              - generic [ref=e6630]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e6631]
+          - listitem [ref=e6632]:
+            - link "Amazon Prime Music 100 million songs, ad-free Over 15 million podcast episodes" [ref=e6633] [cursor=pointer]:
+              - /url: /music/prime?ref=footer_apm
+              - heading "Amazon Prime Music" [level=5] [ref=e6634]
+              - generic [ref=e6635]:
+                - text: 100 million songs, ad-free
+                - text: Over 15 million podcast episodes
+          - listitem [ref=e6636]
+          - listitem [ref=e6637]
+    - generic [ref=e6638]:
+      - list [ref=e6639]:
+        - listitem [ref=e6640]:
+          - link "Conditions of Use & Sale" [ref=e6641] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e6642]:
+          - link "Privacy Notice" [ref=e6643] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e6644]:
+          - link "Interest-Based Ads" [ref=e6645] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e6646]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=e6648]:
+    - iframe [ref=f5e2]:
+      - generic [active]:
+        - img [ref=f6e1]
+        - img [ref=f6e2]
+        - img [ref=f6e3]
+        - img [ref=f6e4]
+        - img [ref=f6e5]
+        - img [ref=f6e6]
+        - img [ref=f6e7]
+        - img [ref=f6e8]
+        - img [ref=f6e9]
+        - img [ref=f6e10]
+        - img [ref=f6e11]
+        - img [ref=f6e12]
+        - img [ref=f6e13]
+        - img [ref=f6e14]
+        - img [ref=f6e15]
+        - img [ref=f6e16]
+        - img [ref=f6e17]
+        - img [ref=f6e18]
+        - img [ref=f6e19]
+        - img [ref=f6e20]
+        - img [ref=f6e21]
+        - img [ref=f6e22]
+        - img [ref=f6e23]
+        - img [ref=f6e24]
+        - img [ref=f6e25]
+        - img [ref=f6e26]
+        - img [ref=f6e27]
+        - img [ref=f6e28]
+        - img [ref=f6e29]
+        - img [ref=f6e30]
+        - img [ref=f6e31]
+        - img [ref=f6e32]
+        - img [ref=f6e33]
+        - img [ref=f6e34]
+        - img [ref=f6e35]
+        - img [ref=f6e36]
+        - img [ref=f6e37]
+        - img [ref=f6e38]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('E-commerce product search and add to cart (stable)', async ({ page }) => {
+  4  | 
+  5  |   // Step 1: Open site
+  6  |   await page.goto('https://www.amazon.in/');
+  7  | 
+  8  |   // Step 2: Search product
+  9  |   await page.getByPlaceholder('Search Amazon.in').fill('Nike shoes');
+  10 |   await page.keyboard.press('Enter');
+  11 | 
+  12 |   // Step 3: Ensure results loaded
+  13 |   await page.waitForSelector('div[data-component-type="s-search-result"]');
+  14 | 
+  15 |   // Step 4: Click first product (handle SAME TAB navigation)
+  16 |   const firstProduct = page.locator('div[data-component-type="s-search-result"]').first();
+  17 | 
+  18 |   await Promise.all([
+> 19 |     page.waitForNavigation({ waitUntil: 'domcontentloaded' }), // ✅ correct wait
+     |          ^ Error: page.waitForNavigation: Test timeout of 30000ms exceeded.
+  20 |     firstProduct.click()
+  21 |   ]);
+  22 | 
+  23 |   // Step 5: Add to cart
+  24 |   await page.getByRole('button', { name: /Add to Cart/i }).click();
+  25 | 
+  26 |   // Step 6: Verify
+  27 |   await expect(page.getByText(/Added to Cart/i)).toBeVisible();
+  28 | });
+```
