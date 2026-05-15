@@ -51,8 +51,7 @@ export default defineConfig({
     screenshot: 'on'
     
   },
-  //  timeout:2000,
-
+   timeout: 2000,
   /* Configure projects for major browsers */
   projects: [
     {
