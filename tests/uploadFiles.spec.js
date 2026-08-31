@@ -47,7 +47,7 @@ test('single file', async({page})=>{
 })
 
 
-test.only('Multiple files',async({page})=>{
+test('Multiple files',async({page})=>{
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
 
 
